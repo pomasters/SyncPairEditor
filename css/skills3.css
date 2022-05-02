@@ -1,0 +1,21 @@
+#passiveMaster,
+#passives,
+#passives2,
+#luckySkills,
+#themeSkills {
+	flex-wrap: nowrap;
+	overflow: auto;
+}
+
+#passiveMaster .skill,
+#passives .skill,
+#passives2 .skill,
+#luckySkills .skill {
+	width: 100%;
+	min-width: calc(33.333% - 8px);
+}
+
+#themeSkills .skill {
+	width: 100%;
+	min-width: calc((100%/6) - 8px);
+}

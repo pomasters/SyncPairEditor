@@ -1,0 +1,27 @@
+#syncPair_pokemon,
+#syncPair_pokemon2,
+#syncPair_pokemonStats,
+#syncPair_pokemon2Stats,
+#passiveMaster,
+#passives,
+#passives2,
+#luckySkills,
+#themeSkills,
+#moves,
+#moves2,
+#movesMAX,
+#movesSync,
+#moves2Sync {
+	display: flex !important;
+}
+
+#btn_alter,
+#btn_dynamax {
+	display: none !important;
+}
+
+#passives2 .skill_name,
+#moves2 .move_name,
+#moves2Sync .move_name {
+	color: var(--textYellow);
+}

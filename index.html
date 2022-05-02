@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html>
+
+<!--f5e8d56a253d2dfc0e7113ca4a12d19904f90d1a0a83df102838fb7b55bc13fb-->
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Sync Pair Editor - Pokémon Masters EX</title>
+	<link rel="icon" type="image/x-icon" href="images/favicon.ico">
+	<link rel="stylesheet" type="text/css" href="css/main.css" id="css_main">
+	<link rel="stylesheet" type="text/css" href="css/main1.css" id="css_main1" disabled>
+	<link rel="stylesheet" type="text/css" href="css/main2.css" id="css_main2">
+	<link rel="stylesheet" type="text/css" href="css/focus.css" id="css_focus">
+	<link rel="stylesheet" type="text/css" href="css/font.css" id="css_font">
+
+	<link rel="stylesheet" type="text/css" href="css/skills3.css" id="css_skills3" disabled>
+	<link rel="stylesheet" type="text/css" href="css/moves4.css" id="css_moves4" disabled>
+	<link rel="stylesheet" type="text/css" href="css/showall.css" id="css_showall" disabled>
+</head>
+
+<body spellcheck="false">
+
+	<div id="editor">
+		<div>
+			<select id="input_sync_pairs"></select>
+
+			<div class="options">
+				<input type="button" value="Expand" id="btn_changeMode" class="option">
+				<input type="button" value="Skills ↔" id="btn_skills" class="option">
+				<input type="button" value="Moves ↔" id="btn_moves" class="option">
+				<input type="button" value="Show all" id="btn_showall" class="option">
+				<input type="button" value="Image ↓" id="btn_genimage" class="option">
+			</div>
+
+			<div class="options">
+				<label class="option" for="file_img_sync_bg">Background</label>
+				<input accept=".png, .jpg, .jpeg .gif" type="file" id="file_img_sync_bg">
+				<label class="option" for="file_img_sync_trainer">Trainer</label>
+				<input accept=".png, .jpg, .jpeg .gif" type="file" id="file_img_sync_trainer">
+				<label class="option" for="file_img_sync_trainer2">Trainer2</label>
+				<input accept=".png, .jpg, .jpeg .gif" type="file" id="file_img_sync_trainer2">
+				<label class="option" for="file_img_sync_pokemon">Pokemon</label>
+				<input accept=".png, .jpg, .jpeg .gif" type="file" id="file_img_sync_pokemon">
+				<label class="option" for="file_img_sync_pokemon2">Pokemon2</label>
+				<input accept=".png, .jpg, .jpeg .gif" type="file" id="file_img_sync_pokemon2">
+			</div>
+
+			<div class="options">
+				<select id="input_backgrounds"><option selected disabled>Background</option></select>
+				<input type="text" id="input_pokemon_art" list="data_pokemon_art" placeholder="Quick search a Pokemon...">
+				<datalist id="data_pokemon_art"></datalist>				
+			</div>
+
+			<div>
+				<div id="source_valid">Valid</div>
+				<textarea id="source_syncpair"></textarea>				
+			</div>
+
+			<div id="infos">
+				<input type="button" value="Need help ?" id="btn_help" class="option">
+				<div id="help">
+					<h1>HELP</h1>
+					<div>
+						<p>(Common mistake)<br>Pay attention to the <span>,</span> inside <span>[{},{}]</span> if multiple <span>{}</span></p>
+						<p>1 <span>{}</span></p>
+<pre><code>[
+  {
+    "propertie": "value", 
+    "propertie": "value"
+  }
+]</code></pre>
+						<p>2 <span>{}</span> and <span>,</span></p>
+<pre><code>[
+  {
+    "propertie": "value", 
+    "propertie": "value"
+  },
+  {
+    "propertie": "value", 
+    "propertie": "value"
+  }
+]</code></pre>
+					</div>
+
+					<div>
+						<p>(Common mistake)<br>Pay attention to the <span>,</span> inside <span>{ }</span> if multiple <span>"propertie":"value"</span></p>
+						<p>1 <span>"propertie": "value"</span></p>
+<pre><code>{
+  "propertie": "value"
+}</code></pre>
+						<p>2 <span>"propertie": "value"</span> and <span>,</span></p>
+<pre><code>{
+  "propertie": "value", 
+  "propertie": "value"
+}</code></pre>
+					</div>
+
+					<div>
+						<p><span>Image↓</span> button don't work</p>
+						<p>Make sure to not have image from custom url in your code. Import them with the buttons.</p>
+					</div>
+
+					<div>
+						<p>Role & Gender</p>
+						<p><span>"Special Strike"</span> <span>"Physical Strike"</span> <span>"Tech"</span> <span>"Support"</span></p>
+						<p><span>"Male"</span> <span>"Female"</span> <span>""</span> (empty quotes)</p> 
+					</div>
+
+					<div>
+						<p>I don't want the stats</p>
+						<p>Put all stats to 0. If 2 Pokémon, all stat should be 0.</p> 
+					</div>
+
+					<div>
+						<p>I don't want a second Pokemon</p>
+						<p>Remove one <span>{pokemon}</span> inside the <span>"pokemon": []</span></p>
+<pre><code>"pokemon": [
+  {
+    "name": "Pikachu",
+    "formName": "Normal",
+  },
+  {
+    "name": "Pikachu",
+    "formName": "Shiny",
+  }
+],</code></pre>
+						<p>like this</p>
+<pre><code>"pokemon": [
+  {
+    "name": "Pikachu",
+    "formName": "Normal",
+  }
+],</code></pre>
+					</div>
+
+					<div>
+						<p>I don't want <span>passiveMaster</span>/<span>passives2</span>/<span>syncMove2</span>/<span>movesMAX</span></p>
+						<p>Remove <span>{passive}</span>/<span>{move}</span> inside the <span>[]</span> to make it empty</p>
+<pre><code>"passivesMaster": [
+  {
+    "name": "Master Passive",
+    "description": ""
+  }
+],</code></pre>
+						<p>like this</p>
+						<pre><code>"passivesMaster": [],</code></pre>
+					</div>
+
+					<div>
+						<p>Hide one specific move</p>
+						<p>Put the move's name or type to <span>""</span> (empty quotes).<br>1 move hided =/= having 3 moves in this case.</p>
+					</div>
+
+					<div>
+						<p>Trainer move</p>
+						<p>Put the move's type to <span>trainer</span>.</p>
+					</div>
+
+					<div>
+						<p>Move user</p>
+						<p><span>pokemon</span> or <span>trainer</span></p>
+					</div>
+
+					<div>
+						<p>Background</p>
+						<p>Click on the background to change the display.</p>
+					</div>
+
+					<div>
+						<p>Bug/Suggestion/Question</p>
+						<p>Contact <span>u/Xtraterrestre</span> on reddit.</p>
+					</div>
+				</div>
+
+				<p>INFOS</p>
+				<ul>
+					<li>2022-05-02 : Hello, Pokémon World !</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	
+	<div id="render">
+		<div id="main">
+			<div id="summary">
+				<img id="syncPair_bg" src="images/empty.png">
+
+				<div>
+					<img id="syncPair_trainerImageBase" src="images/empty.png">
+					<img id="syncPair_trainerImageEx" src="images/empty.png">
+				</div>
+
+				<div>
+					<div id="syncPair_pokemon">
+						<div><img id="syncPair_pokemonImage" src="images/empty.png"></div>
+						<p id="syncPair_pokemonFormName"></p>
+						<p id="syncPair_pokemonName"></p>
+					</div>
+
+					<div id="syncPair_pokemon2">
+						<div><img id="syncPair_pokemon2Image" src="images/empty.png"></div>
+						<p id="syncPair_pokemon2FormName"></p>
+						<p id="syncPair_pokemon2Name"></p>
+					</div>
+
+					<img id="btn_alter" src="images/btn_form.png">
+				</div>
+
+				<div>
+					<div>
+						<img id="btn_ex" src="images/btn_ex.png">
+						<p id="btn_grid" contenteditable>Preset 1</p>
+					</div>
+
+					<div>
+						<p id="syncPair_trainerName"></p>
+
+						<div id="syncPair_rarity"></div>
+
+						<div>
+							<div id="syncPair_role">
+								<p>Role</p><img id="syncPair_roleImage" src="images/empty.png">
+							</div>
+
+							<div id="syncPair_type">
+								<p>Type</p><img id="syncPair_typeImage" src="images/empty.png">
+							</div>
+
+							<div id="syncPair_weakness">
+								<p>Weakness</p><img id="syncPair_weaknessImage" src="images/empty.png">
+							</div>
+						</div>
+					</div>
+
+					<div id="stats">
+						<div id="statsLabels"><p>HP</p><p>Attack</p><p>Defense</p><p>Sp. Atk</p><p>Sp. Def</p><p>Speed</p></div>
+						<div id="syncPair_pokemonStats"></div>
+						<div id="syncPair_pokemon2Stats"></div>
+					</div>
+				</div>
+			</div>
+
+			<div id="tabs">
+				<div class="tab" id="tab_actions">Moves</div>
+				<div class="tab" id="tab_passiveSkills"><img id="iconTabPassiveMaster" src="images/icon_master.png">Passive Skills</div>
+				<div class="tab" id="tab_luckySkills">Lucky Skills</div>
+				<div class="tab" id="tab_themeSkills">Theme Skills</div>
+			</div>
+
+			<div id="actions">
+				<div id="moves"></div>
+				<div id="moves2"></div>
+
+				<div id="movesMAX"></div>
+				<img id="btn_dynamax" src="images/btn_dynamax.png">
+
+				<div id="movesSync"></div>
+				<div id="moves2Sync"></div>
+			</div>
+
+			<div id="skills">
+				<div id="passiveSkills">
+					<div id="passiveMaster"></div>
+					<div id="passives"></div>
+					<div id="passives2"></div>
+				</div>
+
+				<div id="luckySkills"></div>
+
+				<div id="themeSkills"></div>
+			</div>
+
+			<div id="elementFocus"></div>
+
+			<p id="madeWith">Made by <span contenteditable>__</span> with https://pomasters.github.io/SyncPairEditor/</p>
+		</div>
+
+		<div id="screenshot"></div>		
+	</div>
+
+
+	<!--https://codemirror.net/-->
+	<div>
+		<link rel="stylesheet" href="https://codemirror.net/lib/codemirror.css">
+		<link rel="stylesheet" href="https://codemirror.net/addon/fold/foldgutter.css"/>
+		<link rel="stylesheet" href="https://codemirror.net/theme/shadowfox.css">
+		<link rel="stylesheet" href="https://codemirror.net/addon/lint/lint.css">
+		<style type="text/css">
+			.CodeMirror {
+				height: 512px;
+				min-height: 412px;
+				max-height: 612px;
+				resize: both;
+				min-width: 512px;
+				max-width: 1024px;
+				background-color: rgb(8 8 8 / 87%) !important;
+			}
+			.CodeMirror-guttermarker-subtle,
+			.CodeMirror-foldmarker {
+				color: #ff4a4a;
+				text-shadow: none;
+			}
+			.CodeMirror-foldmarker { padding: 0px 5px; }
+			@media only screen and (max-width: 1024px) {
+				.CodeMirror {
+					height: 464px !important;
+					width: 100% !important;
+					min-width: 100% !important;
+					max-width: 100% !important;
+					resize: none !important;
+				}
+			}
+		</style>
+		<script src="https://codemirror.net/lib/codemirror.js"></script>
+		<script src="https://codemirror.net/mode/javascript/javascript.js"></script>
+		<script src="https://unpkg.com/jsonlint@1.6.3/web/jsonlint.js"></script>
+		<script src="https://codemirror.net/addon/lint/lint.js"></script>
+		<script src="https://codemirror.net/addon/lint/json-lint.js"></script>
+		<script src="https://codemirror.net/addon/edit/matchbrackets.js"></script>
+		<script src="https://codemirror.net/addon/edit/closebrackets.js"></script>
+		<script src="https://codemirror.net/addon/selection/active-line.js"></script>
+		<script src="https://codemirror.net/addon/comment/comment.js"></script>
+		<script src="https://codemirror.net/addon/fold/foldcode.js"></script>
+		<script src="https://codemirror.net/addon/fold/foldgutter.js"></script>
+		<script src="https://codemirror.net/addon/fold/brace-fold.js"></script>
+	</div>
+
+
+	<!--https://github.com/tsayen/dom-to-image-->
+	<script type="text/javascript" src="js/dom-to-image.min.js"></script>
+
+
+	<script type="module" src="js/script.js"></script>
+</body>
+
+</html>

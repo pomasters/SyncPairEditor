@@ -1,0 +1,28 @@
+#moves,
+#moves2,
+#movesMAX {
+	flex-wrap: nowrap;
+	overflow: auto;
+}
+
+#moves .move,
+#moves2 .move,
+#movesMAX .move {
+	width: 100%;
+	min-width: calc(25% - 8px);
+}
+
+.move_user {
+	width: 40px;
+	height: 40px;
+}
+
+#moves .move_details_description,
+#moves2 .move_details_description,
+#movesMAX .move_details_description {
+	flex-wrap: wrap;
+}
+
+.move_details_description > * {
+	margin: auto;
+}

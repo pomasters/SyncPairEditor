@@ -1,0 +1,305 @@
+/*------------------------
+ELEMENT FOCUS WHEN CLICKED
+------------------------*/
+
+#elementFocus {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+	width: 100%;
+	height: 100%;
+	z-index: 5;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-color: rgb(0 0 0 / 77%);
+	animation: fadeIn .3s;
+}
+
+#elementFocus #help { display: block; }
+
+@keyframes fadeIn {
+	from { opacity: 0; } to { opacity: 1; }
+}
+
+#elementFocus > div {
+	width: 90%;
+}
+
+#elementFocus > img {
+	width: 50%;
+	height: auto;
+}
+
+
+#elementFocus .move {
+	display: flex;
+	flex-direction: column;
+	padding: 8px;
+	border: 2px rgba(0, 0, 0, 15%) solid;
+	border-radius: 12px;
+	margin: 4px;
+	height: auto;
+}
+
+#elementFocus .move_basics {
+	display: flex;
+	padding: 5px;
+	flex-direction: column;
+	position: relative;
+	background-image: none;
+	height: auto;
+}
+
+#elementFocus .move_name {
+	width: 80%;
+	margin: auto;
+	font-size: 1.2em;
+	text-align: center;
+	color: var(--textWhite);
+	text-shadow: var(--textOutline);
+}
+
+#elementFocus .move_gauge_uses {
+	display: flex;
+	margin: 2px auto;
+}
+
+#elementFocus .move_gauge,
+#elementFocus .move_uses {
+	width: auto;
+	color: var(--textWhite);
+	margin: auto 5px;
+}
+
+#elementFocus .move_gauge img {
+	width: 16px;
+	margin: auto 1px;
+}
+
+#elementFocus .move_uses {
+	font-size: 0.8em;
+	background-color: var(--text);
+	padding: 0px 8px;
+	border-radius: 5px;
+}
+
+#elementFocus .move_user {
+	display: flex;
+	justify-content: center;
+	align-items: start;
+	position: absolute;
+	width: 60px;
+	height: 60px;
+	overflow: hidden;
+	right: 0;
+	bottom: 6px;
+	border: 2px solid rgb(0 0 0 / 30%);
+	border-radius: 50px;
+}
+
+#elementFocus .move_user img {
+	width: 123%;
+}
+
+#elementFocus .move_details_description {
+	font-size: 0.95em;
+	color: var(--text);
+	display: flex;
+	justify-content: space-between;
+	height: 100%;
+	border-radius: 8px;
+	overflow: hidden;
+}
+
+#elementFocus .move_details,
+#elementFocus .move_description {
+	width: 100%;
+	height: 100%;
+	padding: 5px;
+	background-color: rgba(255,255,255,70%);
+	text-align: left;
+}
+
+#elementFocus .move_details {
+	margin-right: 3px;
+}
+
+#elementFocus .move_description {
+	margin-left: 3px;
+	min-height: 150px;
+	position: relative;
+}
+
+#elementFocus .move_details div {
+	display: flex;
+	justify-content: space-between;
+	margin: 0 -5px;
+	padding: 0 5px;
+}
+
+#elementFocus .move_details div:nth-child(even) {
+	background-color: rgba(255, 255, 255, 36%);
+}
+
+#elementFocus .move_details div p:first-child {
+	width: 40%;
+	color: var(--textWhite);
+	text-shadow: var(--textOutline);
+}
+
+#elementFocus .move_details div p:last-child {
+	width: 60%;
+}
+
+#elementFocus .move_type img {
+	height: 20px;
+	width: auto;
+	margin: -3px 3px -3px 0;
+}
+
+#elementFocus .move_category img {
+	width: 28px;
+	height: auto;
+	margin: -1px auto;
+}
+
+#elementFocus .move_sync .move_basics,
+#elementFocus .move2_sync .move_basics {
+	background-image: var(--bgSyncMove);
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+	min-height: 45px;
+}
+#elementFocus .move_sync .move_details_description,
+#elementFocus .move2_sync .move_details_description {
+	width: 100%;
+}
+
+#elementFocus .move_sync .move_gauge_uses,
+#elementFocus .move2_sync .move_gauge_uses {
+	display: none;
+}
+
+#elementFocus .move_sync .move_name,
+#elementFocus .move2_sync .move_name {
+	font-size: 1.3em;
+}
+
+#elementFocus .move_dynamax {
+	background: var(--maxmove) !important;
+	color: #AAA;
+	border: 2px var(--maxmove2) solid;
+}
+
+#elementFocus .move_dynamax .move_basics {
+	background-image: var(--bgDynamax);
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+	min-height: 45px;
+}
+
+#elementFocus .move_dynamax .move_gauge_uses {
+	display: none;
+}
+
+#elementFocus .move_dynamax .move_user {
+	background: var(--maxmove2) !important;
+}
+
+#elementFocus .move_dynamax .move_details_description {
+	color: #AAA;
+}
+
+#elementFocus .move_dynamax .move_details,
+#elementFocus .move_dynamax .move_description  {
+	background-color: rgba(0,0,0,32%);
+}
+
+#elementFocus .move_dynamax .move_details div:nth-child(1) {
+	border-bottom: 6px solid var(--maxmove) !important;
+}
+
+#elementFocus .move_dynamax .move_details div:nth-child(even) {
+	background-color: rgba(0,0,0,32%);
+}
+
+
+#elementFocus .skill {
+	color: var(--text);
+	padding: 8px;
+	background-color: var(--skill);
+	background-image: var(--bgPassive);
+	background-size: cover;
+	border: 2px rgba(0, 0, 0, 30%) solid;
+	border-radius: 8px;
+	margin: 4px;
+	border-bottom: 3px rgb(0 0 0 / 20%) solid;
+	display: flex;
+	flex-direction: column;
+	min-height: 36px;
+}
+
+#elementFocus .skill_name {
+	letter-spacing: 1px;
+	padding: 4px;
+	color: var(--textWhite);
+	text-align: center;
+	text-shadow: var(--textOutline);
+	white-space: nowrap;
+	margin: auto 0;
+}
+
+#elementFocus .skill_description {
+	display: flex;
+	width: 100%;
+	height: 100%;
+	margin: auto;
+	padding: 5px;
+	background-color: rgba(255,255,255,70%);
+	border-radius: 4px;
+	min-height: 100px;
+}
+
+#elementFocus .skill_passiveMaster {
+	background-color: var(--passive_master);
+	background-image: var(--bgPassiveMaster);
+	background-size: cover;
+}
+
+#elementFocus .skill_passiveMaster .skill_name {
+	background-image: var(--iconPassiveMaster);
+	background-repeat: no-repeat;
+	background-size: 24px;
+}
+
+#elementFocus .skill_lucky {
+	background-image: var(--bgLucky);
+	background-size: cover;
+	border: 2px rgba(0, 0, 0, 30%) solid;
+	border-bottom: 3px rgb(0 0 0 / 20%) solid;
+}
+
+#elementFocus .skill_theme {
+	background-image: none;
+	background: linear-gradient(var(--theme), var(--theme2));
+}
+
+#elementFocus .skill_theme .skill_name {
+	text-align: left;
+	margin-left: 0;
+	white-space: nowrap;
+}
+
+#elementFocus .skill_theme .skill_description {
+	display: flex;
+}
+
+#elementFocus .skill_theme .skill_description+.skill_description {
+	margin-top: 5px;
+}
