@@ -2486,6 +2486,9 @@ function DISABLE_OPTION(n) { return {"trainer":{"name":n}, "pokemon":[{"name":"-
 
 
 
+import * as MAY2022 from '../v/v2.20.0/syncpairs.js';
+
+
 export const SYNCPAIRS = [
 	DISABLE_OPTION("-------- SYNC PAIRS DEMO --------"),
 
@@ -2499,6 +2502,14 @@ export const SYNCPAIRS = [
 	LEON_ETERNATUS,
 	ELESA_EMOLGA,
 	MAY_LOPUNNY,
+
+	DISABLE_OPTION("---------------- v2.20.0 (MAY2022) ----------------"),
+
+	MAY2022.MORTY_HOOH,
+	MAY2022.AARON_VESPIQUEN,
+	MAY2022.BERTHA_HIPPOWDON,
+	MAY2022.LUCIAN_GIRAFARIG,
+	MAY2022.GIOVANNI_NIDOKING,
 
 	DISABLE_OPTION("--------------------------------"),
 
