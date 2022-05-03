@@ -1,4 +1,4 @@
-export const BACKGROUNDS = ["arena","canyon","cave","city","coast","forest","glacier","volcano", "christmas", "halloween"];
+export const BACKGROUNDS = ["bg","arena","canyon","cave","city","coast","forest","glacier","volcano", "christmas", "halloween"];
 
 export const ROLES = ["physical strike","special strike","tech","support"];
 

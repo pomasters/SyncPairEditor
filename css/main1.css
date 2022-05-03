@@ -21,9 +21,6 @@
 	z-index: 0;
 	width: 100%;
 	height: 100%;
-	opacity: 80%;
-	filter: blur(2px);
-	clip-path: polygon(90% 0, 0% 80%, 0 0%);
 }
 
 
@@ -615,4 +612,12 @@ SKILLS
 	display: flex;
 	justify-content: center;
 	align-items: center;
+}
+
+
+/* Preset backgrounds */
+img[src^="./images/bg/"] {
+	width: auto !important;
+	left: -64% !important;
+	clip-path: polygon(66% 0, 0% 146%, 0 0%);
 }

@@ -379,8 +379,21 @@ input[type=file] {
 }
 
 
+.backgroundSmall {
+	clip-path: polygon(90% 0, 0% 80%, 0 0%);
+	opacity: 80%;
+	filter: blur(2px);
+}
+
+.backgroundLarge {
+	clip-path: none !important;
+	opacity: 70% !important;
+	filter: none !important;
+}
+
+
 @media only screen and (max-width: 1024px) {
-	body { width: 100%; flex-direction: column; }
+	body { flex-direction: column; }
 	#editor { width: 100%; margin: auto; height: 600px; }
 	#editor>div { position: relative; width: 100%; }
 	#render { margin: auto; }

@@ -125,6 +125,7 @@ function resetShowSyncPair() {
 	var emptyImg = "./images/empty.png";
 
 	g("syncPair_bg").src = emptyImg;
+	g("syncPair_bg").classList.add("backgroundSmall");
 
 	g("syncPair_trainerImageBase").src = emptyImg;
 	g("syncPair_trainerImageEx").src = emptyImg;
@@ -783,14 +784,12 @@ g("input_backgrounds").addEventListener("input", function() {
 click on the background itself to change the display
 */
 g("syncPair_bg").addEventListener("click", function() {
-	if(this.style.clipPath!="none") {
-		this.style.clipPath="none";
-		this.style.opacity="60%";
-		this.style.filter="none";
+	if(this.classList.contains("backgroundSmall")) {
+		this.classList.remove("backgroundSmall");
+		this.classList.add("backgroundLarge");
 	} else {
-		this.style.clipPath="polygon(90% 0, 0% 80%, 0 0%)";
-		this.style.opacity="80%";
-		this.style.filter="blur(2px)";
+		this.classList.add("backgroundSmall")
+		this.classList.remove("backgroundLarge");
 	}
 })
 
