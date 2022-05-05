@@ -192,18 +192,31 @@ BTN EX & BTN GRID
 	white-space: nowrap;
 	z-index: 4;
 	overflow: hidden;
-	padding: 0 10px;
+	padding: 0 12px 0 36px;
 	min-width: 32%;
 	margin: 10px;
 	text-align: center;
-	height: 30px;
-	line-height: 26px;
+	line-height: 25px;
 	color: var(--textWhite);
-	border: 2px solid #1CA180;
+	border: 2px solid #73968C;
 	border-radius: 7px;
-	background-color: rgb(55 183 151 / 90%);
-	border-bottom: 4px solid rgb(0 0 0 / 20%);
-	border-right: 3px solid rgb(0 0 0 / 20%);
+	box-shadow: 2px 2px rgb(163 178 183 / 50%);
+	transition-duration: 100ms;
+	background-color: rgb(28 161 128 / 90%);
+	background-image: url(../images/icon_grid.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+#btn_grid:focus {
+	min-width: 32% !important;
+	transition-duration: 100ms;
+}
+
+#btn_grid:empty {
+	padding: 0;
+	min-width: 30px;
+	transition-duration: 100ms;
 }
 
 
@@ -419,6 +432,7 @@ MOVES
 	text-align: center;
 	color: var(--textWhite);
 	text-shadow: var(--textOutline);
+	width: 90%;
 }
 
 .move_user,
