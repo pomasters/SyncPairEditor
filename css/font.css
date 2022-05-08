@@ -24,14 +24,13 @@ Font used in the game
 #syncPair_pokemon2FormName {
 	font-family: "kenya-NewRodinProN-B";
 	font-size: 0.75em;
-	padding: 0;
+	line-height: 20px;
 }
 
 #syncPair_pokemonName,
 #syncPair_pokemon2Name {
 	font-family: "kenya-NewRodinProN-EB";
 	font-size: 0.9em;
-	padding: 0;
 }
 
 #syncPair_role,

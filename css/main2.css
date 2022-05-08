@@ -44,7 +44,13 @@ IMAGES TRAINER
 
 #syncPair_trainerImageBase,
 #syncPair_trainerImageEx {
-	height: 100%;
+	max-height: 100%;
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	top: 0;
+	margin: auto;
 }
 
 
@@ -53,11 +59,12 @@ IMAGES/NAME POKEMON
 -----------------*/
 
 #summary > div:nth-of-type(2) {
+	--size: 208px;
 	z-index: 2;
-	width: 43%;
-	height: 38%;
+	width: calc(var(--size) * 2);
+	height: var(--size);
 	position: absolute;
-	top: 6%;
+	top: 5%;
 	right: 5%;
 	display: flex;
 	align-items: center;
@@ -70,22 +77,35 @@ IMAGES/NAME POKEMON
 	height: 100%;
 	display: flex;
 	flex-direction: column;
-	margin: 10px;
+	position: relative;
 }
 
-#syncPair_pokemon div,
-#syncPair_pokemon2 div {
+#syncPair_pokemon div:first-child,
+#syncPair_pokemon2 div:first-child {
 	background-image: var(--bgPokeball);
 	background-repeat: no-repeat;
 	background-size: contain;
 	background-position: center;
 	height: 100%;
+	position: relative;
+}
+
+#syncPair_pokemon div:last-child,
+#syncPair_pokemon2 div:last-child {
+	width: 100%;
+	position: absolute;
+	bottom: -36px;
 }
 
 #syncPair_pokemonImage,
 #syncPair_pokemon2Image {
-	display: block;
-	height: 100%;
+	max-width: 100%;
+	max-height: 100%;
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	top: 0;
 	margin: auto;
 	padding: 10px;
 }
@@ -95,11 +115,13 @@ IMAGES/NAME POKEMON
 	color: var(--textWhite);
 	background-color: var(--button);
 	border-radius: 50px;
-	padding: 1px;
 	margin: auto;
+	margin-bottom: 5px;
 	word-break: break-word;
 	text-align: center;
 	width: 100%;
+	white-space: pre;
+	overflow: hidden;
 }
 
 #syncPair_pokemonName,
@@ -108,11 +130,13 @@ IMAGES/NAME POKEMON
 	background-color: rgba(255,255,255,80%);
 	border: 1px solid #d7d7d7;
 	border-radius: 5px;
-	padding: 5px;
-	margin: 5px auto;
+	padding: 0px;
+	margin: auto;
 	word-break: break-word;
 	text-align: center;
 	width: 100%;
+	white-space: pre;
+	overflow: hidden;
 }
 
 .syncPair_pokemonGender {
@@ -130,8 +154,8 @@ BUTTONS EX, ALTER, DYNAMAX
 #btn_alter {
 	width: 36px;
 	position: absolute;
-	right: 0;
-	bottom: 0;
+	right: -6px;
+	bottom: -3px;
 }
 #btn_ex:hover,
 #btn_alter:hover,

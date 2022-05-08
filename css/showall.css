@@ -15,6 +15,10 @@
 	display: flex !important;
 }
 
+#syncPair_pokemon2 {
+	margin-left: 20px;
+}
+
 #btn_alter,
 #btn_dynamax {
 	display: none !important;
