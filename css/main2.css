@@ -435,7 +435,7 @@ MOVES
 	pointer-events: none;
 	filter: grayscale(100%) blur(1px);
 	opacity: 32%;
-	background-color: rgb(35 35 35);
+	background: rgb(190 190 190) !important;
 }
 
 .no_move * {

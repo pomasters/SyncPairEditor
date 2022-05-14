@@ -436,11 +436,14 @@ return :
 */
 function skillIs(skill, option) {
 	var themeType = "";
+	var skillOption = option;
+
+	if(skill.name == "" && skill.description == "") { skillOption = "no_move"; }
 
 	/*if the skill is a "type" (fire, ice, ..)*/
 	if(TYPES.indexOf(skill.name.toLowerCase()) > -1) { themeType= "bg_"+skill.name.toLowerCase(); }
 
-	return `<div class="skill ${option} ${themeType} elementF">
+	return `<div class="skill ${skillOption} ${themeType} elementF">
 				<p class="skill_name">${skill.name}</p>
 				<p class="skill_description">${skill.description}</p>
 			</div>`;
