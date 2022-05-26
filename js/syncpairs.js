@@ -2487,9 +2487,29 @@ function DISABLE_OPTION(n) { return {"trainer":{"name":n}, "pokemon":[{"name":"-
 
 
 import * as MAY2022 from '../v/v2.20.0/syncpairs.js';
+import * as JUNE2022 from '../v/v2.21.0/syncpairs.js';
 
 
 export const SYNCPAIRS = [
+
+	TEMPLATE1, //Always at the
+	TEMPLATE2, //top of the array
+
+	DISABLE_OPTION("---------------- v2.21.0 (JUNE2022) ----------------"),
+
+	JUNE2022.ETHAN_LUGIA,
+	JUNE2022.LYRA_CELEBI,
+	JUNE2022.KRIS_SUICUNE,
+	JUNE2022.BEDE_HATTERENE,
+
+	DISABLE_OPTION("---------------- v2.20.0 (MAY2022) -----------------"),
+
+	MAY2022.MORTY_HOOH,
+	MAY2022.AARON_VESPIQUEN,
+	MAY2022.BERTHA_HIPPOWDON,
+	MAY2022.LUCIAN_GIRAFARIG,
+	MAY2022.GIOVANNI_NIDOKING,
+
 	DISABLE_OPTION("-------- SYNC PAIRS DEMO --------"),
 
 	RED_CHARIZARD,
@@ -2501,18 +2521,5 @@ export const SYNCPAIRS = [
 	CYNTHIA_GIRATINA,
 	LEON_ETERNATUS,
 	ELESA_EMOLGA,
-	MAY_LOPUNNY,
-
-	DISABLE_OPTION("---------------- v2.20.0 (MAY2022) ----------------"),
-
-	MAY2022.MORTY_HOOH,
-	MAY2022.AARON_VESPIQUEN,
-	MAY2022.BERTHA_HIPPOWDON,
-	MAY2022.LUCIAN_GIRAFARIG,
-	MAY2022.GIOVANNI_NIDOKING,
-
-	DISABLE_OPTION("--------------------------------"),
-
-	TEMPLATE1, //Always at the
-	TEMPLATE2 //end of the array
+	MAY_LOPUNNY
 ];

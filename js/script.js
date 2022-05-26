@@ -569,8 +569,8 @@ function generateSyncPairsOptionsHtml() {
 			option = `<option disabled>${SYNCPAIRS[i].trainer.name}</option>`
 		}
 
-		/*if last two elements, just show the trainer name, no pokemon*/
-		if(i==SYNCPAIRS.length-1 || i==SYNCPAIRS.length-2) {
+		/*if first two elements, just show the trainer name, no pokemon*/
+		if(i==0 || i==1) {
 			option = `<option value="${i}" selected>${SYNCPAIRS[i].trainer.name}</option>`
 		}
 		output += option;
@@ -956,7 +956,7 @@ g("elementFocus").addEventListener("click", function() {
 	INIT
 -----------------------------------------------------------------------------*/
 
-var SYNCPAIR = SYNCPAIRS[SYNCPAIRS.length-1];//TEMPLATE (FULL)
+var SYNCPAIR = SYNCPAIRS[1];//TEMPLATE (FULL)
 
 showSyncPair();
 firstshowSyncPairSource();
