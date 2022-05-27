@@ -150,8 +150,8 @@ export const ETHAN_LUGIA = {
 				"gauge" : 0,
 				"uses" : 0,
 				"category" : "Special",
-				"power" : "",
-				"accuracy" : "--",
+				"power" : "250",
+				"accuracy" : "-",
 				"target" : "An opponent",
 				"effect" : "-",
 				"description" : "No additional effect."
