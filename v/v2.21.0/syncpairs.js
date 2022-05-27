@@ -260,7 +260,7 @@ export const LYRA_CELEBI = {
 				"user" : "Pokemon",
 				"name" : "Grassy Glide",
 				"type" : "Grass",
-				"gauge" : 4,
+				"gauge" : 3,
 				"uses" : 0,
 				"category" : "Physical",
 				"power" : "100",
