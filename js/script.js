@@ -329,9 +329,7 @@ function moveIs(move, option) {
 						<p class="move_uses ${hideOrNot(move.uses)}">${uses(move.uses)}</p>
 					</div>
 
-					<div class="move_user bg_${move.type.toLowerCase()}">
-						<img src="${moveUser(move.user)}">
-					</div>
+					${moveUser(move.user, move.type)}
 				</div>
 
 				<div class="move_details_description">
@@ -371,12 +369,14 @@ function moveIs(move, option) {
 	}
 
 	/*
-	Returns the path of the image of the user u
+	Returns the div that contains the image of the move user (or not)
 	*/
-	function moveUser(u) {
-		if(u.toLowerCase() == "trainer" && SYNCPAIR.trainer.images.base.length > 0) { return SYNCPAIR.trainer.images.base; }
-		if(u.toLowerCase() == "pokemon" && SYNCPAIR.pokemon.length > 0) { return SYNCPAIR.pokemon[0].image;	}
-		return "./images/empty.png"
+	function moveUser(u, t) {
+		if(u == "") { return ""; }
+		var image = "./images/empty.png";
+		if(u.toLowerCase() == "trainer" && SYNCPAIR.trainer.images.base.length > 0) { image = SYNCPAIR.trainer.images.base; }
+		if(u.toLowerCase() == "pokemon" && SYNCPAIR.pokemon.length > 0) { image = SYNCPAIR.pokemon[0].image; }
+		return `<div class="move_user bg_${t.toLowerCase()}"><img src="${image}"></div>`;
 	}
 }
 

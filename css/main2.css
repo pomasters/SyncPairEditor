@@ -459,6 +459,7 @@ MOVES
 	text-align: center;
 	color: var(--textWhite);
 	text-shadow: var(--textOutline);
+	z-index: 1;
 }
 
 .move_gauge_uses {
