@@ -660,3 +660,26 @@ img[src^="./images/bg/"] {
 	left: -64% !important;
 	clip-path: polygon(66% 0, 0% 146%, 0 0%);
 }
+
+
+#grid {
+	width: 512px;
+	height: 1024px;
+}
+
+#gridInfos {
+	width: 25%;
+}
+
+#cells {
+	transform: scale(66%);
+	transform-origin: left top;
+	margin-top: -12%;
+}
+
+#cells .cellName { display: none; }
+
+.cell[data-cellid]:hover:before,
+.cell[data-cellid]:hover:after {
+	font-size: 1.2em;
+}

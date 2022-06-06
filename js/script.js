@@ -4,9 +4,11 @@ Check at the end of file for init
 
 */
 
-import {BACKGROUNDS,ROLES,GENDER,CATEGORIES,TYPES,POKEMON} from './data.js';
-import {SYNCPAIRS} from './syncpairs.js';
+import * as DATA from './data.js';
+import {CURRENT_SYNCPAIR, SYNCPAIRS} from './syncpairs.js';
 
+import * as GRID from './grid.js';
+import {CURRENT_SYNCGRID, SYNCGRIDS, SYNCGRIDS_TEMPLATES} from './syncgrids.js';
 
 const MAX_NUMBER_STARS = 6;
 const MAX_NUMBER_PASSIVES = 3;
@@ -220,7 +222,7 @@ function rarity(n) {
 Cheks if r is a role and return the path of the image
 */
 function roleImage(r) {
-	if(ROLES.indexOf(r.toLowerCase()) > -1) {
+	if(DATA.ROLES.indexOf(r.toLowerCase()) > -1) {
 		return `./images/role_${r.toLowerCase().replace(" ","_")}.png`;
 	} else { return "./images/empty.png" }
 }
@@ -229,7 +231,7 @@ function roleImage(r) {
 Cheks if t is a type and return the path of the image
 */
 function typeImage(t) {
-	if(TYPES.indexOf(t.toLowerCase()) > -1) {
+	if(DATA.TYPES.indexOf(t.toLowerCase()) > -1) {
 		return `./images/type_${t.toLowerCase()}.png`;
 	} else { return "./images/empty.png" }
 }
@@ -238,7 +240,7 @@ function typeImage(t) {
 Cheks if t is a type and return the path of the image
 */
 function moveTypeImage(t) {
-	if(TYPES.indexOf(t.toLowerCase()) > -1) {
+	if(DATA.TYPES.indexOf(t.toLowerCase()) > -1) {
 		return `./images/move_${t.toLowerCase()}.png`;
 	} else { return "./images/empty.png" }
 }
@@ -247,7 +249,7 @@ function moveTypeImage(t) {
 Cheks if t is a type and return the path of the image
 */
 function syncMoveTypeImage(t) {
-	if(TYPES.indexOf(t.toLowerCase()) > -1) {
+	if(DATA.TYPES.indexOf(t.toLowerCase()) > -1) {
 		return `./images/sync_${t.toLowerCase()}.png`;
 	} else { return "./images/empty.png" }
 }
@@ -256,7 +258,7 @@ function syncMoveTypeImage(t) {
 Returns the html code for the <img> of the gender g
 */
 function gender(g) {
-	if(GENDER.indexOf(g.toLowerCase()) > -1) {
+	if(DATA.GENDER.indexOf(g.toLowerCase()) > -1) {
 		return `<img class="syncPair_pokemonGender" src="./images/icon_${g.toLowerCase()}.png">`;
 	} else { return '<img class="syncPair_pokemonGender" src="./images/empty.png">'; }
 }
@@ -363,7 +365,7 @@ function moveIs(move, option) {
 	Cheks if c is a category and return a <img> of the category
 	*/
 	function category(c) {
-		if(CATEGORIES.indexOf(c.toLowerCase()) > -1) {
+		if(DATA.CATEGORIES.indexOf(c.toLowerCase()) > -1) {
 			return `<img src="./images/category_${c.toLowerCase()}.png">`;
 		} else { return '<img src="./images/empty.png">' }
 	}
@@ -441,7 +443,7 @@ function skillIs(skill, option) {
 	if(skill.name == "" && skill.description == "") { skillOption = "no_move"; }
 
 	/*if the skill is a "type" (fire, ice, ..)*/
-	if(TYPES.indexOf(skill.name.toLowerCase()) > -1) { themeType= "bg_"+skill.name.toLowerCase(); }
+	if(DATA.TYPES.indexOf(skill.name.toLowerCase()) > -1) { themeType= "bg_"+skill.name.toLowerCase(); }
 
 	return `<div class="skill ${skillOption} ${themeType} elementF">
 				<p class="skill_name">${skill.name}</p>
@@ -533,7 +535,6 @@ function changeMode() {
 		g("btn_moves").classList.remove("no_move");
 		g("btn_showall").classList.remove("no_move");
 	}
-
 }
 
 
@@ -561,9 +562,11 @@ and insert it in the <select>
 function generateSyncPairsOptionsHtml() {
 	var output = "";
 	for(var i=0; i<SYNCPAIRS.length; i++) {
-		var option = `<option value="${i}">${SYNCPAIRS[i].trainer.name} & ${SYNCPAIRS[i].pokemon[0].name}</option>`;
-		
+		var optionSelected = "";
+		if(SYNCPAIRS[i].trainer.name == SYNCPAIR.trainer.name) { optionSelected = "selected"; }
 
+		var option = `<option value="${i}" ${optionSelected}>${SYNCPAIRS[i].trainer.name} & ${SYNCPAIRS[i].pokemon[0].name}</option>`;
+		
 		/*disable <option> if name is "--" */
 		if(SYNCPAIRS[i].pokemon[0].name == "--") {
 			option = `<option disabled>${SYNCPAIRS[i].trainer.name}</option>`
@@ -571,8 +574,9 @@ function generateSyncPairsOptionsHtml() {
 
 		/*if first two elements, just show the trainer name, no pokemon*/
 		if(i==0 || i==1) {
-			option = `<option value="${i}" selected>${SYNCPAIRS[i].trainer.name}</option>`
+			option = `<option value="${i}" ${optionSelected}>${SYNCPAIRS[i].trainer.name}</option>`
 		}
+
 		output += option;
 	}
 	g("input_sync_pairs").innerHTML = output;
@@ -595,8 +599,15 @@ function generateOptionsHtml(arr, target) {
 //https://github.com/tsayen/dom-to-image
 function screenshot() {
 	var node = g('main');
+	if(node.classList.contains("hide")) {
+		node = g("grid")
+		if(g("btn_changeMode").classList.contains("optionSelected")) {
+			node.style.height = "1200px";
+		} else { node.style.height = "812px"; }
+	}
 
 	node.classList.add("screenshotXL");
+	g("gridInfos").classList.add("hide");	
 
 	var size = node.getBoundingClientRect();
 	var w = size.width;
@@ -610,12 +621,14 @@ function screenshot() {
 		g("screenshot").innerHTML = `<p>GENERATED IMAGE :</p>`;
 		g("screenshot").appendChild(img);
 
-		g('main').classList.remove("screenshotXL");
+		node.classList.remove("screenshotXL");
+		node.removeAttribute("style");
+		g("gridInfos").classList.remove("hide");
 
 		alert("Image generated. Scroll down the page to see your image.")
 	})
 	.catch(function (error) {
-		g('main').classList.remove("screenshotXL");
+		node.classList.remove("screenshotXL");
 		alert("Error. Make sure to not have a custom image link in your code before using this button.")
 		console.log(error);
 	});
@@ -629,20 +642,26 @@ function screenshot() {
 -----------------------------------------------------------------------------*/
 
 var SOURCE_SYNCPAIR_VALUE;
+var SOURCE_SYNCGRID_VALUE;
 
 /*
 put the code inside the textarea "source_syncpair" 
 before applying codemirror on it
+
+same for "source_syncgrid" 
 */
-function firstshowSyncPairSource() {
+function firstShowCodeSources() {
 	g("source_syncpair").value = JSON.stringify(SYNCPAIR, null, "  ");
 	SOURCE_SYNCPAIR_VALUE = g("source_syncpair").value;
+
+	g("source_syncgrid").value = JSON.stringify(SYNCGRID, null, "  ");
+	SOURCE_SYNCGRID_VALUE = g("source_syncgrid").value;
 }
 
 
 function showSyncPairFromSource() {
 	try {
-		SYNCPAIR = JSON.parse(SOURCE_SYNCPAIR_VALUE)
+		SYNCPAIR = JSON.parse(SOURCE_SYNCPAIR_VALUE);
 		g('source_valid').innerHTML = "Valid";
 		g('source_valid').classList.remove("sourceInvalid");
 		g('source_valid').classList.add("sourceValid");
@@ -654,11 +673,36 @@ function showSyncPairFromSource() {
 	showSyncPair();
 }
 
+function showSyncGridFromSource() {
+	try {
+		SYNCGRID = JSON.parse(SOURCE_SYNCGRID_VALUE);
+		g('sourceGrid_valid').innerHTML = "Valid";
+		g('sourceGrid_valid').classList.remove("sourceInvalid");
+		g('sourceGrid_valid').classList.add("sourceValid");
+	} catch {
+		g('sourceGrid_valid').innerHTML = "Invalid";
+		g('sourceGrid_valid').classList.remove("sourceValid");
+		g('sourceGrid_valid').classList.add("sourceInvalid");
+	}
+	GRID.genGrid(SYNCGRID);
+}
+
 
 //https://codemirror.net/
 var CODE_MIRROR_EDITOR;
+var CODE_MIRROR_EDITOR_GRID;
 
-function initTextEditor(){
+function initTextEditor() {
+
+	initSyncPairCodeEditor();
+	initSyncGridCodeEditor();
+	
+	g("syncGridCodeEditor").classList.add("hide");
+	g("grid").classList.add("hide");
+}
+
+
+function initSyncPairCodeEditor() {
 	CODE_MIRROR_EDITOR = CodeMirror.fromTextArea(document.getElementById("source_syncpair"), {
 		mode: "application/json",
 		lineNumbers: true,
@@ -669,28 +713,71 @@ function initTextEditor(){
 		lint: true,
 		foldGutter: true,
 		gutters: ["CodeMirror-lint-markers","CodeMirror-linenumbers", "CodeMirror-foldgutter"],
-		theme: "shadowfox"
+		theme: "shadowfox",
+		extraKeys: {"Alt-F": "findPersistent"}
 	});
 
-	/*
-	fold some parts of the code of the template demo
-	*/
-	CODE_MIRROR_EDITOR.foldCode(CodeMirror.Pos(28, 0));//pokemon2
-	CODE_MIRROR_EDITOR.foldCode(CodeMirror.Pos(57, 0));//passives2
-	CODE_MIRROR_EDITOR.foldCode(CodeMirror.Pos(71, 0));//passiveMaster
-	CODE_MIRROR_EDITOR.foldCode(CodeMirror.Pos(176, 0));//moves2
-	CODE_MIRROR_EDITOR.foldCode(CodeMirror.Pos(230, 0));//syncMove2
-	CODE_MIRROR_EDITOR.foldCode(CodeMirror.Pos(245, 0));//movesMAX
-	
 	CODE_MIRROR_EDITOR.on('change', (editor) => {
 		SOURCE_SYNCPAIR_VALUE = editor.doc.getValue();
 		setTimeout(showSyncPairFromSource, DELAY_UPDATE_DISPLAY);
 	});
+
+	var charWidth = CODE_MIRROR_EDITOR.defaultCharWidth(), basePadding = 4;
+	CODE_MIRROR_EDITOR.on("renderLine", function(cm, line, elt) {
+		var off = CodeMirror.countColumn(line.text, null, cm.getOption("tabSize")) * charWidth;
+		elt.style.textIndent = "-" + off + "px";
+		elt.style.paddingLeft = (basePadding + off) + "px";
+	});
+	CODE_MIRROR_EDITOR.refresh();
+}
+
+function initSyncGridCodeEditor() {
+	CODE_MIRROR_EDITOR_GRID = CodeMirror.fromTextArea(document.getElementById("source_syncgrid"), {
+		mode: "application/json",
+		lineNumbers: true,
+		lineWrapping: true,
+		matchBrackets: true,
+		autoCloseBrackets: true,
+		styleActiveLine: true,
+		lint: true,
+		foldGutter: true,
+		gutters: ["CodeMirror-lint-markers","CodeMirror-linenumbers", "CodeMirror-foldgutter"],
+		theme: "shadowfox",
+		extraKeys: {"Alt-F": "findPersistent"}
+	});
+
+	CODE_MIRROR_EDITOR_GRID.on('change', (editor) => {
+		SOURCE_SYNCGRID_VALUE = editor.doc.getValue();
+		document.getElementById("syncGridModeBtn").classList.add("syncGridModeBtnPending");
+	});
+
+	var charWidth = CODE_MIRROR_EDITOR_GRID.defaultCharWidth(), basePadding = 4;
+	CODE_MIRROR_EDITOR_GRID.on("renderLine", function(cm, line, elt) {
+		var off = CodeMirror.countColumn(line.text, null, cm.getOption("tabSize")) * charWidth;
+		elt.style.textIndent = "-" + off + "px";
+		elt.style.paddingLeft = (basePadding + off) + "px";
+	});
+	CODE_MIRROR_EDITOR_GRID.refresh();
 }
 
 function upTextEditorValueFromSyncPairOBJ() {
 	SOURCE_SYNCPAIR_VALUE = JSON.stringify(SYNCPAIR, null, "  ");
-	CODE_MIRROR_EDITOR.doc.setValue(SOURCE_SYNCPAIR_VALUE);	
+	CODE_MIRROR_EDITOR.doc.setValue(SOURCE_SYNCPAIR_VALUE);
+
+	/* fold some parts of the code of the template demo */
+	if(SYNCPAIR.trainer.name == "TEMPLATE (FULL)") {
+		CODE_MIRROR_EDITOR.foldCode(CodeMirror.Pos(28, 0));//pokemon2
+		CODE_MIRROR_EDITOR.foldCode(CodeMirror.Pos(57, 0));//passives2
+		CODE_MIRROR_EDITOR.foldCode(CodeMirror.Pos(71, 0));//passiveMaster
+		CODE_MIRROR_EDITOR.foldCode(CodeMirror.Pos(176, 0));//moves2
+		CODE_MIRROR_EDITOR.foldCode(CodeMirror.Pos(230, 0));//syncMove2
+		CODE_MIRROR_EDITOR.foldCode(CodeMirror.Pos(245, 0));//movesMAX		
+	}
+}
+
+function upTextEditorValueFromSyncGridOBJ() {
+	SOURCE_SYNCGRID_VALUE = JSON.stringify(SYNCGRID, null, "  ");
+	CODE_MIRROR_EDITOR_GRID.doc.setValue(SOURCE_SYNCGRID_VALUE);	
 }
 
 
@@ -722,8 +809,14 @@ syncpairs selection
 */
 g("input_sync_pairs").addEventListener("input", function() {
 	SYNCPAIR = SYNCPAIRS[this.value];
+	SYNCGRID = SYNCGRIDS[this.value];
+
 	upTextEditorValueFromSyncPairOBJ();
+	upTextEditorValueFromSyncGridOBJ()
 	showSyncPair();
+	if(g("syncPairCodeEditor").classList.contains("hide")) {
+		GRID.genGrid(SYNCGRID);
+	}
 })
 
 /*
@@ -771,6 +864,19 @@ help button
 g("btn_help").addEventListener("click", function() {
 	g("elementFocus").innerHTML = g("help").outerHTML;
 	g("elementFocus").classList.remove("hide");
+
+	g("detailedCell").classList = "cell_base";
+	g("detailedCell").children[2].innerHTML = "HELP";
+	g("detailedCell").children[3].innerHTML = 
+		`<span>id</span><br>the id of the cell...<br><br>
+		<span>x, y</span><br>coordinates of the cell in the grid. You can make a completely new template if you want. For more details, look at the "All cells" template.<br><br>
+		<span>energy, orb, level</span><br>(optional but if you really want to fully interact with your grid, you can add those values)<br><br>
+		<span>color</span><br>"blue", "red", "green", "yellow", "sync", "dynamax"<br><br>
+		<span>icon</span><br>"bug", "dark", "dragon", "electric", "fairy", "fighting", "fire", "flying", "ghost", "grass", "ground", "ice", "normal", "poison", "psychic", "rock", "steel", "water",<br><br>"trainer", "sync", "dynamax", "stat", "passive"`;
+
+	g("detailedCell").children[4].innerHTML = "0";
+	g("detailedCell").children[5].innerHTML = "0";
+	g("detailedCell").children[6].innerHTML = "0";
 })
 
 
@@ -778,7 +884,7 @@ g("btn_help").addEventListener("click", function() {
 backgrounds selection
 */
 g("input_backgrounds").addEventListener("input", function() {
-	SYNCPAIR.bg = `./images/bg/${BACKGROUNDS[this.value]}.jpg`;
+	SYNCPAIR.bg = `./images/bg/${DATA.BACKGROUNDS[this.value]}.jpg`;
 	upTextEditorValueFromSyncPairOBJ();
 	showSyncPair();
 })
@@ -794,6 +900,16 @@ g("syncPair_bg").addEventListener("click", function() {
 		this.classList.add("backgroundSmall")
 		this.classList.remove("backgroundLarge");
 	}
+})
+
+
+/*
+grid templates selection
+*/
+g("input_gridTemplates").addEventListener("input", function() {
+	SYNCGRID = SYNCGRIDS_TEMPLATES[this.value];
+	upTextEditorValueFromSyncGridOBJ();
+	GRID.genGrid(SYNCGRID);
 })
 
 
@@ -877,20 +993,20 @@ g("input_pokemon_art").addEventListener("input", function() {
 		g("syncPair_pokemonName").innerHTML = "???";
 	}
 	else {
-		if(this.value < 0 || this.value >= POKEMON.length ) {//if number <0 or >898 (#calyrex)
+		if(this.value < 0 || this.value >= DATA.POKEMON.length ) {//if number <0 or >898 (#calyrex)
 			g("syncPair_pokemonImage").src = "./images/substitute.png";
 			g("syncPair_pokemonFormName").innerHTML = "";
 			g("syncPair_pokemonName").innerHTML = "???";
 		} else {
 			if(SYNCPAIR.pokemon.length == 0) {
 				SYNCPAIR.pokemon.push({
-					"name" : POKEMON[this.value],
+					"name" : DATA.POKEMON[this.value],
 					"formName" : "",
 					"stats" : {"hp":0,"atk":0,"def":0,"spa":0,"spd":0,"spe":0},
 					"image" : pokeUrl
 				})
 			} else {
-				SYNCPAIR.pokemon[0].name = POKEMON[this.value];
+				SYNCPAIR.pokemon[0].name = DATA.POKEMON[this.value];
 				SYNCPAIR.pokemon[0].formName = "";
 				SYNCPAIR.pokemon[0].image = pokeUrl;
 			}
@@ -899,6 +1015,25 @@ g("input_pokemon_art").addEventListener("input", function() {
 		}
 	}
 })
+
+
+
+g("syncPairModeBtn").addEventListener("click", function() {
+	g("syncPairCodeEditor").classList.remove("hide");
+	g("syncGridCodeEditor").classList.add("hide");
+	g("main").classList.remove("hide");
+	g("grid").classList.add("hide");
+})
+
+g("syncGridModeBtn").addEventListener("click", function() {
+	g("syncPairCodeEditor").classList.add("hide");
+	g("syncGridCodeEditor").classList.remove("hide");
+	g("main").classList.add("hide");
+	g("grid").classList.remove("hide");
+	g("syncGridModeBtn").classList.remove("syncGridModeBtnPending");
+	showSyncGridFromSource();
+})
+
 
 
 /*
@@ -951,22 +1086,30 @@ g("elementFocus").addEventListener("click", function() {
 })
 
 
+g("syncLevel").addEventListener("input", function() {
+	GRID.resetGrid(this.value);
+})
+
+
 
 /*-----------------------------------------------------------------------------
 	INIT
 -----------------------------------------------------------------------------*/
 
-var SYNCPAIR = SYNCPAIRS[1];//TEMPLATE (FULL)
+var SYNCPAIR = CURRENT_SYNCPAIR;
+var SYNCGRID = CURRENT_SYNCGRID;
 
 showSyncPair();
-firstshowSyncPairSource();
+firstShowCodeSources();
 
 changeTabTo(lastSelected);
 
 changeMode();
 
 generateSyncPairsOptionsHtml();
-generateOptionsHtml(POKEMON,"data_pokemon_art");
-generateOptionsHtml(BACKGROUNDS,"input_backgrounds");
+generateOptionsHtml(DATA.POKEMON,"data_pokemon_art");
+generateOptionsHtml(DATA.BACKGROUNDS,"input_backgrounds");
+generateOptionsHtml(DATA.GRID_TEMPLATES,"input_gridTemplates");
+
 
 window.onload = initTextEditor;

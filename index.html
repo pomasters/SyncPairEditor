@@ -13,6 +13,7 @@
 	<link rel="stylesheet" type="text/css" href="css/main2.css" id="css_main2">
 	<link rel="stylesheet" type="text/css" href="css/focus.css" id="css_focus">
 	<link rel="stylesheet" type="text/css" href="css/font.css" id="css_font">
+	<link rel="stylesheet" type="text/css" href="css/grid.css" id="css_font">
 
 	<link rel="stylesheet" type="text/css" href="css/skills3.css" id="css_skills3" disabled>
 	<link rel="stylesheet" type="text/css" href="css/moves4.css" id="css_moves4" disabled>
@@ -50,11 +51,22 @@
 				<select id="input_backgrounds"><option selected disabled>Background</option></select>
 				<input type="text" id="input_pokemon_art" list="data_pokemon_art" placeholder="Quick search a Pokemon...">
 				<datalist id="data_pokemon_art"></datalist>				
+				<select id="input_gridTemplates"><option selected disabled>Grid Template</option></select>
 			</div>
 
-			<div>
+			<div class="options">
+				<div id="syncPairModeBtn"><img src="images/icon_syncpair.png">Sync Pair</div>
+				<div id="syncGridModeBtn"><img src="images/icon_syncgrid.png">Sync Grid</div>
+			</div>
+
+			<div id="syncPairCodeEditor">
 				<div id="source_valid">Valid</div>
 				<textarea id="source_syncpair"></textarea>				
+			</div>
+
+			<div id="syncGridCodeEditor">
+				<div id="sourceGrid_valid">Valid</div>
+				<textarea id="source_syncgrid"></textarea>				
 			</div>
 
 			<div id="infos">
@@ -175,6 +187,7 @@
 
 				<p>INFOS</p>
 				<ul>
+					<li>2022-06-06 : Sync Grid support added</li>
 					<li>2022-05-26 : Sync Pairs from v2.21.0 added</li>
 					<li>2022-05-02 : Sync Pairs from v2.20.0 added</li>
 					<li>2022-05-02 : Hello, Pokémon World !</li>
@@ -277,9 +290,40 @@
 				<div id="themeSkills"></div>
 			</div>
 
+
 			<div id="elementFocus"></div>
 
-			<p id="madeWith">Made by <span contenteditable>__</span> with https://pomasters.github.io/SyncPairEditor/</p>
+			<p class="madeWith">Made by <span contenteditable>__</span> with https://pomasters.github.io/SyncPairEditor/</p>
+		</div>
+
+		<div id="grid">
+			<div id="gridInfos">
+				<div id="ressourcesGrid">
+					<p id="energyLeft">60</p>
+					<div><select id="syncLevel">
+							<option selected>1</option>
+							<option>2</option>
+							<option>3</option>
+							<option>4</option>
+							<option>5</option>
+						</select></div>
+					<p id="orbUsed">0</p>
+				</div>
+
+				<div id="detailedCell" class="cell_base">
+					<div class="grid_color_"></div>
+					<div class="grid_icon_"></div>
+					<p class="cellName">/</p>
+					<p class="cellDescription">/</p>
+					<p class="cellEnergy">0</p>
+					<p class="cellLevel">0</p>
+					<p class="cellOrb">0</p>
+				</div>
+			</div>
+
+			<div id="cells"></div>
+			
+			<p class="madeWith">Sync Grid made with https://pomasters.github.io/SyncPairEditor/</p>
 		</div>
 
 		<div id="screenshot"></div>		
@@ -292,6 +336,8 @@
 		<link rel="stylesheet" href="https://codemirror.net/addon/fold/foldgutter.css"/>
 		<link rel="stylesheet" href="https://codemirror.net/theme/shadowfox.css">
 		<link rel="stylesheet" href="https://codemirror.net/addon/lint/lint.css">
+		<link rel="stylesheet" href="https://codemirror.net/addon/dialog/dialog.css">
+		<link rel="stylesheet" href="https://codemirror.net/addon/search/matchesonscrollbar.css">
 		<style type="text/css">
 			.CodeMirror {
 				height: 512px;
@@ -317,6 +363,12 @@
 					resize: none !important;
 				}
 			}
+			
+			#syncGridCodeEditor .CodeMirror { resize: vertical; }
+			#syncGridCodeEditor .cm-s-shadowfox span.cm-number,
+			#syncGridCodeEditor .cm-s-shadowfox span.cm-string,
+			#syncGridCodeEditor .cm-s-shadowfox span.cm-string-2 { color: #E1768A; }
+			#syncGridCodeEditor .cm-s-shadowfox span.cm-property { color: #E6CE5E; }
 		</style>
 		<script src="https://codemirror.net/lib/codemirror.js"></script>
 		<script src="https://codemirror.net/mode/javascript/javascript.js"></script>
@@ -330,6 +382,12 @@
 		<script src="https://codemirror.net/addon/fold/foldcode.js"></script>
 		<script src="https://codemirror.net/addon/fold/foldgutter.js"></script>
 		<script src="https://codemirror.net/addon/fold/brace-fold.js"></script>
+		<script src="https://codemirror.net/addon/dialog/dialog.js"></script>
+		<script src="https://codemirror.net/addon/search/searchcursor.js"></script>
+		<script src="https://codemirror.net/addon/search/search.js"></script>
+		<script src="https://codemirror.net/addon/scroll/annotatescrollbar.js"></script>
+		<script src="https://codemirror.net/addon/search/matchesonscrollbar.js"></script>
+		<script src="https://codemirror.net/addon/search/jump-to-line.js"></script>
 	</div>
 
 

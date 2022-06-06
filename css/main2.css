@@ -802,3 +802,30 @@ SKILLS
 @media only screen and (max-width: 720px) {
 	.move { width: 100%; }
 }
+
+
+#grid {
+	width: 812px;
+	height: 1400px;
+}
+
+#gridInfos {
+	width: 700px !important;
+	margin-left: 56px !important;
+}
+
+#cells {
+	transform: scale(106%);
+	transform-origin: left top;
+	margin-top: -18%;
+}
+
+#cells .cellName { display: block; }
+
+.cell[data-cellid]:hover:before {
+	display: none;
+}
+.cell[data-cellid]:hover:after {
+	padding: 1px !important;
+	border-radius: 5px !important;
+}
