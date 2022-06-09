@@ -378,6 +378,7 @@ function moveIs(move, option) {
 		var image = "./images/empty.png";
 		if(u.toLowerCase() == "trainer" && SYNCPAIR.trainer.images.base.length > 0) { image = SYNCPAIR.trainer.images.base; }
 		if(u.toLowerCase() == "pokemon" && SYNCPAIR.pokemon.length > 0) { image = SYNCPAIR.pokemon[0].image; }
+		if(u.toLowerCase() == "pokemon2" && SYNCPAIR.pokemon.length > 1) { image = SYNCPAIR.pokemon[1].image; }
 		return `<div class="move_user bg_${t.toLowerCase()}"><img src="${image}"></div>`;
 	}
 }

@@ -338,7 +338,7 @@ const TEMPLATE2 = {
 
 		"moves2" : [
 			{
-				"user" : "Pokemon",
+				"user" : "Pokemon2",
 				"name" : "Move 1",
 				"type" : "Grass",
 				"gauge" : 1,
@@ -351,7 +351,7 @@ const TEMPLATE2 = {
 				"description" : "1"
 			},
 			{
-				"user" : "Pokemon",
+				"user" : "Pokemon2",
 				"name" : "Move 2",
 				"type" : "Fire",
 				"gauge" : 2,
@@ -364,7 +364,7 @@ const TEMPLATE2 = {
 				"description" : "2"
 			},
 			{
-				"user" : "Pokemon",
+				"user" : "Pokemon2",
 				"name" : "Move 3",
 				"type" : "Water",
 				"gauge" : 3,
@@ -393,7 +393,7 @@ const TEMPLATE2 = {
 
 		"syncMove2" : [
 			{
-				"user" : "Pokemon",
+				"user" : "Pokemon2",
 				"name" : "Sync move 2",
 				"type" : "Dragon",
 				"gauge" : 0,
@@ -639,7 +639,7 @@ const RED_CHARIZARD = {
 
 		"moves2" : [
 			{
-				"user" : "Pokemon",
+				"user" : "Pokemon2",
 				"name" : "Heat Wave",
 				"type" : "Fire",
 				"gauge" : 3,
@@ -652,7 +652,7 @@ const RED_CHARIZARD = {
 				"description" : "Has a very small chance of leaving the target burned."
 			},
 			{
-				"user" : "Pokemon",
+				"user" : "Pokemon2",
 				"name" : "Flare Blitz",
 				"type" : "Fire",
 				"gauge" : 3,
@@ -665,7 +665,7 @@ const RED_CHARIZARD = {
 				"description" : "Unfreezes the user. The user also takes 25% of the damage it dealt to the target. Has a very small chance of leaving the target burned."
 			},
 			{
-				"user" : "Pokemon",
+				"user" : "Pokemon2",
 				"name" : "Blast Burn",
 				"type" : "Fire",
 				"gauge" : 4,
@@ -1427,7 +1427,7 @@ const CYNTHIA_GARCHOMP = {
 
 		"moves2" : [
 			{
-				"user" : "Pokemon",
+				"user" : "Pokemon2",
 				"name" : "Earthquake",
 				"type" : "Ground",
 				"gauge" : 3,
@@ -1453,7 +1453,7 @@ const CYNTHIA_GARCHOMP = {
 				"description" : "Sharply raises the user's Attack."
 			},
 			{
-				"user" : "Pokemon",
+				"user" : "Pokemon2",
 				"name" : "Slash",
 				"type" : "Ground",
 				"gauge" : 2,
@@ -2434,7 +2434,7 @@ const MAY_LOPUNNY = {
 				"description" : "Restores an ally's HP by approximately 40% of its maximum HP."
 			},
 			{
-				"user" : "Pokemon",
+				"user" : "Pokemon2",
 				"name" : "High Jump Kick",
 				"type" : "Fighting",
 				"gauge" : 3,
@@ -2463,7 +2463,7 @@ const MAY_LOPUNNY = {
 
 		"syncMove2" : [
 			{
-				"user" : "Pokemon",
+				"user" : "Pokemon2",
 				"name" : "Heart-Thumping Fighting Impact",
 				"type" : "Fighting",
 				"gauge" : 0,
