@@ -26,3 +26,8 @@
 .move_details_description > * {
 	margin: auto;
 }
+
+#movesSync .move_details,
+#moves2Sync .move_details {
+	margin: 0;
+}
