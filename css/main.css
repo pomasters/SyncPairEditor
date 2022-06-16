@@ -137,6 +137,30 @@ img[src$="empty.png"] { display: none !important; }
 img[src$="sync_.png"] { display: none !important; }
 
 
+#loadApp {
+	position: fixed;
+	width: 100%;
+	height: 125%;
+	z-index: 111;
+	background-color: black;
+	margin: auto;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+}
+#loadApp img {
+	position: absolute;
+	width: auto;
+	height: auto;
+	margin: auto;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+
+
 #editor {
 	width: 512px;
 	height: 1024px;
@@ -200,7 +224,7 @@ img[src$="sync_.png"] { display: none !important; }
 
 .option {
 	width: 100%;
-	padding: 5px 20px;
+	padding: 5px;
 	outline: none;
 	border: 2px solid var(--text);
 	background: linear-gradient(#ffffff, #cccccc);
@@ -237,7 +261,8 @@ input[type=file] {
 
 
 #syncPairModeBtn,
-#syncGridModeBtn {
+#syncGridModeBtn,
+#syncOptionsModeBtn {
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -257,21 +282,25 @@ input[type=file] {
 }
 
 #syncPairModeBtn img,
-#syncGridModeBtn img {
+#syncGridModeBtn img,
+#syncOptionsModeBtn img {
 	height: 20px;
 	margin: auto 5px;
 }
 #syncPairModeBtn { margin-right: 2px; }
-#syncGridModeBtn { margin-left: 2px; }
+#syncGridModeBtn { margin-left: 2px; margin-right: 2px; }
+#syncOptionsModeBtn { margin-left: 2px; width: auto; }
 
 #syncPairModeBtn:hover,
-#syncGridModeBtn:hover {
+#syncGridModeBtn:hover,
+#syncOptionsModeBtn:hover {
 	cursor: pointer;
 	filter: brightness(112%);
 }
 
 #syncPairModeBtn:active,
-#syncGridModeBtn:active {
+#syncGridModeBtn:active,
+#syncOptionsModeBtn:active {
 	transform: scale(0.98);
 	transition-duration: 50ms;
 }
@@ -308,6 +337,88 @@ input[type=file] {
 }
 
 
+#syncOptions {
+	background-color: #0c0c0d;
+	border-radius: 5px;
+	margin: 5px 0;
+	padding: 5px;
+	max-height: 512px;
+	display: flex;
+	flex-direction: column;
+}
+
+#syncOptions h2 {
+	color: rgb(174 217 255);
+	padding-bottom: 5px;
+	margin-bottom: 10px;
+	border-bottom: 1px solid rgb(174 217 255);
+}
+
+#syncOptions h3 {
+	color: rgb(254 255 174);
+	padding-bottom: 5px;
+	margin-top: 10px;
+}
+
+#syncOptions input {
+	outline: none;
+}
+#syncOptions input[type="button"]:hover {
+	cursor: pointer;
+}
+
+#syncOptions > div {
+	width: 98%;
+	display: flex;
+	justify-content: space-between;
+	margin: 4px 1%;
+}
+
+#syncOptions > div > p {
+	width: 50%;
+}
+
+#syncOptions > div > div {
+	width: 50%;
+	display: flex;
+	justify-content: space-between;
+}
+
+#syncOptions > div > div > input {
+	width: 100%;
+}
+
+#syncOptions > div label,
+#syncOptions > div label+input {
+	width: 50%;
+}
+
+#ratioBg {
+	width: auto !important;
+	margin-right: auto;
+}
+
+#btn_reset_adjustments {
+	width: 49%;
+	margin-top: 2px;
+	margin-left: 50%;
+}
+
+#localstorage {
+	width: 100%;
+	outline: none;
+}
+#btn_saves {
+	width: 49% !important;
+	margin-top: -4px !important;
+	margin-left: 50% !important;
+}
+#btn_saves > input {
+	width: 100%;
+	margin: 5px 0;
+}
+
+
 #infos {
 	font-family: monospace;
 	font-size: 14px;
@@ -317,9 +428,17 @@ input[type=file] {
 	color: #D1EC96;
 }
 
+#infos ul {
+	padding-inline-start: 20px;
+}
+
 #infos p, #infos li {
 	width: 100%;
 	margin: 10px 0;
+}
+
+#infos li:not(#infos li:first-child) {
+	color : #444444
 }
 
 
@@ -415,7 +534,6 @@ input[type=file] {
 
 
 #screenshot {
-	width: 100%;
 	max-width: 1024px;
 	z-index: 10;
 }
@@ -450,7 +568,7 @@ input[type=file] {
 
 @media only screen and (max-width: 1024px) {
 	body { flex-direction: column; }
-	#editor { width: 100%; margin: auto; height: 678px; }
+	#editor { width: 100%; margin: auto; height: auto; }
 	#editor>div { position: relative; width: 100%; }
 	#render { margin: auto; }
 	#input_sync_pairs, .options, #input_pokemon_art { width: 100%; }
@@ -466,5 +584,12 @@ input[type=file] {
 		bottom: 2% !important;
 		right: 0 !important;
 		left: 0 !important;
+	}
+
+	#syncPairCodeEditor[class="hide"] +
+	#syncGridCodeEditor[class="hide"] +
+	#syncOptions +
+	#infos *:not(#help) {
+		display: block !important;
 	}
 }

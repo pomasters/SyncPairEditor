@@ -14,13 +14,28 @@
 	background-image: var(--bg1);
 	background-repeat: repeat;
 	background-size: 32%;
+	overflow: hidden;
+}
+
+
+/* -----------
+BACKGROUND IMAGE
+------------*/
+
+#summary > div:nth-of-type(1) {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	z-index: 0;
 }
 
 #syncPair_bg {
-	position: absolute;
-	z-index: 0;
 	width: 100%;
 	height: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	margin: auto;
 }
 
 
@@ -28,8 +43,9 @@
 IMAGES TRAINER 
 ------------*/
 
-#summary > div:nth-of-type(1) {
+#summary > div:nth-of-type(2) {
 	z-index: 1;
+	width: 44%;
 	height: 80%;
 	position: absolute;
 	bottom: 0;
@@ -42,9 +58,7 @@ IMAGES TRAINER
 	max-height: 100%;
 	position: absolute;
 	left: 0;
-	right: 0;
 	bottom: 0;
-	top: 0;
 	margin: auto;
 }
 
@@ -53,7 +67,7 @@ IMAGES TRAINER
 IMAGES/NAME POKEMON
 -----------------*/
 
-#summary > div:nth-of-type(2) {
+#summary > div:nth-of-type(3) {
 	--size: 224px;
 	z-index: 2;
 	width: var(--size);
@@ -174,7 +188,7 @@ BUTTONS EX, ALTER, DYNAMAX
 SYNC PAIR INFOS
 -------------*/
 
-#summary > div:nth-of-type(3) {
+#summary > div:nth-of-type(4) {
 	color: var(--text);
 	z-index: 3;
 	width: 96%;
@@ -197,7 +211,7 @@ BTN EX & BTN GRID
 ---------------*/
 
 #summary
-> div:nth-of-type(3)
+> div:nth-of-type(4)
 > div:nth-of-type(1) {
 
 	display: flex;
@@ -249,7 +263,7 @@ NAME, RARITY, ROLE, TYPE, WEAK
 ----------------------------*/
 
 #summary
-> div:nth-of-type(3)
+> div:nth-of-type(4)
 > div:nth-of-type(2) {
 
 	width: 100%;
@@ -279,7 +293,7 @@ ROLE, TYPE, WEAK + ICONS
 ----------------------*/
 
 #summary
-> div:nth-of-type(3)
+> div:nth-of-type(4)
 > div:nth-of-type(2)
 > div:nth-of-type(2) {
 
@@ -662,6 +676,11 @@ img[src^="./images/bg/"] {
 }
 
 
+#screenshot {
+	width: 512px;
+}
+
+
 #grid {
 	width: 512px;
 	height: 1024px;
@@ -682,4 +701,8 @@ img[src^="./images/bg/"] {
 .cell[data-cellid]:hover:before,
 .cell[data-cellid]:hover:after {
 	font-size: 1.2em;
+}
+
+#selectedCells .cellDescription {
+	display: none;
 }

@@ -32,6 +32,11 @@ ELEMENT FOCUS WHEN CLICKED
 #elementFocus > img {
 	width: 50%;
 	height: auto;
+	right: 0;
+	left: 0 !important;
+	top: 0;
+	bottom: 0 !important;
+	transform: scale(1.0) !important;
 }
 
 
@@ -67,6 +72,8 @@ ELEMENT FOCUS WHEN CLICKED
 #elementFocus .move_gauge_uses {
 	display: flex;
 	margin: 2px auto;
+	height: 18px;
+	z-index: 1;
 }
 
 #elementFocus .move_gauge,
@@ -100,10 +107,14 @@ ELEMENT FOCUS WHEN CLICKED
 	bottom: 6px;
 	border: 2px solid rgb(0 0 0 / 30%);
 	border-radius: 50px;
+	margin: auto;
 }
 
 #elementFocus .move_user img {
 	width: 123%;
+	position: absolute;
+	transform-origin: top left;
+	margin: auto;
 }
 
 #elementFocus .move_details_description {

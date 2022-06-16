@@ -38,7 +38,7 @@ export function genGrid(sgrid) {
 		id: 0,
 		x: 0,
 		y: 0,
-		name: '',
+		name: 'Pokemon',
 		description: '',
 		energy: 0,
 		orb: 0,
@@ -60,11 +60,17 @@ export function genGrid(sgrid) {
 		showCell(this)
 	}));
 
-	document.getElementById("cell0").children[1].innerHTML = `<img src="${document.getElementById("syncPair_pokemonImage").src}">`;
-
 	document.getElementById("energyLeft").innerHTML = "60";
 	document.getElementById("orbUsed").innerHTML = "0";
 	document.getElementById("syncLevel").children[2].selected = 'selected';
+
+	document.getElementById("cell0").addEventListener("click", function() {
+		document.getElementById("selectedCellsContainer").classList.toggle("hide");
+	})
+	document.getElementById("cell0").children[1].innerHTML = `<img src="${document.getElementById("syncPair_pokemonImage").src}">`;
+	document.getElementById("selectedCellsPokemon").innerHTML = `${document.getElementById("syncPair_trainerName").textContent} & ${document.getElementById("syncPair_pokemonName").textContent}`;
+
+	document.getElementById("selectedCellsContainer").classList.add("hide");
 
 	resetGrid(3);
 }
@@ -80,7 +86,7 @@ export function createCell(cell, cellDimensions) {
 	if(cell.x > 0) { adjustY = (y/2) * Math.abs(cell.x); }
 	if(cell.x < 0) { adjustY = -(y/2) * Math.abs(cell.x); }
 
-	return `<div class="cell" id="cell${cell.id}" data-cellid="${cell.id}" data-cellname="${cell.name}" style="left:${x * cell.x + cellDimensions.marginLeft}px;top:${(y * cell.y) + adjustY + cellDimensions.marginTop}px;">
+	return `<div class="cell" id="cell${cell.id}" data-cellid="${cell.id}" data-cellname="${cell.name}" data-cellcolor="${cell.color.toLowerCase()}" style="left:${x * cell.x + cellDimensions.marginLeft}px;top:${(y * cell.y) + adjustY + cellDimensions.marginTop}px;">
 				<div class="${"grid_color_" + cell.color.toLowerCase()}"></div>
 				<div class="${"grid_icon_" + cell.icon.toLowerCase()}"></div>
 				<p class="cellName">${cell.name}</p>
@@ -93,12 +99,15 @@ export function createCell(cell, cellDimensions) {
 
 
 export function clickCell(cell) {
+	if(cell.id == "cell0") return;
+
 	if(cell.classList.contains("selectedCell")) {
 		unselect(cell)
 	} else {
 		select(cell)
 	}
 	energyLeft();
+	updateSelectedCells();
 }
 
 
@@ -125,8 +134,21 @@ export function unselect(cell) {
 
 
 export function showCell(cell) {
+	if(cell.id == "cell0") return;
+
 	document.getElementById("detailedCell").classList = cell.children[0].classList.toString().replace("grid_color_","cell_").replace("2","")
 	document.getElementById("detailedCell").innerHTML = cell.innerHTML;
+}
+
+
+export function updateSelectedCells() {
+	var selectedCells = [];
+
+	Array.from(document.getElementsByClassName("selectedCell")).forEach(c => 
+		selectedCells.push(`<div class="cell_${c.dataset.cellcolor}">${c.innerHTML}</div>`)
+	)
+
+	document.getElementById("selectedCells").innerHTML = selectedCells.sort().join("");
 }
 
 
@@ -144,6 +166,7 @@ export function resetGrid(syncLevel) {
 		}
 	})
 	energyLeft();
+	updateSelectedCells();
 }
 
 

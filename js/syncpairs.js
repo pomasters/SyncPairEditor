@@ -2481,6 +2481,216 @@ const MAY_LOPUNNY = {
 	}
 }
 
+const PROFESSOR_OAK_MEW = {
+  "Informations and images from": "Serebii",
+  "----------------------------": "-------",
+  "bg": "./images/bg3.png",
+  "trainer": {
+    "name": "Professor Oak",
+    "images": {
+      "base": "./demos/professoroak.png",
+      "ex": "./demos/professoroak.png"
+    }
+  },
+  "rarity": 3,
+  "role": "Tech",
+  "pokemonType": "Psychic",
+  "pokemonWeakness": "Bug",
+  "pokemonGender": "",
+  "pokemon": [
+    {
+      "name": "Mew",
+      "formName": "Pre-Sync Move",
+      "stats": {
+        "hp": 368,
+        "atk": 268,
+        "def": 268,
+        "spa": 268,
+        "spd": 268,
+        "spe": 268
+      },
+      "image": "./demos/151.png"
+    },
+    {
+      "name": "Mew",
+      "formName": "Post-Sync Move",
+      "stats": {
+        "hp": 368,
+        "atk": 268,
+        "def": 268,
+        "spa": 268,
+        "spd": 268,
+        "spe": 268
+      },
+      "image": "./demos/151.png"
+    }
+  ],
+  "skills": {
+    "passives": [
+      {
+        "name": "Oak's Research",
+        "description": "Replaces some of the user's moves with different moves after using a sync move."
+      },
+      {
+        "name": "Superduper Effective 1",
+        "description": "Powers up moves that are super effective."
+      },
+      {
+        "name": "Unfortuitous 9",
+        "description": "Lowers the target's Attack, Defense, Sp. Atk, Sp. Def, Speed, accuracy, or evasiveness at random when an attack is successful."
+      }
+    ],
+    "passives2": [],
+    "passivesMaster": [],
+    "themes": [
+      {
+        "name": "Psychic",
+        "description": ""
+      },
+      {
+        "name": "Kanto",
+        "description": ""
+      },
+      {
+        "name": "Researcher",
+        "description": ""
+      },
+      {
+        "name": "Old-Timer",
+        "description": ""
+      }
+    ],
+    "lucky": []
+  },
+  "actions": {
+    "moves": [
+      {
+        "user": "Pokemon",
+        "name": "Swift",
+        "type": "Normal",
+        "gauge": 2,
+        "uses": 0,
+        "category": "Special",
+        "power": "57-68",
+        "accuracy": "-",
+        "target": "All opponents",
+        "effect": "-",
+        "description": "Never misses."
+      },
+      {
+        "user": "Trainer",
+        "name": "X Speed",
+        "type": "Trainer",
+        "gauge": 0,
+        "uses": 2,
+        "category": "Status",
+        "power": "-",
+        "accuracy": "-",
+        "target": "Self",
+        "effect": "-",
+        "description": "Sharply raises the user's Speed."
+      },
+      {
+        "user": "Pokemon",
+        "name": "Psychic",
+        "type": "Psychic",
+        "gauge": 3,
+        "uses": 0,
+        "category": "Special",
+        "power": "99-118",
+        "accuracy": "100",
+        "target": "An opponent",
+        "effect": "-",
+        "description": "Has a very small chance of lowering the target's Sp. Def."
+      },
+      {
+        "user": "Trainer",
+        "name": "A World of Dreams!",
+        "type": "Trainer",
+        "gauge": 0,
+        "uses": 2,
+        "category": "Status",
+        "power": "-",
+        "accuracy": "-",
+        "target": "Self",
+        "effect": "-",
+        "description": "Sharply raises the user's Sp. Atk. Drastically raises either the user's Attack, Defense, Sp. Def, Speed, accuracy, or evasiveness."
+      }
+    ],
+    "syncMove": [
+      {
+        "user": "Pokemon",
+        "name": "Pokémon Professor Psychic",
+        "type": "Psychic",
+        "gauge": 0,
+        "uses": 0,
+        "category": "Special",
+        "power": "250-300",
+        "accuracy": "-",
+        "target": "An opponent",
+        "effect": "-",
+        "description": "No additional effect."
+      }
+    ],
+    "moves2": [
+      {
+        "user": "Pokemon",
+        "name": "Fire Blast",
+        "type": "Fire",
+        "gauge": 3,
+        "uses": 0,
+        "category": "Special",
+        "power": "116-139",
+        "accuracy": "85",
+        "target": "An opponent",
+        "effect": "-",
+        "description": "Has a very small chance of leaving the target burned."
+      },
+      {
+        "user": "Pokemon",
+        "name": "Thunder",
+        "type": "Electric",
+        "gauge": 3,
+        "uses": 0,
+        "category": "Special",
+        "power": "124-148",
+        "accuracy": "70",
+        "target": "An opponent",
+        "effect": "-",
+        "description": "Never misses when the weather is rainy. Has a moderate chance of leaving the target paralyzed."
+      },
+      {
+        "user": "Pokemon",
+        "name": "Psychic",
+        "type": "Psychic",
+        "gauge": 3,
+        "uses": 0,
+        "category": "Special",
+        "power": "99-118",
+        "accuracy": "100",
+        "target": "An opponent",
+        "effect": "-",
+        "description": "Has a very small chance of lowering the target's Sp. Def."
+      },
+      {
+        "user": "Pokemon",
+        "name": "Blizzard",
+        "type": "Ice",
+        "gauge": 3,
+        "uses": 0,
+        "category": "Special",
+        "power": "126-151",
+        "accuracy": "70",
+        "target": "All opponents",
+        "effect": "-",
+        "description": "Never misses during a hailstorm. Has a very small chance of leaving the target frozen."
+      }
+    ],
+    "syncMove2": [],
+    "movesMAX": []
+  }
+}
+
 function DISABLE_OPTION(n) { return {"trainer":{"name":n}, "pokemon":[{"name":"--"}]} }
 
 
@@ -2521,7 +2731,8 @@ export const SYNCPAIRS = [
 	CYNTHIA_GIRATINA,
 	LEON_ETERNATUS,
 	ELESA_EMOLGA,
-	MAY_LOPUNNY
+	MAY_LOPUNNY,
+	PROFESSOR_OAK_MEW
 ];
 
-export var CURRENT_SYNCPAIR = JUNE2022.KRIS_SUICUNE;
+export var CURRENT_SYNCPAIR = JUNE2022.BEDE_HATTERENE;

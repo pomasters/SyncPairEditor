@@ -22,6 +22,8 @@
 
 <body spellcheck="false">
 
+	<div id="loadApp"><img src="loading.gif"><img src="images/star_ex.png"></div>
+
 	<div id="editor">
 		<div>
 			<select id="input_sync_pairs"></select>
@@ -57,6 +59,7 @@
 			<div class="options">
 				<div id="syncPairModeBtn"><img src="images/icon_syncpair.png">Sync Pair</div>
 				<div id="syncGridModeBtn"><img src="images/icon_syncgrid.png">Sync Grid</div>
+				<div id="syncOptionsModeBtn"><img src="images/icon_options.png"></div>
 			</div>
 
 			<div id="syncPairCodeEditor">
@@ -67,6 +70,81 @@
 			<div id="syncGridCodeEditor">
 				<div id="sourceGrid_valid">Valid</div>
 				<textarea id="source_syncgrid"></textarea>				
+			</div>
+
+			<div id="syncOptions">
+				<h2>Advanced options</h2>
+
+				<h3>Save</h3>
+
+				<div>
+					<p>Imported images are not saved.</p>
+						<div>
+							<select id="localstorage">
+								<option class="slot" value="Slot1" selected>Slot 1</option>
+								<option class="slot" value="Slot2">Slot 2</option>
+								<option class="slot" value="Slot3">Slot 3</option>
+								<option class="slot" value="Slot4">Slot 4</option>
+								<option class="slot" value="Slot5">Slot 5</option>
+								<option class="slot" value="Slot6">Slot 6</option>
+							</select>						
+						</div>
+				</div>
+				<div id="btn_saves">
+					<input type="button" value="Load" id="btn_loadSave">
+					<input type="button" value="Save" id="btn_saveSave">
+					<input type="button" value="Clear" id="btn_clearSaves">
+				</div>
+
+				<h3>Images adjustments</h3>
+
+				<div><label for="ratioBg">Keep background ratio</label><input type="checkbox" id="ratioBg"></div>
+
+				<div>
+					<p>Background</p>
+					<div>
+						<input type="number" min="-100" max="100" placeholder="x" id="positionXbg">
+						<input type="number" min="-100" max="100" placeholder="y" id="positionYbg">
+						<input type="number" min="0" max="200" placeholder="size" value="100" id="sizeBg">
+					</div>
+				</div>
+
+				<div>
+					<p>Trainer</p>
+					<div>
+						<input type="number" min="-100" max="100" placeholder="x" id="positionXTrainer">
+						<input type="number" min="-100" max="100" placeholder="y" id="positionYTrainer">
+						<input type="number" min="0" max="200" placeholder="size" value="100" id="sizeTrainer">
+					</div>
+				</div>
+
+				<div>
+					<p>Move user (Pokemon)</p>
+					<div>
+						<input type="number" min="-100" max="100" placeholder="x" id="positionXuserPokemon">
+						<input type="number" min="-100" max="100" placeholder="y" id="positionYuserPokemon">
+						<input type="number" min="100" max="200" placeholder="size" id="sizeUserPokemon">
+					</div>
+				</div>
+
+				<div>
+					<p>Move user (Pokemon2)</p>
+					<div>
+						<input type="number" min="-100" max="100" placeholder="x" id="positionXuserPokemon2">
+						<input type="number" min="-100" max="100" placeholder="y" id="positionYuserPokemon2">
+						<input type="number" min="100" max="200" placeholder="size" id="sizeUserPokemon2">
+					</div>
+				</div>
+
+				<div>
+					<p>Move user (Trainer)</p>
+					<div>
+						<input type="number" min="-100" max="100" placeholder="x" id="positionXuserTrainer">
+						<input type="number" min="-100" max="100" placeholder="y" id="positionYuserTrainer">
+						<input type="number" min="100" max="200" placeholder="size" id="sizeUserTrainer">
+					</div>
+				</div>
+				<input type="button" value="Reset" id="btn_reset_adjustments">
 			</div>
 
 			<div id="infos">
@@ -185,8 +263,13 @@
 					</div>
 				</div>
 
-				<p>INFOS</p>
+				<p>NEWS</p>
 				<ul>
+					<li>2022-06-16 : New features added<br>
+						- Save your current sync pair<br>
+						- Images adjustments options<br>
+						- List view of selected tiles (don't need to create an entire grid) (click on the pokemon icon in the middle of the grid)<br>
+						- Select a grid tile ==> Jump to the corresponding code in the editor and highlight it (you just have to edit)</li>
 					<li>2022-06-06 : Sync Grid support added</li>
 					<li>2022-05-26 : Sync Pairs from v2.21.0 added</li>
 					<li>2022-05-02 : Sync Pairs from v2.20.0 added</li>
@@ -199,7 +282,9 @@
 	<div id="render">
 		<div id="main">
 			<div id="summary">
-				<img id="syncPair_bg" src="images/empty.png">
+				<div id="syncPair_bg_div">
+					<img id="syncPair_bg" src="images/empty.png">
+				</div>
 
 				<div>
 					<img id="syncPair_trainerImageBase" src="images/empty.png">
@@ -297,6 +382,14 @@
 		</div>
 
 		<div id="grid">
+			<div id="cells"></div>
+
+			<div id="selectedCellsContainer">
+				<div id="selectedCellsPokemon">Selected tiles</div>
+				<div id="selectedCells"></div>
+				<p class="madeWith">Sync Grid made with https://pomasters.github.io/SyncPairEditor/</p>
+			</div>
+
 			<div id="gridInfos">
 				<div id="ressourcesGrid">
 					<p id="energyLeft">60</p>
@@ -320,8 +413,6 @@
 					<p class="cellOrb">0</p>
 				</div>
 			</div>
-
-			<div id="cells"></div>
 			
 			<p class="madeWith">Sync Grid made with https://pomasters.github.io/SyncPairEditor/</p>
 		</div>
@@ -344,7 +435,7 @@
 				min-height: 412px;
 				max-height: 612px;
 				resize: both;
-				min-width: 512px;
+				min-width: 100%;
 				max-width: 1024px;
 				background-color: rgb(8 8 8 / 87%) !important;
 			}

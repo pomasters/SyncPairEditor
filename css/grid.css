@@ -34,6 +34,7 @@
 	position: absolute;
 	width: var(--cellWidth);
 	height: calc(var(--cellWidth) * var(--cellRatio));
+	background-color: transparent !important;
 }
 
 .cell:hover {
@@ -74,8 +75,13 @@
 	pointer-events: none;
 }
 
-.cell:first-child {
-	pointer-events: none;
+.cell:first-child[data-cellid]:before,
+.cell:first-child[data-cellid]:after,
+.cell:first-child .cellName {
+	display: none !important;
+}
+.cell:first-child > div:nth-child(2):hover {
+	filter: brightness(100%) !important;
 }
 
 .cell div {
@@ -189,7 +195,8 @@
 
 
 #detailedCell,
-#ressourcesGrid {
+#ressourcesGrid,
+#selectedCells {
 	color: var(--textWhite);
 	text-shadow: var(--textOutline);
 	width: 100%;
@@ -287,6 +294,107 @@
 #ressourcesGrid #orbUsed:before {
 	content: "Sync Orb used :";
 	margin-right: 4px;
+}
+
+
+#selectedCellsContainer {
+	background-color: #75BACA;
+	background-image: url(../images/bg2.png);
+	background-attachment: fixed;
+	padding: 5%;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	height: 100%;
+	z-index: 11;
+	display: flex;
+	flex-direction: column;
+}
+
+#selectedCellsPokemon {
+	color: var(--textWhite);
+	text-shadow: var(--textOutline);
+	font-size: 1.25em;
+	height: 32px;
+	width: 100%;
+	margin: 0 auto;
+	margin-bottom: 12px;
+	text-align: center;
+}
+
+#selectedCells {
+	flex-direction: column;
+	justify-content: start;
+	background-color: rgb(63 134 152 / 60%);
+	padding: 3%;
+	flex-wrap: nowrap;
+	overflow-y: auto;
+	border: 2px solid #75BACA;
+	box-shadow: none;
+	min-height: 50%;
+	margin: 0 auto;
+}
+
+#selectedCells > div {
+	width: 100%;
+	margin: 2px auto;
+	padding: 4px 6px;
+	display: flex;
+	flex-wrap: wrap;
+	border: 2px solid rgb(0 0 0 / 32%);
+	border-radius: 5px;
+	box-shadow: 1px 1px 1px rgb(88 88 88 / 50%);
+	position: relative;
+}
+
+#selectedCells > div:hover {
+	transform: scale(0.98);
+}
+
+#selectedCells .cellName {
+	font-size: 0.9em;
+	width: 100%;
+	padding: 2px 4px;
+	margin: auto;
+}
+
+#selectedCells .cell_blue .cellDescription,
+#selectedCells .cell_green .cellDescription {
+	display: none;
+}
+
+#selectedCells .cellDescription {
+	font-size: 0.8em;
+	background-color: rgb(0 0 0 / 40%);
+	width: 100%;
+	padding: 4px;
+	margin: 5px auto;
+	border-radius: 4px;
+}
+
+#selectedCells .cellEnergy {
+	font-size: 0.8em;
+	position: absolute;
+	right: 10px;
+	background-color: rgb(0 0 0 / 20%);
+	border-radius: 5px;
+	margin: 4px auto;
+	padding-right: 12px;
+	text-align: center;
+}
+
+#selectedCells .cellLevel,
+#selectedCells .cellOrb {
+	display: none;
+}
+
+#selectedCells .cellEnergy:before {
+	background-color: rgb(0 0 0 / 20%);
+	padding: 0 12px;
+	margin-right: 8px;
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+	content: "Energy";
 }
 
 

@@ -127,7 +127,7 @@ function resetShowSyncPair() {
 	var emptyImg = "./images/empty.png";
 
 	g("syncPair_bg").src = emptyImg;
-	g("syncPair_bg").classList.add("backgroundSmall");
+	g("syncPair_bg_div").classList.add("backgroundSmall");
 
 	g("syncPair_trainerImageBase").src = emptyImg;
 	g("syncPair_trainerImageEx").src = emptyImg;
@@ -375,11 +375,16 @@ function moveIs(move, option) {
 	*/
 	function moveUser(u, t) {
 		if(u == "") { return ""; }
+
 		var image = "./images/empty.png";
-		if(u.toLowerCase() == "trainer" && SYNCPAIR.trainer.images.base.length > 0) { image = SYNCPAIR.trainer.images.base; }
-		if(u.toLowerCase() == "pokemon" && SYNCPAIR.pokemon.length > 0) { image = SYNCPAIR.pokemon[0].image; }
-		if(u.toLowerCase() == "pokemon2" && SYNCPAIR.pokemon.length > 1) { image = SYNCPAIR.pokemon[1].image; }
-		return `<div class="move_user bg_${t.toLowerCase()}"><img src="${image}"></div>`;
+		var user = "";
+
+		if(u.toLowerCase() == "trainer" && SYNCPAIR.trainer.images.base.length > 0) { image = SYNCPAIR.trainer.images.base; user = "u_trainer"; }
+		if(u.toLowerCase() == "trainer2" && SYNCPAIR.trainer.images.ex.length > 0) { image = SYNCPAIR.trainer.images.ex; user = "u_trainer"; }
+		if(u.toLowerCase() == "pokemon" && SYNCPAIR.pokemon.length > 0) { image = SYNCPAIR.pokemon[0].image; user = "u_pokemon"; }
+		if(u.toLowerCase() == "pokemon2" && SYNCPAIR.pokemon.length > 1) { image = SYNCPAIR.pokemon[1].image; user = "u_pokemon2"; }
+
+		return `<div class="move_user bg_${t.toLowerCase()} ${user}"><img src="${image}"></div>`;
 	}
 }
 
@@ -600,15 +605,23 @@ function generateOptionsHtml(arr, target) {
 //https://github.com/tsayen/dom-to-image
 function screenshot() {
 	var node = g('main');
-	if(node.classList.contains("hide")) {
-		node = g("grid")
-		if(g("btn_changeMode").classList.contains("optionSelected")) {
-			node.style.height = "1200px";
-		} else { node.style.height = "812px"; }
+
+	if(! g("grid").classList.contains("hide")) {
+		if(g("selectedCellsContainer").classList.contains("hide")) {
+			node = g("grid");
+			if(g("btn_changeMode").classList.contains("optionSelected")) {
+				node.style.height = "1200px";
+			} else { node.style.height = "812px"; }
+			g("gridInfos").classList.add("hide");
+		} else {
+			node = g("selectedCellsContainer");
+			node.style.overflowY = "initial";
+			node.style.height = "auto";
+			g("grid").style.overflow = "initial";			
+		}
 	}
 
 	node.classList.add("screenshotXL");
-	g("gridInfos").classList.add("hide");	
 
 	var size = node.getBoundingClientRect();
 	var w = size.width;
@@ -623,8 +636,11 @@ function screenshot() {
 		g("screenshot").appendChild(img);
 
 		node.classList.remove("screenshotXL");
+
 		node.removeAttribute("style");
-		g("gridInfos").classList.remove("hide");
+		g("gridInfos").removeAttribute("class");
+		g("grid").removeAttribute("style");
+		g("selectedCellsContainer").removeAttribute("style");
 
 		alert("Image generated. Scroll down the page to see your image.")
 	})
@@ -633,17 +649,83 @@ function screenshot() {
 		alert("Error. Make sure to not have a custom image link in your code before using this button.")
 		console.log(error);
 	});
-
 }
 
+
+/*-----------------------------------------------------------------------------
+	LOCALSTORAGE
+-----------------------------------------------------------------------------*/
+
+function clearAll() {
+	localStorage.clear();
+
+	Array.from(document.getElementsByClassName("slot")).forEach(s => s.innerHTML = s.value.replace("Slot", "Slot "));
+}
+
+function clearSave() {
+	var save = g("localstorage").value;
+	var slotNum = parseInt(save.replace("Slot","")) - 1;
+
+	localStorage.removeItem(save);
+	localStorage.removeItem(save+"_grid");
+
+	document.getElementsByClassName("slot")[slotNum].innerHTML = document.getElementsByClassName("slot")[slotNum].value.replace("Slot", "Slot ");
+
+	updateSlotsName();
+}
+
+function loadSave() {
+	var save = g("localstorage").value;
+
+	if(localStorage.getItem(save) !== null) {
+		SYNCPAIR = JSON.parse(localStorage.getItem(save));
+		SYNCGRID = JSON.parse(localStorage.getItem(save+"_grid"));
+
+		upTextEditorValueFromSyncPairOBJ();
+		upTextEditorValueFromSyncGridOBJ();
+
+		showSyncPair();
+		GRID.genGrid(SYNCGRID);
+		clickCellToCodePart();
+	}
+}
+
+function saveSave() {
+	var save = g("localstorage").value;
+	var currentPairName = `${SYNCPAIR.trainer.name} & ${SYNCPAIR.pokemon[0].name}`;
+
+	localStorage.setItem(save, JSON.stringify(SYNCPAIR, null, "  "));
+	localStorage.setItem(save+"_grid", JSON.stringify(SYNCGRID, null, "  "));
+
+	document.getElementsByClassName("slot")[parseInt(save.replace("Slot","")) - 1].innerHTML = currentPairName;
+	
+	updateSlotsName();
+}
+
+function updateSlotsName() {
+	var slotsName = [];
+
+	Array.from(document.getElementsByClassName("slot")).forEach(s => slotsName.push(s.innerHTML));
+
+	localStorage.setItem("SlotsName", slotsName.join(" &&&& "));
+}
+
+function getSaveName() {
+	try {
+		if(localStorage.getItem("SlotsName") !== null) {
+			var slotsName = localStorage.getItem("SlotsName").split(" &&&& ");
+
+			Array.from(document.getElementsByClassName("slot")).forEach(s => s.innerHTML = slotsName[s.value.replace("Slot","") - 1]);		
+		}
+	} catch(e) {
+		clearAll();
+	}
+}
 
 
 /*-----------------------------------------------------------------------------
 	TEXT EDITOR
 -----------------------------------------------------------------------------*/
-
-var SOURCE_SYNCPAIR_VALUE;
-var SOURCE_SYNCGRID_VALUE;
 
 /*
 put the code inside the textarea "source_syncpair" 
@@ -653,16 +735,14 @@ same for "source_syncgrid"
 */
 function firstShowCodeSources() {
 	g("source_syncpair").value = JSON.stringify(SYNCPAIR, null, "  ");
-	SOURCE_SYNCPAIR_VALUE = g("source_syncpair").value;
 
 	g("source_syncgrid").value = JSON.stringify(SYNCGRID, null, "  ");
-	SOURCE_SYNCGRID_VALUE = g("source_syncgrid").value;
 }
 
 
 function showSyncPairFromSource() {
 	try {
-		SYNCPAIR = JSON.parse(SOURCE_SYNCPAIR_VALUE);
+		SYNCPAIR = JSON.parse(CODE_MIRROR_EDITOR.doc.getValue());
 		g('source_valid').innerHTML = "Valid";
 		g('source_valid').classList.remove("sourceInvalid");
 		g('source_valid').classList.add("sourceValid");
@@ -674,9 +754,9 @@ function showSyncPairFromSource() {
 	showSyncPair();
 }
 
-function showSyncGridFromSource() {
+function updateSyncGridFromSource() {
 	try {
-		SYNCGRID = JSON.parse(SOURCE_SYNCGRID_VALUE);
+		SYNCGRID = JSON.parse(CODE_MIRROR_EDITOR_GRID.doc.getValue());
 		g('sourceGrid_valid').innerHTML = "Valid";
 		g('sourceGrid_valid').classList.remove("sourceInvalid");
 		g('sourceGrid_valid').classList.add("sourceValid");
@@ -685,22 +765,12 @@ function showSyncGridFromSource() {
 		g('sourceGrid_valid').classList.remove("sourceValid");
 		g('sourceGrid_valid').classList.add("sourceInvalid");
 	}
-	GRID.genGrid(SYNCGRID);
 }
 
 
 //https://codemirror.net/
 var CODE_MIRROR_EDITOR;
 var CODE_MIRROR_EDITOR_GRID;
-
-function initTextEditor() {
-
-	initSyncPairCodeEditor();
-	initSyncGridCodeEditor();
-	
-	g("syncGridCodeEditor").classList.add("hide");
-	g("grid").classList.add("hide");
-}
 
 
 function initSyncPairCodeEditor() {
@@ -719,7 +789,6 @@ function initSyncPairCodeEditor() {
 	});
 
 	CODE_MIRROR_EDITOR.on('change', (editor) => {
-		SOURCE_SYNCPAIR_VALUE = editor.doc.getValue();
 		setTimeout(showSyncPairFromSource, DELAY_UPDATE_DISPLAY);
 	});
 
@@ -748,7 +817,7 @@ function initSyncGridCodeEditor() {
 	});
 
 	CODE_MIRROR_EDITOR_GRID.on('change', (editor) => {
-		SOURCE_SYNCGRID_VALUE = editor.doc.getValue();
+		updateSyncGridFromSource();
 		document.getElementById("syncGridModeBtn").classList.add("syncGridModeBtnPending");
 	});
 
@@ -762,8 +831,7 @@ function initSyncGridCodeEditor() {
 }
 
 function upTextEditorValueFromSyncPairOBJ() {
-	SOURCE_SYNCPAIR_VALUE = JSON.stringify(SYNCPAIR, null, "  ");
-	CODE_MIRROR_EDITOR.doc.setValue(SOURCE_SYNCPAIR_VALUE);
+	CODE_MIRROR_EDITOR.doc.setValue(JSON.stringify(SYNCPAIR, null, "  "));
 
 	/* fold some parts of the code of the template demo */
 	if(SYNCPAIR.trainer.name == "TEMPLATE (FULL)") {
@@ -777,8 +845,18 @@ function upTextEditorValueFromSyncPairOBJ() {
 }
 
 function upTextEditorValueFromSyncGridOBJ() {
-	SOURCE_SYNCGRID_VALUE = JSON.stringify(SYNCGRID, null, "  ");
-	CODE_MIRROR_EDITOR_GRID.doc.setValue(SOURCE_SYNCGRID_VALUE);	
+	CODE_MIRROR_EDITOR_GRID.doc.setValue(JSON.stringify(SYNCGRID, null, "  "));
+}
+
+
+function clickCellToCodePart() {
+	Array.from(document.getElementsByClassName("cell")).forEach(e => e.addEventListener("click", function() {
+		if(this.dataset.cellid == 0) return;
+
+		var line = ((parseInt(this.dataset.cellid)-1)*12)+5;
+		CODE_MIRROR_EDITOR_GRID.focus();
+		CODE_MIRROR_EDITOR_GRID.setSelection({line: line, ch: 0}, {line: line+7, ch: 0})
+	}));
 }
 
 
@@ -813,10 +891,12 @@ g("input_sync_pairs").addEventListener("input", function() {
 	SYNCGRID = SYNCGRIDS[this.value];
 
 	upTextEditorValueFromSyncPairOBJ();
-	upTextEditorValueFromSyncGridOBJ()
+	upTextEditorValueFromSyncGridOBJ();
+
 	showSyncPair();
-	if(g("syncPairCodeEditor").classList.contains("hide")) {
+	if(! g("grid").classList.contains("hide")) {
 		GRID.genGrid(SYNCGRID);
+		clickCellToCodePart();
 	}
 })
 
@@ -887,13 +967,12 @@ backgrounds selection
 g("input_backgrounds").addEventListener("input", function() {
 	SYNCPAIR.bg = `./images/bg/${DATA.BACKGROUNDS[this.value]}.jpg`;
 	upTextEditorValueFromSyncPairOBJ();
-	showSyncPair();
 })
 
 /*
 click on the background itself to change the display
 */
-g("syncPair_bg").addEventListener("click", function() {
+g("syncPair_bg_div").addEventListener("click", function() {
 	if(this.classList.contains("backgroundSmall")) {
 		this.classList.remove("backgroundSmall");
 		this.classList.add("backgroundLarge");
@@ -910,7 +989,10 @@ grid templates selection
 g("input_gridTemplates").addEventListener("input", function() {
 	SYNCGRID = SYNCGRIDS_TEMPLATES[this.value];
 	upTextEditorValueFromSyncGridOBJ();
-	GRID.genGrid(SYNCGRID);
+	if(! g("grid").classList.contains("hide")) {
+		GRID.genGrid(SYNCGRID);
+		clickCellToCodePart();
+	}
 })
 
 
@@ -920,7 +1002,6 @@ button to import background image
 g("file_img_sync_bg").addEventListener("input", function() {
 	SYNCPAIR.bg = URL.createObjectURL(this.files[0]);
 	upTextEditorValueFromSyncPairOBJ();
-	showSyncPair();
 })
 
 /*
@@ -929,7 +1010,6 @@ button to import trainer image 1
 g("file_img_sync_trainer").addEventListener("input", function() {
 	SYNCPAIR.trainer.images.base = URL.createObjectURL(this.files[0]);
 	upTextEditorValueFromSyncPairOBJ();
-	showSyncPair();
 })
 
 /*
@@ -938,7 +1018,6 @@ button to import trainer image 2
 g("file_img_sync_trainer2").addEventListener("input", function() {
 	SYNCPAIR.trainer.images.ex = URL.createObjectURL(this.files[0]);
 	upTextEditorValueFromSyncPairOBJ();
-	showSyncPair();
 })
 
 /*
@@ -958,7 +1037,6 @@ g("file_img_sync_pokemon").addEventListener("input", function() {
 		SYNCPAIR.pokemon[0].image = img_url;
 	}
 	upTextEditorValueFromSyncPairOBJ();
-	showSyncPair();
 })
 
 /*
@@ -978,7 +1056,6 @@ g("file_img_sync_pokemon2").addEventListener("input", function() {
 		SYNCPAIR.pokemon[1].image = img_url;
 	}
 	upTextEditorValueFromSyncPairOBJ();
-	showSyncPair();
 })
 
 
@@ -1012,7 +1089,6 @@ g("input_pokemon_art").addEventListener("input", function() {
 				SYNCPAIR.pokemon[0].image = pokeUrl;
 			}
 			upTextEditorValueFromSyncPairOBJ();
-			showSyncPair();
 		}
 	}
 })
@@ -1022,17 +1098,121 @@ g("input_pokemon_art").addEventListener("input", function() {
 g("syncPairModeBtn").addEventListener("click", function() {
 	g("syncPairCodeEditor").classList.remove("hide");
 	g("syncGridCodeEditor").classList.add("hide");
+	g("syncOptions").classList.add("hide");
 	g("main").classList.remove("hide");
 	g("grid").classList.add("hide");
+
+	upTextEditorValueFromSyncPairOBJ();
+	if(! g("syncPairCodeEditor").classList.contains("hide")) {
+		showSyncPair();
+	}
 })
 
 g("syncGridModeBtn").addEventListener("click", function() {
 	g("syncPairCodeEditor").classList.add("hide");
 	g("syncGridCodeEditor").classList.remove("hide");
+	g("syncOptions").classList.add("hide");
 	g("main").classList.add("hide");
 	g("grid").classList.remove("hide");
 	g("syncGridModeBtn").classList.remove("syncGridModeBtnPending");
-	showSyncGridFromSource();
+
+	updateSyncGridFromSource();
+	if(! g("grid").classList.contains("hide")) {
+		GRID.genGrid(SYNCGRID);
+		clickCellToCodePart();
+	}
+})
+
+
+g("syncOptionsModeBtn").addEventListener("click", function() {
+	g("syncPairCodeEditor").classList.add("hide");
+	g("syncGridCodeEditor").classList.add("hide");
+	g("syncOptions").classList.remove("hide");
+})
+
+g("ratioBg").addEventListener("input", function() {
+	if(this.checked) {
+		g("syncPair_bg").style.width = "auto";
+		g("syncPair_bg").style.height = "100%";
+	} else {
+		g("syncPair_bg").style.width = "100%";
+		g("syncPair_bg").style.height = "100%";
+	}
+})
+
+g("positionXbg").addEventListener("input", function() {
+	g("syncPair_bg").style.left = this.value + "%";
+})
+g("positionYbg").addEventListener("input", function() {
+	g("syncPair_bg").style.top = this.value + "%";
+})
+g("sizeBg").addEventListener("input", function() {
+	g("syncPair_bg").style.transform = "scale(" + this.value + "%)";
+})
+g("positionXTrainer").addEventListener("input", function() {
+	g("syncPair_trainerImageBase").style.left = this.value + "%";
+	g("syncPair_trainerImageEx").style.left = this.value + "%";
+})
+g("positionYTrainer").addEventListener("input", function() {
+	g("syncPair_trainerImageBase").style.bottom = this.value + "%";
+	g("syncPair_trainerImageEx").style.bottom = this.value + "%";
+})
+g("sizeTrainer").addEventListener("input", function() {
+	g("syncPair_trainerImageBase").style.transform = "scale(" + this.value + "%)";
+	g("syncPair_trainerImageEx").style.transform = "scale(" + this.value + "%)";
+})
+
+g("positionXuserPokemon").addEventListener("input", function() {
+	Array.from(document.getElementsByClassName("u_pokemon")).forEach(e => e.children[0].style.left = this.value + "%");
+})
+g("positionYuserPokemon").addEventListener("input", function() {
+	Array.from(document.getElementsByClassName("u_pokemon")).forEach(e => e.children[0].style.top = this.value + "%");
+})
+g("sizeUserPokemon").addEventListener("input", function() {
+	Array.from(document.getElementsByClassName("u_pokemon")).forEach(e => e.children[0].style.transform = "scale(" + this.value + "%)");
+})
+g("positionXuserPokemon2").addEventListener("input", function() {
+	Array.from(document.getElementsByClassName("u_pokemon2")).forEach(e => e.children[0].style.left = this.value + "%");
+})
+g("positionYuserPokemon2").addEventListener("input", function() {
+	Array.from(document.getElementsByClassName("u_pokemon2")).forEach(e => e.children[0].style.top = this.value + "%");
+})
+g("sizeUserPokemon2").addEventListener("input", function() {
+	Array.from(document.getElementsByClassName("u_pokemon2")).forEach(e => e.children[0].style.transform = "scale(" + this.value + "%)");
+})
+g("positionXuserTrainer").addEventListener("input", function() {
+	Array.from(document.getElementsByClassName("u_trainer")).forEach(e => e.children[0].style.left = this.value + "%");
+})
+g("positionYuserTrainer").addEventListener("input", function() {
+	Array.from(document.getElementsByClassName("u_trainer")).forEach(e => e.children[0].style.top = this.value + "%");
+})
+g("sizeUserTrainer").addEventListener("input", function() {
+	Array.from(document.getElementsByClassName("u_trainer")).forEach(e => e.children[0].style.transform = "scale(" + this.value + "%)");
+})
+
+g("btn_reset_adjustments").addEventListener("click", function() {
+	g("positionXbg").value = 0;	g("positionYbg").value = 0;	g("sizeBg").value = 100;
+	g("positionXTrainer").value = 0; g("positionYTrainer").value = 0; g("sizeTrainer").value = 100;
+	g("positionXuserPokemon").value = 0; g("positionYuserPokemon").value = 0; g("sizeUserPokemon").value = 100;
+	g("positionXuserPokemon2").value = 0; g("positionYuserPokemon2").value = 0;  g("sizeUserPokemon2").value = 100;
+	g("positionXuserTrainer").value = 0; g("positionYuserTrainer").value = 0; g("sizeUserTrainer").value = 100;
+
+	g("syncPair_bg").removeAttribute("style");
+	g("syncPair_trainerImageBase").removeAttribute("style");
+	g("syncPair_trainerImageEx").removeAttribute("style");
+	Array.from(document.getElementsByClassName("u_pokemon")).forEach(e => e.children[0].removeAttribute("style"));
+	Array.from(document.getElementsByClassName("u_pokemon2")).forEach(e => e.children[0].removeAttribute("style"));
+	Array.from(document.getElementsByClassName("u_trainer")).forEach(e => e.children[0].removeAttribute("style"));
+})
+
+g("btn_loadSave").addEventListener("click", function() {
+	loadSave();
+})
+g("btn_saveSave").addEventListener("click", function() {
+	saveSave();
+})
+g("btn_clearSaves").addEventListener("click", function() {
+	clearSave();
 })
 
 
@@ -1092,6 +1272,11 @@ g("syncLevel").addEventListener("input", function() {
 })
 
 
+g("selectedCellsContainer").addEventListener("click", function() {
+	this.classList.add("hide");
+})
+
+
 
 /*-----------------------------------------------------------------------------
 	INIT
@@ -1113,4 +1298,21 @@ generateOptionsHtml(DATA.BACKGROUNDS,"input_backgrounds");
 generateOptionsHtml(DATA.GRID_TEMPLATES,"input_gridTemplates");
 
 
-window.onload = initTextEditor;
+function init() {
+
+	initSyncPairCodeEditor();
+	initSyncGridCodeEditor();
+
+	getSaveName();
+	
+	g("syncGridCodeEditor").classList.add("hide");
+	g("grid").classList.add("hide");
+	g("selectedCellsContainer").classList.add("hide");
+
+	g("syncOptions").classList.add("hide");
+
+	function hideLoad(){ g("loadApp").classList.add("hide"); }
+	setTimeout(hideLoad, 300);
+}
+
+window.onload = init;
