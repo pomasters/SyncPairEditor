@@ -66,6 +66,7 @@ function showSyncPair() {
 
 		showSyncPair2();
 
+		checkImagesValidity();
 		addFocusEvent();
 		noDragImages();
 	} catch(e) {}
@@ -203,6 +204,31 @@ function resetShowSyncPair() {
 	g("syncPair_pokemon2Stats").removeAttribute("style");
 
 	g("elementFocus").classList.add("hide");
+}
+
+
+function checkImagesValidity() {
+	var emptyImg = "./images/empty.png";
+	g("syncPair_bg").onerror = function() {
+		this.src = "./images/bg3.png";
+		SYNCPAIR.bg = "./images/bg3.png";
+	}
+	g("syncPair_trainerImageBase").onerror = function() {
+		this.src = emptyImg;
+		SYNCPAIR.trainer.images.base = emptyImg;
+	}
+	g("syncPair_trainerImageEx").onerror = function() {
+		this.src = emptyImg;
+		SYNCPAIR.trainer.images.ex = emptyImg;
+	}
+	g("syncPair_pokemonImage").onerror = function() {
+		this.src = emptyImg;
+		SYNCPAIR.pokemon[0].image = emptyImg;
+	}
+	g("syncPair_pokemon2Image").onerror = function() {
+		this.src = emptyImg;
+		SYNCPAIR.pokemon[1].image = emptyImg;
+	}
 }
 
 /*
@@ -785,7 +811,31 @@ function initSyncPairCodeEditor() {
 		foldGutter: true,
 		gutters: ["CodeMirror-lint-markers","CodeMirror-linenumbers", "CodeMirror-foldgutter"],
 		theme: "shadowfox",
-		extraKeys: {"Alt-F": "findPersistent"}
+		extraKeys: {"Alt-F": "findPersistent"},
+		foldOptions: {
+			widget: (from, to) => {
+				var count = undefined;
+
+				// Get open / close token
+				var startToken = '{', endToken = '}';        
+				var prevLine = CODE_MIRROR_EDITOR.getLine(from.line);
+				if (prevLine.lastIndexOf('[') > prevLine.lastIndexOf('{')) {
+					startToken = '[', endToken = ']';
+				}
+
+				// Get json content
+				var internal = CODE_MIRROR_EDITOR.getRange(from, to);
+				var toParse = startToken + internal + endToken;
+
+				// Get key count
+				try {
+					var parsed = JSON.parse(toParse);
+					count = Object.keys(parsed).length;
+				} catch(e) { }        
+
+				return count ? `\u2190\u0020${count}\u0020\u2192` : '\u2194';
+			}
+		}
 	});
 
 	CODE_MIRROR_EDITOR.on('change', (editor) => {
@@ -813,7 +863,31 @@ function initSyncGridCodeEditor() {
 		foldGutter: true,
 		gutters: ["CodeMirror-lint-markers","CodeMirror-linenumbers", "CodeMirror-foldgutter"],
 		theme: "shadowfox",
-		extraKeys: {"Alt-F": "findPersistent"}
+		extraKeys: {"Alt-F": "findPersistent"},
+		foldOptions: {
+			widget: (from, to) => {
+				var count = undefined;
+
+				// Get open / close token
+				var startToken = '{', endToken = '}';        
+				var prevLine = CODE_MIRROR_EDITOR.getLine(from.line);
+				if (prevLine.lastIndexOf('[') > prevLine.lastIndexOf('{')) {
+					startToken = '[', endToken = ']';
+				}
+
+				// Get json content
+				var internal = CODE_MIRROR_EDITOR.getRange(from, to);
+				var toParse = startToken + internal + endToken;
+
+				// Get key count
+				try {
+					var parsed = JSON.parse(toParse);
+					count = Object.keys(parsed).length;
+				} catch(e) { }        
+
+				return count ? `\u2190\u0020${count}\u0020\u2192` : '\u2194';
+			}
+		}
 	});
 
 	CODE_MIRROR_EDITOR_GRID.on('change', (editor) => {
