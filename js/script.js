@@ -929,7 +929,12 @@ function clickCellToCodePart() {
 
 		var line = ((parseInt(this.dataset.cellid)-1)*12)+5;
 		CODE_MIRROR_EDITOR_GRID.focus();
-		CODE_MIRROR_EDITOR_GRID.setSelection({line: line, ch: 0}, {line: line+7, ch: 0})
+		CODE_MIRROR_EDITOR_GRID.setSelection({line: line, ch: 0}, {line: line+7, ch: 0});
+
+		/* center vertically selection */
+		var top = CODE_MIRROR_EDITOR_GRID.charCoords({line: line, ch: 0}, "local").top; 
+		var marginTop = CODE_MIRROR_EDITOR_GRID.getScrollerElement().offsetHeight / 3; 
+		CODE_MIRROR_EDITOR_GRID.scrollTo(null, top - marginTop); 
 	}));
 }
 
@@ -957,6 +962,22 @@ function noDragImages() {
 }
 
 
+function resetImagesAdjustments() {
+	g("positionXbg").value = 0;	g("positionYbg").value = 0;	g("sizeBg").value = 100;
+	g("positionXTrainer").value = 0; g("positionYTrainer").value = 0; g("sizeTrainer").value = 100;
+	g("positionXuserPokemon").value = 0; g("positionYuserPokemon").value = 0; g("sizeUserPokemon").value = 100;
+	g("positionXuserPokemon2").value = 0; g("positionYuserPokemon2").value = 0;  g("sizeUserPokemon2").value = 100;
+	g("positionXuserTrainer").value = 0; g("positionYuserTrainer").value = 0; g("sizeUserTrainer").value = 100;
+
+	g("syncPair_bg").removeAttribute("style");
+	g("syncPair_trainerImageBase").removeAttribute("style");
+	g("syncPair_trainerImageEx").removeAttribute("style");
+	Array.from(document.getElementsByClassName("u_pokemon")).forEach(e => e.children[0].removeAttribute("style"));
+	Array.from(document.getElementsByClassName("u_pokemon2")).forEach(e => e.children[0].removeAttribute("style"));
+	Array.from(document.getElementsByClassName("u_trainer")).forEach(e => e.children[0].removeAttribute("style"));
+}
+
+
 /*
 syncpairs selection
 */
@@ -972,6 +993,8 @@ g("input_sync_pairs").addEventListener("input", function() {
 		GRID.genGrid(SYNCGRID);
 		clickCellToCodePart();
 	}
+
+	resetImagesAdjustments();
 })
 
 /*
@@ -1009,9 +1032,7 @@ g("btn_showall").addEventListener("click", function() {
 /*
 image generator button
 */
-g("btn_genimage").addEventListener("click", function() {
-	screenshot()
-})
+g("btn_genimage").addEventListener("click", screenshot)
 
 /*
 help button
@@ -1204,6 +1225,10 @@ g("syncOptionsModeBtn").addEventListener("click", function() {
 	g("syncOptions").classList.remove("hide");
 })
 
+g("btn_loadSave").addEventListener("click", loadSave)
+g("btn_saveSave").addEventListener("click", saveSave)
+g("btn_clearSave").addEventListener("click", clearSave)
+
 g("ratioBg").addEventListener("input", function() {
 	if(this.checked) {
 		g("syncPair_bg").style.width = "auto";
@@ -1264,30 +1289,7 @@ g("sizeUserTrainer").addEventListener("input", function() {
 	Array.from(document.getElementsByClassName("u_trainer")).forEach(e => e.children[0].style.transform = "scale(" + this.value + "%)");
 })
 
-g("btn_reset_adjustments").addEventListener("click", function() {
-	g("positionXbg").value = 0;	g("positionYbg").value = 0;	g("sizeBg").value = 100;
-	g("positionXTrainer").value = 0; g("positionYTrainer").value = 0; g("sizeTrainer").value = 100;
-	g("positionXuserPokemon").value = 0; g("positionYuserPokemon").value = 0; g("sizeUserPokemon").value = 100;
-	g("positionXuserPokemon2").value = 0; g("positionYuserPokemon2").value = 0;  g("sizeUserPokemon2").value = 100;
-	g("positionXuserTrainer").value = 0; g("positionYuserTrainer").value = 0; g("sizeUserTrainer").value = 100;
-
-	g("syncPair_bg").removeAttribute("style");
-	g("syncPair_trainerImageBase").removeAttribute("style");
-	g("syncPair_trainerImageEx").removeAttribute("style");
-	Array.from(document.getElementsByClassName("u_pokemon")).forEach(e => e.children[0].removeAttribute("style"));
-	Array.from(document.getElementsByClassName("u_pokemon2")).forEach(e => e.children[0].removeAttribute("style"));
-	Array.from(document.getElementsByClassName("u_trainer")).forEach(e => e.children[0].removeAttribute("style"));
-})
-
-g("btn_loadSave").addEventListener("click", function() {
-	loadSave();
-})
-g("btn_saveSave").addEventListener("click", function() {
-	saveSave();
-})
-g("btn_clearSaves").addEventListener("click", function() {
-	clearSave();
-})
+g("btn_reset_adjustments").addEventListener("click", resetImagesAdjustments)
 
 
 
