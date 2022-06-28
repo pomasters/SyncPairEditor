@@ -383,7 +383,7 @@ export const KRIS_SUICUNE = {
 				"description" : "Raises the Sp. Def of all allied sync pairs by 4 stat ranks the first time the user’s Pokémon uses a status move each battle."
 			},
 			{
-				"name" : "Passive 4: First Aid 4",
+				"name" : "First Aid 4",
 				"description" : "Restores the user’s HP by approximately 40% of its maximum HP the first time it is in a pinch each battle."
 			},
 		],

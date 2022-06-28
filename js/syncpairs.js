@@ -2698,12 +2698,20 @@ function DISABLE_OPTION(n) { return {"trainer":{"name":n}, "pokemon":[{"name":"-
 
 import * as MAY2022 from '../v/v2.20.0/syncpairs.js';
 import * as JUNE2022 from '../v/v2.21.0/syncpairs.js';
+import * as JULY2022 from '../v/v2.22.0/syncpairs.js';
 
 
 export const SYNCPAIRS = [
 
 	TEMPLATE1, //Always at the
 	TEMPLATE2, //top of the array
+
+	DISABLE_OPTION("---------------- v2.22.0 (JULY2022) ----------------"),
+
+	JULY2022.N_ZOROARK,
+	JULY2022.HILDA_GRAPPLOCT,
+	JULY2022.GLORIA_URSHIFU,
+	JULY2022.KORRINA_MARSHADOW,
 
 	DISABLE_OPTION("---------------- v2.21.0 (JUNE2022) ----------------"),
 
@@ -2735,4 +2743,4 @@ export const SYNCPAIRS = [
 	PROFESSOR_OAK_MEW
 ];
 
-export var CURRENT_SYNCPAIR = JUNE2022.BEDE_HATTERENE;
+export var CURRENT_SYNCPAIR = JULY2022.N_ZOROARK;
