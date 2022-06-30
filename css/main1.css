@@ -448,8 +448,8 @@ MOVES
 
 .no_move {
 	pointer-events: none;
-	filter: grayscale(100%) blur(1px);
-	opacity: 32%;
+	filter: grayscale(100%);
+	opacity: 25%;
 	background: rgb(190 190 190) !important;
 }
 
@@ -543,7 +543,7 @@ MOVE DYNAMAX
 }
 
 #movesMAX .icon_sync_center {
-	filter: grayscale(100%) blur(1px);
+	filter: grayscale(100%);
 	opacity: 0.3;
 	top: 0;
 	bottom: 0;

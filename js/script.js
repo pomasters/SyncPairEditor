@@ -1061,6 +1061,9 @@ backgrounds selection
 */
 g("input_backgrounds").addEventListener("input", function() {
 	SYNCPAIR.bg = `./images/bg/${DATA.BACKGROUNDS[this.value]}.jpg`;
+	if(this.value <= 4) {
+		SYNCPAIR.bg = `./images/bg/${DATA.BACKGROUNDS[this.value]}.png`;
+	}
 	upTextEditorValueFromSyncPairOBJ();
 })
 

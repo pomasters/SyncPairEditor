@@ -221,7 +221,7 @@ ELEMENT FOCUS WHEN CLICKED
 }
 
 #elementFocus .move_dynamax .move_user {
-	background: var(--maxmove2) !important;
+	background: var(--maxmove3) !important;
 }
 
 #elementFocus .move_dynamax .move_details_description {
@@ -314,4 +314,13 @@ ELEMENT FOCUS WHEN CLICKED
 
 #elementFocus .skill_theme .skill_description+.skill_description {
 	margin-top: 5px;
+}
+
+img[src^="./images/bg/bronze.png"],
+img[src^="./images/bg/silver.png"],
+img[src^="./images/bg/gold.png"],
+img[src^="./images/bg/rainbow.png"] {
+	left: auto !important;
+	clip-path: none;
+	opacity: 80%;
 }

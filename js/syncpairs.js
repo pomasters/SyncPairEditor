@@ -1,5 +1,5 @@
 const TEMPLATE1 = {
-	"bg" : "./images/bg3.png",
+	"bg" : "./images/bg/bronze.png",
 
 	"trainer" : {
 		"name" : "TEMPLATE (SIMPLE)",
@@ -151,7 +151,7 @@ const TEMPLATE1 = {
 }
 
 const TEMPLATE2 = {
-	"bg" : "./images/bg3.png",
+	"bg" : "./images/bg/gold.png",
 
 	"trainer" : {
 		"name" : "TEMPLATE (FULL)",
@@ -2484,7 +2484,7 @@ const MAY_LOPUNNY = {
 const PROFESSOR_OAK_MEW = {
   "Informations and images from": "Serebii",
   "----------------------------": "-------",
-  "bg": "./images/bg3.png",
+  "bg": "./images/bg/bronze.png",
   "trainer": {
     "name": "Professor Oak",
     "images": {

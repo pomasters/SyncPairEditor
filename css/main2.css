@@ -447,8 +447,8 @@ MOVES
 
 .no_move {
 	pointer-events: none;
-	filter: grayscale(100%) blur(1px);
-	opacity: 32%;
+	filter: grayscale(100%);
+	opacity: 25%;
 	background: rgb(190 190 190) !important;
 }
 
@@ -653,7 +653,7 @@ MOVE DYNAMAX
 }
 
 .move_dynamax .move_user {
-	background: var(--maxmove2) !important;
+	background: var(--maxmove3) !important;
 }
 
 .move_dynamax .move_details_description {
