@@ -289,13 +289,31 @@ input[type=file] {
 }
 #syncPairModeBtn { margin-right: 2px; }
 #syncGridModeBtn { margin-left: 2px; margin-right: 2px; }
-#syncOptionsModeBtn { margin-left: 2px; width: auto; }
+#syncOptionsModeBtn { margin-left: 2px; width: auto; filter: hue-rotate(90deg); }
 
 #syncPairModeBtn:hover,
 #syncGridModeBtn:hover,
 #syncOptionsModeBtn:hover {
 	cursor: pointer;
-	filter: brightness(112%);
+}
+
+#syncPairModeBtn:hover > img,
+#syncGridModeBtn:hover > img {
+	animation: translateIcon 500ms infinite;
+}
+@keyframes translateIcon {
+	0% { transform: translateY(0px); }
+	50% { transform: translateY(-2px); }
+	100% { transform: translateY(0px); }
+}
+
+#syncOptionsModeBtn:hover > img {
+	animation: rotateIcon 2000ms infinite;
+}
+@keyframes rotateIcon {
+	0% { transform: rotate(0deg); }
+	50% { transform: rotate(180deg); }
+	100% { transform: rotate(360deg); }
 }
 
 #syncPairModeBtn:active,

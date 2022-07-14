@@ -69,6 +69,8 @@ function showSyncPair() {
 		checkImagesValidity();
 		addFocusEvent();
 		noDragImages();
+		moveUserImagesAdjustments();
+
 	} catch(e) {}
 }
 
@@ -406,7 +408,7 @@ function moveIs(move, option) {
 		var user = "";
 
 		if(u.toLowerCase() == "trainer" && SYNCPAIR.trainer.images.base.length > 0) { image = SYNCPAIR.trainer.images.base; user = "u_trainer"; }
-		if(u.toLowerCase() == "trainer2" && SYNCPAIR.trainer.images.ex.length > 0) { image = SYNCPAIR.trainer.images.ex; user = "u_trainer"; }
+		if(u.toLowerCase() == "trainer2" && SYNCPAIR.trainer.images.ex.length > 0) { image = SYNCPAIR.trainer.images.ex; user = "u_trainer2"; }
 		if(u.toLowerCase() == "pokemon" && SYNCPAIR.pokemon.length > 0) { image = SYNCPAIR.pokemon[0].image; user = "u_pokemon"; }
 		if(u.toLowerCase() == "pokemon2" && SYNCPAIR.pokemon.length > 1) { image = SYNCPAIR.pokemon[1].image; user = "u_pokemon2"; }
 
@@ -968,6 +970,7 @@ function resetImagesAdjustments() {
 	g("positionXuserPokemon").value = 0; g("positionYuserPokemon").value = 0; g("sizeUserPokemon").value = 100;
 	g("positionXuserPokemon2").value = 0; g("positionYuserPokemon2").value = 0;  g("sizeUserPokemon2").value = 100;
 	g("positionXuserTrainer").value = 0; g("positionYuserTrainer").value = 0; g("sizeUserTrainer").value = 100;
+	g("positionXuserTrainer2").value = 0; g("positionYuserTrainer2").value = 0; g("sizeUserTrainer2").value = 100;
 
 	g("syncPair_bg").removeAttribute("style");
 	g("syncPair_trainerImageBase").removeAttribute("style");
@@ -975,6 +978,31 @@ function resetImagesAdjustments() {
 	Array.from(document.getElementsByClassName("u_pokemon")).forEach(e => e.children[0].removeAttribute("style"));
 	Array.from(document.getElementsByClassName("u_pokemon2")).forEach(e => e.children[0].removeAttribute("style"));
 	Array.from(document.getElementsByClassName("u_trainer")).forEach(e => e.children[0].removeAttribute("style"));
+	Array.from(document.getElementsByClassName("u_trainer2")).forEach(e => e.children[0].removeAttribute("style"));
+}
+
+
+function moveUserImagesAdjustments() {
+	Array.from(document.getElementsByClassName("u_pokemon")).forEach(function(e) {
+		e.children[0].style.left = g("positionXuserPokemon").value + "%";
+		e.children[0].style.top = g("positionYuserPokemon").value + "%";
+		e.children[0].style.transform = "scale(" + g("sizeUserPokemon").value + "%)";
+	});
+	Array.from(document.getElementsByClassName("u_pokemon2")).forEach(function(e) {
+		e.children[0].style.left = g("positionXuserPokemon2").value + "%";
+		e.children[0].style.top = g("positionYuserPokemon2").value + "%";
+		e.children[0].style.transform = "scale(" + g("sizeUserPokemon2").value + "%)";
+	});
+	Array.from(document.getElementsByClassName("u_trainer")).forEach(function(e) {
+		e.children[0].style.left = g("positionXuserTrainer").value + "%";
+		e.children[0].style.top = g("positionYuserTrainer").value + "%";
+		e.children[0].style.transform = "scale(" + g("sizeUserTrainer").value + "%)";
+	});
+	Array.from(document.getElementsByClassName("u_trainer2")).forEach(function(e) {
+		e.children[0].style.left = g("positionXuserTrainer2").value + "%";
+		e.children[0].style.top = g("positionYuserTrainer2").value + "%";
+		e.children[0].style.transform = "scale(" + g("sizeUserTrainer2").value + "%)";
+	});
 }
 
 
@@ -1290,6 +1318,15 @@ g("positionYuserTrainer").addEventListener("input", function() {
 })
 g("sizeUserTrainer").addEventListener("input", function() {
 	Array.from(document.getElementsByClassName("u_trainer")).forEach(e => e.children[0].style.transform = "scale(" + this.value + "%)");
+})
+g("positionXuserTrainer2").addEventListener("input", function() {
+	Array.from(document.getElementsByClassName("u_trainer2")).forEach(e => e.children[0].style.left = this.value + "%");
+})
+g("positionYuserTrainer2").addEventListener("input", function() {
+	Array.from(document.getElementsByClassName("u_trainer2")).forEach(e => e.children[0].style.top = this.value + "%");
+})
+g("sizeUserTrainer2").addEventListener("input", function() {
+	Array.from(document.getElementsByClassName("u_trainer2")).forEach(e => e.children[0].style.transform = "scale(" + this.value + "%)");
 })
 
 g("btn_reset_adjustments").addEventListener("click", resetImagesAdjustments)
