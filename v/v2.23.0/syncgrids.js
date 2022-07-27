@@ -696,7 +696,7 @@ export const BRENDAN_LATIOS = [
 		orb: '36',
 		level: 1,
 		color: 'green',
-		icon: ''
+		icon: 'psychic'
 	},
 	{
 		id: 11,
@@ -720,7 +720,7 @@ export const BRENDAN_LATIOS = [
 		orb: '36',
 		level: '2',
 		color: 'green',
-		icon: ''
+		icon: 'psychic'
 	},
 	{
 		id: 13,
@@ -732,7 +732,7 @@ export const BRENDAN_LATIOS = [
 		orb: '36',
 		level: 1,
 		color: 'green',
-		icon: ''
+		icon: 'psychic'
 	},
 	{
 		id: 14,
@@ -828,7 +828,7 @@ export const BRENDAN_LATIOS = [
 		orb: '36',
 		level: 1,
 		color: 'green',
-		icon: ''
+		icon: 'psychic'
 	},
 	{
 		id: 22,
@@ -840,7 +840,7 @@ export const BRENDAN_LATIOS = [
 		orb: '36',
 		level: '2',
 		color: 'green',
-		icon: ''
+		icon: 'psychic'
 	},
 	{
 		id: 23,
@@ -936,7 +936,7 @@ export const BRENDAN_LATIOS = [
 		orb: '36',
 		level: 1,
 		color: 'green',
-		icon: ''
+		icon: 'dragon'
 	},
 	{
 		id: 31,
@@ -960,7 +960,7 @@ export const BRENDAN_LATIOS = [
 		orb: '36',
 		level: '2',
 		color: 'green',
-		icon: ''
+		icon: 'dragon'
 	},
 	{
 		id: 33,
@@ -972,7 +972,7 @@ export const BRENDAN_LATIOS = [
 		orb: '36',
 		level: 1,
 		color: 'green',
-		icon: ''
+		icon: 'dragon'
 	},
 	{
 		id: 34,
@@ -1056,7 +1056,7 @@ export const BRENDAN_LATIOS = [
 		orb: '36',
 		level: 1,
 		color: 'green',
-		icon: ''
+		icon: 'dragon'
 	},
 	{
 		id: 41,
@@ -1080,7 +1080,7 @@ export const BRENDAN_LATIOS = [
 		orb: '36',
 		level: '2',
 		color: 'green',
-		icon: ''
+		icon: 'dragon'
 	},
 	{
 		id: 43,
@@ -1287,7 +1287,7 @@ export const LOOKER_CROAGUNK = [
 		orb: '36',
 		level: 1,
 		color: 'green',
-		icon: ''
+		icon: 'poison'
 	},
 	{
 		id: 12,
@@ -1299,7 +1299,7 @@ export const LOOKER_CROAGUNK = [
 		orb: '36',
 		level: 1,
 		color: 'green',
-		icon: ''
+		icon: 'poison'
 	},
 	{
 		id: 13,
@@ -1311,7 +1311,7 @@ export const LOOKER_CROAGUNK = [
 		orb: '36',
 		level: '2',
 		color: 'green',
-		icon: ''
+		icon: 'poison'
 	},
 	{
 		id: 14,
@@ -1419,7 +1419,7 @@ export const LOOKER_CROAGUNK = [
 		orb: '36',
 		level: 1,
 		color: 'green',
-		icon: ''
+		icon: 'poison'
 	},
 	{
 		id: 23,
@@ -1431,7 +1431,7 @@ export const LOOKER_CROAGUNK = [
 		orb: '36',
 		level: 1,
 		color: 'green',
-		icon: ''
+		icon: 'poison'
 	},
 	{
 		id: 24,
@@ -1443,7 +1443,7 @@ export const LOOKER_CROAGUNK = [
 		orb: '36',
 		level: '2',
 		color: 'green',
-		icon: ''
+		icon: 'poison'
 	},
 	{
 		id: 25,
@@ -1515,7 +1515,7 @@ export const LOOKER_CROAGUNK = [
 		orb: '36',
 		level: 1,
 		color: 'green',
-		icon: ''
+		icon: 'poison'
 	},
 	{
 		id: 31,
@@ -1527,7 +1527,7 @@ export const LOOKER_CROAGUNK = [
 		orb: '36',
 		level: 1,
 		color: 'green',
-		icon: ''
+		icon: 'poison'
 	},
 	{
 		id: 32,
@@ -1635,7 +1635,7 @@ export const LOOKER_CROAGUNK = [
 		orb: '36',
 		level: 1,
 		color: 'green',
-		icon: ''
+		icon: 'poison'
 	},
 	{
 		id: 41,
@@ -1647,7 +1647,7 @@ export const LOOKER_CROAGUNK = [
 		orb: '36',
 		level: 1,
 		color: 'green',
-		icon: ''
+		icon: 'poison'
 	},
 	{
 		id: 42,
@@ -1878,7 +1878,7 @@ export const COURTNEY_CAMERUPT = [
 		orb: '36',
 		level: '2',
 		color: 'green',
-		icon: ''
+		icon: 'ground'
 	},
 	{
 		id: 13,
@@ -1890,7 +1890,7 @@ export const COURTNEY_CAMERUPT = [
 		orb: '36',
 		level: 1,
 		color: 'green',
-		icon: ''
+		icon: 'ground'
 	},
 	{
 		id: 14,
@@ -1998,7 +1998,7 @@ export const COURTNEY_CAMERUPT = [
 		orb: '36',
 		level: 1,
 		color: 'green',
-		icon: ''
+		icon: 'ground'
 	},
 	{
 		id: 23,
@@ -2094,7 +2094,7 @@ export const COURTNEY_CAMERUPT = [
 		orb: '36',
 		level: 1,
 		color: 'green',
-		icon: ''
+		icon: 'ground'
 	},
 	{
 		id: 31,
@@ -2238,7 +2238,7 @@ export const COURTNEY_CAMERUPT = [
 		orb: '36',
 		level: '2',
 		color: 'green',
-		icon: ''
+		icon: 'ground'
 	},
 	{
 		id: 43,
