@@ -11672,12 +11672,20 @@ export const SYNCGRIDS_TEMPLATES = [
 import * as MAY2022 from '../v/v2.20.0/syncgrids.js';
 import * as JUNE2022 from '../v/v2.21.0/syncgrids.js';
 import * as JULY2022 from '../v/v2.22.0/syncgrids.js';
+import * as AUGUST2022 from '../v/v2.23.0/syncgrids.js';
 
 
 export const SYNCGRIDS = [
 
 	BASE_EMPTY,
 	ALL_EMPTY,
+
+	BASE_EMPTY, // "---------------- v2.23.0 (AUGUST2022) ----------------"
+
+	AUGUST2022.MAY_BLAZIKEN,
+	AUGUST2022.BRENDAN_LATIOS,
+	AUGUST2022.LOOKER_CROAGUNK,
+	AUGUST2022.COURTNEY_CAMERUPT,
 
 	BASE_EMPTY, // "---------------- v2.22.0 (JULY2022) ----------------"
 
@@ -11716,4 +11724,4 @@ export const SYNCGRIDS = [
 	PROFESSOR_OAK_MEW
 ]
 
-export var CURRENT_SYNCGRID = JULY2022.KORRINA_MARSHADOW;
+export var CURRENT_SYNCGRID = AUGUST2022.MAY_BLAZIKEN;
