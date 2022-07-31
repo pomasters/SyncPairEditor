@@ -819,11 +819,6 @@ SKILLS
 }
 
 
-@media only screen and (max-width: 720px) {
-	.move { width: 100%; }
-}
-
-
 #main[class="hide"] + #grid + #screenshot {
 	width: 812px;
 }
