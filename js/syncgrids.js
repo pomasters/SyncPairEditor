@@ -8175,6 +8175,78 @@ const CYNTHIA_GARCHOMP = [
 		level: 3,
 		color: 'sync',
 		icon: 'sync'
+	},
+	{
+		id: 49,
+		x: -2,
+		y: 2,
+		name: 'Attack +20',
+		description: 'Attack +20',
+		energy: 0,
+		orb: 5,
+		level: 1,
+		color: 'blue',
+		icon: 'stat'
+	},
+	{
+		id: 50,
+		x: -3,
+		y: 2,
+		name: 'Sand Blaster 5',
+		description: "Powers up the user's sync move during a sandstorm.",
+		energy: 3,
+		orb: 36,
+		level: 2,
+		color: 'yellow',
+		icon: 'passive'
+	},
+	{
+		id: 51,
+		x: -3,
+		y: 3,
+		name: 'Haymaker',
+		description: "The more the user's Attack is raised, the more it powers up the user's sync move.",
+		energy: 5,
+		orb: 60,
+		level: 3,
+		color: 'yellow',
+		icon: 'passive'
+	},
+	{
+		id: 52,
+		x: 2,
+		y: -2,
+		name: 'Speed +20',
+		description: 'Speed +20',
+		energy: 0,
+		orb: 5,
+		level: 1,
+		color: 'blue',
+		icon: 'stat'
+	},
+	{
+		id: 53,
+		x: 3,
+		y: -3,
+		name: 'Superduper Effective 5',
+		description: 'Powers up moves that are super effective.',
+		energy: 3,
+		orb: 36,
+		level: 2,
+		color: 'yellow',
+		icon: 'passive'
+	},
+	{
+		id: 54,
+		x: 3,
+		y: -2,
+		name: 'Fierce Entry 1',
+		description: "Raises the user's Attack by 1 stat rank when it enters a battle.",
+		energy: 5,
+		orb: 60,
+		level: 3,
+		color: 'yellow',
+		icon: 'passive'
 	}
 ]
 
@@ -11672,7 +11744,8 @@ export const SYNCGRIDS_TEMPLATES = [
 import * as MAY2022 from '../v/v2.20.0/syncgrids.js';
 import * as JUNE2022 from '../v/v2.21.0/syncgrids.js';
 import * as JULY2022 from '../v/v2.22.0/syncgrids.js';
-import * as AUGUST2022 from '../v/v2.23.0/syncgrids.js';
+import * as AUGUSTpart12022 from '../v/v2.23.0/syncgrids.js';
+import * as AUGUSTpart22022 from '../v/v2.23.5/syncgrids.js';
 
 
 export const SYNCGRIDS = [
@@ -11680,12 +11753,21 @@ export const SYNCGRIDS = [
 	BASE_EMPTY,
 	ALL_EMPTY,
 
-	BASE_EMPTY, // "---------------- v2.23.0 (AUGUST2022) ----------------"
+	BASE_EMPTY, // "---------------- v2.23.5 (AUGUST2022 part2) ----------------"
 
-	AUGUST2022.MAY_BLAZIKEN,
-	AUGUST2022.BRENDAN_LATIOS,
-	AUGUST2022.LOOKER_CROAGUNK,
-	AUGUST2022.COURTNEY_CAMERUPT,
+	AUGUSTpart22022.ZINNIA_RAYQUAZA,
+	AUGUSTpart22022.STEVEN_DEOXYS,
+	AUGUSTpart22022.STEVEN_DEOXYS,
+	AUGUSTpart22022.STEVEN_DEOXYS,
+	AUGUSTpart22022.STEVEN_DEOXYS,
+	AUGUSTpart22022.GIOVANNI_PERSIAN,
+
+	BASE_EMPTY, // "---------------- v2.23.0 (AUGUST2022 part1) ----------------"
+
+	AUGUSTpart12022.MAY_BLAZIKEN,
+	AUGUSTpart12022.BRENDAN_LATIOS,
+	AUGUSTpart12022.LOOKER_CROAGUNK,
+	AUGUSTpart12022.COURTNEY_CAMERUPT,
 
 	BASE_EMPTY, // "---------------- v2.22.0 (JULY2022) ----------------"
 
@@ -11724,4 +11806,4 @@ export const SYNCGRIDS = [
 	PROFESSOR_OAK_MEW
 ]
 
-export var CURRENT_SYNCGRID = AUGUST2022.COURTNEY_CAMERUPT;
+export var CURRENT_SYNCGRID = AUGUSTpart22022.ZINNIA_RAYQUAZA;

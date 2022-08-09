@@ -2659,7 +2659,8 @@ function DISABLE_OPTION(n) { return {"trainer":{"name":n}, "pokemon":[{"name":"-
 import * as MAY2022 from '../v/v2.20.0/syncpairs.js';
 import * as JUNE2022 from '../v/v2.21.0/syncpairs.js';
 import * as JULY2022 from '../v/v2.22.0/syncpairs.js';
-import * as AUGUST2022 from '../v/v2.23.0/syncpairs.js';
+import * as AUGUSTpart12022 from '../v/v2.23.0/syncpairs.js';
+import * as AUGUSTpart22022 from '../v/v2.23.5/syncpairs.js';
 
 
 export const SYNCPAIRS = [
@@ -2667,12 +2668,21 @@ export const SYNCPAIRS = [
 	TEMPLATE1, //Always at the
 	TEMPLATE2, //top of the array
 
-	DISABLE_OPTION("---------------- v2.23.0 (AUGUST2022) ----------------"),
+	DISABLE_OPTION("---------------- v2.23.5 (AUGUST2022 part2) ----------------"),
 
-	AUGUST2022.MAY_BLAZIKEN,
-	AUGUST2022.BRENDAN_LATIOS,
-	AUGUST2022.LOOKER_CROAGUNK,
-	AUGUST2022.COURTNEY_CAMERUPT,
+	AUGUSTpart22022.ZINNIA_RAYQUAZA,
+	AUGUSTpart22022.STEVEN_DEOXYS_ATTACK,
+	AUGUSTpart22022.STEVEN_DEOXYS_DEFENSE,
+	AUGUSTpart22022.STEVEN_DEOXYS_SPEED,
+	AUGUSTpart22022.STEVEN_DEOXYS,
+	AUGUSTpart22022.GIOVANNI_PERSIAN,
+
+	DISABLE_OPTION("---------------- v2.23.0 (AUGUST2022 part1) ----------------"),
+
+	AUGUSTpart12022.MAY_BLAZIKEN,
+	AUGUSTpart12022.BRENDAN_LATIOS,
+	AUGUSTpart12022.LOOKER_CROAGUNK,
+	AUGUSTpart12022.COURTNEY_CAMERUPT,
 
 	DISABLE_OPTION("---------------- v2.22.0 (JULY2022) ----------------"),
 
@@ -2711,4 +2721,4 @@ export const SYNCPAIRS = [
 	PROFESSOR_OAK_MEW
 ];
 
-export var CURRENT_SYNCPAIR = AUGUST2022.COURTNEY_CAMERUPT;
+export var CURRENT_SYNCPAIR = AUGUSTpart22022.ZINNIA_RAYQUAZA;
