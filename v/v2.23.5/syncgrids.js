@@ -574,30 +574,6 @@ export const ZINNIA_RAYQUAZA = [
 		level: 3,
 		color: 'sync',
 		icon: 'sync'
-	},
-	{
-		id: 49,
-		x: -2,
-		y: 2,
-		name: 'Dimensional Defender\nDraco Meteor: Power ↑ +25',
-		description: 'Dimensional Defender\nDraco Meteor: Power ↑ +25',
-		energy: 5,
-		orb: 60,
-		level: 3,
-		color: 'sync',
-		icon: 'sync'
-	},
-	{
-		id: 50,
-		x: 2,
-		y: -2,
-		name: 'Dimensional Defender\nDraco Meteor: Power ↑ +25',
-		description: 'Dimensional Defender\nDraco Meteor: Power ↑ +25',
-		energy: 5,
-		orb: 60,
-		level: 3,
-		color: 'sync',
-		icon: 'sync'
 	}
 ]
 
