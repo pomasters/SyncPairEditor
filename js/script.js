@@ -1031,6 +1031,7 @@ change mode button
 g("btn_changeMode").addEventListener("click", function() {
 	changeMode();
 	this.classList.toggle("optionSelected");
+	g("btn_skills").click();
 })
 
 /*
