@@ -1,5 +1,5 @@
 #main {
-	min-width: 812px;
+	min-width: 1024px;
 	max-width: 1024px;
 	padding-bottom: 2%;
 	background-image: var(--bg2);
@@ -476,6 +476,31 @@ MOVES
 	z-index: 1;
 }
 
+.noIconType { background-image: none; }
+
+.b_move {
+	position: absolute;
+	width: 92%;
+	height: 85%;
+	margin: auto;
+	margin-top: -4px;
+	left: 0;
+	right: 0;
+	overflow: hidden;
+}
+
+.b_move img:nth-child(1) {
+	display: none;
+}
+
+.b_move img:nth-child(2) {
+	height: 100%;
+	filter: opacity(95%);
+	display: block;
+	float: right;
+}
+
+
 .move_gauge_uses {
 	display: flex;
 	margin: 2px auto;
@@ -507,8 +532,8 @@ MOVES
 	justify-content: center;
 	align-items: start;
 	position: absolute;
-	width: 60px;
-	height: 60px;
+	width: 54px;
+	height: 54px;
 	overflow: hidden;
 	right: 0;
 	bottom: 6px;
@@ -863,4 +888,23 @@ SKILLS
 #selectedCells .cellDescription,
 #selectedCells .cellEnergy {
 	font-size: 1em !important;
+}
+
+@media only screen and (max-width: 1536px) {
+	body { flex-direction: column; }
+	#editor {
+		width: 100%;
+		margin: auto;
+		height: auto;
+		z-index: 12;
+		background-color: black;
+	}
+	#editor>div { position: relative; width: 100%; }
+	#render { margin: auto; }
+	#input_sync_pairs, .options, #input_pokemon_art { width: 100%; }
+	#main {
+		width: 100%;
+		margin: auto;
+	}
+	#infos ul { height: 80px; }
 }

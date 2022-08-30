@@ -444,6 +444,7 @@ MOVES
 	border-bottom: 3px rgba(0, 0, 0, 40%) solid;
 	border-radius: 40px;
 	box-shadow: 1px 3px rgb(0 0 0 / 24%);
+	position: relative;
 }
 
 .no_move {
@@ -465,13 +466,34 @@ MOVES
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	position: relative;
 }
 
 .move_name {
 	text-align: center;
 	color: var(--textWhite);
-	text-shadow: var(--textOutline);
+	text-shadow: -1px -1px 0 var(--text),	1px -1px 0 var(--text),	-1px 1px 0 var(--text),	2px 2px 1px var(--text);
 	width: 90%;
+	z-index: 2;
+}
+
+.b_move {
+	height: 102%;
+	margin: auto;
+	overflow: hidden;
+}
+
+.b_move+.move_name {
+	position: absolute;
+}
+
+.b_move img:nth-child(1) {
+	height: 100%;
+	filter: opacity(95%);
+}
+
+.b_move img:nth-child(2) {
+	display: none;
 }
 
 .move_user,

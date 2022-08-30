@@ -448,6 +448,12 @@ input[type=file] {
 
 #infos ul {
 	padding-inline-start: 20px;
+	height: 200px;
+	overflow: auto;
+	scrollbar-width: none;
+}
+#infos ul::-webkit-scrollbar {
+	display: none;
 }
 
 #infos p, #infos li {

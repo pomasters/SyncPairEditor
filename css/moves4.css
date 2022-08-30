@@ -13,8 +13,19 @@
 }
 
 .move_user {
-	width: 40px;
-	height: 40px;
+	width: 45px;
+	height: 45px;
+}
+
+.b_move {
+	border-top-right-radius: 15px;
+	border-bottom-right-radius: 15px;
+}
+
+.b_move img:nth-child(2) {
+	height: 100%;
+	filter: opacity(95%);
+	float: none;
 }
 
 #moves .move_details_description,

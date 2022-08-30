@@ -69,6 +69,36 @@ ELEMENT FOCUS WHEN CLICKED
 	z-index: 1;
 }
 
+
+#elementFocus .b_move {
+	position: absolute;
+	width: 92%;
+	height: 85%;
+	margin: auto;
+	margin-top: -4px;
+	left: 0;
+	right: 0;
+	overflow: hidden;
+	border-top-right-radius: 25px;
+	border-bottom-right-radius: 25px;
+}
+
+#elementFocus .b_move+.move_name {
+	position: static !important;
+}
+
+#elementFocus .b_move img:nth-child(1) {
+	display: none;
+}
+
+#elementFocus .b_move img:nth-child(2) {
+	height: 100%;
+	filter: opacity(95%);
+	margin: auto;
+	display: block;
+}
+
+
 #elementFocus .move_gauge_uses {
 	display: flex;
 	margin: 2px auto;

@@ -350,9 +350,19 @@ function moveIs(move, option) {
 
 	if(move.name == "" || move.type == "") { moveOption = "no_move"; }
 
+	var b_move = "";
+	var move_name = move.name;
+	var noIconType = "";
+	if(move_name.substring(0, 8).toLowerCase() == "(b move)") {
+		b_move = `<div class="b_move"><img src="images/b_move_chain.png"><img src="images/b_move_bg.png"></div>`;
+		move_name = move.name.substring(8);
+		noIconType = "noIconType"
+	}
+
 	return `<div class="move ${moveOption} bg_${move.type.toLowerCase()} elementF">
-				<div class="move_basics icon_${move.type.toLowerCase()}">
-					<p class="move_name">${move.name}</p>
+				<div class="move_basics icon_${move.type.toLowerCase()} ${noIconType}">
+					${b_move}
+					<p class="move_name">${move_name}</p>
 
 					<div class="move_gauge_uses">
 						<div class="move_gauge ${hideOrNot(move.gauge)}">${gauges(move.gauge)}</div>
@@ -372,7 +382,7 @@ function moveIs(move, option) {
 						<div><p>Effect</p><p class="move_effect">${move.effect}</p></div>
 					</div>
 
-					<p class="move_description">${move.description}</p>
+					<p class="move_description">${move.description.replaceAll("(lb)","<br>")}</p>
 				</div>
 			</div>`;
 
