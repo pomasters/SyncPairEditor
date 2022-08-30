@@ -491,7 +491,7 @@ function skillIs(skill, option) {
 
 	return `<div class="skill ${skillOption} ${themeType} elementF">
 				<p class="skill_name">${skill.name}</p>
-				<p class="skill_description">${skill.description}</p>
+				<p class="skill_description">${skill.description.replaceAll("(lb)","<br>")}</p>
 			</div>`;
 }
 
