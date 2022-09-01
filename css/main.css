@@ -571,11 +571,6 @@ input[type=file] {
 	width: 100%;
 }
 
-.screenshotXL {
-	transform: scale(1.45);
-	transform-origin: top left;
-}
-
 
 .backgroundSmall {
 	clip-path: polygon(90% 0, 0% 80%, 0 0%);

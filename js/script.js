@@ -659,21 +659,21 @@ function screenshot() {
 		}
 	}
 
-	node.classList.add("screenshotXL");
+	var w = node.clientWidth;
+	var h = node.clientHeight;
+	var scale = 1.45;
+	var options = { width: w*scale,
+					height: h*scale,
+					style: {'transform': 'scale('+scale+')','transform-origin': 'top left'}
+				}
 
-	var size = node.getBoundingClientRect();
-	var w = size.width;
-	var h = size.height;
-
-	domtoimage.toPng(node,{width: w,height: h})
+	domtoimage.toPng(node, options)
 	.then(function (dataUrl) {
 		var img = new Image();
 		img.src = dataUrl;
 
 		g("screenshot").innerHTML = `<p>GENERATED IMAGE :</p>`;
 		g("screenshot").appendChild(img);
-
-		node.classList.remove("screenshotXL");
 
 		node.removeAttribute("style");
 		g("gridInfos").removeAttribute("class");
@@ -683,7 +683,6 @@ function screenshot() {
 		alert("Image generated. Scroll down the page to see your image.")
 	})
 	.catch(function (error) {
-		node.classList.remove("screenshotXL");
 		alert("Error. Make sure to not have a custom image link in your code before using this button.")
 		console.log(error);
 	});
