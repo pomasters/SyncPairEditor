@@ -495,7 +495,6 @@ MOVES
 
 .b_move img:nth-child(2) {
 	height: 100%;
-	filter: opacity(95%);
 	display: block;
 	float: right;
 }

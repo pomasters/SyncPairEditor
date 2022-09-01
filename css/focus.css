@@ -93,7 +93,6 @@ ELEMENT FOCUS WHEN CLICKED
 
 #elementFocus .b_move img:nth-child(2) {
 	height: 100%;
-	filter: opacity(95%);
 	margin: auto;
 	display: block;
 }
