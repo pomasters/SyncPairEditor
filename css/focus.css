@@ -97,6 +97,13 @@ ELEMENT FOCUS WHEN CLICKED
 	display: block;
 }
 
+#elementFocus .b_move img:nth-child(3) {
+	display: none;
+}
+
+#elementFocus .move_target_icon {
+	display: none;
+}
 
 #elementFocus .move_gauge_uses {
 	display: flex;

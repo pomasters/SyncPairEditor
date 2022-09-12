@@ -354,9 +354,14 @@ function moveIs(move, option) {
 	var move_name = move.name;
 	var noIconType = "";
 	if(move_name.substring(0, 8).toLowerCase() == "(b move)") {
-		b_move = `<div class="b_move"><img src="images/b_move_chain.png"><img src="images/b_move_bg.png"></div>`;
+		b_move = `<div class="b_move"><img src="images/b_move_chain.png"><img src="images/b_move_bg.png"><img src="images/b_move_border.png"></div>`;
 		move_name = move.name.substring(8);
 		noIconType = "noIconType"
+	}
+
+	var target_icon = "";
+	if(move.target == "All opponents") {
+		target_icon = `<div class="move_target_icon bg_${move.type.toLowerCase()}"></div>`
 	}
 
 	return `<div class="move ${moveOption} bg_${move.type.toLowerCase()} elementF">
@@ -370,6 +375,8 @@ function moveIs(move, option) {
 					</div>
 
 					${moveUser(move.user, move.type)}
+
+					${target_icon}
 				</div>
 
 				<div class="move_details_description">

@@ -440,7 +440,7 @@ MOVES
 	color: var(--textWhite);
 	border-left: 6px rgba(0, 0, 0, 30%) solid;
 	border-right: 6px rgba(0, 0, 0, 30%) solid;
-	border-top: 2px rgba(0, 0, 0, 30%) solid;
+	border-top: 2px rgba(0, 0, 0, 25%) solid;
 	border-bottom: 3px rgba(0, 0, 0, 40%) solid;
 	border-radius: 40px;
 	box-shadow: 1px 3px rgb(0 0 0 / 24%);
@@ -491,10 +491,32 @@ MOVES
 .b_move img:nth-child(1) {
 	height: 100%;
 	filter: opacity(95%);
+	z-index: 1;
+	position: relative;
 }
 
 .b_move img:nth-child(2) {
 	display: none;
+}
+
+.b_move img:nth-child(3) {
+	position: absolute;
+	width: 101%;
+	height: 100%;
+	left: -1px;
+	right: 0;
+	top: 0;
+	bottom: 0;
+}
+
+.move_target_icon {
+	width: 28%;
+	margin: auto;
+	height: 17px;
+	position: absolute;
+	top: -18px;
+	clip-path: polygon(0% 100%, 13% 65%, 25% 100%, 37% 100%, 50% 64%, 63% 100%, 75% 100%, 88% 65%, 100% 100%);
+	filter: brightness(75%);
 }
 
 .move_user,

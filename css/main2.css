@@ -499,6 +499,13 @@ MOVES
 	float: right;
 }
 
+.b_move img:nth-child(3) {
+	display: none;
+}
+
+.move_target_icon {
+	display: none;
+}
 
 .move_gauge_uses {
 	display: flex;
