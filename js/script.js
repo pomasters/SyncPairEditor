@@ -1415,8 +1415,16 @@ g("selectedCellsContainer").addEventListener("click", function() {
 	INIT
 -----------------------------------------------------------------------------*/
 
-var SYNCPAIR = CURRENT_SYNCPAIR;
-var SYNCGRID = CURRENT_SYNCGRID;
+var SYNCPAIR = SYNCPAIRS[0];
+var SYNCGRID = SYNCGRIDS[0];
+
+if(CURRENT_SYNCPAIR.length > 0 && CURRENT_SYNCPAIR.length == CURRENT_SYNCGRID.length) {
+	var rand = Math.floor(Math.random() * CURRENT_SYNCPAIR.length);
+
+	SYNCPAIR = CURRENT_SYNCPAIR[rand];
+	SYNCGRID = CURRENT_SYNCGRID[rand];
+}
+
 
 showSyncPair();
 firstShowCodeSources();
