@@ -2662,12 +2662,24 @@ import * as JULY2022 from '../v/v2.22.0/syncpairs.js';
 import * as AUGUSTpart12022 from '../v/v2.23.0/syncpairs.js';
 import * as AUGUSTpart22022 from '../v/v2.23.5/syncpairs.js';
 import * as SEPTEMBER2022 from '../v/v2.24.0/syncpairs.js';
+import * as OCTOBER2022 from '../v/v2.25.0/syncpairs.js';
 
 
 export const SYNCPAIRS = [
 
 	TEMPLATE1, //Always at the
 	TEMPLATE2, //top of the array
+
+	DISABLE_OPTION("---------------- v2.25.0 (OCTOBER2022) ----------------"),
+	
+	OCTOBER2022.WALLY_GARDEVOIR,
+	OCTOBER2022.RAIHAN_GIGALITH,
+	OCTOBER2022.GORDIE_COALOSSAL,
+	OCTOBER2022.MELONY_LAPRAS,
+	OCTOBER2022.VICTOR_RILLABOOM,
+	OCTOBER2022.HELENA_HAUNTER,
+	OCTOBER2022.IRIS_NAGANADEL,
+	OCTOBER2022.ALLISTER_GOURGEIST,
 
 	DISABLE_OPTION("---------------- v2.24.0 (SEPTEMBER2022) ----------------"),
 
@@ -2748,4 +2760,4 @@ export const SYNCPAIRS = [
 	PROFESSOR_OAK_MEW
 ];
 
-export var CURRENT_SYNCPAIR = [SEPTEMBER2022.ROSA_SHAYMIN, SEPTEMBER2022.NAOMI_SANDSLASH];
+export var CURRENT_SYNCPAIR = [OCTOBER2022.WALLY_GARDEVOIR];

@@ -11747,12 +11747,24 @@ import * as JULY2022 from '../v/v2.22.0/syncgrids.js';
 import * as AUGUSTpart12022 from '../v/v2.23.0/syncgrids.js';
 import * as AUGUSTpart22022 from '../v/v2.23.5/syncgrids.js';
 import * as SEPTEMBER2022 from '../v/v2.24.0/syncgrids.js';
+import * as OCTOBER2022 from '../v/v2.25.0/syncgrids.js';
 
 
 export const SYNCGRIDS = [
 
 	BASE_EMPTY,
 	ALL_EMPTY,
+
+	BASE_EMPTY, // "---------------- v2.25.0 (OCTOBER2022) ----------------"
+
+	OCTOBER2022.WALLY_GARDEVOIR,
+	OCTOBER2022.RAIHAN_GIGALITH,
+	OCTOBER2022.GORDIE_COALOSSAL,
+	OCTOBER2022.MELONY_LAPRAS,
+	OCTOBER2022.VICTOR_RILLABOOM,
+	OCTOBER2022.HELENA_HAUNTER,
+	OCTOBER2022.IRIS_NAGANADEL,
+	OCTOBER2022.ALLISTER_GOURGEIST,
 
 	BASE_EMPTY, // "---------------- v2.24.0 (SEPTEMBER2022) ----------------"
 
@@ -11833,4 +11845,4 @@ export const SYNCGRIDS = [
 	PROFESSOR_OAK_MEW
 ]
 
-export var CURRENT_SYNCGRID = [SEPTEMBER2022.ROSA_SHAYMIN, SEPTEMBER2022.NAOMI_SANDSLASH];
+export var CURRENT_SYNCGRID = [OCTOBER2022.WALLY_GARDEVOIR];
