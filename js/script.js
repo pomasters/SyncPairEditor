@@ -573,6 +573,9 @@ function changeMode() {
 		g("btn_moves").classList.remove("optionSelected");
 		g("btn_showall").classList.remove("optionSelected");
 		changeTabTo(lastSelected);
+
+		g("css_slider").disabled = true;
+		g("css_vertical").disabled = true;
 	}
 	else {//"expanded mode"
 		g("css_main1").disabled = true;
@@ -585,6 +588,15 @@ function changeMode() {
 		g("btn_skills").classList.remove("no_move");
 		g("btn_moves").classList.remove("no_move");
 		g("btn_showall").classList.remove("no_move");
+
+		if(localStorage.getItem("syncPairEditorSliderMode") !== null) {
+			g("css_slider").disabled = !(localStorage.getItem("syncPairEditorSliderMode") === "true");
+			g("css_vertical").disabled = true;
+		}
+		if(localStorage.getItem("syncPairEditorVerticalMode") !== null) {
+			g("css_vertical").disabled = !(localStorage.getItem("syncPairEditorVerticalMode") === "true");
+			g("css_slider").disabled = true;
+		}
 	}
 }
 
@@ -764,6 +776,24 @@ function getSaveName() {
 	} catch(e) {
 		clearAll();
 	}
+}
+
+
+function sliderMode() {
+	var isDisabled = document.getElementById("css_slider").disabled;
+	document.getElementById("css_slider").disabled = !isDisabled;
+
+	localStorage.setItem("syncPairEditorSliderMode", isDisabled);
+	localStorage.removeItem("syncPairEditorVerticalMode");
+}
+
+
+function verticalMode() {
+	var isDisabled = document.getElementById("css_vertical").disabled;
+	document.getElementById("css_vertical").disabled = !isDisabled;
+
+	localStorage.setItem("syncPairEditorVerticalMode", isDisabled);
+	localStorage.removeItem("syncPairEditorSliderMode");
 }
 
 
@@ -1047,7 +1077,7 @@ change mode button
 g("btn_changeMode").addEventListener("click", function() {
 	changeMode();
 	this.classList.toggle("optionSelected");
-	g("btn_skills").click();
+	if(!g("css_main2").disabled) { g("btn_skills").click(); }
 })
 
 /*
@@ -1348,6 +1378,9 @@ g("sizeUserTrainer2").addEventListener("input", function() {
 
 g("btn_reset_adjustments").addEventListener("click", resetImagesAdjustments)
 
+g("btn_sliderMode").addEventListener("click", sliderMode)
+
+g("btn_verticalMode").addEventListener("click", verticalMode)
 
 
 /*

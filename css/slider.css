@@ -1,0 +1,88 @@
+#source_valid { display: none; }
+
+#slider {
+	background-color: black;
+	position: absolute;
+	z-index: 16;
+	width: 100%;
+	left: -100%;
+	height: 100%;
+	display: flex;
+    justify-content: end;
+}
+
+#slider div {
+	background-image: url(../images/bg_btn.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	padding: 8px;
+	width: auto;
+	transform: rotate(270deg);
+	transform-origin: bottom right;
+	border: 2px solid;
+	border-radius: 6px;
+	color: var(--text);
+	box-shadow: 2px 2px 3px #585858;
+	position: fixed;
+	top: 30%;
+	margin: auto;
+	white-space: nowrap;
+}
+
+#slider:hover > div,
+#editor:hover #slider > div{
+	filter: hue-rotate(164deg);
+}
+
+#slider img {
+	width: 16px;
+	margin: 0 16px;
+}
+
+#slider:hover + #editor,
+#editor:hover {
+	opacity: 1;
+	transform: translateX(0);
+	pointer-events: auto;
+}
+
+#editor {
+	width: 640px;
+	height: 100%;
+	margin-top: 0;
+	position: fixed;
+	background-color: rgb(0 0 0 / 90%);
+	opacity: 0;
+	transform: translateX(-100%);
+	transition: transform 0.3s, opacity 0.5s;
+	pointer-events: none;
+	z-index: 12;
+}
+
+#editor>div {
+	padding: 10px;
+}
+
+#infos > *:not(input:first-child) {
+	display: none;
+}
+
+#syncOptions {
+	background-color: transparent;
+}
+
+.CodeMirror {
+	width: 620px !important;
+	background-color: transparent !important;
+	resize: vertical !important;
+}
+
+#btn_sliderMode {
+	background: linear-gradient(#D1EC96, #B8F33B);
+}
+
+#btn_verticalMode {
+	width: 24%;
+	pointer-events: none;
+	filter: brightness(40%);
+}

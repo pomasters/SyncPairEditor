@@ -521,6 +521,11 @@ MOVES
 	margin: auto 5px;
 }
 
+.move_gauge {
+	display: flex;
+	flex-wrap: nowrap;
+}
+
 .move_gauge img {
 	width: 16px;
 	margin: auto 1px;
@@ -896,21 +901,17 @@ SKILLS
 	font-size: 1em !important;
 }
 
-@media only screen and (max-width: 1536px) {
-	body { flex-direction: column; }
-	#editor {
-		width: 100%;
-		margin: auto;
-		height: auto;
-		z-index: 12;
-		background-color: black;
+#btn_sliderMode,
+#btn_verticalMode {
+	pointer-events: auto;
+	filter: none;
+}
+
+
+@media only screen and (max-width: 1024px) {
+	#btn_sliderMode,
+	#btn_verticalMode {
+		pointer-events: none;
+		filter: brightness(40%);
 	}
-	#editor>div { position: relative; width: 100%; }
-	#render { margin: auto; }
-	#input_sync_pairs, .options, #input_pokemon_art { width: 100%; }
-	#main {
-		width: 100%;
-		margin: auto;
-	}
-	#infos ul { height: 80px; }
 }

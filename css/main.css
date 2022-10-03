@@ -129,6 +129,7 @@ body {
 	font-family: 'Roboto','Verdana';
 	display: flex;
 	flex-direction: row;
+	position: relative;
 }
 
 p:empty:not(#btn_grid) { display: none !important; }
@@ -160,6 +161,7 @@ img[src$="sync_.png"] { display: none !important; }
 	right: 0;
 }
 
+#slider { display: none; }
 
 #editor {
 	width: 512px;
@@ -238,6 +240,7 @@ img[src$="sync_.png"] { display: none !important; }
 	transition-duration: 50ms;
 	font-size: 12px;
 	text-align: center;
+	font-family: "Roboto", "Tahoma", "monospace;";
 }
 .option:hover {
 	cursor: pointer;
@@ -257,6 +260,15 @@ input+.option {
 
 input[type=file] {
 	display: none;
+}
+
+.exclamation {
+	position: absolute;
+	right: -12px;
+	top: 2px;
+	filter: hue-rotate(270deg);
+	animation: none !important;
+	height: 25px !important;
 }
 
 
@@ -363,6 +375,9 @@ input[type=file] {
 	max-height: 512px;
 	display: flex;
 	flex-direction: column;
+	height: 456px;
+	overflow-y: scroll;
+	padding-right: 32px;
 }
 
 #syncOptions h2 {
@@ -376,6 +391,7 @@ input[type=file] {
 	color: rgb(254 255 174);
 	padding-bottom: 5px;
 	margin-top: 10px;
+	position: relative;
 }
 
 #syncOptions input {
@@ -422,6 +438,13 @@ input[type=file] {
 	margin-left: 50%;
 }
 
+#btn_sliderMode,
+#btn_verticalMode {
+	width: 24%;
+	pointer-events: none;
+	filter: brightness(40%);
+}
+
 #localstorage {
 	width: 100%;
 	outline: none;
@@ -459,6 +482,15 @@ input[type=file] {
 #infos p, #infos li {
 	width: 100%;
 	margin: 10px 0;
+}
+
+#infos li:first-child::after {
+	content: ".";
+	color: transparent;
+	margin-left: 10px;
+	padding: 3px;
+	background-image: url(../images/exclamation2.png);
+	background-size: cover;
 }
 
 #infos li:not(#infos li:first-child) {

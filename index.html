@@ -18,11 +18,15 @@
 	<link rel="stylesheet" type="text/css" href="css/skills3.css" id="css_skills3" disabled>
 	<link rel="stylesheet" type="text/css" href="css/moves4.css" id="css_moves4" disabled>
 	<link rel="stylesheet" type="text/css" href="css/showall.css" id="css_showall" disabled>
+	<link rel="stylesheet" type="text/css" href="css/vertical.css" id="css_vertical" disabled>
+	<link rel="stylesheet" type="text/css" href="css/slider.css" id="css_slider" disabled>
 </head>
 
 <body spellcheck="false">
 
 	<div id="loadApp"><img src="loading.gif"><img src="images/star_ex.png"></div>
+
+	<div id="slider"><div><img src="images/editor_slider.png">Editor<img src="images/editor_slider.png"></div></div>
 
 	<div id="editor">
 		<div>
@@ -59,7 +63,7 @@
 			<div class="options">
 				<div id="syncPairModeBtn"><img src="images/icon_syncpair.png">Sync Pair</div>
 				<div id="syncGridModeBtn"><img src="images/icon_syncgrid.png">Sync Grid</div>
-				<div id="syncOptionsModeBtn"><img src="images/icon_options.png"></div>
+				<div id="syncOptionsModeBtn"><img src="images/icon_options.png"><img src="images/exclamation2.png" class="exclamation"></div>
 			</div>
 
 			<div id="syncPairCodeEditor">
@@ -74,6 +78,14 @@
 
 			<div id="syncOptions">
 				<h2>Advanced options</h2>
+
+				<h3>Mode<img src="images/exclamation2.png" class="exclamation"></h3>
+
+				<div>
+					<p>Change the layout of the editor.</p>
+					<input type="button" value="Slider mode" class="option" id="btn_sliderMode">
+					<input type="button" value="Vertical mode" class="option" id="btn_verticalMode">
+				</div>
 
 				<h3>Save</h3>
 
@@ -274,6 +286,7 @@
 
 				<p>NEWS</p>
 				<ul>
+					<li>2022-10-02 : Added two layouts in expanded view</li>
 					<li>2022-09-26 : Sync Pairs from v2.25.0 added</li>
 					<li>2022-08-30 : - Add B Move support<br>- To standardize the template for everyone, force the vertical mode for some screen sizes</li>
 					<li>2022-08-26 : Sync Pairs from v2.24.0 added</li>
@@ -452,7 +465,7 @@
 				resize: both;
 				min-width: 100%;
 				max-width: 1024px;
-				background-color: rgb(8 8 8 / 87%) !important;
+				background-color: rgb(8 8 8 / 87%);
 			}
 			.CodeMirror-guttermarker-subtle,
 			.CodeMirror-foldmarker {
@@ -472,6 +485,7 @@
 			}
 			
 			#syncGridCodeEditor .CodeMirror { resize: vertical; }
+			.cm-s-shadowfox.CodeMirror { background: rgb(8 8 8 / 87%); }
 			#syncGridCodeEditor .cm-s-shadowfox span.cm-number,
 			#syncGridCodeEditor .cm-s-shadowfox span.cm-string,
 			#syncGridCodeEditor .cm-s-shadowfox span.cm-string-2 { color: #E1768A; }

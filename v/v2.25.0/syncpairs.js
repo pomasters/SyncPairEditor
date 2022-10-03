@@ -201,7 +201,7 @@ export const WALLY_GARDEVOIR = {
 export const RAIHAN_GIGALITH = {
 	"Informations from":"Absol-utely",
 	"-----------------":"-------",
-	"bg":"./v/v2.25.0/silver.png",
+	"bg":"./images/bg/silver.png",
 	"trainer":{
 		"name":"Raihan",
 		"images":{

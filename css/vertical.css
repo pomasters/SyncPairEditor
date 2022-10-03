@@ -1,0 +1,32 @@
+body { flex-direction: column; }
+
+#editor {
+	width: 100%;
+	margin: auto;
+	height: auto;
+	z-index: 12;
+	background-color: black;
+}
+
+#editor>div { position: relative; width: 100%; }
+
+#render { margin: auto; }
+
+#input_sync_pairs, .options, #input_pokemon_art { width: 100%; }
+
+#main {
+	width: 100%;
+	margin: auto;
+}
+
+#infos ul { height: 80px; }
+
+#btn_verticalMode {
+	background: linear-gradient(#D1EC96, #B8F33B);
+}
+
+#btn_sliderMode {
+	width: 24%;
+	pointer-events: none;
+	filter: brightness(40%);
+}
