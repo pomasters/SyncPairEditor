@@ -374,7 +374,7 @@ export const GORDIE_COALOSSAL = {
 		"name":"Gordie",
 		"images":{
 			"base":"./v/v2.25.0/gordie.png",
-			"ex":"./v/v2.25.0/gordieEX.png"
+			"ex":"./v/v2.25.0/gordieEx.png"
 		}
 	},
 	"rarity":6,
