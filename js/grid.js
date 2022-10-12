@@ -149,6 +149,12 @@ export function updateSelectedCells() {
 	)
 
 	document.getElementById("selectedCells").innerHTML = selectedCells.sort().join("");
+
+	if(selectedCells.length > 0) {
+		document.getElementsByClassName("grid_icon_origin")[0].classList.add("grid_icon_origin_animation");
+	} else {
+		document.getElementsByClassName("grid_icon_origin")[0].classList.remove("grid_icon_origin_animation");
+	}
 }
 
 

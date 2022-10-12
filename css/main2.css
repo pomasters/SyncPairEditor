@@ -897,7 +897,8 @@ SKILLS
 
 #selectedCells .cellName,
 #selectedCells .cellDescription,
-#selectedCells .cellEnergy {
+#selectedCells .cellEnergy,
+#selectedCells .cellLevel {
 	font-size: 1em !important;
 }
 
