@@ -484,6 +484,7 @@ input[type=file] {
 	margin: 10px 0;
 }
 
+/*
 #infos li:first-child::after {
 	content: ".";
 	color: transparent;
@@ -492,6 +493,7 @@ input[type=file] {
 	background-image: url(../images/exclamation2.png);
 	background-size: cover;
 }
+*/
 
 #infos li:not(#infos li:first-child) {
 	color : #444444
