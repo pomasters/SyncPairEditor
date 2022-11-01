@@ -121,6 +121,8 @@
 	margin: 0;
 }
 
+html { scroll-behavior:smooth; }
+
 body {
 	margin: auto;
 	width: fit-content;

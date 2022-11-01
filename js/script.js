@@ -699,7 +699,8 @@ function screenshot() {
 		g("grid").removeAttribute("style");
 		g("selectedCellsContainer").removeAttribute("style");
 
-		alert("Image generated. Scroll down the page to see your image.")
+		alert("Image generated.")
+		location.href = "#screenshot";
 	})
 	.catch(function (error) {
 		alert("Error. Make sure to not have a custom image link in your code before using this button.")
