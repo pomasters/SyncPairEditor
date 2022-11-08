@@ -161,7 +161,7 @@ const TEMPLATE2 = {
 		},
 	},
 
-	"rarity" : 1,
+	"rarity" : 7,
 	"role" : "Support",
 
 	"pokemonType" : "Electric",
@@ -2773,4 +2773,4 @@ export const SYNCPAIRS = [
 	PROFESSOR_OAK_MEW
 ];
 
-export var CURRENT_SYNCPAIR = [NOVEMBER2022.HILDA_VICTINI, NOVEMBER2022.HILBERT_GENESECT];
+export var CURRENT_SYNCPAIR = [NOVEMBER2022.HILDA_VICTINI, NOVEMBER2022.HILBERT_GENESECT, NOVEMBER2022.HUGH_BOUFFALANT];

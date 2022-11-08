@@ -13,7 +13,8 @@
 	<link rel="stylesheet" type="text/css" href="css/main2.css" id="css_main2">
 	<link rel="stylesheet" type="text/css" href="css/focus.css" id="css_focus">
 	<link rel="stylesheet" type="text/css" href="css/font.css" id="css_font">
-	<link rel="stylesheet" type="text/css" href="css/grid.css" id="css_font">
+	<link rel="stylesheet" type="text/css" href="css/grid.css" id="css_grid">
+	<link rel="stylesheet" type="text/css" href="css/scout.css" id="css_scout">
 
 	<link rel="stylesheet" type="text/css" href="css/skills3.css" id="css_skills3" disabled>
 	<link rel="stylesheet" type="text/css" href="css/moves4.css" id="css_moves4" disabled>
@@ -24,7 +25,7 @@
 
 <body spellcheck="false">
 
-	<div id="loadApp"><img src="loading.gif"><img src="images/star_ex.png"></div>
+	<div id="loadApp"><img src="loading.gif"><img src="images/star_ex2.png"></div>
 
 	<div id="slider"><div><img src="images/editor_slider.png">Editor<img src="images/editor_slider.png"></div></div>
 
@@ -56,24 +57,25 @@
 			<div class="options">
 				<select id="input_backgrounds"><option selected disabled>Background</option></select>
 				<input type="text" id="input_pokemon_art" list="data_pokemon_art" placeholder="Quick search a Pokemon...">
-				<datalist id="data_pokemon_art"></datalist>				
+				<datalist id="data_pokemon_art"></datalist>
 				<select id="input_gridTemplates"><option selected disabled>Grid Template</option></select>
 			</div>
 
 			<div class="options">
 				<div id="syncPairModeBtn"><img src="images/icon_syncpair.png">Sync Pair</div>
 				<div id="syncGridModeBtn"><img src="images/icon_syncgrid.png">Sync Grid</div>
-				<div id="syncOptionsModeBtn"><img src="images/icon_options.png"></div>
+				<div id="syncScoutModeBtn"><img src="images/icon_syncscout.png">Scout Intro</div>
+				<div id="syncOptionsModeBtn"><img src="images/icon_options.png"><img src="images/exclamation2.png" class="exclamation"></div>
 			</div>
 
 			<div id="syncPairCodeEditor">
 				<div id="source_valid">Valid</div>
-				<textarea id="source_syncpair"></textarea>				
+				<textarea id="source_syncpair"></textarea>
 			</div>
 
 			<div id="syncGridCodeEditor">
 				<div id="sourceGrid_valid">Valid</div>
-				<textarea id="source_syncgrid"></textarea>				
+				<textarea id="source_syncgrid"></textarea>
 			</div>
 
 			<div id="syncOptions">
@@ -110,14 +112,16 @@
 
 				<h3>Images adjustments</h3>
 
-				<div><label for="ratioBg">Keep background ratio</label><input type="checkbox" id="ratioBg"></div>
+				<p>You can use ←↑↓→ on your keyboard or directly enter a number.</p><br>
+
+				<div><label for="ratioBg">Keep background ratio</label><input type="checkbox" class="checkBox" id="ratioBg"></div>
 
 				<div>
 					<p>Background</p>
 					<div>
 						<input type="number" min="-100" max="100" placeholder="x" id="positionXbg">
 						<input type="number" min="-100" max="100" placeholder="y" id="positionYbg">
-						<input type="number" min="0" max="200" placeholder="size" value="100" id="sizeBg">
+						<input type="number" min="50" max="200" placeholder="size" value="100" id="sizeBg">
 					</div>
 				</div>
 
@@ -126,7 +130,7 @@
 					<div>
 						<input type="number" min="-100" max="100" placeholder="x" id="positionXTrainer">
 						<input type="number" min="-100" max="100" placeholder="y" id="positionYTrainer">
-						<input type="number" min="0" max="200" placeholder="size" value="100" id="sizeTrainer">
+						<input type="number" min="50" max="200" placeholder="size" value="100" id="sizeTrainer">
 					</div>
 				</div>
 
@@ -165,6 +169,29 @@
 						<input type="number" min="100" max="300" placeholder="size" id="sizeUserTrainer2">
 					</div>
 				</div>
+
+				<br><div><img src="images/exclamation2.png" class="exclamation">
+					<p>Trainer (Scout Screen)</p>
+					<div>
+						<input type="number" min="-200" max="200" placeholder="x" id="positionXscoutTrainer">
+						<input type="number" min="-200" max="200" placeholder="y" id="positionYscoutTrainer">
+						<input type="number" min="50" max="300" step="2" placeholder="size" value="100" id="sizeScoutTrainer">
+					</div>
+				</div>
+
+				<div><img src="images/exclamation2.png" class="exclamation">
+					<p>Pokémon (Scout Screen)</p>
+					<div>
+						<input type="number" min="-200" max="200" placeholder="x" id="positionXscoutPokemon">
+						<input type="number" min="-200" max="200" placeholder="y" id="positionYscoutPokemon">
+						<input type="number" min="50" max="300" step="2" placeholder="size" value="100" id="sizeScoutPokemon">
+					</div>
+				</div>
+
+				<div class="mirrorOption"><label for="mirrorScoutPokemon">Mirror</label><input type="checkbox" class="checkBox" id="mirrorScoutPokemon"></div>
+
+				<br>
+
 				<input type="button" value="Reset" class="option" id="btn_reset_adjustments">
 			</div>
 
@@ -210,6 +237,12 @@
 					<div>
 						<p><span>Image↓</span> button don't work</p>
 						<p>Make sure to not have image from custom url in your code. Import them with the buttons.</p>
+					</div>
+
+					<div>
+						<p>Rarity</p>
+						<p><span>1</span> to <span>5</span></p>
+						<p><span>6</span> for acces to EX but not EXed or <span>7</span> for EXed icon</p> 
 					</div>
 
 					<div>
@@ -286,6 +319,7 @@
 
 				<p>NEWS</p>
 				<ul>
+					<li>2022-11-08 : Add a "Scout screen" creator</li>
 					<li>2022-10-27 : Add v2.26.0</li>
 					<li>2022-10-02 : Added two layouts in expanded view</li>
 					<li>2022-09-26 : Sync Pairs from v2.25.0 added</li>
@@ -325,7 +359,7 @@
 						<div><img id="syncPair_pokemonImage" src="images/empty.png"></div>
 						<div>
 							<p id="syncPair_pokemonFormName"></p>
-							<p id="syncPair_pokemonName"></p>							
+							<p id="syncPair_pokemonName"></p>
 						</div>
 					</div>
 
@@ -333,7 +367,7 @@
 						<div><img id="syncPair_pokemon2Image" src="images/empty.png"></div>
 						<div>
 							<p id="syncPair_pokemon2FormName"></p>
-							<p id="syncPair_pokemon2Name"></p>							
+							<p id="syncPair_pokemon2Name"></p>
 						</div>
 					</div>
 
@@ -446,7 +480,23 @@
 			<p class="madeWith">Sync Grid made with https://pomasters.github.io/SyncPairEditor/</p>
 		</div>
 
-		<div id="screenshot"></div>		
+		<div id="scout" class="scout_electric">
+			<div id="scout_images">
+				<img id="scout_trainer" src="">
+				<img id="scout_pokemon" src="">
+			</div>
+
+			<textarea id="scout_intro" spellcheck="false" placeholder="Edit this.&#10;(Click on the advanced options button to adjust images positions)"></textarea>
+
+			<div id="scout_infos">
+				<div id="scout_star"></div>
+
+				<div id="scout_name"></div>
+			</div>
+			<p class="madeWith">Made with https://pomasters.github.io/SyncPairEditor/</p>
+		</div>
+
+		<div id="screenshot"></div>
 	</div>
 
 

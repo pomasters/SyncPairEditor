@@ -10,7 +10,7 @@ import {CURRENT_SYNCPAIR, SYNCPAIRS} from './syncpairs.js';
 import * as GRID from './grid.js';
 import {CURRENT_SYNCGRID, SYNCGRIDS, SYNCGRIDS_TEMPLATES} from './syncgrids.js';
 
-const MAX_NUMBER_STARS = 6;
+const MAX_NUMBER_STARS = 7;
 const MAX_NUMBER_PASSIVES = 3;
 const MAX_NUMBER_MASTERPASSIVES = 2;
 const MAX_NUMBER_LUCKY = 3;
@@ -70,6 +70,7 @@ function showSyncPair() {
 		addFocusEvent();
 		noDragImages();
 		moveUserImagesAdjustments();
+		scout();
 
 	} catch(e) {}
 }
@@ -233,16 +234,39 @@ function checkImagesValidity() {
 	}
 }
 
+
+function scout() {
+
+	if(g("scout").classList.contains("hide")) {
+		g("scout").classList = "hide scout_" + SYNCPAIR.pokemonType.toLowerCase();
+	} else {
+		g("scout").classList = "scout_" + SYNCPAIR.pokemonType.toLowerCase();
+	}
+
+	g("scout_trainer").src = SYNCPAIR.trainer.images.base;
+	g("scout_star").innerHTML = rarity(SYNCPAIR.rarity);
+
+	if(SYNCPAIR.pokemon.length > 0) {
+		g("scout_pokemon").src = SYNCPAIR.pokemon[0].image;
+		g("scout_name").innerHTML = `<p>${SYNCPAIR.trainer.name}<br>& ${SYNCPAIR.pokemon[0].name}</p>`;
+	}
+
+	g("scout_trainer").onerror = function() { g("scout_trainer").src = "./images/empty.png" };
+	g("scout_pokemon").onerror = function() { g("scout_pokemon").src = "./images/empty.png" };
+}
+
+
 /*
 Generates the html code for n <img> stars
 */
 function rarity(n) {
 	var o = "";
-	for(var i=1; i<=MAX_NUMBER_STARS-1; i++) {
+	for(var i=1; i<=MAX_NUMBER_STARS-2; i++) {
 		if (i<=n) { o += '<img src="./images/star.png">'; }
 		else { o += '<img src="./images/star2.png">'; }
 	}
-	if(n>=MAX_NUMBER_STARS) { o += '<img src="./images/star_ex.png">'; }
+	if(n==MAX_NUMBER_STARS-1) { o += '<img src="./images/star_ex1.png">'; }
+	if(n>=MAX_NUMBER_STARS) { o += '<img src="./images/star_ex2.png">'; }
 	return o;
 }
 
@@ -678,6 +702,10 @@ function screenshot() {
 		}
 	}
 
+	if(! g("scout").classList.contains("hide")) {
+		node = g("scout");
+	}
+
 	var w = node.clientWidth;
 	var h = node.clientHeight;
 	var scale = 1.45;
@@ -685,6 +713,10 @@ function screenshot() {
 					height: h*scale,
 					style: {'transform': 'scale('+scale+')','transform-origin': 'top left'}
 				}
+
+	if(! g("scout").classList.contains("hide")) {
+		options.style["background-size"] = "69%";
+	}
 
 	domtoimage.toPng(node, options)
 	.then(function (dataUrl) {
@@ -898,6 +930,8 @@ function initSyncPairCodeEditor() {
 		elt.style.paddingLeft = (basePadding + off) + "px";
 	});
 	CODE_MIRROR_EDITOR.refresh();
+
+	foldSomeParts();
 }
 
 function initSyncGridCodeEditor() {
@@ -956,7 +990,21 @@ function initSyncGridCodeEditor() {
 function upTextEditorValueFromSyncPairOBJ() {
 	CODE_MIRROR_EDITOR.doc.setValue(JSON.stringify(SYNCPAIR, null, "  "));
 
-	/* fold some parts of the code of the template demo */
+	foldSomeParts();
+}
+
+function upTextEditorValueFromSyncGridOBJ() {
+	CODE_MIRROR_EDITOR_GRID.doc.setValue(JSON.stringify(SYNCGRID, null, "  "));
+}
+
+
+/* fold some parts of the code */
+function foldSomeParts() {
+	var statsLVL150 = CODE_MIRROR_EDITOR.getSearchCursor("statsLVL150", CodeMirror.Pos(CODE_MIRROR_EDITOR.firstLine(), 0));
+	while(statsLVL150.findNext()) {
+		CODE_MIRROR_EDITOR.foldCode(CodeMirror.Pos(statsLVL150.from().line,0));
+	}
+
 	if(SYNCPAIR.trainer.name == "TEMPLATE (FULL)") {
 		CODE_MIRROR_EDITOR.foldCode(CodeMirror.Pos(28, 0));//pokemon2
 		CODE_MIRROR_EDITOR.foldCode(CodeMirror.Pos(57, 0));//passives2
@@ -965,10 +1013,6 @@ function upTextEditorValueFromSyncPairOBJ() {
 		CODE_MIRROR_EDITOR.foldCode(CodeMirror.Pos(230, 0));//syncMove2
 		CODE_MIRROR_EDITOR.foldCode(CodeMirror.Pos(245, 0));//movesMAX		
 	}
-}
-
-function upTextEditorValueFromSyncGridOBJ() {
-	CODE_MIRROR_EDITOR_GRID.doc.setValue(JSON.stringify(SYNCGRID, null, "  "));
 }
 
 
@@ -1019,6 +1063,13 @@ function resetImagesAdjustments() {
 	g("positionXuserTrainer").value = 0; g("positionYuserTrainer").value = 0; g("sizeUserTrainer").value = 100;
 	g("positionXuserTrainer2").value = 0; g("positionYuserTrainer2").value = 0; g("sizeUserTrainer2").value = 100;
 
+	g("positionXscoutTrainer").value = 0; g("positionYscoutTrainer").value = 0; g("sizeScoutTrainer").value = 100;
+	g("positionXscoutPokemon").value = 0; g("positionYscoutPokemon").value = 0; g("sizeScoutPokemon").value = 100;
+
+	g("scout_trainer").removeAttribute("style");
+	g("scout_pokemon").removeAttribute("style");
+	g("mirrorScoutPokemon").checked = false;
+
 	g("syncPair_bg").removeAttribute("style");
 	g("syncPair_trainerImageBase").removeAttribute("style");
 	g("syncPair_trainerImageEx").removeAttribute("style");
@@ -1032,22 +1083,22 @@ function resetImagesAdjustments() {
 function moveUserImagesAdjustments() {
 	Array.from(document.getElementsByClassName("u_pokemon")).forEach(function(e) {
 		e.children[0].style.left = g("positionXuserPokemon").value + "%";
-		e.children[0].style.top = g("positionYuserPokemon").value + "%";
+		e.children[0].style.top = -parseInt(g("positionYuserPokemon").value) + "%";
 		e.children[0].style.transform = "scale(" + g("sizeUserPokemon").value + "%)";
 	});
 	Array.from(document.getElementsByClassName("u_pokemon2")).forEach(function(e) {
 		e.children[0].style.left = g("positionXuserPokemon2").value + "%";
-		e.children[0].style.top = g("positionYuserPokemon2").value + "%";
+		e.children[0].style.top = -parseInt(g("positionYuserPokemon2").value) + "%";
 		e.children[0].style.transform = "scale(" + g("sizeUserPokemon2").value + "%)";
 	});
 	Array.from(document.getElementsByClassName("u_trainer")).forEach(function(e) {
 		e.children[0].style.left = g("positionXuserTrainer").value + "%";
-		e.children[0].style.top = g("positionYuserTrainer").value + "%";
+		e.children[0].style.top = -parseInt(g("positionYuserTrainer").value) + "%";
 		e.children[0].style.transform = "scale(" + g("sizeUserTrainer").value + "%)";
 	});
 	Array.from(document.getElementsByClassName("u_trainer2")).forEach(function(e) {
 		e.children[0].style.left = g("positionXuserTrainer2").value + "%";
-		e.children[0].style.top = g("positionYuserTrainer2").value + "%";
+		e.children[0].style.top = -parseInt(g("positionYuserTrainer2").value) + "%";
 		e.children[0].style.transform = "scale(" + g("sizeUserTrainer2").value + "%)";
 	});
 }
@@ -1062,6 +1113,7 @@ g("input_sync_pairs").addEventListener("input", function() {
 
 	upTextEditorValueFromSyncPairOBJ();
 	upTextEditorValueFromSyncGridOBJ();
+	document.getElementById("syncGridModeBtn").classList.remove("syncGridModeBtnPending");
 
 	showSyncPair();
 	if(! g("grid").classList.contains("hide")) {
@@ -1275,6 +1327,10 @@ g("syncPairModeBtn").addEventListener("click", function() {
 	g("syncOptions").classList.add("hide");
 	g("main").classList.remove("hide");
 	g("grid").classList.add("hide");
+	g("scout").classList.add("hide");
+	g("syncPairModeBtn").classList.add("syncModeBtnSelected");
+	g("syncGridModeBtn").classList.remove("syncModeBtnSelected");
+	g("syncScoutModeBtn").classList.remove("syncModeBtnSelected");
 
 	upTextEditorValueFromSyncPairOBJ();
 	if(! g("syncPairCodeEditor").classList.contains("hide")) {
@@ -1288,13 +1344,29 @@ g("syncGridModeBtn").addEventListener("click", function() {
 	g("syncOptions").classList.add("hide");
 	g("main").classList.add("hide");
 	g("grid").classList.remove("hide");
+	g("scout").classList.add("hide");
 	g("syncGridModeBtn").classList.remove("syncGridModeBtnPending");
+	g("syncPairModeBtn").classList.remove("syncModeBtnSelected");
+	g("syncGridModeBtn").classList.add("syncModeBtnSelected");
+	g("syncScoutModeBtn").classList.remove("syncModeBtnSelected");
 
 	updateSyncGridFromSource();
 	if(! g("grid").classList.contains("hide")) {
 		GRID.genGrid(SYNCGRID);
 		clickCellToCodePart();
 	}
+})
+
+g("syncScoutModeBtn").addEventListener("click", function() {
+	g("syncPairCodeEditor").classList.remove("hide");
+	g("syncGridCodeEditor").classList.add("hide");
+	g("syncOptions").classList.add("hide");
+	g("main").classList.add("hide");
+	g("grid").classList.add("hide");
+	g("scout").classList.remove("hide");
+	g("syncPairModeBtn").classList.remove("syncModeBtnSelected");
+	g("syncGridModeBtn").classList.remove("syncModeBtnSelected");
+	g("syncScoutModeBtn").classList.add("syncModeBtnSelected");
 })
 
 
@@ -1325,7 +1397,7 @@ g("positionYbg").addEventListener("input", function() {
 	g("syncPair_bg").style.top = this.value + "%";
 })
 g("sizeBg").addEventListener("input", function() {
-	g("syncPair_bg").style.transform = "scale(" + this.value + "%)";
+	g("syncPair_bg").style.transform = `scaleX(${this.value}%) scaleY(${this.value}%)`;
 })
 g("positionXTrainer").addEventListener("input", function() {
 	g("syncPair_trainerImageBase").style.left = this.value + "%";
@@ -1336,45 +1408,82 @@ g("positionYTrainer").addEventListener("input", function() {
 	g("syncPair_trainerImageEx").style.bottom = this.value + "%";
 })
 g("sizeTrainer").addEventListener("input", function() {
-	g("syncPair_trainerImageBase").style.transform = "scale(" + this.value + "%)";
-	g("syncPair_trainerImageEx").style.transform = "scale(" + this.value + "%)";
+	g("syncPair_trainerImageBase").style.transform = `scaleX(${this.value}%) scaleY(${this.value}%)`;
+	g("syncPair_trainerImageEx").style.transform = `scaleX(${this.value}%) scaleY(${this.value}%)`;
 })
 
 g("positionXuserPokemon").addEventListener("input", function() {
 	Array.from(document.getElementsByClassName("u_pokemon")).forEach(e => e.children[0].style.left = this.value + "%");
 })
 g("positionYuserPokemon").addEventListener("input", function() {
-	Array.from(document.getElementsByClassName("u_pokemon")).forEach(e => e.children[0].style.top = this.value + "%");
+	Array.from(document.getElementsByClassName("u_pokemon")).forEach(e => e.children[0].style.top = -parseInt(this.value) + "%");
 })
 g("sizeUserPokemon").addEventListener("input", function() {
-	Array.from(document.getElementsByClassName("u_pokemon")).forEach(e => e.children[0].style.transform = "scale(" + this.value + "%)");
+	Array.from(document.getElementsByClassName("u_pokemon")).forEach(e => e.children[0].style.transform = `scaleX(${this.value}%) scaleY(${this.value}%)`);
 })
 g("positionXuserPokemon2").addEventListener("input", function() {
 	Array.from(document.getElementsByClassName("u_pokemon2")).forEach(e => e.children[0].style.left = this.value + "%");
 })
 g("positionYuserPokemon2").addEventListener("input", function() {
-	Array.from(document.getElementsByClassName("u_pokemon2")).forEach(e => e.children[0].style.top = this.value + "%");
+	Array.from(document.getElementsByClassName("u_pokemon2")).forEach(e => e.children[0].style.top = -parseInt(this.value) + "%");
 })
 g("sizeUserPokemon2").addEventListener("input", function() {
-	Array.from(document.getElementsByClassName("u_pokemon2")).forEach(e => e.children[0].style.transform = "scale(" + this.value + "%)");
+	Array.from(document.getElementsByClassName("u_pokemon2")).forEach(e => e.children[0].style.transform = `scaleX(${this.value}%) scaleY(${this.value}%)`);
 })
 g("positionXuserTrainer").addEventListener("input", function() {
 	Array.from(document.getElementsByClassName("u_trainer")).forEach(e => e.children[0].style.left = this.value + "%");
 })
 g("positionYuserTrainer").addEventListener("input", function() {
-	Array.from(document.getElementsByClassName("u_trainer")).forEach(e => e.children[0].style.top = this.value + "%");
+	Array.from(document.getElementsByClassName("u_trainer")).forEach(e => e.children[0].style.top = -parseInt(this.value) + "%");
 })
 g("sizeUserTrainer").addEventListener("input", function() {
-	Array.from(document.getElementsByClassName("u_trainer")).forEach(e => e.children[0].style.transform = "scale(" + this.value + "%)");
+	Array.from(document.getElementsByClassName("u_trainer")).forEach(e => e.children[0].style.transform = `scaleX(${this.value}%) scaleY(${this.value}%)`);
 })
 g("positionXuserTrainer2").addEventListener("input", function() {
 	Array.from(document.getElementsByClassName("u_trainer2")).forEach(e => e.children[0].style.left = this.value + "%");
 })
 g("positionYuserTrainer2").addEventListener("input", function() {
-	Array.from(document.getElementsByClassName("u_trainer2")).forEach(e => e.children[0].style.top = this.value + "%");
+	Array.from(document.getElementsByClassName("u_trainer2")).forEach(e => e.children[0].style.top = -parseInt(this.value) + "%");
 })
 g("sizeUserTrainer2").addEventListener("input", function() {
-	Array.from(document.getElementsByClassName("u_trainer2")).forEach(e => e.children[0].style.transform = "scale(" + this.value + "%)");
+	Array.from(document.getElementsByClassName("u_trainer2")).forEach(e => e.children[0].style.transform = `scaleX(${this.value}%) scaleY(${this.value}%)`);
+})
+
+
+g("positionXscoutTrainer").addEventListener("input", function() {
+	g("scout_trainer").style.left = this.value + "%";
+})
+g("positionYscoutTrainer").addEventListener("input", function() {
+	g("scout_trainer").style.top = -parseInt(this.value) + "%";
+})
+g("sizeScoutTrainer").addEventListener("input", function() {
+	g("scout_trainer").style.transform = `scaleX(${this.value}%) scaleY(${this.value}%)`;
+})
+
+g("positionXscoutPokemon").addEventListener("input", function() {
+	g("scout_pokemon").style.right = -parseInt(this.value) + "%";
+})
+g("positionYscoutPokemon").addEventListener("input", function() {
+	g("scout_pokemon").style.top = (-parseInt(this.value)+25) + "%";
+})
+g("sizeScoutPokemon").addEventListener("input", function() {
+	if(g("mirrorScoutPokemon").checked) {
+		g("scout_pokemon").style.transform = `scaleX(-${this.value}%) scaleY(${this.value}%)`;
+	} else {
+		g("scout_pokemon").style.transform = `scaleX(${this.value}%) scaleY(${this.value}%)`;
+	}
+})
+
+g("mirrorScoutPokemon").addEventListener("input", function() {
+	if(g("scout_pokemon").style.transform == "") {
+		g("scout_pokemon").style.transform = `scaleX(-1) scaleY(1)`;
+	}
+
+	if(this.checked) {
+		g("scout_pokemon").style.transform = g("scout_pokemon").style.transform.replace("scaleX(","scaleX(-");
+	} else {
+		g("scout_pokemon").style.transform = g("scout_pokemon").style.transform.replace("scaleX(-","scaleX(");
+	}
 })
 
 g("btn_reset_adjustments").addEventListener("click", resetImagesAdjustments)
@@ -1480,8 +1589,10 @@ function init() {
 
 	getSaveName();
 	
+	g("syncPairModeBtn").classList.add("syncModeBtnSelected");
 	g("syncGridCodeEditor").classList.add("hide");
 	g("grid").classList.add("hide");
+	g("scout").classList.add("hide");
 	g("selectedCellsContainer").classList.add("hide");
 
 	g("syncOptions").classList.add("hide");

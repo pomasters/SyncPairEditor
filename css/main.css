@@ -187,6 +187,7 @@ img[src$="sync_.png"] { display: none !important; }
 	margin-right: auto;
 	display: flex;
 	flex-direction: column;
+	width: min-content;
 }
 
 #input_sync_pairs,
@@ -276,6 +277,7 @@ input[type=file] {
 
 #syncPairModeBtn,
 #syncGridModeBtn,
+#syncScoutModeBtn,
 #syncOptionsModeBtn {
 	display: flex;
 	justify-content: center;
@@ -297,22 +299,26 @@ input[type=file] {
 
 #syncPairModeBtn img,
 #syncGridModeBtn img,
+#syncScoutModeBtn img,
 #syncOptionsModeBtn img {
 	height: 20px;
 	margin: auto 5px;
 }
 #syncPairModeBtn { margin-right: 2px; }
-#syncGridModeBtn { margin-left: 2px; margin-right: 2px; }
+#syncGridModeBtn,
+#syncScoutModeBtn { margin-left: 2px; margin-right: 2px; }
 #syncOptionsModeBtn { margin-left: 2px; width: auto; filter: hue-rotate(90deg); }
 
 #syncPairModeBtn:hover,
 #syncGridModeBtn:hover,
+#syncScoutModeBtn:hover,
 #syncOptionsModeBtn:hover {
 	cursor: pointer;
 }
 
 #syncPairModeBtn:hover > img,
-#syncGridModeBtn:hover > img {
+#syncGridModeBtn:hover > img,
+#syncScoutModeBtn:hover > img {
 	animation: translateIcon 500ms infinite;
 }
 @keyframes translateIcon {
@@ -329,16 +335,26 @@ input[type=file] {
 	50% { transform: rotate(180deg); }
 	100% { transform: rotate(360deg); }
 }
+@keyframes rotateIcon {
+	0% { transform: rotate(0deg); }
+	60% { transform: rotate(216deg); }
+	100% { transform: rotate(360deg); }
+}
 
 #syncPairModeBtn:active,
 #syncGridModeBtn:active,
+#syncScoutModeBtn:active,
 #syncOptionsModeBtn:active {
 	transform: scale(0.98);
 	transition-duration: 50ms;
 }
 
-.syncGridModeBtnPending {
-	filter: hue-rotate(212deg);
+.syncGridModeBtnPending > img {
+    animation: rotateIcon 2000ms infinite !important;
+}
+
+.syncModeBtnSelected {
+	filter: hue-rotate(270deg);
 }
 
 #source_valid,
@@ -408,6 +424,7 @@ input[type=file] {
 	display: flex;
 	justify-content: space-between;
 	margin: 4px 1%;
+	position: relative;
 }
 
 #syncOptions > div > p {
@@ -429,9 +446,14 @@ input[type=file] {
 	width: 50%;
 }
 
-#ratioBg {
+.checkBox {
 	width: auto !important;
 	margin-right: auto;
+}
+
+.mirrorOption {
+	width: 49% !important;
+	margin-left: auto !important;
 }
 
 #btn_reset_adjustments {
@@ -486,7 +508,7 @@ input[type=file] {
 	margin: 10px 0;
 }
 
-/*
+
 #infos li:first-child::after {
 	content: ".";
 	color: transparent;
@@ -495,7 +517,7 @@ input[type=file] {
 	background-image: url(../images/exclamation2.png);
 	background-size: cover;
 }
-*/
+
 
 #infos li:not(#infos li:first-child) {
 	color : #444444

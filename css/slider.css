@@ -4,8 +4,8 @@
 	background-color: black;
 	position: absolute;
 	z-index: 16;
-	width: 100%;
-	left: -100%;
+	width: 200%;
+	left: -200%;
 	height: 100%;
 	display: flex;
     justify-content: end;

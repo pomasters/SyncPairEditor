@@ -1,0 +1,146 @@
+#scout {
+	width: 512px;
+	height: 1024px;
+	background-image: url("../images/scout/bg_.png");
+	background-size: 100%;
+	background-origin: content-box;
+	background-repeat: no-repeat;
+	background-position: top left;
+	position: relative;
+	overflow: hidden;
+}
+
+#scout_images {
+	background-image: url(../images/scout/pokeball.png);
+	background-size: 150%;
+	background-origin: initial;
+	background-repeat: no-repeat;
+	background-position-x: center;
+	background-position-y: 20%;
+	position: absolute;
+	top: 8%;
+	width: 100%;
+	height: 92%;
+	pointer-events: none;
+}
+
+#scout_images img {
+	position: absolute;
+}
+
+#scout_trainer {
+	left: 0;
+	height: 70%;
+	z-index: 3;
+}
+#scout_pokemon {
+	right: 0;
+	top: 25%;
+	width: 50%;
+	z-index: 2;
+}
+
+#scout_intro {
+	width: 92%;
+	margin: auto;
+	background-color: #F9F9F9;
+	color: #042236;
+	padding: 16px 12px;
+	padding-right: 50px;
+	border-radius: 12px;
+	box-shadow: 2px 4px 0px 0px rgb(0 0 0 / 30%);
+	font-size: 18px;
+	font-family: 'Roboto';
+	bottom: 27%;
+	position: absolute;
+	left: 0;
+	right: 0;
+	height: 12%;
+	line-height: 30px;
+	resize: none;
+	border: none;
+	outline: none;
+	overflow: hidden;
+	z-index: 5;
+}
+
+#scout_infos {
+	width: 86%;
+	margin: auto;
+	height: 16%;
+	position: absolute;
+	bottom: 8%;
+	left: 0;
+	right: 0;
+	z-index: 5;
+	pointer-events: none;
+}
+
+#scout_star {
+	background-image: url(../images/scout/star.png);
+	background-size: 100%;
+	background-repeat: no-repeat;
+	position: absolute;
+	width: 100%;
+	height: 45%;
+	padding-left: 19%;
+}
+
+#scout_star img {
+	height: 55%;
+	margin-top: 3%;
+}
+
+#scout_name {
+	background-image: url(../images/scout/name.png);
+	background-repeat: no-repeat;
+	background-size: 100%;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+
+#scout_name > * {
+	text-shadow: 1px 1px 3px white;
+	position: absolute;
+	bottom: 20%;
+	left: 0;
+	right: 0;
+	margin: auto;
+	font-family: 'kenya-NewRodinProN-EB';
+	font-size: 21px;
+	width: fit-content;
+	max-width: 90%;
+	text-align: center;
+	line-height: 25px;
+	background: none;
+	border: none;
+	resize: none;
+	overflow: hidden;
+}
+
+#scout .madeWith {
+	color: #ffffff;
+	font-size: 11.5px;
+	text-shadow: 1px 0px 2px black, -1px 0px 2px black;
+}
+
+
+.scout_bug { background-image: url("../images/scout/bg_bug.png") !important; }
+.scout_dark { background-image: url("../images/scout/bg_dark.png") !important; }
+.scout_dragon { background-image: url("../images/scout/bg_dragon.png") !important; }
+.scout_electric { background-image: url("../images/scout/bg_electric.png") !important; }
+.scout_fairy { background-image: url("../images/scout/bg_fairy.png") !important; }
+.scout_fighting { background-image: url("../images/scout/bg_fighting.png") !important; }
+.scout_fire { background-image: url("../images/scout/bg_fire.png") !important; }
+.scout_flying { background-image: url("../images/scout/bg_flying.png") !important; }
+.scout_ghost { background-image: url("../images/scout/bg_ghost.png") !important; }
+.scout_grass { background-image: url("../images/scout/bg_grass.png") !important; }
+.scout_ground { background-image: url("../images/scout/bg_ground.png") !important; }
+.scout_ice { background-image: url("../images/scout/bg_ice.png") !important; }
+.scout_normal { background-image: url("../images/scout/bg_normal.png") !important; }
+.scout_poison { background-image: url("../images/scout/bg_poison.png") !important; }
+.scout_psychic { background-image: url("../images/scout/bg_psychic.png") !important; }
+.scout_rock { background-image: url("../images/scout/bg_rock.png") !important; }
+.scout_steel { background-image: url("../images/scout/bg_steel.png") !important; }
+.scout_water { background-image: url("../images/scout/bg_water.png") !important; }
