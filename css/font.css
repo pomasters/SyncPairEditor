@@ -14,6 +14,24 @@ Font used in the game
 	src: url("kenya-NewRodinProN-EB.otf") format("opentype");
 }
 
+@font-face {
+	font-family: "kenya-SouthSide";
+	font-weight: bold;
+	src: url("kenya-SouthSide.otf") format("opentype");
+}
+
+@font-face {
+	font-family: "SourceHanSansTC-Medium";
+	font-weight: bold;
+	src: url("SourceHanSansTC-Medium.otf") format("opentype");
+}
+
+@font-face {
+	font-family: "SourceHanSansTC-Bold";
+	font-weight: bold;
+	src: url("SourceHanSansTC-Bold.otf") format("opentype");
+}
+
 #syncPair_trainerName {
 	font-family: "kenya-NewRodinProN-EB";
 	font-size: 1em;
