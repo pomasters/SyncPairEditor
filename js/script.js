@@ -332,12 +332,12 @@ function statsAre(stats, stats2) {
 		g("stats").classList.remove("hide");
 	}
 
-	return `<p class="${compareStat(stats.hp, stats2.hp)}">${stats.hp}</p>
-			<p class="${compareStat(stats.atk, stats2.atk)}">${stats.atk}</p>
-			<p class="${compareStat(stats.def, stats2.def)}">${stats.def}</p>
-			<p class="${compareStat(stats.spa, stats2.spa)}">${stats.spa}</p>
-			<p class="${compareStat(stats.spd, stats2.spd)}">${stats.spd}</p>
-			<p class="${compareStat(stats.spe, stats2.spe)}">${stats.spe}</p>`
+	return `<p class="${compareStat(stats.hp, stats2.hp)}">${isEmpty(stats.hp)}</p>
+			<p class="${compareStat(stats.atk, stats2.atk)}">${isEmpty(stats.atk)}</p>
+			<p class="${compareStat(stats.def, stats2.def)}">${isEmpty(stats.def)}</p>
+			<p class="${compareStat(stats.spa, stats2.spa)}">${isEmpty(stats.spa)}</p>
+			<p class="${compareStat(stats.spd, stats2.spd)}">${isEmpty(stats.spd)}</p>
+			<p class="${compareStat(stats.spe, stats2.spe)}">${isEmpty(stats.spe)}</p>`
 
 	/*
 	compare stat1 and stat2 and return the adequate class name that describes their relation
@@ -345,6 +345,11 @@ function statsAre(stats, stats2) {
 	function compareStat(s, s2) {
 		if(s==s2) { return ""; }
 		if(s>s2) { return "stat_up"; } else { return "stat_down"; }
+	}
+
+	function isEmpty(s) {
+		if(s == "") { return "&nbsp;"; }
+		else { return s; }
 	}
 }
 
@@ -484,18 +489,20 @@ function movesAre(moves, option) {
 	adds the html code of div/img of the syncMoveIcon in the middle
 	*/
 	function sync_center(option) {
-		if(option == "move_sync") {
-			return `<div class="icon_sync_center"><img src="./images/icon_sync.png">
-					<img src="${syncMoveTypeImage(SYNCPAIR.actions.syncMove[0].type)}"></div>`;
-		}
-		if(option == "move2_sync") {
-			return `<div class="icon_sync_center"><img src="./images/icon_sync.png">
-					<img src="${syncMoveTypeImage(SYNCPAIR.actions.syncMove2[0].type)}"></div>`;
-		}
-		if(option == "move_dynamax") {
-			return `<div class="icon_sync_center"><img src="./images/icon_sync.png"></div>`
-		}
-		return "";
+		try {
+			if(option == "move_sync") {
+				return `<div class="icon_sync_center"><img src="./images/icon_sync.png">
+						<img src="${syncMoveTypeImage(SYNCPAIR.actions.syncMove[0].type)}"></div>`;
+			}
+			if(option == "move2_sync") {
+				return `<div class="icon_sync_center"><img src="./images/icon_sync.png">
+						<img src="${syncMoveTypeImage(SYNCPAIR.actions.syncMove2[0].type)}"></div>`;
+			}
+			if(option == "move_dynamax") {
+				return `<div class="icon_sync_center"><img src="./images/icon_sync.png"></div>`
+			}
+			return "";
+		} catch(e) { return ""; }
 	}
 }
 
