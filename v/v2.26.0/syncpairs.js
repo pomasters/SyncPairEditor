@@ -741,7 +741,7 @@ export const N_KYUREMBLACK = {
 				"accuracy": "-",
 				"target": "All opponents",
 				"effect": "-",
-				"description": "Activation Condition: When the user gets ready to attack. Deactivation Condition: When this move is used.  Never misses. Lowers the Attack, Sp. Atk, and Speed of all opposing sync pairs by 2 stat ranks. Applies the Supereffective ↑ Next effect to the user. Applies the Free Move Next effect to the user. Increases the user’s Physical Moves ↑ Next effect by 1 rank."
+				"description": "Activation Condition: When the user gets ready to attack.(lb)Deactivation Condition: When this move is used.(lb)(lb)Never misses. Lowers the Attack, Sp. Atk, and Speed of all opposing sync pairs by 2 stat ranks. Applies the Supereffective ↑ Next effect to the user. Applies the Free Move Next effect to the user. Increases the user’s Physical Moves ↑ Next effect by 1 rank."
 			},
 			{
 				"user": "Trainer",
