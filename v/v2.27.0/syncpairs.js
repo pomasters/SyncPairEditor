@@ -122,7 +122,7 @@ export const SERENA_GRENINJA = {
 			},
 			{
 				"user": "Pokemon",
-				"name": "B Quick Attack",
+				"name": "(B Move) B Quick Attack",
 				"type": "Normal",
 				"gauge": "-",
 				"uses": "2",
@@ -310,7 +310,7 @@ export const CALEM_GRENINJA = {
 			},
 			{
 				"user": "Pokemon",
-				"name": "B Double Team",
+				"name": "(B Move) B Double Team",
 				"type": "Normal",
 				"gauge": "-",
 				"uses": "2",
