@@ -17,7 +17,7 @@ export const SERENA_GRENINJA = {
 	"pokemon": [
 		{
 			"name": "Greninja",
-			"formName": "",
+			"formName": "Sync Move: Water",
 			"stats": {
 				"hp": "648",
 				"atk": "468",
@@ -33,6 +33,19 @@ export const SERENA_GRENINJA = {
 				"spa": "492",
 				"spd": "195",
 				"spe": "431"
+			},
+			"image": "./v/v2.27.0/658.png"
+		},
+		{
+			"name": "Greninja",
+			"formName": "Sync Move: Dark",
+			"stats": {
+				"hp": "648",
+				"atk": "468",
+				"def": "185",
+				"spa": "468",
+				"spd": "185",
+				"spe": "409"
 			},
 			"image": "./v/v2.27.0/658.png"
 		}
@@ -131,7 +144,7 @@ export const SERENA_GRENINJA = {
 				"accuracy": "-",
 				"target": "An opponent",
 				"effect": "-",
-				"description": "Activation Condition: When any allies’ attack moves hit a total of 10 times while this move is deactivated.(lb)Deactivation Condition: When this move is used.(lb)(lb)Never misses. Lowers the target’s Defense and Sp. Def by 2 stat ranks. Lowers the target’s Water Type Rebuff by 1 rank when the user’s sync move is Water type. Lowers the target’s Dark Type Rebuff by 1 rank when the user’s sync move is Dark type. Reduces the user’s sync move countdown by 1. Raises the Speed of all allied sync pairs by 3 stat ranks."
+				"description": "Activation Condition: When any allies’ attack moves hit a total of 10 times while this move is desactivated.(lb)Desactivation Condition: When this move is used.(lb)(lb)Never misses. Lowers the target’s Defense and Sp. Def by 2 stat ranks. Lowers the target’s Water Type Rebuff by 1 rank when the user’s sync move is Water type. Lowers the target’s Dark Type Rebuff by 1 rank when the user’s sync move is Dark type. Reduces the user’s sync move countdown by 1. Raises the Speed of all allied sync pairs by 3 stat ranks."
 			},
 			{
 				"user": "Trainer",
@@ -201,7 +214,7 @@ export const CALEM_GRENINJA = {
 	"pokemon": [
 		{
 			"name": "Greninja",
-			"formName": "",
+			"formName": "Sync Move: Dark",
 			"stats": {
 				"hp": "648",
 				"atk": "137",
@@ -217,6 +230,19 @@ export const CALEM_GRENINJA = {
 				"spa": "143",
 				"spd": "307",
 				"spe": "431"
+			},
+			"image": "./v/v2.27.0/658-s.png"
+		},
+		{
+			"name": "Greninja",
+			"formName": "Sync Move: Water",
+			"stats": {
+				"hp": "648",
+				"atk": "137",
+				"def": "307",
+				"spa": "137",
+				"spd": "293",
+				"spe": "409"
 			},
 			"image": "./v/v2.27.0/658-s.png"
 		}
@@ -319,7 +345,7 @@ export const CALEM_GRENINJA = {
 				"accuracy": "-",
 				"target": "All allies",
 				"effect": "-",
-				"description": "Activation Condition: When any allies’ attack moves hit a total of 10 times while this move is deactivated.(lb)Deactivation Condition: When this move is used.(lb)(lb)Raises the evasiveness of all allied sync pairs by 2 stat ranks. Increases the Physical Moves ↑ Next effect of all allied sync pairs by 2 ranks when the user’s sync move is Dark type. Turns the field of play’s zone into a Dark Zone when the user’s sync move is Dark type. (A Dark Zone powers up Dark-type attacks.) Increases the Special Moves ↑ Next effect of all allied sync pairs by 2 ranks when the user’s sync move is Water type. Makes the weather rainy when the user’s sync move is Water type."
+				"description": "Activation Condition: When any allies’ attack moves hit a total of 10 times while this move is desactivated.(lb)Desactivation Condition: When this move is used.(lb)(lb)Raises the evasiveness of all allied sync pairs by 2 stat ranks. Increases the Physical Moves ↑ Next effect of all allied sync pairs by 2 ranks when the user’s sync move is Dark type. Turns the field of play’s zone into a Dark Zone when the user’s sync move is Dark type. (A Dark Zone powers up Dark-type attacks.) Increases the Special Moves ↑ Next effect of all allied sync pairs by 2 ranks when the user’s sync move is Water type. Makes the weather rainy when the user’s sync move is Water type."
 			},
 			{
 				"user": "Trainer",
