@@ -140,6 +140,7 @@ IMAGES/NAME POKEMON
 	width: 100%;
 	white-space: pre;
 	overflow: hidden;
+	pointer-events: auto;
 }
 
 #syncPair_pokemonName,
@@ -155,6 +156,7 @@ IMAGES/NAME POKEMON
 	width: 100%;
 	white-space: pre;
 	overflow: hidden;
+	pointer-events: auto;
 }
 
 .syncPair_pokemonGender {
@@ -174,6 +176,7 @@ BUTTONS EX, ALTER, DYNAMAX
 	position: absolute;
 	right: -6px;
 	bottom: -3px;
+	pointer-events: auto;
 }
 #btn_ex:hover,
 #btn_alter:hover,
