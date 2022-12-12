@@ -418,7 +418,7 @@ function moveIs(move, option) {
 						<div><p>Effect</p><p class="move_effect">${move.effect}</p></div>
 					</div>
 
-					<p class="move_description">${move.description.replaceAll("(lb)","<br>")}</p>
+					<p class="move_description" data-descriptionlength="${Math.round(move.description.length/10)}">${move.description.replaceAll("(lb)","<br>")}</p>
 				</div>
 			</div>`;
 
@@ -529,7 +529,7 @@ function skillIs(skill, option) {
 
 	return `<div class="skill ${skillOption} ${themeType} elementF">
 				<p class="skill_name">${skill.name}</p>
-				<p class="skill_description">${skill.description.replaceAll("(lb)","<br>")}</p>
+				<p class="skill_description" data-descriptionlength="${Math.round(skill.description.length/10)}">${skill.description.replaceAll("(lb)","<br>")}</p>
 			</div>`;
 }
 
@@ -694,6 +694,10 @@ function generateOptionsHtml(arr, target) {
 function screenshot() {
 	var node = g('main');
 
+	var pageIsZoomed = (100 !== Math.round(window.devicePixelRatio * 100));
+	var descriptions = Array.from(document.getElementsByClassName("move_description")).concat(Array.from(document.getElementsByClassName("skill_description")));
+	if(pageIsZoomed) { descriptions.forEach(d => d.style = `padding-bottom: ${parseInt(d.dataset.descriptionlength)/2}px`); }
+
 	if(! g("grid").classList.contains("hide")) {
 		if(g("selectedCellsContainer").classList.contains("hide")) {
 			node = g("grid");
@@ -737,6 +741,8 @@ function screenshot() {
 		g("gridInfos").removeAttribute("class");
 		g("grid").removeAttribute("style");
 		g("selectedCellsContainer").removeAttribute("style");
+
+		if(pageIsZoomed) { descriptions.forEach(d => d.removeAttribute("style")); }
 
 		alert("Image generated.")
 		location.href = "#screenshot";

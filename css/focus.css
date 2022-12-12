@@ -10,7 +10,7 @@ ELEMENT FOCUS WHEN CLICKED
 	margin: auto;
 	width: 100%;
 	height: 100%;
-	z-index: 5;
+	z-index: 6;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;

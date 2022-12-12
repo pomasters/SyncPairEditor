@@ -508,7 +508,7 @@ input[type=file] {
 	margin: 10px 0;
 }
 
-
+/*
 #infos li:first-child::after {
 	content: ".";
 	color: transparent;
@@ -517,7 +517,7 @@ input[type=file] {
 	background-image: url(../images/exclamation2.png);
 	background-size: cover;
 }
-
+*/
 
 #infos li:not(#infos li:first-child) {
 	color : #444444
@@ -531,16 +531,16 @@ input[type=file] {
 #help {
 	display: none;
 	color: white;
-	background-color: rgb(28 30 28 / 50%);
+	background-color: rgb(0 0 0 / 60%);
 	width: 100% !important;
 	height: 100%;
 	padding: 5%;
-	overflow: hidden;
+	overflow-y: auto;
 }
 
 #help div {
-	margin: 25px 0;
-	border: 1px solid #44b1ff;
+	margin: 12px 0;
+	border: 1px solid #15659f;
 	color: #44b1ff;
 	background-color: rgb(68 177 255 / 20%);
 	border-radius: 5px;
@@ -592,7 +592,7 @@ input[type=file] {
 	left: 0;
 	text-align: center;
 	right: 0;
-	z-index: 100;
+	z-index: 5;
 	font-size: 12.3px;
 	color: #6a8f97;
 	font-family: monospace;
