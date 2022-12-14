@@ -719,7 +719,7 @@ export const JASMINE_AMHPAROS = {
 		],
 		"syncMove": [
 			{
-				"user": "Pokemon",
+				"user": "Pokemon2",
 				"name": "Snowy Night’s Guide Electric Beam",
 				"type": "Electric",
 				"gauge": "-",
