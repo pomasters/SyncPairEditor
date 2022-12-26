@@ -122,7 +122,7 @@ export const ASH_PIKACHU = {
 				"accuracy": "-",
 				"target": "An opponent",
 				"effect": "Quick Move Sure Hit",
-				"description": "Activation Condition: When the user uses any moves three times.(lb)Desactivation Condition: Cannot be deactivated.(lb)(lb)Never misses. Uses a maximum of 6 slots of the user’s move gauge. The more amount used, the greater the power of this attack."
+				"description": "Activation Condition: When the user uses any moves three times.(lb)Deactivation Condition: Cannot be deactivated.(lb)(lb)Never misses. Uses a maximum of 6 slots of the user’s move gauge. The more amount used, the greater the power of this attack."
 			},
 			{
 				"user": "Trainer",
@@ -304,7 +304,7 @@ export const CYNTHIA_LUCARIO = {
 				"accuracy": "-",
 				"target": "An opponent",
 				"effect": "-",
-				"description": "Activation Condition: When the user is hit by an attack move twice.(lb)Desactivation Condition: When this move is used.(lb)(lb)Never misses. Applies the Move Gauge Acceleration effect to the allied field of play. Increases the Physical Moves ↑ Next effect of all allied sync pairs by 2 ranks. Increases the Special Moves ↑ Next effect of all allied sync pairs by 2 ranks."
+				"description": "Activation Condition: When the user is hit by an attack move twice.(lb)Deactivation Condition: When this move is used.(lb)(lb)Never misses. Applies the Move Gauge Acceleration effect to the allied field of play. Increases the Physical Moves ↑ Next effect of all allied sync pairs by 2 ranks. Increases the Special Moves ↑ Next effect of all allied sync pairs by 2 ranks."
 			},
 			{
 				"user": "Trainer",
@@ -465,7 +465,7 @@ export const RED_PIKACHU = {
 				"accuracy": "100",
 				"target": "All opponents",
 				"effect": "-",
-				"description": "Activation Condition: When the field of play’s terrain turns into Electric Terrain.(lb)Desactivation Condition: When the field of play’s terrain is no longer Electric Terrain.(lb)(lb)Ignores passive skills that would reduce the damage of this attack. Ignores passive skills that would protect the target against a critical hit. Ignores the target’s Enduring effect. The power of this move is not lowered even if there are multiple targets. Lowers the target’s Defense and Sp. Def by 1 stat rank when the target is paralyzed."
+				"description": "Activation Condition: When the field of play’s terrain turns into Electric Terrain.(lb)Deactivation Condition: When the field of play’s terrain is no longer Electric Terrain.(lb)(lb)Ignores passive skills that would reduce the damage of this attack. Ignores passive skills that would protect the target against a critical hit. Ignores the target’s Enduring effect. The power of this move is not lowered even if there are multiple targets. Lowers the target’s Defense and Sp. Def by 1 stat rank when the target is paralyzed."
 			},
 			{
 				"user": "Trainer",

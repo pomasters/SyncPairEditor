@@ -144,7 +144,7 @@ export const SERENA_GRENINJA = {
 				"accuracy": "-",
 				"target": "An opponent",
 				"effect": "-",
-				"description": "Activation Condition: When any allies’ attack moves hit a total of 10 times while this move is desactivated.(lb)Desactivation Condition: When this move is used.(lb)(lb)Never misses. Lowers the target’s Defense and Sp. Def by 2 stat ranks. Lowers the target’s Water Type Rebuff by 1 rank when the user’s sync move is Water type. Lowers the target’s Dark Type Rebuff by 1 rank when the user’s sync move is Dark type. Reduces the user’s sync move countdown by 1. Raises the Speed of all allied sync pairs by 3 stat ranks."
+				"description": "Activation Condition: When any allies’ attack moves hit a total of 10 times while this move is deactivated.(lb)Deactivation Condition: When this move is used.(lb)(lb)Never misses. Lowers the target’s Defense and Sp. Def by 2 stat ranks. Lowers the target’s Water Type Rebuff by 1 rank when the user’s sync move is Water type. Lowers the target’s Dark Type Rebuff by 1 rank when the user’s sync move is Dark type. Reduces the user’s sync move countdown by 1. Raises the Speed of all allied sync pairs by 3 stat ranks."
 			},
 			{
 				"user": "Trainer",
@@ -345,7 +345,7 @@ export const CALEM_GRENINJA = {
 				"accuracy": "-",
 				"target": "All allies",
 				"effect": "-",
-				"description": "Activation Condition: When any allies’ attack moves hit a total of 10 times while this move is desactivated.(lb)Desactivation Condition: When this move is used.(lb)(lb)Raises the evasiveness of all allied sync pairs by 2 stat ranks. Increases the Physical Moves ↑ Next effect of all allied sync pairs by 2 ranks when the user’s sync move is Dark type. Turns the field of play’s zone into a Dark Zone when the user’s sync move is Dark type. (A Dark Zone powers up Dark-type attacks.) Increases the Special Moves ↑ Next effect of all allied sync pairs by 2 ranks when the user’s sync move is Water type. Makes the weather rainy when the user’s sync move is Water type."
+				"description": "Activation Condition: When any allies’ attack moves hit a total of 10 times while this move is deactivated.(lb)Deactivation Condition: When this move is used.(lb)(lb)Raises the evasiveness of all allied sync pairs by 2 stat ranks. Increases the Physical Moves ↑ Next effect of all allied sync pairs by 2 ranks when the user’s sync move is Dark type. Turns the field of play’s zone into a Dark Zone when the user’s sync move is Dark type. (A Dark Zone powers up Dark-type attacks.) Increases the Special Moves ↑ Next effect of all allied sync pairs by 2 ranks when the user’s sync move is Water type. Makes the weather rainy when the user’s sync move is Water type."
 			},
 			{
 				"user": "Trainer",
