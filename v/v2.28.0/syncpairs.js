@@ -166,7 +166,7 @@ export const LISIA_RAPIDASH = {
 		}
 	},
 	"rarity": 6,
-	"role": "Strike",
+	"role": "Physical Strike",
 	"pokemonType": "Fairy",
 	"pokemonWeakness": "Ghost",
 	"pokemonGender": "Male",
