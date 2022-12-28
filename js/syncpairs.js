@@ -619,7 +619,7 @@ const RED_CHARIZARD = {
 
 		"syncMove" : [
 			{
-				"user" : "Pokemon",
+				"user" : "Pokemon2",
 				"name" : "Living Legend Blast Burn",
 				"type" : "Fire",
 				"gauge" : 0,
@@ -848,7 +848,7 @@ const BLUE_BLASTOISE = {
 
 		"syncMove" : [
 			{
-				"user" : "Pokemon",
+				"user" : "Pokemon2",
 				"name" : "Triumphant Hydro Cannon",
 				"type" : "Water",
 				"gauge" : 0,
@@ -1020,7 +1020,7 @@ const LEAF_VENUSAUR = {
 
 		"syncMove" : [
 			{
-				"user" : "Pokemon",
+				"user" : "Pokemon2",
 				"name" : "Tenacious Frenzy Plant",
 				"type" : "Grass",
 				"gauge" : 0,
@@ -1212,7 +1212,7 @@ const SERENA_ZYGARDE = {
 
 		"syncMove" : [
 			{
-				"user" : "Pokemon",
+				"user" : "Pokemon2",
 				"name" : "Ecosystem Core Enforcer",
 				"type" : "Dragon",
 				"gauge" : 0,
@@ -1391,7 +1391,7 @@ const CYNTHIA_GARCHOMP = {
 
 		"syncMove" : [
 			{
-				"user" : "Pokemon",
+				"user" : "Pokemon2",
 				"name" : "Earthquake of Ancient Lore",
 				"type" : "Ground",
 				"gauge" : 0,

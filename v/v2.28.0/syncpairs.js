@@ -772,7 +772,7 @@ export const DIANTHA_DIANCIE = {
 		],
 		"syncMove": [
 			{
-				"user": "Pokemon",
+				"user": "Pokemon2",
 				"name": "Noble Beauty Diamond Storm",
 				"type": "Rock",
 				"gauge": "-",
