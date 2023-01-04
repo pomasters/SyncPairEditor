@@ -45,8 +45,14 @@ function showSyncPair() {
 			g("syncPair_pokemonImage").src = SYNCPAIR.pokemon[0].image;
 			g("syncPair_pokemonFormName").innerHTML = SYNCPAIR.pokemon[0].formName;
 			g("syncPair_pokemonName").innerHTML = SYNCPAIR.pokemon[0].name;
+			if(SYNCPAIR.pokemon[0].name.substring(0, 7).toLowerCase() == "(shiny)") {
+				g("syncPair_pokemonShiny").classList.remove("hide");
+				g("syncPair_pokemon2Shiny").classList.remove("hide");
+				g("syncPair_pokemonName").innerHTML = SYNCPAIR.pokemon[0].name.substring(7);
+			}
 			g("syncPair_pokemonName").innerHTML += gender(SYNCPAIR.pokemonGender);
 			g("syncPair_pokemonStats").innerHTML = statsAre(SYNCPAIR.pokemon[0].stats, SYNCPAIR.pokemon[0].stats);
+
 		}
 
 		g("syncPair_trainerName").innerHTML = SYNCPAIR.trainer.name;
@@ -180,6 +186,9 @@ function resetShowSyncPair() {
 
 	g("syncPair_pokemonImage").classList.add("elementF");
 	g("syncPair_pokemon2Image").classList.add("elementF");
+
+	g("syncPair_pokemonShiny").classList.add("hide");
+	g("syncPair_pokemon2Shiny").classList.add("hide");
 
 	g("btn_alter").classList.add("hide");
 
@@ -659,7 +668,7 @@ function generateSyncPairsOptionsHtml() {
 		var optionSelected = "";
 		if(SYNCPAIRS[i].trainer.name == SYNCPAIR.trainer.name) { optionSelected = "selected"; }
 
-		var option = `<option value="${i}" ${optionSelected}>${SYNCPAIRS[i].trainer.name} & ${SYNCPAIRS[i].pokemon[0].name}</option>`;
+		var option = `<option value="${i}" ${optionSelected}>${SYNCPAIRS[i].trainer.name} & ${SYNCPAIRS[i].pokemon[0].name.replace("(shiny) ", "")}</option>`;
 		
 		/*disable <option> if name is "--" */
 		if(SYNCPAIRS[i].pokemon[0].name == "--") {

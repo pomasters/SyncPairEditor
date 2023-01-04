@@ -119,6 +119,16 @@ IMAGES/NAME POKEMON
 	padding: 10px;
 }
 
+#syncPair_pokemonShiny,
+#syncPair_pokemon2Shiny {
+	position: absolute;
+	left: 0;
+	bottom: 25px;
+	margin: auto;
+	z-index: 1;
+	width: 32px;
+}
+
 #syncPair_pokemonFormName,
 #syncPair_pokemon2FormName {
 	color: var(--textWhite);

@@ -213,7 +213,7 @@ export const CALEM_GRENINJA = {
 	"pokemonGender": "Male",
 	"pokemon": [
 		{
-			"name": "Greninja",
+			"name": "(shiny) Greninja",
 			"formName": "Sync Move: Dark",
 			"stats": {
 				"hp": "648",

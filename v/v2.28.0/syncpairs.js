@@ -172,7 +172,7 @@ export const LISIA_RAPIDASH = {
 	"pokemonGender": "Male",
 	"pokemon": [
 		{
-			"name": "Rapidash",
+			"name": "(shiny) Rapidash",
 			"formName": "Galarian Form",
 			"stats": {
 				"hp": "622",
@@ -632,7 +632,7 @@ export const DIANTHA_DIANCIE = {
 	"pokemonGender": "",
 	"pokemon": [
 		{
-			"name": "Diancie",
+			"name": "(shiny) Diancie",
 			"formName": "",
 			"stats": {
 				"hp": "635",

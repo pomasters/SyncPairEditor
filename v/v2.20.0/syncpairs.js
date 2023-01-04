@@ -21,7 +21,7 @@ export const MORTY_HOOH = {
 
 	"pokemon" : [
 		{
-			"name" : "Ho-Oh",
+			"name" : "(shiny) Ho-Oh",
 			"formName" : "",
 			"stats" : {
 				"hp" : 689,

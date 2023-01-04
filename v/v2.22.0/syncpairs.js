@@ -184,7 +184,7 @@ export const HILDA_GRAPPLOCT = {
 
 	"pokemon" : [
 		{
-			"name" : "Grapploct",
+			"name" : "(shiny) Grapploct",
 			"formName" : "",
 			"stats" : {
 				"hp" : 648,

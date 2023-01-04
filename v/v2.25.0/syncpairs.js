@@ -16,7 +16,7 @@ export const WALLY_GARDEVOIR = {
 	"pokemonGender":"Male",
 	"pokemon":[
 		{
-			"name":"Gardevoir",
+			"name":"(shiny) Gardevoir",
 			"formName":"",
 			"stats":{
 				"hp":"645",
