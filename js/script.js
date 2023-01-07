@@ -710,6 +710,7 @@ function screenshot() {
 	if(! g("grid").classList.contains("hide")) {
 		if(g("selectedCellsContainer").classList.contains("hide")) {
 			node = g("grid");
+			node.style.backgroundImage = "none";
 			if(g("btn_changeMode").classList.contains("optionSelected")) {
 				node.style.height = "1200px";
 			} else { node.style.height = "812px"; }

@@ -618,11 +618,14 @@ input[type=file] {
 #screenshot {
 	max-width: 1024px;
 	z-index: 10;
+	background-color: #0c0c0d;
+	background-image: url(../images/bg2.png);
+	margin-top: 24px;
 }
 
 #screenshot p {
-	color: white;
 	margin-top: 24px;
+	text-align: center;
 }
 
 #screenshot img {
