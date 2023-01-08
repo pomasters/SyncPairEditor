@@ -1314,13 +1314,17 @@ datalist containing all pokemon options
 g("input_pokemon_art").addEventListener("input", function() {
 	var pokeUrl = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/"+this.value+".png";
 
+	if(g("pokemonHome_art").classList.contains("pokemonHome_art_selected")) {
+		pokeUrl = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/"+this.value+".png";
+	}
+
 	if(isNaN(this.value) || this.value =="") {//if input is not number or ""
 		g("syncPair_pokemonImage").src = "./images/substitute.png";
 		g("syncPair_pokemonFormName").innerHTML = "";
 		g("syncPair_pokemonName").innerHTML = "???";
 	}
 	else {
-		if(this.value < 0 || this.value >= DATA.POKEMON.length ) {//if number <0 or >898 (#calyrex)
+		if(this.value < 0 || this.value >= DATA.POKEMON.length ) {//if number out of range
 			g("syncPair_pokemonImage").src = "./images/substitute.png";
 			g("syncPair_pokemonFormName").innerHTML = "";
 			g("syncPair_pokemonName").innerHTML = "???";
@@ -1342,6 +1346,21 @@ g("input_pokemon_art").addEventListener("input", function() {
 	}
 })
 
+g("pokemonHome_art").addEventListener("click", function() {
+	this.classList.toggle("pokemonHome_art_selected");
+
+	if(!isNaN(g("input_pokemon_art").value)) {
+		var currentImg = SYNCPAIR.pokemon[0].image;
+
+		if(currentImg.indexOf("/pokemon/other/home/") > -1) {
+			SYNCPAIR.pokemon[0].image = currentImg.replace("/pokemon/other/home/", "/pokemon/other/official-artwork/");
+		} else if(currentImg.indexOf("/pokemon/other/official-artwork/") > -1) {
+			SYNCPAIR.pokemon[0].image = currentImg.replace("/pokemon/other/official-artwork/", "/pokemon/other/home/");
+		}
+
+		upTextEditorValueFromSyncPairOBJ();
+	}
+})
 
 
 g("syncPairModeBtn").addEventListener("click", function() {
