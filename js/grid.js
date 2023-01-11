@@ -67,7 +67,7 @@ export function genGrid(sgrid) {
 	document.getElementById("cell0").addEventListener("click", function() {
 		document.getElementById("selectedCellsContainer").classList.toggle("hide");
 	})
-	document.getElementById("cell0").children[1].innerHTML = `<img src="${document.getElementById("syncPair_pokemonImage").src}">`;
+	document.getElementById("cell0").children[1].innerHTML = `<div class="centerCellAnimation"></div><img src="${document.getElementById("syncPair_pokemonImage").src}">`;
 	document.getElementById("selectedCellsPokemon").innerHTML = `${document.getElementById("syncPair_trainerName").textContent} & ${document.getElementById("syncPair_pokemonName").textContent}`;
 
 	document.getElementById("selectedCellsContainer").classList.add("hide");

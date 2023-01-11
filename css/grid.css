@@ -469,7 +469,7 @@
 .grid_icon_passive { background-image: url("../images/grid/grid_icon_passive.png"); }
 .grid_icon_lock { background-image: url("../images/grid/grid_icon_lock.png") !important; }
 
-.grid_icon_origin { filter: brightness(100%) !important; }
+.grid_icon_origin { filter: brightness(100%) !important; width: 100% !important; }
 .grid_icon_origin img {
 	position: absolute;
 	z-index: 100;
@@ -482,15 +482,15 @@
 	right: 0;
 }
 
-.grid_icon_origin_animation img {
-	animation: gridIcon 1.5s infinite;
-	border-radius: 16%;
+.grid_icon_origin_animation .centerCellAnimation {
+	animation: gridIcon 2s infinite;
+	clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
 }
 
 @keyframes gridIcon {
-	0% { box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.6); }
-	70% { box-shadow: 0 0 0 20px rgba(0, 0, 0, 0); }
-	100% { box-shadow: 0 0 0 0 rgba(0, 0, 0, 0); }
+	0% { background-color: rgb(0 0 0); width: 0%; height: 0%; }
+	70% { background-color: rgb(0 0 0 / 0%); width: 100%; height: 100%; }
+	100% { background-color: rgb(0 0 0 / 0%); }
 }
 
 .grid_light { background-image: url("../images/grid/grid_light.png"); pointer-events: none; }
