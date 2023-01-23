@@ -2311,5 +2311,77 @@ export const BEDE_HATTERENE = [
     level: '3',
     color: 'sync',
     icon: 'sync'
+  },
+  {
+    id: 49,
+    x: 0,
+    y: -2,
+    name: "Maximum Super Powered 1",
+    description: "Powers up the user’s moves that are super effective. Powers up the user’s sync move that is super effective. Powers up the user’s max moves that are super effective.",
+    energy: "8",
+    orb: "96",
+    level: "2",
+    color: "yellow",
+    icon: "passive"
+  },
+  {
+    id: 50,
+    x: 0,
+    y: -4,
+    name: "MAX Countdown 2",
+    description: "Reduces the user’s sync move countdown by 2 after using its max move.",
+    energy: "10",
+    orb: "120",
+    level: "4",
+    color: "yellow",
+    icon: "passive"
+  },
+  {
+    id: 51,
+    x: 0,
+    y: -5,
+    name: "G-Max Smite: Power 100",
+    description: "G-Max Smite: Power ↑ 100",
+    energy: "8",
+    orb: "96",
+    level: "5",
+    color: "dynamax",
+    icon: "dynamax"
+  },
+  {
+    id: 52,
+    x: 0,
+    y: 2,
+    name: "Unbending",
+    description: "Defense cannot be lowered.",
+    energy: "5",
+    orb: "60",
+    level: "2",
+    color: "yellow",
+    icon: "passive"
+  },
+  {
+    id: 53,
+    x: -1,
+    y: 4,
+    name: "Recuperation 2",
+    description: "Restores the user’s HP by approximately 40% of its maximum HP after using its sync move.",
+    energy: "10",
+    orb: "120",
+    level: "4",
+    color: "yellow",
+    icon: "passive"
+  },
+  {
+    id: 54,
+    x: 1,
+    y: 3,
+    name: "MAX Damage Guard",
+    description: "Applies the Damage Guard Next effect to the user after using its max move. (If hit by an attack while this effect is applied, the attack will inflict no damage on the user, while the damage of some attacks such as sync moves will be halved. The effect is removed after it is activated.)",
+    energy: "10",
+    orb: "120",
+    level: "5",
+    color: "yellow",
+    icon: "passive"
   }
 ]
