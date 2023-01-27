@@ -769,7 +769,7 @@ export const ANABEL_SNORLAX = {
 		"movesMAX": [
 			{
 				"user": "Pokemon",
-				"name": "Max G-Max Replenish",
+				"name": "G-Max Replenish",
 				"type": "Normal",
 				"gauge": "-",
 				"uses": "-",
@@ -782,7 +782,7 @@ export const ANABEL_SNORLAX = {
 			},
 			{
 				"user": "Pokemon",
-				"name": "Max Max Guard",
+				"name": "Max Guard",
 				"type": "Normal",
 				"gauge": "-",
 				"uses": "-",
@@ -795,7 +795,7 @@ export const ANABEL_SNORLAX = {
 			},
 			{
 				"user": "Pokemon",
-				"name": "Max Max Guard",
+				"name": "Max Guard",
 				"type": "Normal",
 				"gauge": "-",
 				"uses": "-",
