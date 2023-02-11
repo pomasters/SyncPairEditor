@@ -82,14 +82,6 @@
 			<div id="syncOptions">
 				<h2>Advanced options</h2>
 
-				<h3>Mode</h3>
-
-				<div>
-					<p>Change the layout of the editor.</p>
-					<input type="button" value="Slider mode" class="option" id="btn_sliderMode">
-					<input type="button" value="Vertical mode" class="option" id="btn_verticalMode">
-				</div>
-
 				<h3>Save</h3>
 
 				<div>
@@ -116,7 +108,6 @@
 				<p>You can use ←↑↓→ on your keyboard or directly enter a number.</p><br>
 
 				<div><label for="ratioBg">Keep background ratio</label><input type="checkbox" class="checkBox" id="ratioBg"></div>
-
 				<div>
 					<p>Background</p>
 					<div>
@@ -133,10 +124,13 @@
 						<input type="number" min="-100" max="100" placeholder="y" id="positionYTrainer">
 						<input type="number" min="50" max="200" placeholder="size" value="100" id="sizeTrainer">
 					</div>
-				</div>
+				</div>				
+				<div><label for="mirrorImageTrainer">Trainer (Mirror)</label><input type="checkbox" class="checkBox" id="mirrorImageTrainer"></div>
+
+				<h4>Move user icon</h4>
 
 				<div>
-					<p>Move user (Pokemon)</p>
+					<p>Pokemon</p>
 					<div>
 						<input type="number" min="-200" max="200" placeholder="x" id="positionXuserPokemon">
 						<input type="number" min="-200" max="200" placeholder="y" id="positionYuserPokemon">
@@ -145,7 +139,7 @@
 				</div>
 
 				<div>
-					<p>Move user (Pokemon2)</p>
+					<p>Pokemon2</p>
 					<div>
 						<input type="number" min="-200" max="200" placeholder="x" id="positionXuserPokemon2">
 						<input type="number" min="-200" max="200" placeholder="y" id="positionYuserPokemon2">
@@ -154,7 +148,7 @@
 				</div>
 
 				<div>
-					<p>Move user (Trainer)</p>
+					<p>Trainer</p>
 					<div>
 						<input type="number" min="-200" max="200" placeholder="x" id="positionXuserTrainer">
 						<input type="number" min="-200" max="200" placeholder="y" id="positionYuserTrainer">
@@ -163,7 +157,7 @@
 				</div>
 
 				<div>
-					<p>Move user (Trainer2)</p>
+					<p>Trainer2</p>
 					<div>
 						<input type="number" min="-200" max="200" placeholder="x" id="positionXuserTrainer2">
 						<input type="number" min="-200" max="200" placeholder="y" id="positionYuserTrainer2">
@@ -171,29 +165,38 @@
 					</div>
 				</div>
 
-				<br><div>
-					<p>Trainer (Scout Screen)</p>
+				<h4>Scout Screen</h4>
+
+				<div>
+					<p>Trainer</p>
 					<div>
 						<input type="number" min="-200" max="200" placeholder="x" id="positionXscoutTrainer">
 						<input type="number" min="-200" max="200" placeholder="y" id="positionYscoutTrainer">
 						<input type="number" min="50" max="300" step="2" placeholder="size" value="100" id="sizeScoutTrainer">
 					</div>
 				</div>
+				<div><label for="mirrorScoutTrainer">Trainer (Mirror)</label><input type="checkbox" class="checkBox" id="mirrorScoutTrainer"></div>
 
 				<div>
-					<p>Pokémon (Scout Screen)</p>
+					<p>Pokémon</p>
 					<div>
 						<input type="number" min="-200" max="200" placeholder="x" id="positionXscoutPokemon">
 						<input type="number" min="-200" max="200" placeholder="y" id="positionYscoutPokemon">
 						<input type="number" min="50" max="300" step="2" placeholder="size" value="100" id="sizeScoutPokemon">
 					</div>
 				</div>
-
-				<div class="mirrorOption"><label for="mirrorScoutPokemon">Mirror</label><input type="checkbox" class="checkBox" id="mirrorScoutPokemon"></div>
-
-				<br>
+				<div><label for="mirrorScoutPokemon">Pokémon (Mirror)</label><input type="checkbox" class="checkBox" id="mirrorScoutPokemon"></div><br>
 
 				<input type="button" value="Reset" class="option" id="btn_reset_adjustments">
+
+				<br>
+				<h3>Mode</h3>
+
+				<div>
+					<p>Change the layout of the editor.</p>
+					<input type="button" value="Slider mode" class="option" id="btn_sliderMode">
+					<input type="button" value="Vertical mode" class="option" id="btn_verticalMode">
+				</div><br>
 			</div>
 
 			<div id="infos">

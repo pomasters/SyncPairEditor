@@ -424,7 +424,7 @@ function moveIs(move, option) {
 						<div><p>Power</p><p class="move_power">${move.power}</p></div>
 						<div><p>Accuracy</p><p class="move_accuracy">${move.accuracy}</p></div>
 						<div><p>Target</p><p class="move_target">${move.target}</p></div>
-						<div><p>Effect</p><p class="move_effect">${move.effect}</p></div>
+						<div><p>Effect</p><p class="move_effect">${move.effect.replaceAll("(lb)","<br>")}</p></div>
 					</div>
 
 					<p class="move_description" data-descriptionlength="${Math.round(move.description.length/10)}">${move.description.replaceAll("(lb)","<br>")}</p>
@@ -1081,6 +1081,10 @@ function noDragImages() {
 function resetImagesAdjustments() {
 	g("positionXbg").value = 0;	g("positionYbg").value = 0;	g("sizeBg").value = 100;
 	g("positionXTrainer").value = 0; g("positionYTrainer").value = 0; g("sizeTrainer").value = 100;
+
+	g("ratioBg").checked = false;
+	g("mirrorImageTrainer").checked = false;
+
 	g("positionXuserPokemon").value = 0; g("positionYuserPokemon").value = 0; g("sizeUserPokemon").value = 100;
 	g("positionXuserPokemon2").value = 0; g("positionYuserPokemon2").value = 0;  g("sizeUserPokemon2").value = 100;
 	g("positionXuserTrainer").value = 0; g("positionYuserTrainer").value = 0; g("sizeUserTrainer").value = 100;
@@ -1091,6 +1095,7 @@ function resetImagesAdjustments() {
 
 	g("scout_trainer").removeAttribute("style");
 	g("scout_pokemon").removeAttribute("style");
+	g("mirrorScoutTrainer").checked = false;
 	g("mirrorScoutPokemon").checked = false;
 
 	g("syncPair_bg").removeAttribute("style");
@@ -1450,8 +1455,30 @@ g("positionYTrainer").addEventListener("input", function() {
 	g("syncPair_trainerImageEx").style.bottom = this.value + "%";
 })
 g("sizeTrainer").addEventListener("input", function() {
-	g("syncPair_trainerImageBase").style.transform = `scaleX(${this.value}%) scaleY(${this.value}%)`;
-	g("syncPair_trainerImageEx").style.transform = `scaleX(${this.value}%) scaleY(${this.value}%)`;
+	if(g("mirrorImageTrainer").checked) {
+		g("syncPair_trainerImageBase").style.transform = `scaleX(-${this.value}%) scaleY(${this.value}%)`;
+		g("syncPair_trainerImageEx").style.transform = `scaleX(-${this.value}%) scaleY(${this.value}%)`;
+	} else {
+		g("syncPair_trainerImageBase").style.transform = `scaleX(${this.value}%) scaleY(${this.value}%)`;
+		g("syncPair_trainerImageEx").style.transform = `scaleX(${this.value}%) scaleY(${this.value}%)`;
+	}
+})
+
+g("mirrorImageTrainer").addEventListener("input", function() {
+	if(g("syncPair_trainerImageBase").style.transform == "") {
+		g("syncPair_trainerImageBase").style.transform = `scaleX(-1) scaleY(1)`;
+	}
+	if(g("syncPair_trainerImageEx").style.transform == "") {
+		g("syncPair_trainerImageEx").style.transform = `scaleX(-1) scaleY(1)`;
+	}
+
+	if(this.checked) {
+		g("syncPair_trainerImageBase").style.transform = g("syncPair_trainerImageBase").style.transform.replace("scaleX(","scaleX(-");
+		g("syncPair_trainerImageEx").style.transform = g("syncPair_trainerImageEx").style.transform.replace("scaleX(","scaleX(-");
+	} else {
+		g("syncPair_trainerImageBase").style.transform = g("syncPair_trainerImageBase").style.transform.replace("scaleX(-","scaleX(");
+		g("syncPair_trainerImageEx").style.transform = g("syncPair_trainerImageEx").style.transform.replace("scaleX(-","scaleX(");
+	}
 })
 
 g("positionXuserPokemon").addEventListener("input", function() {
@@ -1499,7 +1526,11 @@ g("positionYscoutTrainer").addEventListener("input", function() {
 	g("scout_trainer").style.top = -parseInt(this.value) + "%";
 })
 g("sizeScoutTrainer").addEventListener("input", function() {
-	g("scout_trainer").style.transform = `scaleX(${this.value}%) scaleY(${this.value}%)`;
+	if(g("mirrorScoutTrainer").checked) {
+		g("scout_trainer").style.transform = `scaleX(-${this.value}%) scaleY(${this.value}%)`;
+	} else {
+		g("scout_trainer").style.transform = `scaleX(${this.value}%) scaleY(${this.value}%)`;
+	}
 })
 
 g("positionXscoutPokemon").addEventListener("input", function() {
@@ -1513,6 +1544,18 @@ g("sizeScoutPokemon").addEventListener("input", function() {
 		g("scout_pokemon").style.transform = `scaleX(-${this.value}%) scaleY(${this.value}%)`;
 	} else {
 		g("scout_pokemon").style.transform = `scaleX(${this.value}%) scaleY(${this.value}%)`;
+	}
+})
+
+g("mirrorScoutTrainer").addEventListener("input", function() {
+	if(g("scout_trainer").style.transform == "") {
+		g("scout_trainer").style.transform = `scaleX(-1) scaleY(1)`;
+	}
+
+	if(this.checked) {
+		g("scout_trainer").style.transform = g("scout_trainer").style.transform.replace("scaleX(","scaleX(-");
+	} else {
+		g("scout_trainer").style.transform = g("scout_trainer").style.transform.replace("scaleX(-","scaleX(");
 	}
 })
 

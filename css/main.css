@@ -412,6 +412,11 @@ input[type=file] {
 	position: relative;
 }
 
+#syncOptions h4 {
+    margin: 15px 0px 5px;
+    color: rgb(248 249 192);
+}
+
 #syncOptions input {
 	outline: none;
 }
