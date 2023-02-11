@@ -2297,7 +2297,7 @@ export const LYSANDRE_VOLCANION = [
 		"energy": "3",
 		"orb": "36",
 		"level": 1,
-		"color": "sync",
+		"color": "green",
 		"icon": "water"
 	},
 	{
@@ -2309,7 +2309,7 @@ export const LYSANDRE_VOLCANION = [
 		"energy": "3",
 		"orb": "36",
 		"level": "2",
-		"color": "sync",
+		"color": "green",
 		"icon": "water"
 	},
 	{
@@ -2943,12 +2943,12 @@ export const ANABEL_SNORLAX = [
 		"id": 47,
 		"x": -2,
 		"y": -1,
-		"name": "Reflect: Power 0",
-		"description": "Reflect: Power ↑ 0",
+		"name": "Reflect: Move Gauge Refresh 3",
+		"description": "Has a chance (40%) of charging the user’s move gauge by one when a move is successful.",
 		"energy": "7",
 		"orb": "84",
 		"level": 1,
-		"color": "sync",
+		"color": "red",
 		"icon": "psychic"
 	},
 	{
@@ -3599,7 +3599,7 @@ export const EMMA_CROBAT = [
 		"energy": "3",
 		"orb": "36",
 		"level": 1,
-		"color": "sync",
+		"color": "green",
 		"icon": "poison"
 	},
 	{
@@ -3611,7 +3611,7 @@ export const EMMA_CROBAT = [
 		"energy": "3",
 		"orb": "36",
 		"level": "2",
-		"color": "sync",
+		"color": "green",
 		"icon": "poison"
 	},
 	{
