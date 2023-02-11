@@ -257,7 +257,7 @@ function scout() {
 
 	if(SYNCPAIR.pokemon.length > 0) {
 		g("scout_pokemon").src = SYNCPAIR.pokemon[0].image;
-		g("scout_name").innerHTML = `<p>${SYNCPAIR.trainer.name}<br>& ${SYNCPAIR.pokemon[0].name}</p>`;
+		g("scout_name").innerHTML = `<p>${SYNCPAIR.trainer.name}<br>& ${SYNCPAIR.pokemon[0].name.replace("(Shiny)","").replace("(shiny)","")}</p>`;
 	}
 
 	g("scout_trainer").onerror = function() { g("scout_trainer").src = "./images/empty.png" };
@@ -421,7 +421,7 @@ function moveIs(move, option) {
 					<div class="move_details">
 						<div style="border-bottom: 6px solid var(--${move.type.toLowerCase()});"><p>Type</p><p class="move_type"><img src="${typeImage(move.type)}">${move.type}</p></div>
 						<div><p>Category</p><p class="move_category">${category(move.category)}</p></div>
-						<div><p>Power</p><p class="move_power">${move.power}</p></div>
+						<div><p>Power</p><p class="move_power">${move.category.toLowerCase()=="status" ? "-" : move.power}</p></div>
 						<div><p>Accuracy</p><p class="move_accuracy">${move.accuracy}</p></div>
 						<div><p>Target</p><p class="move_target">${move.target}</p></div>
 						<div><p>Effect</p><p class="move_effect">${move.effect.replaceAll("(lb)","<br>")}</p></div>
