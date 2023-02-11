@@ -89,10 +89,10 @@ export const ASH_PIKACHU = {
 				"user": "Pokemon",
 				"name": "Thunder",
 				"type": "Electric",
-				"gauge": "3",
+				"gauge": "2",
 				"uses": "--",
 				"category": "Special",
-				"power": "124-148",
+				"power": "161-192",
 				"accuracy": "70",
 				"target": "An opponent",
 				"effect": "-",
@@ -121,7 +121,7 @@ export const ASH_PIKACHU = {
 				"power": "400-480",
 				"accuracy": "-",
 				"target": "An opponent",
-				"effect": "Quick Move Sure Hit",
+				"effect": "Quick Move(lb)Sure Hit",
 				"description": "Activation Condition: When the user uses any moves three times.(lb)Deactivation Condition: Cannot be deactivated.(lb)(lb)Never misses. Uses a maximum of 6 slots of the user’s move gauge. The more amount used, the greater the power of this attack."
 			},
 			{
