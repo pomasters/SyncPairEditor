@@ -334,6 +334,15 @@ return :
 	string of html code for the stats
 */
 function statsAre(stats, stats2) {
+	const max_stats = {
+		"Hp": ["Rampardos (1000)", "Emboar (978)", "Cranidos (975)", "Pignite (939)", "Hariyama (935)"],
+		"Attack": ["Pheromosa (544)", "Mega Metagross (539)", "Mega Charizard X (535)", "Zygarde (Complete Forme) (535)", "Mega Blaziken (535)"],
+		"Defense": ["Mega Steelix (424)", "Mega Lucario (Cynthia) (387)", "Mega Blastoise (374)", "Steelix (354)", "Mega Ampharos (350)"],
+		"Special Attack": ["Mega Gardevoir (Wally) (621)", "Mega Mewtwo Y (599)", "Pheromosa (544)", "Mega Pidgeot (535)", "Mega Charizard X (535)", "Zygarde (Complete Forme) (535)"],
+		"Special Defense": ["Mega Latios (392)", "Mega Lucario (Cynthia) (387)", "Mega Blastoise (374)", "Celesteela (354)", "Mega Ampharos (350)"],
+		"Speed": ["Deoxys-Speed (566)", "Mega Sharpedo (540)", "Mega Mewtwo Y (532)", "Rapidash (Blaine) (529)", "Pheromosa (523)"]
+	}
+
 	if(stats.hp == 0 && stats.atk == 0 && stats.def == 0 && 
 		stats.spa == 0 && stats.spd == 0 && stats.spe ==0) {
 		g("stats").classList.add("hide");
@@ -341,24 +350,33 @@ function statsAre(stats, stats2) {
 		g("stats").classList.remove("hide");
 	}
 
-	return `<p class="${compareStat(stats.hp, stats2.hp)}">${isEmpty(stats.hp)}</p>
-			<p class="${compareStat(stats.atk, stats2.atk)}">${isEmpty(stats.atk)}</p>
-			<p class="${compareStat(stats.def, stats2.def)}">${isEmpty(stats.def)}</p>
-			<p class="${compareStat(stats.spa, stats2.spa)}">${isEmpty(stats.spa)}</p>
-			<p class="${compareStat(stats.spd, stats2.spd)}">${isEmpty(stats.spd)}</p>
-			<p class="${compareStat(stats.spe, stats2.spe)}">${isEmpty(stats.spe)}</p>`
+	return `<p class="${compareStat(stats.hp, stats2.hp)}">${checkMaxStat(stats.hp,935,"Hp")}${isEmpty(stats.hp)}</p>
+			<p class="${compareStat(stats.atk, stats2.atk)}">${checkMaxStat(stats.atk,535,"Attack")}${isEmpty(stats.atk)}</p>
+			<p class="${compareStat(stats.def, stats2.def)}">${checkMaxStat(stats.def,350,"Defense")}${isEmpty(stats.def)}</p>
+			<p class="${compareStat(stats.spa, stats2.spa)}">${checkMaxStat(stats.spa,535,"Special Attack")}${isEmpty(stats.spa)}</p>
+			<p class="${compareStat(stats.spd, stats2.spd)}">${checkMaxStat(stats.spd,350,"Special Defense")}${isEmpty(stats.spd)}</p>
+			<p class="${compareStat(stats.spe, stats2.spe)}">${checkMaxStat(stats.spe,523,"Speed")}${isEmpty(stats.spe)}</p>`
 
 	/*
 	compare stat1 and stat2 and return the adequate class name that describes their relation
 	*/
 	function compareStat(s, s2) {
-		if(s==s2) { return ""; }
-		if(s>s2) { return "stat_up"; } else { return "stat_down"; }
+		if(parseInt(s)==parseInt(s2)) { return ""; }
+		if(parseInt(s)>parseInt(s2)) { return "stat_up"; } else { return "stat_down"; }
 	}
 
 	function isEmpty(s) {
 		if(s == "") { return "&nbsp;"; }
 		else { return s; }
+	}
+
+	function checkMaxStat(stat, maxStat, whichStat) {
+		if(stat >= maxStat) {
+			return `<img src="images/attention.png" class="highestStatIcon">
+			<span class="highestStatTooltip"><a target="_blank" href="https://www.serebii.net/pokemonmasters/syncpairs/${whichStat.toLowerCase().replace(" ","")}.shtml">TOP IN ${whichStat.toUpperCase()} ↗</a><br><br>${max_stats[whichStat].join("<br>")}</span>`
+		} else {
+			return "";
+		}
 	}
 }
 
@@ -750,6 +768,9 @@ function screenshot() {
 		options.style["background-size"] = "69%";
 	}
 
+	Array.from(document.getElementsByClassName("highestStatIcon")).forEach(i => i.classList.add("hide"));
+	Array.from(document.getElementsByClassName("highestStatTooltip")).forEach(i => i.classList.add("hide"));
+
 	domtoimage.toPng(node, options)
 	.then(function (dataUrl) {
 		var img = new Image();
@@ -764,6 +785,9 @@ function screenshot() {
 		g("selectedCellsContainer").removeAttribute("style");
 
 		if(pageIsZoomed) { descriptions.forEach(d => d.removeAttribute("style")); }
+
+		Array.from(document.getElementsByClassName("highestStatIcon")).forEach(i => i.classList.remove("hide"));
+		Array.from(document.getElementsByClassName("highestStatTooltip")).forEach(i => i.classList.remove("hide"));
 
 		alert("Image generated.")
 		location.href = "#screenshot";

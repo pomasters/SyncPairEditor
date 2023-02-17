@@ -355,6 +355,7 @@ STATS
 	padding: 2px 12px;
 	font-size: 1.1em;
 	letter-spacing: 1px;
+	position: relative;
 }
 
 #stats div p:nth-child(1) { background-color: var(--hp); }
@@ -367,6 +368,36 @@ STATS
 
 .stat_up { color: var(--textYellow); }
 .stat_down { color: var(--textGray); }
+
+.highestStatTooltip {
+	display: none;
+	position: absolute;
+	background-color: #000000cf;
+	border-radius: 5px;
+	font-family: 'Roboto';
+	font-size: 13px;
+	text-shadow: none;
+	padding: 10px;
+	z-index: 5;
+	right: 80px;
+	width: max-content;
+	bottom: 5px;
+}
+
+.highestStatTooltip a {
+	color: #31a98b;
+	text-decoration: none;
+}
+
+#stats p:hover .highestStatTooltip {
+	display: block;
+}
+
+.highestStatIcon {
+	height: 84%;
+	position: absolute;
+	margin: -12px -26px;
+}
 
 
 /* --------------------------------
