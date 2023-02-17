@@ -753,7 +753,7 @@ SKILLS
 }
 
 #skills>div+div {
-	margin-top: 1%;
+	margin-top: 0%;
 }
 
 #skills>div+div:empty {
@@ -854,6 +854,20 @@ SKILLS
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+	position: relative;
+	margin-top: 2.2%;
+}
+
+#themeSkills .no_move {
+	margin-top: 2.2%;
+	border-radius: 50px;
+}
+
+.skill_theme_icon {
+	position: absolute;
+	top: -15px;
+	left: -2px;
+	height: 30px;
 }
 
 .skill_theme .skill_name {
@@ -861,6 +875,7 @@ SKILLS
 	padding: 2px;
 	margin: auto;
 	white-space: nowrap;
+	z-index: 2;
 }
 
 .skill_theme .skill_description {

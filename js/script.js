@@ -530,13 +530,24 @@ return :
 function skillIs(skill, option) {
 	var themeType = "";
 	var skillOption = option;
+	var themeSkillIcon = "";
 
-	if(skill.name == "" && skill.description == "") { skillOption = "no_move"; }
+	if(skill.name == "" && skill.description == "") { skillOption = "no_move"; skill.name = "&nbsp;"; }
+
+	if(option == "skill_theme") {
+		var icon = "other";
+		if((icon = DATA.THEMES_SKILLS[skill.name.toLowerCase()]) == undefined) { icon = "other"; }
+		themeSkillIcon = `<img src="images/theme_${icon}.png" class="skill_theme_icon">`;
+	}
 
 	/*if the skill is a "type" (fire, ice, ..)*/
-	if(DATA.TYPES.indexOf(skill.name.toLowerCase()) > -1) { themeType= "bg_"+skill.name.toLowerCase(); }
+	if(DATA.TYPES.indexOf(skill.name.toLowerCase()) > -1) {
+		themeType= "bg_"+skill.name.toLowerCase();
+		themeSkillIcon = `<img src="images/theme_type.png" class="skill_theme_icon">`;
+	}
 
 	return `<div class="skill ${skillOption} ${themeType} elementF">
+				${themeSkillIcon}
 				<p class="skill_name">${skill.name}</p>
 				<p class="skill_description" data-descriptionlength="${Math.round(skill.description.length/10)}">${skill.description.replaceAll("(lb)","<br>")}</p>
 			</div>`;

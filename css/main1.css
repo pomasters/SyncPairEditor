@@ -720,6 +720,19 @@ SKILLS
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	position: relative;
+	margin-bottom: 3%;
+}
+
+#themeSkills .skill_name {
+	z-index: 2;
+}
+
+#themeSkills .skill_theme_icon {
+	position: absolute;
+	top: -15px;
+	left: -2px;
+	height: 30px;
 }
 
 

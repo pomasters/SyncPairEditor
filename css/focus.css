@@ -293,6 +293,10 @@ ELEMENT FOCUS WHEN CLICKED
 	min-height: 36px;
 }
 
+#elementFocus .skill_theme_icon {
+	display: none;
+}
+
 #elementFocus .skill_name {
 	letter-spacing: 1px;
 	padding: 4px;
