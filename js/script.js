@@ -1717,8 +1717,7 @@ function init() {
 
 	g("syncOptions").classList.add("hide");
 
-	function hideLoad(){ g("loadApp").classList.add("hide"); }
-	setTimeout(hideLoad, 300);
+	g("loadApp").classList.add("hide");
 }
 
 window.onload = init;
