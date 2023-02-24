@@ -776,6 +776,7 @@ function screenshot() {
 		var img = new Image();
 		img.src = dataUrl;
 
+		g("screenshot").classList.remove("hide");
 		g("screenshot").innerHTML = `<p>GENERATED IMAGE :</p>`;
 		g("screenshot").appendChild(img);
 
@@ -1714,6 +1715,7 @@ function init() {
 	g("grid").classList.add("hide");
 	g("scout").classList.add("hide");
 	g("selectedCellsContainer").classList.add("hide");
+	g("screenshot").classList.add("hide");
 
 	g("syncOptions").classList.add("hide");
 
