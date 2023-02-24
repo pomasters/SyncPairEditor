@@ -2667,12 +2667,21 @@ import * as NOVEMBER2022 from '../v/v2.26.0/syncpairs.js';
 import * as DECEMBER2022 from '../v/v2.27.0/syncpairs.js';
 import * as JANUARY2023 from '../v/v2.28.0/syncpairs.js';
 import * as FEBRUARY2023 from '../v/v2.29.0/syncpairs.js';
+import * as MARCH2023 from '../v/v2.30.0/syncpairs.js';
 
 
 export const SYNCPAIRS = [
 
 	TEMPLATE1, //Always at the
 	TEMPLATE2, //top of the array
+
+	DISABLE_OPTION("---------------- v2.30.0 (MARCH2023) ----------------"),
+
+	MARCH2023.MARNIE_MOLTRES,
+	MARCH2023.GLORIA_THWACKEY,
+	MARCH2023.HOP_ZAPDOS,
+	MARCH2023.BEDE_ARTICUNO,
+	MARCH2023.BALLGUY_AMOONGUSS,
 
 	DISABLE_OPTION("---------------- v2.29.0 (FEBRUARY2023) ----------------"),
 
