@@ -625,7 +625,7 @@ input[type=file] {
 	z-index: 10;
 	background-color: #0c0c0d;
 	background-image: url(../images/bg2.png);
-	margin-top: 24px;
+	padding-top: 24px;
 }
 
 #screenshot p {
