@@ -596,7 +596,7 @@ export const DAWN_WORMADAM = {
 		"syncMove": [
 			{
 				"user": "Pokemon",
-				"name": "Plant Power Bug Impact",
+				"name": "Plant Power Bug Beam",
 				"type": "Bug",
 				"gauge": "-",
 				"uses": "-",
