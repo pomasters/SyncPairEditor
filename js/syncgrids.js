@@ -16025,12 +16025,23 @@ import * as DECEMBER2022 from '../v/v2.27.0/syncgrids.js';
 import * as JANUARY2023 from '../v/v2.28.0/syncgrids.js';
 import * as FEBRUARY2023 from '../v/v2.29.0/syncgrids.js';
 import * as MARCH2023 from '../v/v2.30.0/syncgrids.js';
+import * as APRIL2023 from '../v/v2.31.0/syncgrids.js';
 
 
 export const SYNCGRIDS = [
 
 	BASE_EMPTY,
 	ALL_EMPTY,
+
+	BASE_EMPTY, // "---------------- v2.31.0 (APRIL2023) ----------------"
+
+	APRIL2023.STEVEN_STOUTLAND,
+	APRIL2023.STEVEN_CRADILY,
+	APRIL2023.SHAUNA_KLEFKI,
+	APRIL2023.ZINNIA_THIEVUL,
+	APRIL2023.LYRA_PHANPY,
+	APRIL2023.LORELEI_CLOYSTER,
+	APRIL2023.BRUNO_ONIX,
 
 	BASE_EMPTY, // "---------------- v2.30.0 (MARCH2023) ----------------"
 
