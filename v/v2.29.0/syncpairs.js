@@ -165,7 +165,7 @@ export const MORTY_GASTLY = {
 			"ex": "./v/v2.29.0/morty.png"
 		}
 	},
-	"rarity": 4,
+	"rarity": "4+ex",
 	"role": "Support",
 	"pokemonType": "Ghost",
 	"pokemonWeakness": "Dark",

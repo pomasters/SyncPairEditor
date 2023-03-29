@@ -407,7 +407,7 @@ export const SERENA_FLETCHLING = {
 			"ex": "./v/v2.27.0/serena.png"
 		}
 	},
-	"rarity": 4,
+	"rarity": "4+ex",
 	"role": "Tech",
 	"pokemonType": "Flying",
 	"pokemonWeakness": "Electric",

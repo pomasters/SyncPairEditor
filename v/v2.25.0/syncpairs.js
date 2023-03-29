@@ -209,7 +209,7 @@ export const RAIHAN_GIGALITH = {
 			"ex":"./v/v2.25.0/raihan.png"
 		}
 	},
-	"rarity":4,
+	"rarity": "4+ex",
 	"role":"Support",
 	"pokemonType":"Rock",
 	"pokemonWeakness":"Water",

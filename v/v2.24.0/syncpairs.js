@@ -567,7 +567,7 @@ export const BLUE_EXEGGUTOR = {
 			"ex": "./v/v2.24.0/blue.png"
 		}
 	},
-	"rarity": 4,
+	"rarity": "4+ex",
 	"role": "Support",
 	"pokemonType": "Grass",
 	"pokemonWeakness": "Bug",
@@ -723,7 +723,7 @@ export const SILVER_FERALIGATR = {
 			"ex": "./v/v2.24.0/silver.png"
 		}
 	},
-	"rarity": 4,
+	"rarity": "4+ex",
 	"role": "Tech",
 	"pokemonType": "Water",
 	"pokemonWeakness": "Electric",
@@ -875,7 +875,7 @@ export const MAY_WAILMER = {
 			"ex": "./v/v2.24.0/may.png"
 		}
 	},
-	"rarity": 4,
+	"rarity": "4+ex",
 	"role": "Special Strike",
 	"pokemonType": "Water",
 	"pokemonWeakness": "Grass",
@@ -1031,7 +1031,7 @@ export const CYNTHIA_GASTRODON = {
 			"ex": "./v/v2.24.0/cynthia.png"
 		}
 	},
-	"rarity": 4,
+	"rarity": "4+ex",
 	"role": "Support",
 	"pokemonType": "Ground",
 	"pokemonWeakness": "Grass",
@@ -1187,7 +1187,7 @@ export const N_SIGILYPH = {
 			"ex": "./v/v2.24.0/n.png"
 		}
 	},
-	"rarity": 4,
+	"rarity": "4+ex",
 	"role": "Tech",
 	"pokemonType": "Psychic",
 	"pokemonWeakness": "Rock",
@@ -1343,7 +1343,7 @@ export const ROSA_DEWOTT = {
 			"ex": "./v/v2.24.0/rosa.png"
 		}
 	},
-	"rarity": 4,
+	"rarity": "4+ex",
 	"role": "Tech",
 	"pokemonType": "Water",
 	"pokemonWeakness": "Electric",
@@ -1499,7 +1499,7 @@ export const PROFESSOR_SYCAMORE_BULBASAUR = {
 			"ex": "./v/v2.24.0/profsycamore.png"
 		}
 	},
-	"rarity": 4,
+	"rarity": "4+ex",
 	"role": "Special Strike",
 	"pokemonType": "Grass",
 	"pokemonWeakness": "Psychic",
@@ -1651,7 +1651,7 @@ export const LILLIE_COMFEY = {
 			"ex": "./v/v2.24.0/lilie.png"
 		}
 	},
-	"rarity": 4,
+	"rarity": "4+ex",
 	"role": "Tech",
 	"pokemonType": "Fairy",
 	"pokemonWeakness": "Steel",
@@ -1807,7 +1807,7 @@ export const MARNIE_TOXICROAK = {
 			"ex": "./v/v2.24.0/marnie.png"
 		}
 	},
-	"rarity": 4,
+	"rarity": "4+ex",
 	"role": "Tech",
 	"pokemonType": "Poison",
 	"pokemonWeakness": "Psychic",
@@ -2274,7 +2274,7 @@ export const JANINE_CROBAT = {
 			"ex": "./v/v2.24.0/janine.png"
 		}
 	},
-	"rarity": 4,
+	"rarity": "4+ex",
 	"role": "Support",
 	"pokemonType": "Poison",
 	"pokemonWeakness": "Electric",
@@ -2426,7 +2426,7 @@ export const CANDICE_FROSLASS = {
 			"ex": "./v/v2.24.0/candice.png"
 		}
 	},
-	"rarity": 4,
+	"rarity": "4+ex",
 	"role": "Special Strike",
 	"pokemonType": "Ice",
 	"pokemonWeakness": "Steel",
@@ -2582,7 +2582,7 @@ export const CLEMONT_MAGNETON = {
 			"ex": "./v/v2.24.0/clemont.png"
 		}
 	},
-	"rarity": 4,
+	"rarity": "4+ex",
 	"role": "Support",
 	"pokemonType": "Electric",
 	"pokemonWeakness": "Ground",
@@ -2738,7 +2738,7 @@ export const SOPHOCLES_ALOLANGOLEM = {
 			"ex": "./v/v2.24.0/sophocles.png"
 		}
 	},
-	"rarity": 4,
+	"rarity": "4+ex",
 	"role": "Physical Strike",
 	"pokemonType": "Electric",
 	"pokemonWeakness": "Ground",

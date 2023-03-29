@@ -318,7 +318,7 @@ export const SHAUNA_KLEFKI = {
 		"name": "Shauna (Special Costume)",
 		"images": {
 			"base": "./v/v2.31.0/scShauna.png",
-			"ex": "./v/v2.31.0/scShauna.png"
+			"ex": "./v/v2.31.0/scShaunaEX.png"
 		}
 	},
 	"rarity": 6,
@@ -626,7 +626,7 @@ export const LYRA_PHANPY = {
 		"name": "Lyra (Special Costume)",
 		"images": {
 			"base": "./v/v2.31.0/scLyra.png",
-			"ex": "./v/v2.31.0/scLyra.png"
+			"ex": "./v/v2.31.0/scLyraEX.png"
 		}
 	},
 	"rarity": 6,

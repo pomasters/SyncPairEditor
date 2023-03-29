@@ -170,7 +170,7 @@ export const GLORIA_THWACKEY = {
 			"ex": "./v/v2.30.0/gloria.png"
 		}
 	},
-	"rarity": 4,
+	"rarity": "4+ex",
 	"role": "Physical Strike",
 	"pokemonType": "Grass",
 	"pokemonWeakness": "Fire",

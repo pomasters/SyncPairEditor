@@ -268,13 +268,25 @@ function scout() {
 /*
 Generates the html code for n <img> stars
 */
-function rarity(n) {
+function rarity(r) {
+
+	var n, ex;
+	var r_str = r + "";
+
+	if(r_str.toLowerCase().indexOf("+ex") > -1) {
+		ex = true;
+		n = parseInt(r_str.replace("+ex",""));
+	} else {
+		ex = false;
+		n = parseInt(r_str);
+	}
+
 	var o = "";
 	for(var i=1; i<=MAX_NUMBER_STARS-2; i++) {
 		if (i<=n) { o += '<img src="./images/star.png">'; }
 		else { o += '<img src="./images/star2.png">'; }
 	}
-	if(n==MAX_NUMBER_STARS-1) { o += '<img src="./images/star_ex1.png">'; }
+	if(n==MAX_NUMBER_STARS-1 || ex) { o += '<img src="./images/star_ex1.png">'; }
 	if(n>=MAX_NUMBER_STARS) { o += '<img src="./images/star_ex2.png">'; }
 	return o;
 }

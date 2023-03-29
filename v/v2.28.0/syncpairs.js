@@ -469,7 +469,7 @@ export const DAWN_WORMADAM = {
 			"ex": "./v/v2.28.0/dawnL.png"
 		}
 	},
-	"rarity": 4,
+	"rarity": "4+ex",
 	"role": "Support",
 	"pokemonType": "Bug",
 	"pokemonWeakness": "Flying",

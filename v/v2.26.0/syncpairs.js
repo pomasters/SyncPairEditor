@@ -321,7 +321,7 @@ export const ELESA_JOLTIK = {
 			"ex": "./v/v2.26.0/elesa.png"
 		}
 	},
-	"rarity": 4,
+	"rarity": "4+ex",
 	"role": "Support",
 	"pokemonType": "Electric",
 	"pokemonWeakness": "Fire",
@@ -945,7 +945,7 @@ export const LYRA_VAPOREON = {
 			"ex": "./v/v2.26.0/lyra.png"
 		}
 	},
-	"rarity": 5,
+	"rarity": 6,
 	"role": "Tech",
 	"pokemonType": "Water",
 	"pokemonWeakness": "Grass",
@@ -1101,7 +1101,7 @@ export const KRIS_JOLTEON = {
 			"ex": "./v/v2.26.0/kris.png"
 		}
 	},
-	"rarity": 5,
+	"rarity": 6,
 	"role": "Tech",
 	"pokemonType": "Electric",
 	"pokemonWeakness": "Ground",
@@ -1257,7 +1257,7 @@ export const LUCAS_FLAREON = {
 			"ex": "./v/v2.26.0/lucas.png"
 		}
 	},
-	"rarity": 5,
+	"rarity": 6,
 	"role": "Tech",
 	"pokemonType": "Fire",
 	"pokemonWeakness": "Rock",
