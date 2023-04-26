@@ -54,7 +54,28 @@ export const HAU_TAPUKOKO = {
 		],
 		"passives2": [],
 		"passivesMaster": [],
-		"themes": [],
+		"themes": [
+			{
+				"name": "Electric",
+				"description": ""
+			},
+			{
+				"name": "Alola",
+				"description": ""
+			},
+			{
+				"name": "Sygna Suit",
+				"description": ""
+			},
+			{
+				"name": "Free Spirit",
+				"description": ""
+			},
+			{
+				"name": "Passionate Spirit",
+				"description": ""
+			}
+		],
 		"lucky": []
 	},
 	"actions": {
@@ -189,7 +210,28 @@ export const MINA_TAPUFINI = {
 		],
 		"passives2": [],
 		"passivesMaster": [],
-		"themes": [],
+		"themes": [
+			{
+				"name": "Fairy",
+				"description": ""
+			},
+			{
+				"name": "Alola",
+				"description": ""
+			},
+			{
+				"name": "Trial Giver",
+				"description": ""
+			},
+			{
+				"name": "Sygna Suit",
+				"description": ""
+			},
+			{
+				"name": "Free Spirit",
+				"description": ""
+			}
+		],
 		"lucky": []
 	},
 	"actions": {
@@ -324,7 +366,28 @@ export const ACEROLA_BANETTE = {
 		],
 		"passives2": [],
 		"passivesMaster": [],
-		"themes": [],
+		"themes": [
+			{
+				"name": "Ghost",
+				"description": ""
+			},
+			{
+				"name": "Alola",
+				"description": ""
+			},
+			{
+				"name": "Elite Four",
+				"description": ""
+			},
+			{
+				"name": "Trial Giver",
+				"description": ""
+			},
+			{
+				"name": "Fancy Lady",
+				"description": ""
+			}
+		],
 		"lucky": []
 	},
 	"actions": {
@@ -459,7 +522,24 @@ export const AGATHA_ARBOK = {
 		],
 		"passives2": [],
 		"passivesMaster": [],
-		"themes": [],
+		"themes": [
+			{
+				"name": "Poison",
+				"description": ""
+			},
+			{
+				"name": "Kanto",
+				"description": ""
+			},
+			{
+				"name": "Elite Four",
+				"description": ""
+			},
+			{
+				"name": "Veteran Trainer",
+				"description": ""
+			}
+		],
 		"lucky": []
 	},
 	"actions": {
@@ -594,7 +674,24 @@ export const LANCE_DRAGONAIR = {
 		],
 		"passives2": [],
 		"passivesMaster": [],
-		"themes": [],
+		"themes": [
+			{
+				"name": "Dragon",
+				"description": ""
+			},
+			{
+				"name": "Kanto",
+				"description": ""
+			},
+			{
+				"name": "Champion",
+				"description": ""
+			},
+			{
+				"name": "Cape",
+				"description": ""
+			}
+		],
 		"lucky": []
 	},
 	"actions": {
@@ -729,7 +826,28 @@ export const LANA_TAPULELE = {
 		],
 		"passives2": [],
 		"passivesMaster": [],
-		"themes": [],
+		"themes": [
+			{
+				"name": "Psychic",
+				"description": ""
+			},
+			{
+				"name": "Alola",
+				"description": ""
+			},
+			{
+				"name": "Trial Giver",
+				"description": ""
+			},
+			{
+				"name": "Sygna Suit",
+				"description": ""
+			},
+			{
+				"name": "Free Spirit",
+				"description": ""
+			}
+		],
 		"lucky": []
 	},
 	"actions": {
@@ -864,7 +982,28 @@ export const ACEROLA_TAPUBULU = {
 		],
 		"passives2": [],
 		"passivesMaster": [],
-		"themes": [],
+		"themes": [
+			{
+				"name": "Grass",
+				"description": ""
+			},
+			{
+				"name": "Alola",
+				"description": ""
+			},
+			{
+				"name": "Trial Giver",
+				"description": ""
+			},
+			{
+				"name": "Sygna Suit",
+				"description": ""
+			},
+			{
+				"name": "Free Spirit",
+				"description": ""
+			}
+		],
 		"lucky": []
 	},
 	"actions": {
