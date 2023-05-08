@@ -1018,7 +1018,7 @@ export const ACEROLA_TAPUBULU = {
 				"power": "15-18",
 				"accuracy": "100",
 				"target": "An opponent",
-				"effect": "Continues",
+				"effect": "Multistrike",
 				"description": "Attacks the target two to five times in a row."
 			},
 			{

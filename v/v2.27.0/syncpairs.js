@@ -117,7 +117,7 @@ export const SERENA_GRENINJA = {
 				"power": "25-30",
 				"accuracy": "100",
 				"target": "An opponent",
-				"effect": "Continues",
+				"effect": "Multistrike",
 				"description": "Attacks the target two to five times in a row."
 			},
 			{
@@ -331,7 +331,7 @@ export const CALEM_GRENINJA = {
 				"power": "25-30",
 				"accuracy": "100",
 				"target": "An opponent",
-				"effect": "Continues",
+				"effect": "Multistrike",
 				"description": "Attacks the target two to five times in a row."
 			},
 			{
