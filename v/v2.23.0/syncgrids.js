@@ -574,6 +574,78 @@ export const MAY_BLAZIKEN = [
 		level: '3',
 		color: 'sync',
 		icon: 'sync'
+	},
+	{
+		"id": 49,
+		"x": 0,
+		"y": -2,
+		"name": "Trip Wire 1",
+		"description": "Lowers the Speed of all opposing sync pairs by 1 stat rank when the user enters a battle.",
+		"energy": "7",
+		"orb": "84",
+		"level": "2",
+		"color": "yellow",
+		"icon": "passive"
+	},
+	{
+		"id": 50,
+		"x": 0,
+		"y": -4,
+		"name": "Hunter’s Instinct",
+		"description": "The more the target’s Speed is lowered, the more it powers up the user’s moves.",
+		"energy": "10",
+		"orb": "120",
+		"level": "4",
+		"color": "yellow",
+		"icon": "passive"
+	},
+	{
+		"id": 51,
+		"x": 0,
+		"y": -5,
+		"name": "Staggering 2",
+		"description": "Has a chance (30%) of making the target flinch when the user’s attack move against it is successful.",
+		"energy": "10",
+		"orb": "120",
+		"level": "5",
+		"color": "yellow",
+		"icon": "passive"
+	},
+	{
+		"id": 52,
+		"x": 0,
+		"y": 2,
+		"name": "Burn Synergy 2",
+		"description": "Powers up the user’s moves when the target is burned.",
+		"energy": "5",
+		"orb": "60",
+		"level": "2",
+		"color": "yellow",
+		"icon": "passive"
+	},
+	{
+		"id": 53,
+		"x": -1,
+		"y": 4,
+		"name": "Vigilance",
+		"description": "Protects the user against critical hits.",
+		"energy": "10",
+		"orb": "120",
+		"level": "4",
+		"color": "yellow",
+		"icon": "passive"
+	},
+	{
+		"id": 54,
+		"x": 1,
+		"y": 3,
+		"name": "Hostile Environment 9",
+		"description": "Raises the chance of inflicting status conditions with the additional effects of moves.",
+		"energy": "10",
+		"orb": "120",
+		"level": "5",
+		"color": "yellow",
+		"icon": "passive"
 	}
 ]
 

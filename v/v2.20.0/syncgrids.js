@@ -574,6 +574,78 @@ export const MORTY_HOOH = [
     level: '3',
     color: 'sync',
     icon: 'sync'
+  },
+  {
+    "id": 49,
+    "x": 0,
+    "y": -2,
+    "name": "Natural Remedy",
+    "description": "Removes all status conditions from the user the first time it is inflicted by any status condition each battle.",
+    "energy": "7",
+    "orb": "84",
+    "level": "2",
+    "color": "yellow",
+    "icon": "passive"
+  },
+  {
+    "id": 50,
+    "x": 0,
+    "y": -4,
+    "name": "Believe!: Critical Squad 1",
+    "description": "Move: Believe! Raises the critical-hit rate of all allied sync pairs by 1 stat rank when the user’s move is successful.",
+    "energy": "10",
+    "orb": "120",
+    "level": "4",
+    "color": "red",
+    "icon": "passive"
+  },
+  {
+    "id": 51,
+    "x": -2,
+    "y": -3,
+    "name": "Endurance",
+    "description": "When the user enters battle with full HP, applies the Enduring effect to it.",
+    "energy": "10",
+    "orb": "120",
+    "level": "5",
+    "color": "yellow",
+    "icon": "passive"
+  },
+  {
+    "id": 52,
+    "x": 0,
+    "y": 2,
+    "name": "Quick Cure",
+    "description": "Removes the confused, flinching, and trapped conditions from the user the first time they are inflicted each battle.",
+    "energy": "7",
+    "orb": "84",
+    "level": "2",
+    "color": "yellow",
+    "icon": "passive"
+  },
+  {
+    "id": 53,
+    "x": 0,
+    "y": 4,
+    "name": "Sunny Day: Team Hit and Heal",
+    "description": "Move: Sunny Day Applies the Gradual Healing effect to all allied sync pairs when the user’s move is successful.",
+    "energy": "10",
+    "orb": "120",
+    "level": "4",
+    "color": "red",
+    "icon": "passive"
+  },
+  {
+    "id": 54,
+    "x": -2,
+    "y": 5,
+    "name": "Sunburst",
+    "description": "Makes the weather sunny the first time the user enters a battle each battle.",
+    "energy": "10",
+    "orb": "120",
+    "level": "5",
+    "color": "yellow",
+    "icon": "passive"
   }
 ]
 
