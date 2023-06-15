@@ -2297,7 +2297,7 @@ export const EUSINE_SUICUNE = [
 		"energy": "3",
 		"orb": "36",
 		"level": 1,
-		"color": "sync",
+		"color": "green",
 		"icon": "ice"
 	},
 	{
