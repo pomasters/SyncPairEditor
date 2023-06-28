@@ -1732,6 +1732,78 @@ export const GLORIA_URSHIFU = [
 		level: '3',
 		color: 'sync',
 		icon: 'sync'
+	},
+	{
+		"id": 49,
+		"x": 0,
+		"y": -2,
+		"name": "Superduper Effective 2",
+		"description": "Powers up moves that are super effective.",
+		"energy": "8",
+		"orb": "96",
+		"level": "2",
+		"color": "yellow",
+		"icon": "passive"
+	},
+	{
+		"id": 50,
+		"x": 0,
+		"y": -4,
+		"name": "Restoring Strike 4",
+		"description": "Has a chance (50%) of restoring the user’s HP when its attack move hits. If the move has the multistrike effect tag, has a chance (50%) of restoring the user’s HP for each hit.",
+		"energy": "10",
+		"orb": "120",
+		"level": "4",
+		"color": "yellow",
+		"icon": "passive"
+	},
+	{
+		"id": 51,
+		"x": 0,
+		"y": -5,
+		"name": "Head Start 1",
+		"description": "Reduces the user’s sync move countdown by 1 the first time it enters a battle each battle.",
+		"energy": "10",
+		"orb": "120",
+		"level": "5",
+		"color": "yellow",
+		"icon": "passive"
+	},
+	{
+		"id": 52,
+		"x": 0,
+		"y": 2,
+		"name": "Double Down 2",
+		"description": "Powers up the user’s sync moves that are super effective.",
+		"energy": "8",
+		"orb": "96",
+		"level": "2",
+		"color": "yellow",
+		"icon": "passive"
+	},
+	{
+		"id": 53,
+		"x": -1,
+		"y": 4,
+		"name": "Interference Immunity",
+		"description": "Prevents the user from flinching, becoming confused, or becoming trapped.",
+		"energy": "10",
+		"orb": "120",
+		"level": "4",
+		"color": "yellow",
+		"icon": "passive"
+	},
+	{
+		"id": 54,
+		"x": 1,
+		"y": 3,
+		"name": "Impervious",
+		"description": "The user’s stats cannot be lowered.",
+		"energy": "10",
+		"orb": "120",
+		"level": "5",
+		"color": "yellow",
+		"icon": "passive"
 	}
 ]
 

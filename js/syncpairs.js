@@ -2671,12 +2671,23 @@ import * as MARCH2023 from '../v/v2.30.0/syncpairs.js';
 import * as APRIL2023 from '../v/v2.31.0/syncpairs.js';
 import * as MAY2023 from '../v/v2.32.0/syncpairs.js';
 import * as JUNE2023 from '../v/v2.33.0/syncpairs.js';
+import * as JULY2023 from '../v/v2.34.0/syncpairs.js';
 
 
 export const SYNCPAIRS = [
 
 	TEMPLATE1, //Always at the
 	TEMPLATE2, //top of the array
+
+	DISABLE_OPTION("---------------- v2.34.0 (JULY2023) ----------------"),
+
+	JULY2023.TATE_JIRACHI,
+	JULY2023.IRIDA_FLAREON,
+	JULY2023.LIZA_CELESTEELA,
+	JULY2023.ROSE_COPPERAJAH,
+	JULY2023.OLEANA_GARBODOR,
+	JULY2023.KIAWE_ARCANINE,
+	JULY2023.MALLOW_SHIINOTIC,
 
 	DISABLE_OPTION("---------------- v2.33.0 (JUNE2023) ----------------"),
 
