@@ -2672,12 +2672,25 @@ import * as APRIL2023 from '../v/v2.31.0/syncpairs.js';
 import * as MAY2023 from '../v/v2.32.0/syncpairs.js';
 import * as JUNE2023 from '../v/v2.33.0/syncpairs.js';
 import * as JULY2023 from '../v/v2.34.0/syncpairs.js';
+import * as AUGUST2023 from '../v/v2.35.0/syncpairs.js';
 
 
 export const SYNCPAIRS = [
 
 	TEMPLATE1, //Always at the
 	TEMPLATE2, //top of the array
+
+	DISABLE_OPTION("---------------- v2.35.0 (AUGUST2023) ----------------"),
+
+	AUGUST2023.LEON_DRAGAPULT,
+	AUGUST2023.CALEM_FENNEKIN,
+	AUGUST2023.GLORIA_CINDERACE_FIRE,
+	AUGUST2023.GLORIA_CINDERACE_FLYING,
+	AUGUST2023.GLORIA_CINDERACE_FIGHTING,
+	AUGUST2023.OLYMPIA_SIGILYPH,
+	AUGUST2023.DRASNA_DRAGALGE,
+	AUGUST2023.NEMONA_PAWMOT,
+	AUGUST2023.VICTOR_SPECTRIER,
 
 	DISABLE_OPTION("---------------- v2.34.0 (JULY2023) ----------------"),
 
