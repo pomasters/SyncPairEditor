@@ -670,12 +670,12 @@ export const GLORIA_CINDERACE_FLYING = {
 				"description": "Lowers the opponent’s Type Rebuff by 2 ranks after the user uses its max move. The Type Rebuff lowered is the same type as the max move used. Replaces some of the user’s passive skills and sync move with different passive skills and a sync move after using its Max Airstream. Replaces some of the user’s passive skills and sync move with different passive skills and a sync move after using its Max Knuckle."
 			},
 			{
-				"name": "Fuel Economy 2",
-				"description": "Decreases the amount of move gauge slots the user’s Pokémon needs to use moves by 2."
+				"name": "Piercing Blows",
+				"description": "Grants all of the following effects when the user is attacking: Ignores the target’s passive skills that would reduce the damage of attacks. Ignores the target’s passive skills that would protect the target against a critical hit. Ignores the target’s Enduring effect."
 			},
 			{
-				"name": "Brawn Sync 5",
-				"description": "Powers up the user’s sync move when its Attack is raised."
+				"name": "“Quick Move”: Sync CD ↓2 9",
+				"description": "Reduces the user’s sync move countdown by 2 when it uses a move that has the quick move effect tag."
 			}
 		],
 		"passives2": [],
@@ -710,7 +710,7 @@ export const GLORIA_CINDERACE_FLYING = {
 				"user": "Pokemon",
 				"name": "Pyro Ball",
 				"type": "Fire",
-				"gauge": "2",
+				"gauge": "4",
 				"uses": "-",
 				"category": "Physical",
 				"power": "172-206",
@@ -736,7 +736,7 @@ export const GLORIA_CINDERACE_FLYING = {
 				"user": "Pokemon",
 				"name": "High Jump Kick",
 				"type": "Fighting",
-				"gauge": "1",
+				"gauge": "3",
 				"uses": "-",
 				"category": "Physical",
 				"power": "135-162",
@@ -914,12 +914,12 @@ export const GLORIA_CINDERACE_FIGHTING = {
 				"description": "Lowers the opponent’s Type Rebuff by 2 ranks after the user uses its max move. The Type Rebuff lowered is the same type as the max move used. Replaces some of the user’s passive skills and sync move with different passive skills and a sync move after using its Max Airstream. Replaces some of the user’s passive skills and sync move with different passive skills and a sync move after using its Max Knuckle."
 			},
 			{
-				"name": "Fuel Economy 2",
-				"description": "Decreases the amount of move gauge slots the user’s Pokémon needs to use moves by 2."
+				"name": "Piercing Gaze",
+				"description": "Moves never miss."
 			},
 			{
-				"name": "Brawn Sync 5",
-				"description": "Powers up the user’s sync move when its Attack is raised."
+				"name": "HP Recovery (M) 9",
+				"description": "Restores the user’s HP when its attack move is successful."
 			}
 		],
 		"passives2": [],
@@ -954,7 +954,7 @@ export const GLORIA_CINDERACE_FIGHTING = {
 				"user": "Pokemon",
 				"name": "Pyro Ball",
 				"type": "Fire",
-				"gauge": "2",
+				"gauge": "4",
 				"uses": "-",
 				"category": "Physical",
 				"power": "172-206",
@@ -980,7 +980,7 @@ export const GLORIA_CINDERACE_FIGHTING = {
 				"user": "Pokemon",
 				"name": "High Jump Kick",
 				"type": "Fighting",
-				"gauge": "1",
+				"gauge": "3",
 				"uses": "-",
 				"category": "Physical",
 				"power": "135-162",
