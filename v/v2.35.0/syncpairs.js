@@ -396,27 +396,6 @@ export const GLORIA_CINDERACE_FIRE = {
 				"spe": "351"
 			},
 			"image": "./v/v2.35.0/0815.png"
-		},
-		{
-			"name": "Cinderace",
-			"formName": "Sync Move: Fire",
-			"stats": {
-				"hp": "650",
-				"atk": "370",
-				"def": "185",
-				"spa": "200",
-				"spd": "185",
-				"spe": "333"
-			},
-			"statsLVL150": {
-				"hp": "680",
-				"atk": "390",
-				"def": "195",
-				"spa": "210",
-				"spd": "195",
-				"spe": "351"
-			},
-			"image": "./v/v2.35.0/0815.png"
 		}
 	],
 	"skills": {
@@ -531,21 +510,7 @@ export const GLORIA_CINDERACE_FIRE = {
 			}
 		],
 		"moves2": [],
-		"syncMove2": [
-			{
-				"user": "Pokemon",
-				"name": "Ace of the Team Fire Impact",
-				"type": "Fire",
-				"gauge": "-",
-				"uses": "-",
-				"category": "Physical",
-				"power": "200-240",
-				"accuracy": "-",
-				"target": "An opponent",
-				"effect": "-",
-				"description": "This attack’s power increases when the target’s Type Rebuff is lowered."
-			}
-		],
+		"syncMove2": [],
 		"movesMAX": [
 			{
 				"user": "Pokemon",
@@ -670,6 +635,20 @@ export const GLORIA_CINDERACE_FLYING = {
 				"description": "Lowers the opponent’s Type Rebuff by 2 ranks after the user uses its max move. The Type Rebuff lowered is the same type as the max move used. Replaces some of the user’s passive skills and sync move with different passive skills and a sync move after using its Max Airstream. Replaces some of the user’s passive skills and sync move with different passive skills and a sync move after using its Max Knuckle."
 			},
 			{
+				"name": "Fuel Economy 2",
+				"description": "Decreases the amount of move gauge slots the user’s Pokémon needs to use moves by 2."
+			},
+			{
+				"name": "Brawn Sync 5",
+				"description": "Powers up the user’s sync move when its Attack is raised."
+			}
+		],
+		"passives2": [
+			{
+				"name": "Pasio’s Ace",
+				"description": "Lowers the opponent’s Type Rebuff by 2 ranks after the user uses its max move. The Type Rebuff lowered is the same type as the max move used. Replaces some of the user’s passive skills and sync move with different passive skills and a sync move after using its Max Airstream. Replaces some of the user’s passive skills and sync move with different passive skills and a sync move after using its Max Knuckle."
+			},
+			{
 				"name": "Piercing Blows",
 				"description": "Grants all of the following effects when the user is attacking: Ignores the target’s passive skills that would reduce the damage of attacks. Ignores the target’s passive skills that would protect the target against a critical hit. Ignores the target’s Enduring effect."
 			},
@@ -678,7 +657,6 @@ export const GLORIA_CINDERACE_FLYING = {
 				"description": "Reduces the user’s sync move countdown by 2 when it uses a move that has the quick move effect tag."
 			}
 		],
-		"passives2": [],
 		"passivesMaster": [],
 		"themes": [
 			{
@@ -706,6 +684,75 @@ export const GLORIA_CINDERACE_FLYING = {
 	},
 	"actions": {
 		"moves": [
+			{
+				"user": "Pokemon",
+				"name": "Pyro Ball",
+				"type": "Fire",
+				"gauge": "2",
+				"uses": "-",
+				"category": "Physical",
+				"power": "172-206",
+				"accuracy": "90",
+				"target": "An opponent",
+				"effect": "Ok While Frozen",
+				"description": "Removes the frozen condition from the user. Has a chance (10%) of leaving the target burned."
+			},
+			{
+				"user": "Pokemon",
+				"name": "Bounce",
+				"type": "Flying",
+				"gauge": "-",
+				"uses": "3",
+				"category": "Physical",
+				"power": "182-218",
+				"accuracy": "85",
+				"target": "An opponent",
+				"effect": "-",
+				"description": "The user begins bouncing. After a set time, the user stops bouncing and attacks. Has a chance (30%) of leaving the target paralyzed. No other actions can be taken while bouncing. Most moves used by opponents will not hit the user while it is bouncing. If the user is attacked by a sync move or max move while bouncing, it will stop bouncing."
+			},
+			{
+				"user": "Pokemon",
+				"name": "High Jump Kick",
+				"type": "Fighting",
+				"gauge": "1",
+				"uses": "-",
+				"category": "Physical",
+				"power": "135-162",
+				"accuracy": "90",
+				"target": "An opponent",
+				"effect": "Recoil",
+				"description": "When it fails, the user takes damage equal to 50% of its maximum HP."
+			},
+			{
+				"user": "Trainer",
+				"name": "Kickoff!",
+				"type": "Trainer",
+				"gauge": "-",
+				"uses": "1",
+				"category": "Status",
+				"power": "-",
+				"accuracy": "-",
+				"target": "Self",
+				"effect": "-",
+				"description": "Raises the user’s Attack by 4 stat ranks. Raises the user’s evasiveness by 1 stat rank. Raises the user’s critical-hit rate by 3 stat ranks."
+			}
+		],
+		"syncMove": [
+			{
+				"user": "Pokemon",
+				"name": "Ace of the Team Fire Impact",
+				"type": "Fire",
+				"gauge": "-",
+				"uses": "-",
+				"category": "Physical",
+				"power": "200-240",
+				"accuracy": "-",
+				"target": "An opponent",
+				"effect": "-",
+				"description": "This attack’s power increases when the target’s Type Rebuff is lowered."
+			}
+		],
+		"moves2": [
 			{
 				"user": "Pokemon",
 				"name": "Pyro Ball",
@@ -759,22 +806,6 @@ export const GLORIA_CINDERACE_FLYING = {
 				"description": "Raises the user’s Attack by 4 stat ranks. Raises the user’s evasiveness by 1 stat rank. Raises the user’s critical-hit rate by 3 stat ranks."
 			}
 		],
-		"syncMove": [
-			{
-				"user": "Pokemon",
-				"name": "Ace of the Team Fire Impact",
-				"type": "Fire",
-				"gauge": "-",
-				"uses": "-",
-				"category": "Physical",
-				"power": "200-240",
-				"accuracy": "-",
-				"target": "An opponent",
-				"effect": "-",
-				"description": "This attack’s power increases when the target’s Type Rebuff is lowered."
-			}
-		],
-		"moves2": [],
 		"syncMove2": [
 				{
 					"user": "Pokemon",
@@ -914,6 +945,20 @@ export const GLORIA_CINDERACE_FIGHTING = {
 				"description": "Lowers the opponent’s Type Rebuff by 2 ranks after the user uses its max move. The Type Rebuff lowered is the same type as the max move used. Replaces some of the user’s passive skills and sync move with different passive skills and a sync move after using its Max Airstream. Replaces some of the user’s passive skills and sync move with different passive skills and a sync move after using its Max Knuckle."
 			},
 			{
+				"name": "Fuel Economy 2",
+				"description": "Decreases the amount of move gauge slots the user’s Pokémon needs to use moves by 2."
+			},
+			{
+				"name": "Brawn Sync 5",
+				"description": "Powers up the user’s sync move when its Attack is raised."
+			}
+		],
+		"passives2": [
+			{
+				"name": "Pasio’s Ace",
+				"description": "Lowers the opponent’s Type Rebuff by 2 ranks after the user uses its max move. The Type Rebuff lowered is the same type as the max move used. Replaces some of the user’s passive skills and sync move with different passive skills and a sync move after using its Max Airstream. Replaces some of the user’s passive skills and sync move with different passive skills and a sync move after using its Max Knuckle."
+			},
+			{
 				"name": "Piercing Gaze",
 				"description": "Moves never miss."
 			},
@@ -922,7 +967,6 @@ export const GLORIA_CINDERACE_FIGHTING = {
 				"description": "Restores the user’s HP when its attack move is successful."
 			}
 		],
-		"passives2": [],
 		"passivesMaster": [],
 		"themes": [
 			{
@@ -950,6 +994,75 @@ export const GLORIA_CINDERACE_FIGHTING = {
 	},
 	"actions": {
 		"moves": [
+			{
+				"user": "Pokemon",
+				"name": "Pyro Ball",
+				"type": "Fire",
+				"gauge": "2",
+				"uses": "-",
+				"category": "Physical",
+				"power": "172-206",
+				"accuracy": "90",
+				"target": "An opponent",
+				"effect": "Ok While Frozen",
+				"description": "Removes the frozen condition from the user. Has a chance (10%) of leaving the target burned."
+			},
+			{
+				"user": "Pokemon",
+				"name": "Bounce",
+				"type": "Flying",
+				"gauge": "-",
+				"uses": "3",
+				"category": "Physical",
+				"power": "182-218",
+				"accuracy": "85",
+				"target": "An opponent",
+				"effect": "-",
+				"description": "The user begins bouncing. After a set time, the user stops bouncing and attacks. Has a chance (30%) of leaving the target paralyzed. No other actions can be taken while bouncing. Most moves used by opponents will not hit the user while it is bouncing. If the user is attacked by a sync move or max move while bouncing, it will stop bouncing."
+			},
+			{
+				"user": "Pokemon",
+				"name": "High Jump Kick",
+				"type": "Fighting",
+				"gauge": "1",
+				"uses": "-",
+				"category": "Physical",
+				"power": "135-162",
+				"accuracy": "90",
+				"target": "An opponent",
+				"effect": "Recoil",
+				"description": "When it fails, the user takes damage equal to 50% of its maximum HP."
+			},
+			{
+				"user": "Trainer",
+				"name": "Kickoff!",
+				"type": "Trainer",
+				"gauge": "-",
+				"uses": "1",
+				"category": "Status",
+				"power": "-",
+				"accuracy": "-",
+				"target": "Self",
+				"effect": "-",
+				"description": "Raises the user’s Attack by 4 stat ranks. Raises the user’s evasiveness by 1 stat rank. Raises the user’s critical-hit rate by 3 stat ranks."
+			}
+		],
+		"syncMove": [
+			{
+				"user": "Pokemon",
+				"name": "Ace of the Team Fire Impact",
+				"type": "Fire",
+				"gauge": "-",
+				"uses": "-",
+				"category": "Physical",
+				"power": "200-240",
+				"accuracy": "-",
+				"target": "An opponent",
+				"effect": "-",
+				"description": "This attack’s power increases when the target’s Type Rebuff is lowered."
+			}
+		],
+		"moves2": [
 			{
 				"user": "Pokemon",
 				"name": "Pyro Ball",
@@ -1003,22 +1116,6 @@ export const GLORIA_CINDERACE_FIGHTING = {
 				"description": "Raises the user’s Attack by 4 stat ranks. Raises the user’s evasiveness by 1 stat rank. Raises the user’s critical-hit rate by 3 stat ranks."
 			}
 		],
-		"syncMove": [
-			{
-				"user": "Pokemon",
-				"name": "Ace of the Team Fire Impact",
-				"type": "Fire",
-				"gauge": "-",
-				"uses": "-",
-				"category": "Physical",
-				"power": "200-240",
-				"accuracy": "-",
-				"target": "An opponent",
-				"effect": "-",
-				"description": "This attack’s power increases when the target’s Type Rebuff is lowered."
-			}
-		],
-		"moves2": [],
 		"syncMove2": [
 				{
 					"user": "Pokemon",
