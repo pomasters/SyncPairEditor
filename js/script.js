@@ -262,6 +262,12 @@ function scout() {
 
 	g("scout_trainer").onerror = function() { g("scout_trainer").src = "./images/empty.png" };
 	g("scout_pokemon").onerror = function() { g("scout_pokemon").src = "./images/empty.png" };
+
+	if(SYNCPAIR.skills.themes[1].name.toLowerCase() == "sinnoh" && SYNCPAIR.skills.themes[1].description.toLowerCase() == "(hisui)" ) {
+		g("scout_images").classList.add("hisui_bg");
+	} else {
+		g("scout_images").classList.remove("hisui_bg");
+	}
 }
 
 

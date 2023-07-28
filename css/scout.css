@@ -24,6 +24,10 @@
 	pointer-events: none;
 }
 
+.hisui_bg {
+	background-image: url(../images/scout/pokeball_hisui.png) !important;
+}
+
 #scout_images img {
 	position: absolute;
 }

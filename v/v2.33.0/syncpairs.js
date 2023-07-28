@@ -66,7 +66,7 @@ export const ADAMAN_LEAFEON = {
 			},
 			{
 				"name": "Sinnoh",
-				"description": ""
+				"description": "(Hisui)"
 			},
 			{
 				"name": "Nature Lover",
@@ -218,7 +218,7 @@ export const ADAMAN_VAPOREON = {
 			},
 			{
 				"name": "Sinnoh",
-				"description": ""
+				"description": "(Hisui)"
 			},
 			{
 				"name": "Nature Lover",
