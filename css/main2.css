@@ -813,7 +813,6 @@ SKILLS
 	color: var(--textWhite);
 	text-align: center;
 	text-shadow: var(--textOutline);
-	white-space: nowrap;
 	margin: auto 0;
 }
 
