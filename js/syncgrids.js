@@ -9909,6 +9909,78 @@ const RED_CHARIZARD = [
 		level: 3,
 		color: 'sync',
 		icon: 'sync'
+	},
+	{
+		"id": 49,
+		"x": 0,
+		"y": -2,
+		"name": "Solar Flare 2",
+		"description": "Powers up the user’s sync move when the weather is sunny.",
+		"energy": "7",
+		"orb": "84",
+		"level": "2",
+		"color": "yellow",
+		"icon": "passive"
+	},
+	{
+		"id": 50,
+		"x": 0,
+		"y": -4,
+		"name": "Sync Thinker 9",
+		"description": "Increases the user’s Special Moves ↑ Next effect by 1 rank after using its sync move.",
+		"energy": "8",
+		"orb": "96",
+		"level": "4",
+		"color": "yellow",
+		"icon": "passive"
+	},
+	{
+		"id": 51,
+		"x": -1,
+		"y": -3,
+		"name": "Soften Up 1",
+		"description": "Critical hits land more easily when the user attacks with a sync move.",
+		"energy": "5",
+		"orb": "60",
+		"level": "5",
+		"color": "yellow",
+		"icon": "passive"
+	},
+	{
+		"id": 52,
+		"x": 0,
+		"y": 2,
+		"name": "Sharp Entry 1",
+		"description": "Raises the user’s critical-hit rate by 1 stat rank when it enters a battle.",
+		"energy": "8",
+		"orb": "96",
+		"level": "2",
+		"color": "yellow",
+		"icon": "passive"
+	},
+	{
+		"id": 53,
+		"x": 0,
+		"y": 4,
+		"name": "Standfast 9",
+		"description": "Reduces recoil damage received from using moves that have the recoil effect tag.",
+		"energy": "8",
+		"orb": "96",
+		"level": "4",
+		"color": "yellow",
+		"icon": "passive"
+	},
+	{
+		"id": 54,
+		"x": 1,
+		"y": 3,
+		"name": "My Destiny!: Propulsion 9",
+		"description": "Move: My Destiny! Reduces the user’s sync move countdown by one when its move is successful.",
+		"energy": "10",
+		"orb": "120",
+		"level": "5",
+		"color": "red",
+		"icon": "passive"
 	}
 ]
 
@@ -10560,6 +10632,78 @@ const BLUE_BLASTOISE = [
 		level: 1,
 		color: 'red',
 		icon: 'trainer'
+	},
+	{
+		"id": 55,
+		"x": 0,
+		"y": -2,
+		"name": "Team Fierce Entry 1",
+		"description": "Raises the Attack of all allied sync pairs by 1 stat rank when the user enters a battle.",
+		"energy": "7",
+		"orb": "84",
+		"level": "2",
+		"color": "yellow",
+		"icon": "passive"
+	},
+	{
+		"id": 56,
+		"x": 0,
+		"y": -4,
+		"name": "First Aid 4",
+		"description": "Restores the user’s HP by approximately 40% of its maximum HP the first time it is in a pinch each battle.",
+		"energy": "10",
+		"orb": "120",
+		"level": "4",
+		"color": "yellow",
+		"icon": "passive"
+	},
+	{
+		"id": 57,
+		"x": -2,
+		"y": -3,
+		"name": "Freevenge 4",
+		"description": "Has a chance (50%) of applying the Free Move Next effect to the user when it is hit by an attack move.",
+		"energy": "10",
+		"orb": "120",
+		"level": "5",
+		"color": "yellow",
+		"icon": "passive"
+	},
+	{
+		"id": 58,
+		"x": 0,
+		"y": 2,
+		"name": "Team Grand Entry 1",
+		"description": "Raises the Sp. Atk of all allied sync pairs by 1 stat rank when the user enters a battle.",
+		"energy": "7",
+		"orb": "84",
+		"level": "2",
+		"color": "yellow",
+		"icon": "passive"
+	},
+	{
+		"id": 59,
+		"x": 0,
+		"y": 4,
+		"name": "Status Immunity",
+		"description": "Status conditions cannot be inflicted on the user.",
+		"energy": "10",
+		"orb": "120",
+		"level": "4",
+		"color": "yellow",
+		"icon": "passive"
+	},
+	{
+		"id": 60,
+		"x": -2,
+		"y": 5,
+		"name": "Team Rain Coat",
+		"description": "Protects all allied sync pairs against critical hits when the weather is rainy.",
+		"energy": "9",
+		"orb": "108",
+		"level": "5",
+		"color": "yellow",
+		"icon": "passive"
 	}
 ]
 
@@ -14829,6 +14973,78 @@ const ELESA_EMOLGA = [
 		level: 3,
 		color: 'sync',
 		icon: 'sync'
+	},
+	{
+		"id": 49,
+		"x": 0,
+		"y": -2,
+		"name": "Paralysis Synergy 3",
+		"description": "Powers up the user’s moves when the target is paralyzed.",
+		"energy": "7",
+		"orb": "84",
+		"level": "2",
+		"color": "yellow",
+		"icon": "passive"
+	},
+	{
+		"id": 50,
+		"x": 0,
+		"y": -4,
+		"name": "Eagle Eye 9",
+		"description": "Raises the user’s critical-hit rate by one stat rank when its Pokémon uses a move.",
+		"energy": "10",
+		"orb": "120",
+		"level": "4",
+		"color": "yellow",
+		"icon": "passive"
+	},
+	{
+		"id": 51,
+		"x": 0,
+		"y": -5,
+		"name": "Conductive Sync",
+		"description": "Turns the field of play’s terrain into Electric Terrain the first time the user’s sync move is used each battle.",
+		"energy": "10",
+		"orb": "120",
+		"level": "5",
+		"color": "yellow",
+		"icon": "passive"
+	},
+	{
+		"id": 52,
+		"x": 0,
+		"y": 2,
+		"name": "Static Shock 2",
+		"description": "Powers up the user’s sync move when the target is paralyzed.",
+		"energy": "7",
+		"orb": "84",
+		"level": "2",
+		"color": "yellow",
+		"icon": "passive"
+	},
+	{
+		"id": 53,
+		"x": -1,
+		"y": 4,
+		"name": "MAX Countdown 2",
+		"description": "Reduces the user’s sync move countdown by 2 after using its max move.",
+		"energy": "10",
+		"orb": "120",
+		"level": "4",
+		"color": "yellow",
+		"icon": "passive"
+	},
+	{
+		"id": 54,
+		"x": 1,
+		"y": 3,
+		"name": "Power Play",
+		"description": "The more the target’s stats are lowered, the more it powers up the user’s sync move.",
+		"energy": "10",
+		"orb": "120",
+		"level": "5",
+		"color": "yellow",
+		"icon": "passive"
 	}
 ]
 
@@ -16030,12 +16246,37 @@ import * as MAY2023 from '../v/v2.32.0/syncgrids.js';
 import * as JUNE2023 from '../v/v2.33.0/syncgrids.js';
 import * as JULY2023 from '../v/v2.34.0/syncgrids.js';
 import * as AUGUST2023 from '../v/v2.35.0/syncgrids.js';
+import * as SEPTEMBER2023 from '../v/v2.36.0/syncgrids.js';
 
 
 export const SYNCGRIDS = [
 
 	BASE_EMPTY,
 	ALL_EMPTY,
+
+	BASE_EMPTY, // "---------------- v2.36.0 (SEPTEMBER2023) ----------------"
+
+	SEPTEMBER2023.RED_ARTICUNO,
+	SEPTEMBER2023.LEAF_MOLTRES,
+	SEPTEMBER2023.BLUE_ZAPDOS,
+	BASE_EMPTY,
+	SEPTEMBER2023.PLAYER_REGISTEEL,
+	SEPTEMBER2023.BARRY_ROSERADE,
+	SEPTEMBER2023.OLIVIA_CARBINK,
+	SEPTEMBER2023.VALERIE_MAWILE,
+	SEPTEMBER2023.FALKNER_PIGEOT,
+	SEPTEMBER2023.DANA_REGICE,
+	BASE_EMPTY,
+	SEPTEMBER2023.LEAF_CLEFABLE,
+	SEPTEMBER2023.PAULO_LYCANROC,
+	SEPTEMBER2023.TINA_FLAREON,
+	SEPTEMBER2023.GIOVANNI_RHYDON,
+	SEPTEMBER2023.ARCHER_HOUNDOOM,
+	SEPTEMBER2023.ARIANA_ARBOK,
+	SEPTEMBER2023.PETREL_WEEZING,
+	SEPTEMBER2023.PROTON_GOLBAT,
+	SEPTEMBER2023.PALMER_REGIGIGAS,
+	SEPTEMBER2023.ARGENTA_SKARMORY,
 
 	BASE_EMPTY, // "---------------- v2.35.0 (AUGUST2023) ----------------"
 
