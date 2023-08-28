@@ -8,7 +8,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Sync Pair Editor - Pokémon Masters EX</title>
 	<link rel="icon" type="image/x-icon" href="images/favicon.ico">
-	<link rel="stylesheet" type="text/css" href="css/main.css" id="css_main">
+	<link rel="stylesheet" type="text/css" href="css/main.css?v=20230828" id="css_main">
 	<link rel="stylesheet" type="text/css" href="css/main1.css" id="css_main1" disabled>
 	<link rel="stylesheet" type="text/css" href="css/main2.css" id="css_main2">
 	<link rel="stylesheet" type="text/css" href="css/focus.css" id="css_focus">
@@ -21,6 +21,7 @@
 	<link rel="stylesheet" type="text/css" href="css/showall.css" id="css_showall" disabled>
 	<link rel="stylesheet" type="text/css" href="css/vertical.css" id="css_vertical" disabled>
 	<link rel="stylesheet" type="text/css" href="css/slider.css" id="css_slider" disabled>
+	<link rel="stylesheet" type="text/css" href="css/exRole.css" id="css_exRole" disabled>
 </head>
 
 <body spellcheck="false">
@@ -256,6 +257,11 @@
 					</div>
 
 					<div>
+						<p>Shiny Icon</p>
+						<p><span>(shiny)</span> before the name of Pokemon</p>
+					</div>
+
+					<div>
 						<p>I don't want the stats</p>
 						<p>Put all stats to 0. If 2 Pokémon, all stat should be 0.</p> 
 					</div>
@@ -311,8 +317,19 @@
 					</div>
 
 					<div>
+						<p>Buddy Move</p>
+						<p><span>(b move)</span> before the name of a move</p>
+					</div>
+
+					<div>
 						<p>Background</p>
 						<p>Click on the background to change the display.</p>
+					</div>
+
+					<div>
+						<p>EX Effect</p>
+						<p>You can add <span>(ex:blabla)</span> in the sync move description to add an EX effect.</p>
+						<p>You can specify <span>+strike</span> <span>+tech</span> <span>+support</span> <span>+sprint</span> <span>+field</span> instead of <span>blabla</span> to quickly add the effect for the role you want.</p> 
 					</div>
 
 					<div>
@@ -323,6 +340,7 @@
 
 				<p>NEWS</p>
 				<ul>
+					<li>2023-08-28 : Add EX Roles + EX effect in sync move description (look at the "Need help?" section for details)</li>
 					<li>2023-08-24 : Add v2.36.0</li>
 					<li>2023-07-27 : Add v2.35.0</li>
 					<li>2023-06-28 : Add v2.34.0</li>
@@ -409,6 +427,10 @@
 						<div>
 							<div id="syncPair_role">
 								<p>Role</p><img id="syncPair_roleImage" src="images/empty.png">
+							</div>
+
+							<div id="syncPair_exRole">
+								<p>EX Role</p><img id="syncPair_exRoleImage" src="images/empty.png">
 							</div>
 
 							<div id="syncPair_type">
@@ -588,7 +610,7 @@
 	<script type="text/javascript" src="js/dom-to-image.min.js"></script>
 
 
-	<script type="module" src="js/script.js"></script>
+	<script type="module" src="js/script.js?v=20230828"></script>
 </body>
 
 </html>

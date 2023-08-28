@@ -221,6 +221,10 @@ img[src$="sync_.png"] { display: none !important; }
 	border-top-left-radius: 0;
 }
 
+#syncPair_exRole {
+	display: none;
+}
+
 .options {
 	display: flex;
 	flex-direction: row;
@@ -665,6 +669,35 @@ input[type=file] {
 .pokemonHome_art_selected {
 	filter: none !important;
 	transition-duration: 100ms;
+}
+
+
+.exEffect {
+	display: block;
+	bottom: 5px;
+	right: 5px;
+	color: white;
+	text-shadow: var(--textOutline);
+	width: 100%;
+	font-size: 13px;
+	border: 0px rgba(0, 0, 0, 30%) solid;
+	border-radius: 4px;
+	padding: 5px;
+	margin-top: 5px;
+}
+
+
+.exEffect::before {
+	content: "6★EX";
+	color: var(--textYellow);
+	background-color: rgb(66 66 66 / 30%);
+	width: 100%;
+	border-top-left-radius: 4px;
+	border-top-right-radius: 4px;
+	padding: 2px 5px;
+	margin: -5px;
+	margin-bottom: 5px;
+	display: block;
 }
 
 

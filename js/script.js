@@ -63,6 +63,13 @@ function showSyncPair() {
 		g("syncPair_typeImage").src = typeImage(SYNCPAIR.pokemonType);
 		g("syncPair_weaknessImage").src = typeImage(SYNCPAIR.pokemonWeakness);
 
+		if("exRole" in SYNCPAIR) {
+			g("css_exRole").disabled = false;
+			g("syncPair_exRoleImage").src = roleImage(SYNCPAIR.exRole);
+		} else {
+			g("css_exRole").disabled = true;
+		}
+
 		g("moves").innerHTML = movesAre(SYNCPAIR.actions.moves, "move_classic");
 		g("movesSync").innerHTML = movesAre(SYNCPAIR.actions.syncMove, "move_sync");
 
@@ -155,6 +162,7 @@ function resetShowSyncPair() {
 	g("syncPair_rarity").innerHTML = "";
 
 	g("syncPair_roleImage").src = emptyImg;
+	g("syncPair_exRoleImage").src = emptyImg;
 	g("syncPair_typeImage").src = emptyImg;
 	g("syncPair_weaknessImage").src = emptyImg;
 
@@ -463,7 +471,7 @@ function moveIs(move, option) {
 						<div><p>Effect</p><p class="move_effect">${move.effect.replaceAll("(lb)","<br>")}</p></div>
 					</div>
 
-					<p class="move_description" data-descriptionlength="${Math.round(move.description.length/10)}">${move.description.replaceAll("(lb)","<br>")}</p>
+					<p class="move_description" data-descriptionlength="${Math.round(move.description.length/10)}">${move.description.replaceAll("(lb)","<br>").replace(/\(ex:(.*?)\)/g, exEffect)}</p>
 				</div>
 			</div>`;
 
@@ -504,6 +512,21 @@ function moveIs(move, option) {
 		if(u.toLowerCase() == "pokemon2" && SYNCPAIR.pokemon.length > 1) { image = SYNCPAIR.pokemon[1].image; user = "u_pokemon2"; }
 
 		return `<div class="move_user bg_${t.toLowerCase()} ${user}"><img src="${image}"></div>`;
+	}
+
+	function exEffect(match, p1, p2, offset, string) {
+		var exDesc = "";
+		switch(p1) {
+			case "+strike": exDesc = "Targets all opponents."; break;
+			case "+tech": exDesc = "Power ×1.5"; break;
+			case "+support": exDesc = "Once per battle, the stat increase after using sync move is doubled."; break;
+			case "+sprint": exDesc = "The first time the user's sync move is used each battle, the sync move countdown is reduced by three."; break;
+			case "+field": exDesc = "Implements the following field effect just before the user's sync move is used the first time each battle. Extends the field effect duration only that time.<br>• "; break;
+			default: exDesc = p1;
+		}
+		if(option == "move_sync" || option == "move2_sync") {
+			return `<span class="exEffect bg_${move.type.toLowerCase()}">${exDesc}</span>`
+		}
 	}
 }
 
