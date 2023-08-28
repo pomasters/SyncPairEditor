@@ -63,11 +63,12 @@ function showSyncPair() {
 		g("syncPair_typeImage").src = typeImage(SYNCPAIR.pokemonType);
 		g("syncPair_weaknessImage").src = typeImage(SYNCPAIR.pokemonWeakness);
 
-		if("exRole" in SYNCPAIR) {
+		if("exRole" in SYNCPAIR && SYNCPAIR.exRole != "") {
 			g("css_exRole").disabled = false;
 			g("syncPair_exRoleImage").src = roleImage(SYNCPAIR.exRole);
 		} else {
 			g("css_exRole").disabled = true;
+			g("syncPair_exRoleImage").src = "./images/empty.png";
 		}
 
 		g("moves").innerHTML = movesAre(SYNCPAIR.actions.moves, "move_classic");
