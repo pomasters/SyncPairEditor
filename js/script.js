@@ -521,8 +521,13 @@ function moveIs(move, option) {
 			case "+tech": exDesc = "Power ×1.5"; break;
 			case "+support": exDesc = "Once per battle, the stat increase after using sync move is doubled."; break;
 			case "+sprint": exDesc = "The first time the user's sync move is used each battle, the sync move countdown is reduced by three."; break;
-			case "+field": exDesc = "Implements the following field effect just before the user's sync move is used the first time each battle. Extends the field effect duration only that time.<br>• "; break;
-			default: exDesc = p1;
+			default:
+				if(p1.substring(0,7)=="+field ") {
+					var setField = p1.match(/(\+field)(.*)/)[2].split(",");
+					exDesc = "Implements the following field effect just before the user's sync move is used the first time each battle. Extends the field effect duration only that time.<br>• "+setField.join("<br>• ");
+				} else {
+					exDesc = p1;
+				}
 		}
 		if(option == "move_sync" || option == "move2_sync") {
 			return `<span class="exEffect bg_${move.type.toLowerCase()}">${exDesc}</span>`
