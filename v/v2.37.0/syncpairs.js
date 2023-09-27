@@ -62,7 +62,7 @@ export const AKARI_SAMUROTT = {
 			},
 			{
 				"name": "Sinnoh",
-				"description": ""
+				"description": "(Hisui)"
 			},
 			{
 				"name": "Main Character",
@@ -215,7 +215,7 @@ export const REI_DECIDUEYE = {
 			},
 			{
 				"name": "Sinnoh",
-				"description": ""
+				"description": "(Hisui)"
 			},
 			{
 				"name": "Main Character",
@@ -315,7 +315,7 @@ export const GIOVANNI_NIDORINO = {
 			"ex": "./v/v2.37.0/giovanni.png"
 		}
 	},
-	"rarity": 4,
+	"rarity": "4+ex",
 	"role": "Support",
 	"exRole": "",
 	"pokemonType": "Poison",
