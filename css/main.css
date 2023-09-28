@@ -221,10 +221,6 @@ img[src$="sync_.png"] { display: none !important; }
 	border-top-left-radius: 0;
 }
 
-#syncPair_exRole {
-	display: none;
-}
-
 .options {
 	display: flex;
 	flex-direction: row;

@@ -224,6 +224,7 @@ SYNC PAIR INFOS
 	padding: 5px;
 	border: 1px solid #D1E0E0;
 	border-radius: 5px;
+	min-height: 166px;
 }
 
 
@@ -313,20 +314,22 @@ NAME, RARITY, ROLE, TYPE, WEAK
 ROLE, TYPE, WEAK + ICONS
 ----------------------*/
 
-#summary
-> div:nth-of-type(4)
-> div:nth-of-type(2)
-> div:nth-of-type(2) {
-
+#syncPair_role_type {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-evenly;
+	margin: 0 20px;
+}
+
+#syncPair_role_type > * {
+	margin: auto 20px;
 }
 
 #syncPair_role img,
+#syncPair_exRole img,
 #syncPair_type img,
 #syncPair_weakness img {
-	height: 32px;
+	height: 28px;
 	margin: 5px;
 }
 
@@ -781,6 +784,9 @@ SKILLS
 	width: 100%;
 	order: 2;
 	font-size: 0.9em;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 }
 
 #skills>div+div {

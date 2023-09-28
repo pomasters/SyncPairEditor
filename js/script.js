@@ -64,9 +64,11 @@ function showSyncPair() {
 		g("syncPair_weaknessImage").src = typeImage(SYNCPAIR.pokemonWeakness);
 
 		if("exRole" in SYNCPAIR && SYNCPAIR.exRole != "") {
+			g("syncPair_exRole").classList.remove("hide");
 			g("css_exRole").disabled = false;
 			g("syncPair_exRoleImage").src = roleImage(SYNCPAIR.exRole);
 		} else {
+			g("syncPair_exRole").classList.add("hide");
 			g("css_exRole").disabled = true;
 			g("syncPair_exRoleImage").src = "./images/empty.png";
 		}
@@ -373,8 +375,15 @@ function statsAre(stats, stats2) {
 	if(stats.hp == 0 && stats.atk == 0 && stats.def == 0 && 
 		stats.spa == 0 && stats.spd == 0 && stats.spe ==0) {
 		g("stats").classList.add("hide");
+
+		if(SYNCPAIR.exRole != "") {
+			g("syncPair_role_type").classList.add("noExRole");
+		}
 	} else {
 		g("stats").classList.remove("hide");
+		if(SYNCPAIR.exRole != "") {
+			g("syncPair_role_type").classList.remove("noExRole");
+		}
 	}
 
 	return `<p class="${compareStat(stats.hp, stats2.hp)}">${checkMaxStat(stats.hp,935,"Hp")}${isEmpty(stats.hp)}</p>
