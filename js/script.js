@@ -108,6 +108,14 @@ function showSyncPair2() {
 		g("syncPair_pokemon2FormName").innerHTML = SYNCPAIR.pokemon[1].formName;
 		g("syncPair_pokemon2Stats").innerHTML = statsAre(SYNCPAIR.pokemon[1].stats, SYNCPAIR.pokemon[0].stats);
 		g("btn_alter").classList.remove("hide");
+
+		if("pokemonType2" in SYNCPAIR && SYNCPAIR.pokemonType2 != "") {
+			g("syncPair_type2Image").src = typeImage(SYNCPAIR.pokemonType2);
+		}
+		if("pokemonWeakness2" in SYNCPAIR && SYNCPAIR.pokemonWeakness2 != "") {
+			g("syncPair_weakness2Image").src = typeImage(SYNCPAIR.pokemonWeakness2);
+		}
+
 	} else {
 		g("syncPair_pokemon2").setAttribute('style', 'display: none !important');
 		g("syncPair_pokemon2Stats").setAttribute('style', 'display: none !important');
@@ -169,6 +177,9 @@ function resetShowSyncPair() {
 	g("syncPair_typeImage").src = emptyImg;
 	g("syncPair_weaknessImage").src = emptyImg;
 
+	g("syncPair_type2Image").src = emptyImg;
+	g("syncPair_weakness2Image").src = emptyImg;
+
 	g("syncPair_pokemonStats").innerHTML = "";
 	g("syncPair_pokemon2Stats").innerHTML = "";
 
@@ -202,6 +213,12 @@ function resetShowSyncPair() {
 	g("syncPair_pokemon2Shiny").classList.add("hide");
 
 	g("btn_alter").classList.add("hide");
+
+	g("syncPair_typeImage").classList.remove("hide");
+	g("syncPair_weaknessImage").classList.remove("hide");
+
+	g("syncPair_type2Image").classList.add("hide");
+	g("syncPair_weakness2Image").classList.add("hide");
 
 	g("syncPair_pokemonStats").classList.remove("hide");
 	g("syncPair_pokemon2Stats").classList.add("hide");
@@ -1687,6 +1704,13 @@ g("btn_alter").addEventListener("click", function() {
 	if(SYNCPAIR.pokemon.length > 1) {
 		switchBetween("syncPair_pokemon","syncPair_pokemon2");
 		switchBetween("syncPair_pokemonStats","syncPair_pokemon2Stats");
+
+		if("pokemonType2" in SYNCPAIR && SYNCPAIR.pokemonType2 != "") {
+			switchBetween("syncPair_typeImage","syncPair_type2Image");
+		}
+		if("pokemonWeakness2" in SYNCPAIR && SYNCPAIR.pokemonWeakness2 != "") {
+			switchBetween("syncPair_weaknessImage","syncPair_weakness2Image");
+		}
 	}
 	if(SYNCPAIR.skills.passives2.length > 0) {
 		switchBetween("passives","passives2");

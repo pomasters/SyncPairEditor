@@ -15,6 +15,18 @@
 	display: flex !important;
 }
 
+#syncPair_typeImage,
+#syncPair_weaknessImage,
+#syncPair_type2Image,
+#syncPair_weakness2Image {
+	display: initial !important;
+}
+
+#syncPair_type2Image[src$="empty.png"],
+#syncPair_weakness2Image[src$="empty.png"] {
+	display: none !important;
+}
+
 #syncPair_pokemon2 {
 	margin-left: 20px;
 }

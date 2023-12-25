@@ -646,7 +646,9 @@ export const ROSA_MELOETTA = {
 	"role": "Support",
 	"exRole": "Sprint",
 	"pokemonType": "Psychic",
+	"pokemonType2": "",
 	"pokemonWeakness": "Bug",
+	"pokemonWeakness2": "Flying",
 	"pokemonGender": "",
 	"pokemon": [
 		{
