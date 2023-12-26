@@ -62,7 +62,7 @@ export function genGrid(sgrid) {
 
 	document.getElementById("energyLeft").innerHTML = "60";
 	document.getElementById("orbUsed").innerHTML = "0";
-	document.getElementById("syncLevel").children[2].selected = 'selected';
+	document.getElementById("syncLevel").children[4].selected = 'selected';
 
 	document.getElementById("cell0").addEventListener("click", function() {
 		document.getElementById("selectedCellsContainer").classList.toggle("hide");
