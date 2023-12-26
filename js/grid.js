@@ -72,7 +72,7 @@ export function genGrid(sgrid) {
 
 	document.getElementById("selectedCellsContainer").classList.add("hide");
 
-	resetGrid(3);
+	resetGrid(5);
 }
 
 
