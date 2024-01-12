@@ -977,6 +977,12 @@ SKILLS
 }
 
 
+#syncPair_trainerImageBase[src*="iono"],
+#syncPair_trainerImageEx[src*="iono"] {
+	left: -20% !important;
+}
+
+
 @media only screen and (max-width: 1024px) {
 	#btn_sliderMode,
 	#btn_verticalMode {

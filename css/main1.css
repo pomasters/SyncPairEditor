@@ -804,3 +804,9 @@ img[src^="./images/bg/"] {
 #selectedCells .cellDescription {
 	display: none;
 }
+
+
+#syncPair_trainerImageBase[src*="iono"],
+#syncPair_trainerImageEx[src*="iono"] {
+	left: -70% !important;
+}
