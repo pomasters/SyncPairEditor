@@ -2668,12 +2668,25 @@ import * as OCTOBER2023 from '../v/v2.37.0/syncpairs.js';
 import * as NOVEMBER2023 from '../v/v2.38.0/syncpairs.js';
 import * as DECEMBER2023 from '../v/v2.39.0/syncpairs.js';
 import * as JANUARY2024 from '../v/v2.40.0/syncpairs.js';
+import * as FEBRUARY2024 from '../v/v2.41.0/syncpairs.js';
 
 
 export const SYNCPAIRS = [
 
     TEMPLATE1, //Always at the
     TEMPLATE2, //top of the array
+
+    DISABLE_OPTION("---------------- v2.41.0 (FEBRUARY2024) ----------------"),
+
+    FEBRUARY2024.CHASE_PIKACHU,
+    FEBRUARY2024.WALLY_DELCATTY,
+    FEBRUARY2024.PETEY_PIKACHU,
+    FEBRUARY2024.FALKNER_NOCTOWL,
+    FEBRUARY2024.VICTOR_GREEDENT,
+    FEBRUARY2024.CANDICE_DARMANITAN,
+    FEBRUARY2024.PLAYER_ALCREMIE,
+    FEBRUARY2024.GLADION_MAGEARNA,
+    FEBRUARY2024.RILEY_LUCARIO,
 
     DISABLE_OPTION("---------------- v2.40.0 (JANUARY2024) ----------------"),
 
@@ -2926,4 +2939,4 @@ export const SYNCPAIRS = [
     PROFESSOR_OAK_MEW
 ];
 
-export var CURRENT_SYNCPAIR = [DECEMBER2023.ROSA_MELOETTA, JANUARY2024.IONO_BELLIBOLT, JANUARY2024.GRUSHA_CETITAN];
+export var CURRENT_SYNCPAIR = [JANUARY2024.IONO_BELLIBOLT, JANUARY2024.GRUSHA_CETITAN];
