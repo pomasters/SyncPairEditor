@@ -948,6 +948,10 @@ export const PENNY_SYLVEON = {
 				"description": ""
 			},
 			{
+				"name": "Paldea",
+				"description": ""
+			},
+			{
 				"name": "Glasses",
 				"description": ""
 			},

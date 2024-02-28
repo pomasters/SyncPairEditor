@@ -217,7 +217,7 @@ export const IRIDA_FLAREON = {
 			},
 			{
 				"name": "Sinnoh",
-				"description": ""
+				"description": "(Hisui)"
 			},
 			{
 				"name": "Nature Lover",

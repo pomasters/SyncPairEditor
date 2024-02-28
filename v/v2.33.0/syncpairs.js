@@ -375,7 +375,7 @@ export const IRIDA_GLACEON = {
 			},
 			{
 				"name": "Sinnoh",
-				"description": ""
+				"description": "(Hisui)"
 			},
 			{
 				"name": "Nature Lover",

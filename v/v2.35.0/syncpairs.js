@@ -1558,6 +1558,10 @@ export const NEMONA_PAWMOT = {
 				"description": ""
 			},
 			{
+				"name": "Paldea",
+				"description": ""
+			},
+			{
 				"name": "Rival",
 				"description": ""
 			},

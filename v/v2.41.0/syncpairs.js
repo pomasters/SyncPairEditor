@@ -162,7 +162,7 @@ export const WALLY_DELCATTY = {
 			"ex": "./v/v2.41.0/wally.png"
 		}
 	},
-	"rarity": 4,
+	"rarity": "4+ex",
 	"role": "Support",
 	"exRole": "",
 	"pokemonType": "Normal",

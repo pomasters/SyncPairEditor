@@ -726,6 +726,10 @@ export const IONO_BELLIBOLT = {
 				"description": ""
 			},
 			{
+				"name": "Paldea",
+				"description": ""
+			},
+			{
 				"name": "Gym Leader",
 				"description": ""
 			},
@@ -876,6 +880,10 @@ export const GRUSHA_CETITAN = {
 		"themes": [
 			{
 				"name": "Ice",
+				"description": ""
+			},
+			{
+				"name": "Paldea",
 				"description": ""
 			},
 			{
