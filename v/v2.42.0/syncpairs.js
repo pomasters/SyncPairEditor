@@ -560,7 +560,7 @@ export const ADAMAN_URSALUNA = {
 			},
 			{
 				"name": "Sinnoh",
-				"description": ""
+				"description": "(Hisui)"
 			},
 			{
 				"name": "Special Costume",
@@ -717,7 +717,7 @@ export const IRIDA_ZOROARK = {
 			},
 			{
 				"name": "Sinnoh",
-				"description": ""
+				"description": "(Hisui)"
 			},
 			{
 				"name": "Special Costume",
