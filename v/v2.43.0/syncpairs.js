@@ -62,7 +62,7 @@ export const VOLO_TOGEPI = {
 			},
 			{
 				"name": "Sinnoh",
-				"description": ""
+				"description": "(Hisui)"
 			},
 			{
 				"name": "Knowledgeable",
