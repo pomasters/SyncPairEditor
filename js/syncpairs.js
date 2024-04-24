@@ -2671,12 +2671,24 @@ import * as JANUARY2024 from '../v/v2.40.0/syncpairs.js';
 import * as FEBRUARY2024 from '../v/v2.41.0/syncpairs.js';
 import * as MARCH2024 from '../v/v2.42.0/syncpairs.js';
 import * as APRIL2024 from '../v/v2.43.0/syncpairs.js';
+import * as MAY2024 from '../v/v2.44.0/syncpairs.js';
 
 
 export const SYNCPAIRS = [
 
     TEMPLATE1, //Always at the
     TEMPLATE2, //top of the array
+
+    DISABLE_OPTION("---------------- v2.44.0 (MAY2024) ----------------"),
+
+    MAY2024.RIKA_CLODSIRE,
+    MAY2024.BRYCEN_ZOROARK,
+    MAY2024.RIKA_WHISCASH,
+    MAY2024.BLUE_CHARIZARD,
+    MAY2024.SABRINA_SWOOBAT,
+    MAY2024.GUZMA_ARIADOS,
+    MAY2024.PLUMERIA_GENGAR,
+    MAY2024.POPPY_TINKATON,
 
     DISABLE_OPTION("---------------- v2.43.0 (APRIL2024) ----------------"),
 
