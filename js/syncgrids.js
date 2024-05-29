@@ -16255,12 +16255,21 @@ import * as FEBRUARY2024 from '../v/v2.41.0/syncgrids.js';
 import * as MARCH2024 from '../v/v2.42.0/syncgrids.js';
 import * as APRIL2024 from '../v/v2.43.0/syncgrids.js';
 import * as MAY2024 from '../v/v2.44.0/syncgrids.js';
+import * as JUNE2024 from '../v/v2.45.0/syncgrids.js';
 
 
 export const SYNCGRIDS = [
 
 	BASE_EMPTY,
 	ALL_EMPTY,
+
+	BASE_EMPTY, // "---------------- v2.45.0 (JUNE2024) ----------------"
+
+	JUNE2024.CHEREN_TORNADUS,
+	JUNE2024.CHEREN_PURRLOIN,
+	JUNE2024.BIANCA_VIRIZION,
+	JUNE2024.LARRY_DUDUNSPARCE,
+	JUNE2024.KABU_CENTISKORCH,
 
 	BASE_EMPTY, // "---------------- v2.44.0 (MAY2024) ----------------"
 
@@ -16554,4 +16563,4 @@ export const SYNCGRIDS = [
 	PROFESSOR_OAK_MEW
 ]
 
-export var CURRENT_SYNCGRID = [MAY2024.POPPY_TINKATON];
+export var CURRENT_SYNCGRID = [MAY2024.POPPY_TINKATON, JUNE2024.CHEREN_TORNADUS, JUNE2024.BIANCA_VIRIZION];

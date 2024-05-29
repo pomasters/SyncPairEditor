@@ -2672,12 +2672,21 @@ import * as FEBRUARY2024 from '../v/v2.41.0/syncpairs.js';
 import * as MARCH2024 from '../v/v2.42.0/syncpairs.js';
 import * as APRIL2024 from '../v/v2.43.0/syncpairs.js';
 import * as MAY2024 from '../v/v2.44.0/syncpairs.js';
+import * as JUNE2024 from '../v/v2.45.0/syncpairs.js';
 
 
 export const SYNCPAIRS = [
 
     TEMPLATE1, //Always at the
     TEMPLATE2, //top of the array
+
+    DISABLE_OPTION("---------------- v2.45.0 (JUNE2024) ----------------"),
+
+    JUNE2024.CHEREN_TORNADUS,
+    JUNE2024.CHEREN_PURRLOIN,
+    JUNE2024.BIANCA_VIRIZION,
+    JUNE2024.LARRY_DUDUNSPARCE,
+    JUNE2024.KABU_CENTISKORCH,
 
     DISABLE_OPTION("---------------- v2.44.0 (MAY2024) ----------------"),
 
@@ -2971,4 +2980,4 @@ export const SYNCPAIRS = [
     PROFESSOR_OAK_MEW
 ];
 
-export var CURRENT_SYNCPAIR = [MAY2024.POPPY_TINKATON];
+export var CURRENT_SYNCPAIR = [MAY2024.POPPY_TINKATON, JUNE2024.CHEREN_TORNADUS, JUNE2024.BIANCA_VIRIZION];
