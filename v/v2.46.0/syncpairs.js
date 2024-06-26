@@ -1,7 +1,7 @@
 export const GARDENIA_DHELMISE = {
 	"Informations from": "Absol-utely",
 	"-----------------": "-------",
-	"bg": "./v/v2.46.0/gardenia_BG.png",
+	"bg": "./v/v2.46.0/gardenia_bg.png",
 	"trainer": {
 		"name": "Gardenia (Summer 2024)",
 		"images": {
@@ -943,7 +943,7 @@ export const WALLY_ALTARIA = {
 export const ACEROLA_JELLICENT = {
 	"Informations from": "Absol-utely",
 	"-----------------": "-------",
-	"bg": "./v/v2.46.0/acerola_BG.png",
+	"bg": "./v/v2.46.0/acerola_bg.png",
 	"trainer": {
 		"name": "Acerola (Summer 2024)",
 		"images": {
@@ -1257,7 +1257,7 @@ export const KABU_TORKOAL = {
 export const KLARA_SLOWBRO = {
 	"Informations from": "Absol-utely",
 	"-----------------": "-------",
-	"bg": "./v/v2.46.0/klara_BG.png",
+	"bg": "./v/v2.46.0/klara_bg.png",
 	"trainer": {
 		"name": "Klara",
 		"images": {
@@ -1467,7 +1467,7 @@ export const KLARA_SLOWBRO = {
 export const AVERY_SLOWKING = {
 	"Informations from": "Absol-utely",
 	"-----------------": "-------",
-	"bg": "./v/v2.46.0/avery_BG.png",
+	"bg": "./v/v2.46.0/avery_bg.png",
 	"trainer": {
 		"name": "Avery",
 		"images": {
@@ -1677,7 +1677,7 @@ export const AVERY_SLOWKING = {
 export const GRETA_BRELOOM = {
 	"Informations from": "Absol-utely",
 	"-----------------": "-------",
-	"bg": "./v/v2.46.0/greta_BG.png",
+	"bg": "./v/v2.46.0/greta_bg.png",
 	"trainer": {
 		"name": "Greta",
 		"images": {
