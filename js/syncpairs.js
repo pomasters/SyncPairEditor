@@ -2674,12 +2674,23 @@ import * as APRIL2024 from '../v/v2.43.0/syncpairs.js';
 import * as MAY2024 from '../v/v2.44.0/syncpairs.js';
 import * as JUNE2024 from '../v/v2.45.0/syncpairs.js';
 import * as JULY2024 from '../v/v2.46.0/syncpairs.js';
+import * as AUGUST2024 from '../v/v2.47.0/syncpairs.js';
 
 
 export const SYNCPAIRS = [
 
     TEMPLATE1, //Always at the
     TEMPLATE2, //top of the array
+
+    DISABLE_OPTION("---------------- v2.47.0 (AUGUST2024) ----------------"),
+
+    AUGUST2024.ELIO_STAKATAKA,
+    AUGUST2024.IONO_WATTREL,
+    AUGUST2024.BLUE_ALAKAZAM,
+    AUGUST2024.SELENE_NIHILEGO,
+    AUGUST2024.ARVEN_MABOSSTIFF,
+    AUGUST2024.OAK_NIDORINO,
+    AUGUST2024.NEMONA_SCREAMTAIL,
 
     DISABLE_OPTION("---------------- v2.46.0 (JULY2024) ----------------"),
 

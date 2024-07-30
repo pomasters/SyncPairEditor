@@ -16257,12 +16257,23 @@ import * as APRIL2024 from '../v/v2.43.0/syncgrids.js';
 import * as MAY2024 from '../v/v2.44.0/syncgrids.js';
 import * as JUNE2024 from '../v/v2.45.0/syncgrids.js';
 import * as JULY2024 from '../v/v2.46.0/syncgrids.js';
+import * as AUGUST2024 from '../v/v2.47.0/syncgrids.js';
 
 
 export const SYNCGRIDS = [
 
 	BASE_EMPTY,
 	ALL_EMPTY,
+
+	BASE_EMPTY, // "---------------- v2.47.0 (AUGUST2024) ----------------"
+
+	AUGUST2024.ELIO_STAKATAKA,
+	AUGUST2024.IONO_WATTREL,
+	AUGUST2024.BLUE_ALAKAZAM,
+	AUGUST2024.SELENE_NIHILEGO,
+	AUGUST2024.ARVEN_MABOSSTIFF,
+	AUGUST2024.OAK_NIDORINO,
+	AUGUST2024.NEMONA_SCREAMTAIL,
 
 	BASE_EMPTY, // "---------------- v2.46.0 (JULY2024) ----------------"
 
