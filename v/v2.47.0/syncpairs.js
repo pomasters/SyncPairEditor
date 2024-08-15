@@ -1,7 +1,7 @@
 export const ELIO_STAKATAKA = {
 	"Informations from": "Absol-utely",
 	"-----------------": "-------",
-	"bg": "./v/v2.47.0/elio_bg.png",
+	"bg": "./v/v2.47.0/elio_BG.png",
 	"trainer": {
 		"name": "Elio (Alt.)",
 		"images": {

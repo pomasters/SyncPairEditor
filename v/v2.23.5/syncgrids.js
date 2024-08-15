@@ -1153,6 +1153,78 @@ export const STEVEN_DEOXYS = [
 		level: 1,
 		color: 'green',
 		icon: 'psychic'
+	},
+	{
+		"id": 49,
+		"x": -2,
+		"y": -2,
+		"name": "Natural Remedy",
+		"description": "Removes all status conditions from the user the first time it is inflicted by any status condition each battle.",
+		"energy": 7,
+		"orb": 84,
+		"level": 2,
+		"color": "yellow",
+		"icon": "passive"
+	},
+	{
+		"id": 50,
+		"x": 2,
+		"y": 2,
+		"name": "Quick Cure",
+		"description": "Removes the confused, flinching, and trapped conditions from the user the first time they are inflicted each battle.",
+		"energy": 7,
+		"orb": 84,
+		"level": 2,
+		"color": "yellow",
+		"icon": "passive"
+	},
+	{
+		"id": 51,
+		"x": -2,
+		"y": 4,
+		"name": "Vigilance",
+		"description": "Protects the user against critical hits.",
+		"energy": 10,
+		"orb": 120,
+		"level": 4,
+		"color": "yellow",
+		"icon": "passive"
+	},
+	{
+		"id": 52,
+		"x": 2,
+		"y": -4,
+		"name": "Piercing Gaze",
+		"description": "Moves never miss.",
+		"energy": 10,
+		"orb": 120,
+		"level": 4,
+		"color": "yellow",
+		"icon": "passive"
+	},
+	{
+		"id": 53,
+		"x": 4,
+		"y": -2,
+		"name": "Mind Games 9",
+		"description": "Has a chance (100%) of lowering the target’s Sp. Def by one stat rank when the user’s attack move against it is successful.",
+		"energy": 10,
+		"orb": 120,
+		"level": 5,
+		"color": "yellow",
+		"icon": "passive"
+	},
+	{
+		"id": 54,
+		"x": -4,
+		"y": 2,
+		"name": "Head Start 1",
+		"description": "Reduces the user’s sync move countdown by 1 the first time it enters a battle each battle.",
+		"energy": 10,
+		"orb": 120,
+		"level": 5,
+		"color": "yellow",
+		"icon": "passive"
 	}
 ]
 
