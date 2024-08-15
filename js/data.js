@@ -6,7 +6,7 @@ export const GENDER = ["male","female"];
 
 export const CATEGORIES = ["physical","special","status"];
 
-export const GRID_TEMPLATES = ["grid","Base","Striker","Striker+ 1/2/3","Striker+ 2/4/5","Striker Complete","Tech","Tech+ 1/2/3","Tech+ 2/4/5","Tech Complete","Support","Support+ 1/2/3","Support+ 2/4/5","Support Complete","Mew/Deoxys","All cells"];
+export const GRID_TEMPLATES = ["grid","Base","Striker","Striker+ 1/2/3","Striker+ 2/4/5","Striker Complete","Tech","Tech+ 1/2/3","Tech+ 2/4/5","Tech Complete","Support","Support+ 1/2/3","Support+ 2/4/5","Support Complete","Sprint","Sprint+ 2/4/5","Field","Field+ 2/4/5","Mew/Deoxys","Mew/Deoxys 2/4/5","All cells"];
 
 export const TYPES = ["bug","dark","dragon","electric","fairy","fighting","fire","flying","ghost","grass","ground","ice","normal","poison","psychic","rock","steel","water"];
 
