@@ -1560,7 +1560,7 @@ export const AS_LANCE_DRAGONITE = {
 				"user": "Pokemon",
 				"name": "(b move) Almighty Roar Hyper Beam",
 				"type": "Dragon",
-				"gauge": "4",
+				"gauge": "2",
 				"uses": "1",
 				"category": "Special",
 				"power": "300-360",
