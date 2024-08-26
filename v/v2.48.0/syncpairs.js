@@ -1334,7 +1334,20 @@ export const AS_STEVEN_METAGROSS = {
 				"description": "Restores the user’s HP when it is hit by an attack move."
 			}
 		],
-		"passives2": [],
+		"passives2": [
+			{
+				"name": "What I Learned from My Adventure",
+				"description": "Applies the Enduring effect to all allied sync pairs the first time the user enters a battle each battle. Applies the Free Move Next effect to the user when its attack move is successful. Increases the Physical Moves ↑ Next effect of all allied sync pairs by one rank when the user’s attack move is successful."
+			},
+			{
+				"name": "Wandering Stone Enthusiast",
+				"description": "Protects the user against critical hits. Protects the user from damage from a sandstorm. When the user’s stats would be lowered, raises the user’s stats by the same amount instead."
+			},
+			{
+				"name": "Team Triage Tank 9",
+				"description": "Restores the HP of all allied sync pairs when the user is hit by an attack move."
+			}
+		],
 		"passivesMaster": [
 		],
 		"passivesArcSuit": [
