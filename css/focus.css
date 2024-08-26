@@ -330,6 +330,18 @@ ELEMENT FOCUS WHEN CLICKED
 	background-size: 24px;
 }
 
+#elementFocus .skill_passiveArcSuit {
+	background-color: var(--passive_arcsuit);
+	background-image: var(--bgPassiveArcsuit);
+	background-size: cover;
+}
+
+#elementFocus .skill_passiveArcSuit .skill_name {
+	background-image: var(--iconPassiveArcsuit);
+	background-repeat: no-repeat;
+	background-size: 24px;
+}
+
 #elementFocus .skill_lucky {
 	background-image: var(--bgLucky);
 	background-size: cover;

@@ -844,6 +844,18 @@ SKILLS
 	background-size: 24px;
 }
 
+.skill_passiveArcSuit {
+	background-color: var(--passive_arcsuit);
+	background-image: var(--bgPassiveArcsuit);
+	background-size: cover;
+}
+
+.skill_passiveArcSuit .skill_name {
+	background-image: var(--iconPassiveArcsuit);
+	background-repeat: no-repeat;
+	background-size: 24px;
+}
+
 
 #passiveSkills, #luckySkills, #themeSkills {
 	display: flex !important;
@@ -856,7 +868,7 @@ SKILLS
 	margin: auto;
 }
 
-#passiveMaster, #passives, #passives2 {
+#passiveMaster, #passivesArcSuit, #passives, #passives2 {
 	display: flex;
 	flex-wrap: wrap;
 }
@@ -980,6 +992,15 @@ SKILLS
 #syncPair_trainerImageBase[src*="iono"],
 #syncPair_trainerImageEx[src*="iono"] {
 	left: -20% !important;
+}
+
+#syncPair_trainerImageBase[src*="v2.48.0"],
+#syncPair_trainerImageEx[src*="v2.48.0"] {
+	width: 560px;
+	height: auto;
+	top: -100px;
+	left: -150px;
+	max-height: fit-content;
 }
 
 

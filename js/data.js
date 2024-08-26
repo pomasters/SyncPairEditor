@@ -1,6 +1,6 @@
 export const BACKGROUNDS = ["bg","bronze","silver","gold","rainbow","arena","canyon","cave","city","coast","forest","glacier","volcano", "christmas", "halloween"];
 
-export const ROLES = ["physical strike","special strike","tech","support","sprint","field"];
+export const ROLES = ["physical strike","special strike","tech","support","sprint","field","multi"];
 
 export const GENDER = ["male","female"];
 

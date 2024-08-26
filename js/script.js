@@ -13,6 +13,7 @@ import {CURRENT_SYNCGRID, SYNCGRIDS, SYNCGRIDS_TEMPLATES} from './syncgrids.js';
 const MAX_NUMBER_STARS = 7;
 const MAX_NUMBER_PASSIVES = 3;
 const MAX_NUMBER_MASTERPASSIVES = 2;
+const MAX_NUMBER_ARCSUITPASSIVES = 2;
 const MAX_NUMBER_LUCKY = 3;
 const MAX_NUMBER_THEME = 6;
 const MAX_NUMBER_MOVES = 4;
@@ -142,6 +143,11 @@ function showSyncPair2() {
 		g("iconTabPassiveMaster").classList.remove("hide");
 	}
 
+	if(SYNCPAIR.skills.passivesArcSuit.length > 0) {
+		g("passivesArcSuit").innerHTML = skillsAre(SYNCPAIR.skills.passivesArcSuit, "skill_passiveArcSuit");
+		g("passivesArcSuit").classList.remove("hide");
+	}
+
 	if(SYNCPAIR.skills.passives2.length > 0) {
 		g("passives2").innerHTML = skillsAre(SYNCPAIR.skills.passives2, "skill_passive");
 		g("btn_alter").classList.remove("hide");
@@ -190,6 +196,7 @@ function resetShowSyncPair() {
 	g("moves2Sync").innerHTML = "";
 
 	g("passiveMaster").innerHTML = "";
+	g("passivesArcSuit").innerHTML = "";
 	g("passives").innerHTML = "";
 	g("passives2").innerHTML = "";
 
@@ -237,6 +244,7 @@ function resetShowSyncPair() {
 
 	g("iconTabPassiveMaster").classList.add("hide");
 	g("passiveMaster").classList.add("hide");
+	g("passivesArcSuit").classList.add("hide");
 	g("passives").classList.remove("hide");
 	g("passives2").classList.add("hide");
 
@@ -548,6 +556,7 @@ function moveIs(move, option) {
 			case "+tech": exDesc = "Power ×1.5"; break;
 			case "+support": exDesc = "Once per battle, the stat increase after using sync move is doubled."; break;
 			case "+sprint": exDesc = "The first time the user's sync move is used each battle, the sync move countdown is reduced by three."; break;
+			case "+multi": exDesc = "Lowers the opponent's Type Rebuff of a particular type the first time the user's Sync move is used each battle."; break;
 			default:
 				if(p1.substring(0,7)=="+field ") {
 					var setField = p1.match(/(\+field)(.*)/)[2].split(",");
@@ -660,6 +669,7 @@ function skillsAre(skills, option) {
 
 	/*limits the number of skill*/
 	if(option == "skill_passiveMaster") { skills3 = skills.slice(0, MAX_NUMBER_MASTERPASSIVES) }
+	if(option == "skill_passiveArcSuit") { skills3 = skills.slice(0, MAX_NUMBER_ARCSUITPASSIVES) }
 	if(option == "skill_lucky") { skills3 = skills.slice(0, MAX_NUMBER_LUCKY) }
 	if(option == "skill_theme") { skills3 = skills.slice(0, MAX_NUMBER_THEME) }
 

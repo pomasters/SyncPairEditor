@@ -1,4 +1,5 @@
 #passiveMaster,
+#passivesArcSuit,
 #passives,
 #passives2,
 #luckySkills,
@@ -8,6 +9,7 @@
 }
 
 #passiveMaster .skill,
+#passivesArcSuit .skill,
 #passives .skill,
 #passives2 .skill,
 #luckySkills .skill {
