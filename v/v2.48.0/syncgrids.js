@@ -4146,7 +4146,7 @@ export const AS_CYNTHIA_GARCHOMP = [
 		"energy": "0",
 		"orb": "5",
 		"level": "3",
-		"color": "sync",
+		"color": "divine",
 		"icon": "sync"
 	},
 	{
@@ -4158,7 +4158,7 @@ export const AS_CYNTHIA_GARCHOMP = [
 		"energy": "0",
 		"orb": "5",
 		"level": "4",
-		"color": "yellow",
+		"color": "divine",
 		"icon": "passive"
 	},
 	{
@@ -4170,7 +4170,7 @@ export const AS_CYNTHIA_GARCHOMP = [
 		"energy": "0",
 		"orb": "5",
 		"level": "5",
-		"color": "yellow",
+		"color": "divine",
 		"icon": "passive"
 	},
 	{
@@ -4773,7 +4773,7 @@ export const AS_STEVEN_METAGROSS = [
 		"energy": "0",
 		"orb": "5",
 		"level": "3",
-		"color": "sync",
+		"color": "divine",
 		"icon": "sync"
 	},
 	{
@@ -4785,7 +4785,7 @@ export const AS_STEVEN_METAGROSS = [
 		"energy": "0",
 		"orb": "5",
 		"level": "4",
-		"color": "yellow",
+		"color": "divine",
 		"icon": "passive"
 	},
 	{
@@ -4797,7 +4797,7 @@ export const AS_STEVEN_METAGROSS = [
 		"energy": "0",
 		"orb": "5",
 		"level": "5",
-		"color": "yellow",
+		"color": "divine",
 		"icon": "passive"
 	},
 	{
@@ -5400,7 +5400,7 @@ export const AS_LANCE_DRAGONITE = [
 		"energy": "0",
 		"orb": "5",
 		"level": "3",
-		"color": "sync",
+		"color": "divine",
 		"icon": "sync"
 	},
 	{
@@ -5412,7 +5412,7 @@ export const AS_LANCE_DRAGONITE = [
 		"energy": "0",
 		"orb": "5",
 		"level": "4",
-		"color": "yellow",
+		"color": "divine",
 		"icon": "passive"
 	},
 	{
@@ -5424,7 +5424,7 @@ export const AS_LANCE_DRAGONITE = [
 		"energy": "0",
 		"orb": "5",
 		"level": "5",
-		"color": "yellow",
+		"color": "divine",
 		"icon": "passive"
 	},
 	{

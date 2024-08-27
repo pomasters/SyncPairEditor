@@ -146,6 +146,7 @@ function showSyncPair2() {
 	if(SYNCPAIR.skills.passivesArcSuit.length > 0) {
 		g("passivesArcSuit").innerHTML = skillsAre(SYNCPAIR.skills.passivesArcSuit, "skill_passiveArcSuit");
 		g("passivesArcSuit").classList.remove("hide");
+		g("iconTabPassiveArcSuit").classList.remove("hide");
 	}
 
 	if(SYNCPAIR.skills.passives2.length > 0) {
@@ -243,6 +244,7 @@ function resetShowSyncPair() {
 	g("btn_dynamax").classList.add("hideMax");
 
 	g("iconTabPassiveMaster").classList.add("hide");
+	g("iconTabPassiveArcSuit").classList.add("hide");
 	g("passiveMaster").classList.add("hide");
 	g("passivesArcSuit").classList.add("hide");
 	g("passives").classList.remove("hide");
@@ -468,6 +470,7 @@ function moveIs(move, option) {
 	if(move.name == "" || move.type == "") { moveOption = "no_move"; }
 
 	var b_move = "";
+	var divine_move = "";
 	var move_name = move.name;
 	var noIconType = "";
 	if(move_name.substring(0, 8).toLowerCase() == "(b move)") {
@@ -476,12 +479,17 @@ function moveIs(move, option) {
 		noIconType = "noIconType"
 	}
 
+	if(move_name.substring(0, 13).toLowerCase() == "(divine move)") {
+		divine_move = `move_divine`;
+		move_name = move.name.substring(13);
+	}
+
 	var target_icon = "";
 	if(move.target == "All opponents") {
 		target_icon = `<div class="move_target_icon bg_${move.type.toLowerCase()}"></div>`
 	}
 
-	return `<div class="move ${moveOption} bg_${move.type.toLowerCase()} elementF">
+	return `<div class="move ${moveOption} bg_${move.type.toLowerCase()} ${divine_move} elementF">
 				<div class="move_basics icon_${move.type.toLowerCase()} ${noIconType}">
 					${b_move}
 					<p class="move_name">${move_name}</p>
@@ -1322,7 +1330,7 @@ g("btn_help").addEventListener("click", function() {
 		`<span>id</span><br>the id of the cell...<br><br>
 		<span>x, y</span><br>coordinates of the cell in the grid. You can make a completely new template if you want. For more details, look at the "All cells" template.<br><br>
 		<span>energy, orb, level</span><br>(optional but if you really want to fully interact with your grid, you can add those values)<br><br>
-		<span>color</span><br>"blue", "red", "green", "yellow", "sync", "dynamax"<br><br>
+		<span>color</span><br>"blue", "red", "green", "yellow", "sync", "dynamax", "divine"<br><br>
 		<span>icon</span><br>"bug", "dark", "dragon", "electric", "fairy", "fighting", "fire", "flying", "ghost", "grass", "ground", "ice", "normal", "poison", "psychic", "rock", "steel", "water",<br><br>"trainer", "sync", "dynamax", "stat", "passive"`;
 
 	g("detailedCell").children[4].innerHTML = "0";

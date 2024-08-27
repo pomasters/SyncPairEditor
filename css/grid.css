@@ -5,6 +5,7 @@
 	--cellYellow: #E6CE5E;
 	--cellSync: #8A73C3;
 	--cellDynamax: #E17DB9;
+	--cellDivine: linear-gradient(135deg, rgba(255,240,0,1) 0%, rgba(255,144,0,1) 100%);
 	--textOutlineNode: -1px -1px 0 var(--text), 1px -1px 0 var(--text),
 	    			-1px 1px 0 var(--text), 1px 1px 0 var(--text),
 	    			-1px -1px 0 var(--text), 1px -1px 0 var(--text),
@@ -200,6 +201,7 @@
 .cell_yellow { background-color: var(--cellYellow); }
 .cell_sync { background-color: var(--cellSync); }
 .cell_dynamax { background-color: var(--cellDynamax); }
+.cell_divine { background: var(--cellDivine); }
 .cell_base { background-color: #646464; }
 
 
@@ -436,6 +438,8 @@
 .grid_color_yellow2 { background-image: url("../images/grid/grid_color_yellow2.png"); }
 .grid_color_dynamax { background-image: url("../images/grid/grid_color_dynamax.png"); }
 .grid_color_dynamax2 { background-image: url("../images/grid/grid_color_dynamax2.png"); }
+.grid_color_divine { background-image: url("../images/grid/grid_color_divine.png"); }
+.grid_color_divine2 { background-image: url("../images/grid/grid_color_divine2.png"); }
 .grid_color_sync { background-image: url("../images/grid/grid_color_sync.png"); }
 .grid_color_sync2 { background-image: url("../images/grid/grid_color_sync2.png"); }
 

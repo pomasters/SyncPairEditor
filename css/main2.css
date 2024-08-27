@@ -716,6 +716,10 @@ MOVE SYNC
 	color: #ffeca8;
 }
 
+.move_divine .move_basics {
+	background-image: var(--bgDivineMove);
+}
+
 
 /*----------
 MOVE DYNAMAX

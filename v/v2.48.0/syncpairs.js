@@ -1242,7 +1242,7 @@ export const AS_CYNTHIA_GARCHOMP = {
 		"syncMove": [
 			{
 				"user": "Pokemon2",
-				"name": "Cataclysmic Divine Earthquake",
+				"name": "(divine move) Cataclysmic Divine Earthquake",
 				"type": "Ground",
 				"gauge": "-",
 				"uses": "-",
@@ -1438,7 +1438,7 @@ export const AS_STEVEN_METAGROSS = {
 		"syncMove": [
 			{
 				"user": "Pokemon2",
-				"name": "Polished Steel Divine Meteor Mash",
+				"name": "(divine move) Polished Steel Divine Meteor Mash",
 				"type": "Steel",
 				"gauge": "-",
 				"uses": "-",
@@ -1599,7 +1599,7 @@ export const AS_LANCE_DRAGONITE = {
 		"syncMove": [
 			{
 				"user": "Pokemon",
-				"name": "Heroic Ascension Divine Outrage",
+				"name": "(divine move) Heroic Ascension Divine Outrage",
 				"type": "Dragon",
 				"gauge": "-",
 				"uses": "-",

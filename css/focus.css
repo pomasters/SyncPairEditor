@@ -238,6 +238,10 @@ ELEMENT FOCUS WHEN CLICKED
 	font-size: 1.3em;
 }
 
+#elementFocus .move_sync .move_basics {
+	background-image: var(--bgDivineMove);
+}
+
 #elementFocus .move_dynamax {
 	background: var(--maxmove) !important;
 	color: #AAA;
