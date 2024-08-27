@@ -4134,7 +4134,7 @@ export const AS_CYNTHIA_GARCHOMP = [
 		"energy": "0",
 		"orb": "5",
 		"level": "2",
-		"color": "blue",
+		"color": "divine",
 		"icon": "stat"
 	},
 	{
@@ -4761,7 +4761,7 @@ export const AS_STEVEN_METAGROSS = [
 		"energy": "0",
 		"orb": "5",
 		"level": "2",
-		"color": "blue",
+		"color": "divine",
 		"icon": "stat"
 	},
 	{
@@ -5388,7 +5388,7 @@ export const AS_LANCE_DRAGONITE = [
 		"energy": "0",
 		"orb": "5",
 		"level": "2",
-		"color": "blue",
+		"color": "divine",
 		"icon": "stat"
 	},
 	{
