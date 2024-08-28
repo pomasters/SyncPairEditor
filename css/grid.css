@@ -168,6 +168,10 @@
 	mix-blend-mode: multiply;
 }
 
+.selectedCell > .grid_color_divine2+div:nth-child(2) {
+	filter: brightness(50%) sepia(33%) hue-rotate(333deg) !important
+}
+
 .lockedCell {
 	pointer-events: none;
 	filter: opacity(72%);
