@@ -603,7 +603,7 @@ input[type=file] {
 	text-align: center;
 	right: 0;
 	z-index: 5;
-	font-size: 12.3px;
+	font-size: 0.9em;
 	color: #6a8f97;
 	font-family: monospace;
 	margin: auto;
@@ -616,6 +616,7 @@ input[type=file] {
 	outline: none;
 	padding: 0 2px;
 	pointer-events: auto;
+	font-size: 0.9em;
 }
 .madeWith span:hover {
 	border: 1px solid #6ea9b6;

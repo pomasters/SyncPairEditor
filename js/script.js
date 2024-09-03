@@ -434,6 +434,7 @@ function statsAre(stats, stats2) {
 	}
 
 	function checkMaxStat(stat, maxStat, whichStat) {
+		return "";//removing this feature in the future
 		if(stat >= maxStat) {
 			return `<img src="images/attention.png" class="highestStatIcon">
 			<span class="highestStatTooltip"><a target="_blank" href="https://www.serebii.net/pokemonmasters/syncpairs/${whichStat.toLowerCase().replace(" ","")}.shtml">TOP IN ${whichStat.toUpperCase()} ↗</a><br><br>${max_stats[whichStat].join("<br>")}</span>`
