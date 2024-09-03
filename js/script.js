@@ -143,7 +143,7 @@ function showSyncPair2() {
 		g("iconTabPassiveMaster").classList.remove("hide");
 	}
 
-	if(SYNCPAIR.skills.passivesArcSuit.length > 0) {
+	if("passivesArcSuit" in SYNCPAIR.skills && SYNCPAIR.skills.passivesArcSuit.length > 0) {
 		g("passivesArcSuit").innerHTML = skillsAre(SYNCPAIR.skills.passivesArcSuit, "skill_passiveArcSuit");
 		g("passivesArcSuit").classList.remove("hide");
 		g("iconTabPassiveArcSuit").classList.remove("hide");
