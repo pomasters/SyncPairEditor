@@ -826,7 +826,11 @@ img[src^="./images/bg/"] {
 
 
 #syncPair_trainerImageBase[src*="v2.48.0"],
-#syncPair_trainerImageEx[src*="v2.48.0"] {
+#syncPair_trainerImageEx[src*="v2.48.0"],
+#syncPair_trainerImageBase[src*="v2.49.0"],
+#syncPair_trainerImageEx[src*="v2.49.0"],
+#syncPair_trainerImageBase[src*="v2.5"],
+#syncPair_trainerImageEx[src*="v2.5"] {
     width: 690px;
     height: auto;
     top: -156px;
