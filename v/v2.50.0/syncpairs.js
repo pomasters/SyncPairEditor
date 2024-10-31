@@ -53,7 +53,13 @@ export const INGO_CHANDELURE = {
 		],
 		"passives2": [],
 		"passivesMaster": [],
-		"passivesArcSuit": "",
+		"passivesArcSuit": [],
+		"passivesSuperawakening": [
+			{
+				"name": "All Aboard to Victory",
+				"description": "Powers up the user’s sync move against targets that are affected by a status condition. Turns the field of play’s zone into a Ghost Zone after using the user’s max move. (A Ghost Zone powers up Ghost-type attacks.) Extends the duration of the Ghost Zone when the zone turns into a Ghost Zone while the user is on the field."
+			}
+		],
 		"themes": [
 			{
 				"name": "Ghost",
@@ -262,7 +268,13 @@ export const EMMET_EELEKTROSS = {
 		],
 		"passives2": [],
 		"passivesMaster": [],
-		"passivesArcSuit": "",
+		"passivesArcSuit": [],
+		"passivesSuperawakening": [
+			{
+				"name": "Follow the Rules and Drive Safely",
+				"description": "Reduces the user’s sync move countdown by two the first time its Trainer uses a move each battle. Powers up the sync moves of all allied sync pairs when Unova Circle (Defensive) applies to the allied field of play. Extends the duration of Unova Circle (Defensive) when Unova Circle (Defensive) is applied to the allied field of play."
+			}
+		],
 		"themes": [
 			{
 				"name": "Electric",
@@ -471,7 +483,7 @@ export const SHAUNA_DELCATTY = {
 		],
 		"passives2": [],
 		"passivesMaster": [],
-		"passivesArcSuit": "",
+		"passivesArcSuit": [],
 		"themes": [
 			{
 				"name": "Normal",
@@ -623,7 +635,7 @@ export const TIERNO_TALONFLAME = {
 		],
 		"passives2": [],
 		"passivesMaster": [],
-		"passivesArcSuit": "",
+		"passivesArcSuit": [],
 		"themes": [
 			{
 				"name": "Fire",
@@ -775,7 +787,13 @@ export const ERI_ANNIHILAPE = {
 		],
 		"passives2": [],
 		"passivesMaster": [],
-		"passivesArcSuit": "",
+		"passivesArcSuit": [],
+		"passivesSuperawakening": [
+			{
+				"name": "RAAAAAAAAAH!!!",
+				"description": "Reduces the user’s sync move countdown by two the first time it enters a battle each battle. Powers up the moves of all allied sync pairs when Paldea Circle (Defensive) applies to the allied field of play. Restores the user’s HP by approximately 60% of its maximum HP the first time it is in a pinch each battle."
+			}
+		],
 		"themes": [
 			{
 				"name": "Fighting",
@@ -927,7 +945,13 @@ export const SINA_GLACEON = {
 		],
 		"passives2": [],
 		"passivesMaster": [],
-		"passivesArcSuit": "",
+		"passivesArcSuit": [],
+		"passivesSuperawakening": [
+			{
+				"name": "Stop Right There!",
+				"description": "Turns the field of play’s zone into an Ice Zone the first time the user enters a battle each battle. (An Ice Zone powers up Ice-type attacks.) Increases the user’s Special Moves ↑ Next effect by three ranks the first time it enters a battle each battle. Applies the Enduring effect to the user if its HP is full when it enters a battle."
+			}
+		],
 		"themes": [
 			{
 				"name": "Ice",
@@ -1079,7 +1103,13 @@ export const DEXIO_ESPEON = {
 		],
 		"passives2": [],
 		"passivesMaster": [],
-		"passivesArcSuit": "",
+		"passivesArcSuit": [],
+		"passivesSuperawakening": [
+			{
+				"name": "I Might as Well Test My Skills",
+				"description": "Reduces the user’s sync move countdown by two the first time its sync move is used each battle. Turns the field of play’s terrain into Psychic Terrain the first time the user enters a battle each battle. Increases the user’s Special Moves ↑ Next effect by three ranks the first time it enters a battle each battle."
+			}
+		],
 		"themes": [
 			{
 				"name": "Psychic",
@@ -1231,7 +1261,7 @@ export const HILDA_LEAFEON = {
 		],
 		"passives2": [],
 		"passivesMaster": [],
-		"passivesArcSuit": "",
+		"passivesArcSuit": [],
 		"themes": [
 			{
 				"name": "Grass",
@@ -1387,7 +1417,7 @@ export const HILBERT_GLACEON = {
 		],
 		"passives2": [],
 		"passivesMaster": [],
-		"passivesArcSuit": "",
+		"passivesArcSuit": [],
 		"themes": [
 			{
 				"name": "Ice",
@@ -1539,7 +1569,7 @@ export const CALEM_SYLVEON = {
 		],
 		"passives2": [],
 		"passivesMaster": [],
-		"passivesArcSuit": "",
+		"passivesArcSuit": [],
 		"themes": [
 			{
 				"name": "Fairy",

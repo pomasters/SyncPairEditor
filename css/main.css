@@ -45,6 +45,7 @@
 	--skill: #55DBF1;
 	--passive_master: #CF9FFF;
 	--passive_arcsuit: #F4D275;
+	--passive_superawakening: #2478D7;
 	--theme: #5DD0B4; --theme1: #7DD9C3; --theme2: #4AA690;
 
 	--text: #27646E;
@@ -68,6 +69,9 @@
 
 	--bgPassiveArcsuit: url("../images/skill_arcsuit.png");
 	--iconPassiveArcsuit: url("../images/icon_arcsuit.png");
+
+	--bgPassiveSuperawakening: url("../images/skill_superawakening.png");
+	--iconPassiveSuperawakening: url("../images/icon_superawakening.png");
 }
 
 .bg_bug { background: linear-gradient(var(--bug), var(--bug2)) !important; }

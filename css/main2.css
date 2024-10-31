@@ -860,6 +860,18 @@ SKILLS
 	background-size: 24px;
 }
 
+.skill_passiveSuperawakening {
+	background-color: var(--passive_superawakening);
+	background-image: var(--bgPassiveSuperawakening);
+	background-size: cover;
+}
+
+.skill_passiveSuperawakening .skill_name {
+	background-image: var(--iconPassiveSuperawakening);
+	background-repeat: no-repeat;
+	background-size: 24px;
+}
+
 
 #passiveSkills, #luckySkills, #themeSkills {
 	display: flex !important;
@@ -872,7 +884,7 @@ SKILLS
 	margin: auto;
 }
 
-#passiveMaster, #passivesArcSuit, #passives, #passives2 {
+#passiveMaster, #passivesArcSuit, #passivesSuperawakening, #passives, #passives2 {
 	display: flex;
 	flex-wrap: wrap;
 }

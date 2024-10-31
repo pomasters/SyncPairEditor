@@ -12,8 +12,9 @@ import {CURRENT_SYNCGRID, SYNCGRIDS, SYNCGRIDS_TEMPLATES} from './syncgrids.js';
 
 const MAX_NUMBER_STARS = 7;
 const MAX_NUMBER_PASSIVES = 3;
-const MAX_NUMBER_MASTERPASSIVES = 2;
+const MAX_NUMBER_MASTERPASSIVES = 1;
 const MAX_NUMBER_ARCSUITPASSIVES = 2;
+const MAX_NUMBER_SUPERAWAKENINGPASSIVES = 1;
 const MAX_NUMBER_LUCKY = 3;
 const MAX_NUMBER_THEME = 6;
 const MAX_NUMBER_MOVES = 4;
@@ -149,6 +150,12 @@ function showSyncPair2() {
 		g("iconTabPassiveArcSuit").classList.remove("hide");
 	}
 
+	if("passivesSuperawakening" in SYNCPAIR.skills && SYNCPAIR.skills.passivesSuperawakening.length > 0) {
+		g("passivesSuperawakening").innerHTML = skillsAre(SYNCPAIR.skills.passivesSuperawakening, "skill_passiveSuperawakening");
+		g("passivesSuperawakening").classList.remove("hide");
+		g("iconTabPassiveSuperawakening").classList.remove("hide");
+	}
+
 	if(SYNCPAIR.skills.passives2.length > 0) {
 		g("passives2").innerHTML = skillsAre(SYNCPAIR.skills.passives2, "skill_passive");
 		g("btn_alter").classList.remove("hide");
@@ -198,6 +205,7 @@ function resetShowSyncPair() {
 
 	g("passiveMaster").innerHTML = "";
 	g("passivesArcSuit").innerHTML = "";
+	g("passivesSuperawakening").innerHTML = "";
 	g("passives").innerHTML = "";
 	g("passives2").innerHTML = "";
 
@@ -245,8 +253,10 @@ function resetShowSyncPair() {
 
 	g("iconTabPassiveMaster").classList.add("hide");
 	g("iconTabPassiveArcSuit").classList.add("hide");
+	g("iconTabPassiveSuperawakening").classList.add("hide");
 	g("passiveMaster").classList.add("hide");
 	g("passivesArcSuit").classList.add("hide");
+	g("passivesSuperawakening").classList.add("hide");
 	g("passives").classList.remove("hide");
 	g("passives2").classList.add("hide");
 
@@ -679,6 +689,7 @@ function skillsAre(skills, option) {
 	/*limits the number of skill*/
 	if(option == "skill_passiveMaster") { skills3 = skills.slice(0, MAX_NUMBER_MASTERPASSIVES) }
 	if(option == "skill_passiveArcSuit") { skills3 = skills.slice(0, MAX_NUMBER_ARCSUITPASSIVES) }
+	if(option == "skill_passiveSuperawakening") { skills3 = skills.slice(0, MAX_NUMBER_SUPERAWAKENINGPASSIVES) }
 	if(option == "skill_lucky") { skills3 = skills.slice(0, MAX_NUMBER_LUCKY) }
 	if(option == "skill_theme") { skills3 = skills.slice(0, MAX_NUMBER_THEME) }
 
