@@ -633,7 +633,7 @@ export const BLOSSOM_KIRLIA = {
 		"name": "Blossom (Furisode Girl)",
 		"images": {
 			"base": "./v/v2.52.0/ch0660_00_furisodegirl_1024.png",
-			"ex": "./v/v2.52.0/ch0660_00_furisodegirl_1024.png"
+			"ex": "./v/v2.52.0/ch0660_00_furisodegirl_expose_1024.ktx.png"
 		}
 	},
 	"rarity": "3+ex",
