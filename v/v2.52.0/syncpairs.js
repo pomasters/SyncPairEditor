@@ -636,7 +636,7 @@ export const BLOSSOM_KIRLIA = {
 			"ex": "./v/v2.52.0/ch0660_00_furisodegirl_1024.png"
 		}
 	},
-	"rarity": "3",
+	"rarity": "3+ex",
 	"role": "Tech",
 	"exRole": "",
 	"pokemonType": "Fairy",
