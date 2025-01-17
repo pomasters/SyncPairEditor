@@ -1172,7 +1172,7 @@ export const MELA_ARMAROUGE = {
 	},
 	"rarity": "5+ex",
 	"role": "Sprint",
-	"exRole": "Strike (Special)",
+	"exRole": "Special Strike",
 	"pokemonType": "Fire",
 	"pokemonWeakness": "Ghost",
 	"pokemonGender": "Male",
