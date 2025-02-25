@@ -19703,12 +19703,27 @@ import * as NOVEMBER2024 from '../v/v2.50.0/syncgrids.js';
 import * as DECEMBER2024 from '../v/v2.51.0/syncgrids.js';
 import * as JANUARY2025 from '../v/v2.52.0/syncgrids.js';
 import * as FEBRUARY2025 from '../v/v2.53.0/syncgrids.js';
+import * as MARCH2025 from '../v/v2.54.0/syncgrids.js';
 
 
 export const SYNCGRIDS = [
 
 	BASE_EMPTY,
 	ALL_EMPTY,
+
+	BASE_EMPTY, // "---------------- v2.54.0 (MARCH2025) ----------------"
+
+	MARCH2025.STEVEN_SKARMORY,
+	MARCH2025.HOP_ZACIAN,
+	MARCH2025.MARNIE_LIEPARD,
+	MARCH2025.IONO_KILOWATTREL,
+	MARCH2025.MAY_KYOGRE,
+	MARCH2025.BRENDAN_SWELLOW,
+	MARCH2025.HAU_CRABOMINABLE,
+	MARCH2025.BRENDAN_GROUDON,
+	MARCH2025.AS_N_ZOROARK,
+	MARCH2025.ETHAN_HOOH,
+	MARCH2025.ORTEGA_DACHSBUN,
 
 	BASE_EMPTY, // "---------------- v2.53.0 (FEBRUARY2025) ----------------"
 
