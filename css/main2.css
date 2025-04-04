@@ -829,6 +829,7 @@ SKILLS
 .skill_name2 {
 	text-align: left;
 	padding: 2px 0;
+	margin: 0;
 }
 
 .skill_description {
