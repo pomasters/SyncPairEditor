@@ -165,12 +165,13 @@ const TEMPLATE2 = {
 	"exRole": "Tech",
 	"pokemonType" : "Electric",
 	"pokemonWeakness" : "Ground",
+	"pokemonWeakness2" : "Normal",
 	"pokemonGender" : "Male",
 
 	"pokemon" : [
 		{
 			"name" : "(shiny) Pikachu",
-			"formName" : "Name",
+			"formName" : "Shiny",
 			"stats" : {
 				"hp" : 100,
 				"atk" : 100,
@@ -179,11 +180,11 @@ const TEMPLATE2 = {
 				"spd" : 100,
 				"spe" : 100
 			},
-			"image" : "./images/pikachu.png"
+			"image" : "./images/pikachu_shiny.png"
 		},
 		{
-			"name" : "Pikachu",
-			"formName" : "Shiny",
+			"name" : "Raichu",
+			"formName" : "",
 			"stats" : {
 				"hp" : 100,
 				"atk" : 200,
@@ -192,7 +193,7 @@ const TEMPLATE2 = {
 				"spd" : 50,
 				"spe" : 200
 			},
-			"image" : "./images/pikachu_shiny.png"
+			"image" : "./images/raichu.png"
 		}
 	],
 
@@ -209,21 +210,21 @@ const TEMPLATE2 = {
 			},
 			{
 				"name" : "",
-				"description" : "Passive 3 (No name)"
+				"description" : "Passive 3 (No name)(lb)(lb)Do you know ? You can add up to 6 passives here."
 			}
 		],
 		"passives2" : [
 			{
-				"name" : "Passive 1 (2)",
-				"description" : "Description 1 (2)"
+				"name" : "Passive 1",
+				"description" : ""
 			},
 			{
-				"name" : "Passive 2 (No description) (2)",
+				"name" : "Passive 2 (No description)",
 				"description" : ""
 			},
 			{
 				"name" : "",
-				"description" : "Description 3 (No name) (2)"
+				"description" : "Description 3 (No name)"
 			}
 		],
 		"passivesMaster" : [
@@ -305,7 +306,7 @@ const TEMPLATE2 = {
 				"accuracy" : "-",
 				"target" : "Self",
 				"effect" : "",
-				"description" : "Description"
+				"description" : "You can add up to 8 moves here."
 			},
 			{
 				"user" : "Trainer",
