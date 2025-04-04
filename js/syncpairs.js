@@ -153,14 +153,14 @@ const TEMPLATE2 = {
 	"bg" : "./images/bg/gold.png",
 
 	"trainer" : {
-		"name" : "TEMPLATE (FULL)",
+		"name" : "TEMPLATE (COMPLETE)",
 		"images" : {
 			"base" : "./images/trainer_bettie.png",
 			"ex" : "./images/trainer_scottie.png"
 		},
 	},
 
-	"rarity" : 7,
+	"rarity" : "5+ex",
 	"role" : "Support",
 	"exRole": "Tech",
 	"pokemonType" : "Electric",
@@ -169,7 +169,7 @@ const TEMPLATE2 = {
 
 	"pokemon" : [
 		{
-			"name" : "Pikachu",
+			"name" : "(shiny) Pikachu",
 			"formName" : "Name",
 			"stats" : {
 				"hp" : 100,
@@ -236,6 +236,22 @@ const TEMPLATE2 = {
 				"description" : "A second master passive"
 			}
 		],
+		"passivesArcSuit": [
+			{
+			"name": "Myth",
+			"description": "Description"
+			},
+			{
+			"name": "Judgment",
+			"description": ""
+			}
+		],
+		"passivesSuperawakening": [
+		  {
+			"name": "Superawakening",
+			"description": "Description"
+		  }
+		],
 
 		"themes" : [
 			{
@@ -267,7 +283,7 @@ const TEMPLATE2 = {
 		"moves" : [
 			{
 				"user" : "Pokemon",
-				"name" : "Move 1",
+				"name" : "(b move) Move 1",
 				"type" : "Electric",
 				"gauge" : 6,
 				"uses" : 0,
@@ -279,7 +295,7 @@ const TEMPLATE2 = {
 				"description" : "6 !?"
 			},
 			{
-				"user" : "Pokemon",
+				"user" : "Pokemon2",
 				"name" : "Move 2",
 				"type" : "Electric",
 				"gauge" : 2,
@@ -296,7 +312,7 @@ const TEMPLATE2 = {
 				"name" : "Move",
 				"type" : "Trainer",
 				"gauge" : 0,
-				"uses" : 2,
+				"uses" : 99,
 				"category" : "Status",
 				"power" : "-",
 				"accuracy" : "-",
@@ -322,7 +338,7 @@ const TEMPLATE2 = {
 		"syncMove" : [
 			{
 				"user" : "Pokemon",
-				"name" : "Sync move 1",
+				"name" : "(divine move) Divine move 1",
 				"type" : "Electric",
 				"gauge" : 0,
 				"uses" : 0,
@@ -331,7 +347,7 @@ const TEMPLATE2 = {
 				"accuracy" : "",
 				"target" : "",
 				"effect" : "",
-				"description" : "Description"
+				"description" : "Description(ex: This is a custom EX effet) (ex:+strike)"
 			}
 		],
 
