@@ -201,7 +201,7 @@ const TEMPLATE2 = {
 		"passives" : [
 			{
 				"name" : "Passive 1",
-				"description" : "Description 1"
+				"description" : "This is a line (lb) break.(lb)(lb)This is a (name: Passive name) in a passive description.(lb)(lb)(Look at this passive code fo more details)"
 			},
 			{
 				"name" : "Passive 2 (No description)",

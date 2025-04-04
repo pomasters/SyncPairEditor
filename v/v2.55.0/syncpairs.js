@@ -193,7 +193,7 @@ export const REI_BRAVIARY = {
 		"passives": [
 			{
 				"name": "Full Star Ranking",
-				"description": "Raises the user’s Sp. Atk by four stat ranks when it enters a battle. Raises the user’s critical-hit rate by three stat ranks when it enters a battle. Increases the user’s Sync Move ↑ Next effect by four ranks when it enters a battle."
+				"description": "(name: Grand Entry 4) Raises the user’s Sp. Atk by four stat ranks when it enters a battle. (name: Sharp Entry 3) Raises the user’s critical-hit rate by three stat ranks when it enters a battle. (name: Entry: Sync Move Boost 4) Increases the user’s Sync Move ↑ Next effect by four ranks when it enters a battle."
 			},
 			{
 				"name": "T-Move MP 0 & Hit: Free Move Next 9",
@@ -201,7 +201,7 @@ export const REI_BRAVIARY = {
 			},
 			{
 				"name": "T-Move MP 0 & Hit: Special Boost ↑2 9",
-				"description": "Increases the user’s Special Moves ↑ Next effect by two ranks when its attack move is successful while the remaining MP for its Trainer’s moves is zero."
+				"description": "Increases the user’s Special Moves ↑ Next effect by two ranks when its attack move is successful while the remaining MP for its Trainer’s moves is zero."
 			}
 		],
 		"passives2": [],
@@ -346,11 +346,11 @@ export const LACEY_GRANBULL = {
 		"passives": [
 			{
 				"name": "Star Student’s Whispers",
-				"description": "Reduces damage when an ally is hit by an attack move or sync move while the Move Gauge Acceleration effect applies to the allied field of play. Protects all allied sync pairs against critical hits when the Move Gauge Acceleration effect applies to the allied field of play. Extends the duration of the Move Gauge Acceleration effect when the Move Gauge Acceleration effect is applied to the allied field of play."
+				"description": "(name: MG → On Field: Team P-Moves & S-Moves DR 2) Reduces damage when an ally is hit by an attack move or sync move while the Move Gauge Acceleration effect applies to the allied field of play. (name: MG → On Field: Team Crit Immunity) Protects all allied sync pairs against critical hits when the Move Gauge Acceleration effect applies to the allied field of play. (name: MG → Field Extension 5) Extends the duration of the Move Gauge Acceleration effect when the Move Gauge Acceleration effect is applied to the allied field of play."
 			},
 			{
 				"name": "Fairy Zone Hit: Stat ↓ Twice 9",
-				"description": "Grants the following effect two times when the user’s attack move is successful while the zone is a Fairy Zone:Lowers one of the target’s following stats by one stat rank at random: Attack, Defense, Sp. Atk, Sp. Def, Speed, accuracy, or evasiveness."
+				"description": "Grants the following effect two times when the user’s attack move is successful while the zone is a Fairy Zone:Lowers one of the target’s following stats by one stat rank at random: Attack, Defense, Sp. Atk, Sp. Def, Speed, accuracy, or evasiveness."
 			},
 			{
 				"name": "Soften Up 1",
@@ -363,7 +363,7 @@ export const LACEY_GRANBULL = {
 		"passivesSuperawakening": [
 			{
 				"name": " The Miner King’s Daughter",
-				"description": "Reduces the user’s sync move countdown by one the first time it enters a battle each battle. Powers up the user’s sync move when the Move Gauge Acceleration effect applies to the allied field of play. Extends the duration of the Fairy Zone when the zone turns into a Fairy Zone while the user is on the field."
+				"description": "(name: Head Start 1) Reduces the user’s sync move countdown by one the first time it enters a battle each battle. (name: MG → On Field: S-Moves ↑ 5) Powers up the user’s sync move when the Move Gauge Acceleration effect applies to the allied field of play. (name: Fairy Zone Extension 3) Extends the duration of the Fairy Zone when the zone turns into a Fairy Zone while the user is on the field."
 			}
 		],
 		"themes": [
@@ -814,7 +814,7 @@ export const ILIMA_GUMSHOOS = {
 		"passives": [
 			{
 				"name": "T-Move: Team Physical Boost ↑1 9",
-				"description": "Increases the Physical Moves ↑ Next effect of all allied sync pairs by one rank when the user’s Trainer uses a move."
+				"description": "Increases the Physical Moves ↑ Next effect of all allied sync pairs by one rank when the user’s Trainer uses a move."
 			},
 			{
 				"name": "Normal Zone: Team S-Moves ↑ 5",
@@ -967,15 +967,15 @@ export const CYNTHIA_SPIRITOMB = {
 		"passives": [
 			{
 				"name": "Sealed Wicked Thoughts",
-				"description": "Reduces damage taken by the user from super effective moves and super effective sync moves. When a move used by the user’s Pokémon that targets itself or an ally is successful, the target becomes all allied sync pairs. When a move used by the user’s Pokémon that targets an opponent is successful, the target becomes all opposing sync pairs. When the user’s sync move attacks an opponent, the target becomes all opposing sync pairs. The power and chance of applying additional effects of moves and sync moves affected by this passive skill are not lowered even if there are multiple targets. Except in certain circumstances, successful hits with the user’s following attacks become critical hits: Pokémon’s moves or sync move."
+				"description": "(name: Take SE Hit: P-Move DR & S-Move DR 5) Reduces damage taken by the user from super effective moves and super effective sync moves. (name: P-Moves & Sync Moves Expansion) When a move used by the user’s Pokémon that targets itself or an ally is successful, the target becomes all allied sync pairs. When a move used by the user’s Pokémon that targets an opponent is successful, the target becomes all opposing sync pairs. When the user’s sync move attacks an opponent, the target becomes all opposing sync pairs. The power and chance of applying additional effects of moves and sync moves affected by this passive skill are not lowered even if there are multiple targets. (name: P-Moves & S-Moves Crit) Except in certain circumstances, successful hits with the user’s following attacks become critical hits: Pokémon’s moves or sync move."
 			},
 			{
 				"name": "Bad-to-Worse Hex",
-				"description": "The power of the user’s Hex is doubled when the target is affected by a status condition. Restores 32 MP of the user’s buddy move when its Hex is successful."
+				"description": "(name: Opp Status Cond: Hex Power ×2) The power of the user’s Hex is doubled when the target is affected by a status condition. (name: Hex: B-Move MP Recovery (32)) Restores 32 MP of the user’s buddy move when its Hex is successful."
 			},
 			{
 				"name": "Gathered Souls",
-				"description": "Charges the user’s move gauge by six after using its sync move. Restores 50 MP of the user’s buddy move after using its sync move."
+				"description": "(name: Rejuvenate 6) Charges the user’s move gauge by six after using its sync move. (name: S-Move: B-Move MP Recovery (50) 9) Restores 50 MP of the user’s buddy move after using its sync move."
 			}
 		],
 		"passives2": [],
@@ -1124,15 +1124,15 @@ export const MORTY_TYPHLOSION = {
 		"passives": [
 			{
 				"name": "Souls Swaying in the Dark",
-				"description": "Raises the chance of inflicting status conditions with the additional effects of the user’s moves. When the user inflicts a status condition on an opponent with the additional effects of a move, inflicts the same status condition on all opposing sync pairs."
+				"description": "(name: Hostile Environment 3) Raises the chance of inflicting status conditions with the additional effects of the user’s moves. (name: Viral Hit 9) When the user inflicts a status condition on an opponent with the additional effects of a move, inflicts the same status condition on all opposing sync pairs."
 			},
 			{
 				"name": "The Mystic Seer Teacher’s Scary Stories",
-				"description": "Lowers one of the target’s following stats by two stat ranks at random when the user’s attack move is successful against a burned opponent: Attack, Defense, Sp. Atk, Sp. Def, Speed, accuracy, or evasiveness. Applies the Free Move Next effect to the user when its attack move is successful against a burned opponent."
+				"description": "(name: Hit Burned Opp: Free Move Next 9) Lowers one of the target’s following stats by two stat ranks at random when the user’s attack move is successful against a burned opponent: Attack, Defense, Sp. Atk, Sp. Def, Speed, accuracy, or evasiveness. (name: Hit Burned Opp: Stat ↓2 9) Applies the Free Move Next effect to the user when its attack move is successful against a burned opponent."
 			},
 			{
 				"name": "Ally Hits Burned Opp: Special Boost ↑1 9",
-				"description": "Increases an ally’s Special Moves ↑ Next effect by one rank when its attack move is successful against a burned opponent."
+				"description": "Increases an ally’s Special Moves ↑ Next effect by one rank when its attack move is successful against a burned opponent."
 			}
 		],
 		"passives2": [],
@@ -1277,11 +1277,11 @@ export const MARNIE_CYCLIZAR = {
 		"passives": [
 			{
 				"name": "Hungry Buddy",
-				"description": "Reduces the user’s sync move countdown by one the first time the remaining MP for its moves that have the Berry effect tag is zero each battle. Increases the Physical Moves ↑ Next effect of all allied sync pairs by one rank the first time the remaining MP for the user’s moves that have the Berry effect tag is zero each battle."
+				"description": "(name: 1st “Berry” MP 0: Sync CD ↓ 1) Reduces the user’s sync move countdown by one the first time the remaining MP for its moves that have the Berry effect tag is zero each battle. (name: 1st “Berry” MP 0: Team Physical Boost 1) Increases the Physical Moves ↑ Next effect of all allied sync pairs by one rank the first time the remaining MP for the user’s moves that have the Berry effect tag is zero each battle."
 			},
 			{
 				"name": "Ms. Marnie’s Motorcycling Skills",
-				"description": "Has a chance (30%) of restoring the user’s HP when its attack move hits. If the move has the Multistrike effect tag, has a chance (30%) of restoring the user’s HP for each hit. Has a chance (30%) of charging the user’s move gauge by one when its attack move hits. If the move has the Multistrike effect tag, has a chance (30%) of charging the user’s move gauge by one for each hit."
+				"description": "(name: Restoring Strike 2) Has a chance (30%) of restoring the user’s HP when its attack move hits. If the move has the Multistrike effect tag, has a chance (30%) of restoring the user’s HP for each hit. (name: Recharging Strike 2) Has a chance (30%) of charging the user’s move gauge by one when its attack move hits. If the move has the Multistrike effect tag, has a chance (30%) of charging the user’s move gauge by one for each hit."
 			},
 			{
 				"name": "Soften Up 1",
