@@ -668,7 +668,7 @@ function skillIs(skill, option) {
 	return `<div class="skill ${skillOption} ${themeType} elementF">
 				${themeSkillIcon}
 				<p class="skill_name">${skill.name}</p>
-				<p class="skill_description" data-descriptionlength="${Math.round(skill.description.length/10)}">${skill.description.replaceAll("(lb)","<br>")}</p>
+				<p class="skill_description" data-descriptionlength="${Math.round(skill.description.length/10)}">${skill.description.replaceAll("(lb)","<br>").replace(/\(name: ([^)]+)\)/g, "<span class='skill_name2'>$1</span>")}</p>
 			</div>`;
 }
 

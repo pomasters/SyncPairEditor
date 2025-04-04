@@ -301,7 +301,7 @@ ELEMENT FOCUS WHEN CLICKED
 	display: none;
 }
 
-#elementFocus .skill_name {
+#elementFocus .skill_name, #elementFocus .skill_name2 {
 	letter-spacing: 1px;
 	padding: 4px;
 	color: var(--textWhite);
@@ -311,8 +311,13 @@ ELEMENT FOCUS WHEN CLICKED
 	margin: auto 0;
 }
 
+#elementFocus .skill_name2 {
+	text-align: left;
+}
+
 #elementFocus .skill_description {
 	display: flex;
+	flex-direction: column;
 	width: 100%;
 	height: 100%;
 	margin: auto;
