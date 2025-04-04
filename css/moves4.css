@@ -1,15 +1,16 @@
 #moves,
 #moves2,
 #movesMAX {
-	flex-wrap: nowrap;
+	flex-wrap: wrap;
 	overflow: auto;
+	justify-content: start;
 }
 
 #moves .move,
 #moves2 .move,
 #movesMAX .move {
+	flex: 1 1 calc((100% / 4) - 8px);
 	width: 100%;
-	min-width: calc(25% - 8px);
 }
 
 .move_user {

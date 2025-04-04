@@ -4,8 +4,9 @@
 #passives2,
 #luckySkills,
 #themeSkills {
-	flex-wrap: nowrap;
+	flex-wrap: wrap;
 	overflow: auto;
+	justify-content: start;
 }
 
 #passiveMaster .skill,
@@ -14,11 +15,6 @@
 #passives .skill,
 #passives2 .skill,
 #luckySkills .skill {
+	flex: 1 1 calc((100% / 3) - 8px);
 	width: 100%;
-	min-width: calc(33.333% - 8px);
-}
-
-#themeSkills .skill {
-	width: 100%;
-	min-width: calc((100%/6) - 8px);
 }
