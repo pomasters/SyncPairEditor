@@ -28,6 +28,8 @@ export function cellPropertiesBasedOn(divContainer) {
 export function genGrid(sgrid) {
 	var gridDiv = document.getElementById("cells");
 
+	if(sgrid.length > 100) { gridDiv.classList.add("academyCells"); } else { gridDiv.classList.remove("academyCells"); }
+
 	var cellProperties = cellPropertiesBasedOn(gridDiv);
 
 	gridDiv.style.setProperty('--cellWidth', cellProperties.width+'px');
@@ -86,6 +88,15 @@ export function createCell(cell, cellDimensions) {
 	if(cell.x > 0) { adjustY = (y/2) * Math.abs(cell.x); }
 	if(cell.x < 0) { adjustY = -(y/2) * Math.abs(cell.x); }
 
+	var orbs = "";
+	if("orbs" in cell) {
+		orbs = `<div class="academyOrbs"><p class="cellOrbTM">${cell.orbs.tm}</p>
+				<p class="cellOrbFiery">${cell.orbs.fiery}</p>
+				<p class="cellOrbLeafy">${cell.orbs.leafy}</p>
+				<p class="cellOrbBubbly">${cell.orbs.bubbly}</p>
+				<p class="cellOrbSparky">${cell.orbs.sparky}</p></div>`
+	}
+
 	return `<div class="cell" id="cell${cell.id}" data-cellid="${cell.id}" data-cellname="${cell.name}" data-cellcolor="${cell.color.toLowerCase()}" style="left:${x * cell.x + cellDimensions.marginLeft}px;top:${(y * cell.y) + adjustY + cellDimensions.marginTop}px;">
 				<div class="${"grid_color_" + cell.color.toLowerCase()}"></div>
 				<div class="${"grid_icon_" + cell.icon.toLowerCase()}"></div>
@@ -94,6 +105,7 @@ export function createCell(cell, cellDimensions) {
 				<p class="cellEnergy">${cell.energy}</p>
 				<p class="cellLevel">${cell.level}</p>
 				<p class="cellOrb">${cell.orb}</p>
+				${orbs}
 			</div>`
 }
 

@@ -37,20 +37,7 @@ export const ROSA_DEERLING = {
 		}
 	],
 	"skills": {
-		"passives": [
-			{
-				"name": "Passive 1",
-				"description": ""
-			},
-			{
-				"name": "Passive 2",
-				"description": ""
-			},
-			{
-				"name": "Passive 3",
-				"description": ""
-			}
-		],
+		"passives": [],
 		"passives2": [],
 		"passivesMaster": [],
 		"passivesArcSuit": [],
@@ -1427,20 +1414,7 @@ export const FLORIAN_LECHONK = {
 		}
 	],
 	"skills": {
-		"passives": [
-			{
-				"name": "Passive 1",
-				"description": ""
-			},
-			{
-				"name": "Passive 2",
-				"description": ""
-			},
-			{
-				"name": "Passive 3",
-				"description": ""
-			}
-		],
+		"passives": [],
 		"passives2": [],
 		"passivesMaster": [],
 		"passivesArcSuit": [],

@@ -976,8 +976,8 @@ SKILLS
 }
 
 #cells {
-	transform: scale(106%);
-	transform-origin: left top;
+	transform: scale(100%);
+	left: 3%;
 	margin-top: -18%;
 }
 
@@ -1003,7 +1003,8 @@ SKILLS
 #selectedCells .cellName,
 #selectedCells .cellDescription,
 #selectedCells .cellEnergy,
-#selectedCells .cellLevel {
+#selectedCells .cellLevel,
+#selectedCells .academyOrbs {
 	font-size: 1em !important;
 }
 

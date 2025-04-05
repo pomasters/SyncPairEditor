@@ -1,4 +1,2399 @@
-export const ROSA_DEERLING = []
+export const ROSA_DEERLING = [
+	{
+		"id": 1,
+		"x": -1,
+		"y": 0,
+		"name": "Lithe",
+		"description": "Prevents the user from getting paralyzed.",
+		"energy": "0",
+		"orb": "5",
+		"orbs": {
+			"tm": 0,
+			"fiery": 40,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "yellow",
+		"icon": "passive"
+	},
+	{
+		"id": 2,
+		"x": 0,
+		"y": -1,
+		"name": "Haste",
+		"description": "Speed cannot be lowered.",
+		"energy": "0",
+		"orb": "5",
+		"orbs": {
+			"tm": 0,
+			"fiery": 40,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "yellow",
+		"icon": "passive"
+	},
+	{
+		"id": 3,
+		"x": 1,
+		"y": -1,
+		"name": "Clearheaded",
+		"description": "Prevents the user from becoming confused.",
+		"energy": "0",
+		"orb": "5",
+		"orbs": {
+			"tm": 0,
+			"fiery": 40,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "yellow",
+		"icon": "passive"
+	},
+	{
+		"id": 4,
+		"x": 1,
+		"y": 0,
+		"name": "Attack +10",
+		"description": "Attack +10",
+		"energy": "0",
+		"orb": "5",
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": "stat"
+	},
+	{
+		"id": 5,
+		"x": 0,
+		"y": 1,
+		"name": "HP +20",
+		"description": "HP +20",
+		"energy": "0",
+		"orb": "5",
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": "stat"
+	},
+	{
+		"id": 6,
+		"x": -1,
+		"y": 1,
+		"name": "Sp. Atk +10",
+		"description": "Sp. Atk +10",
+		"energy": "0",
+		"orb": "5",
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": "stat"
+	},
+	{
+		"id": 7,
+		"x": 2,
+		"y": -1,
+		"name": "Attack +10",
+		"description": "Attack +10",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": "stat"
+	},
+	{
+		"id": 8,
+		"x": 2,
+		"y": -2,
+		"name": "Dire Hit",
+		"description": "Raises the user’s critical-hit rate by one stat rank.",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 1,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "learnmove",
+		"icon": "learnmove"
+	},
+	{
+		"id": 9,
+		"x": 2,
+		"y": -3,
+		"name": "Dire Hit: MP Refresh +2",
+		"description": "Has a chance (30%) of restoring one MP of the user’s move when that move is successful.",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 40,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "red",
+		"icon": "passive"
+	},
+	{
+		"id": 10,
+		"x": 2,
+		"y": -4,
+		"name": "Dire Hit: Critical Eye +2",
+		"description": "Raises the user’s critical-hit rate by two stat ranks when its move is successful.",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 80,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "red",
+		"icon": "passive"
+	},
+	{
+		"id": 11,
+		"x": 3,
+		"y": -5,
+		"name": "Dire Hit: Power Combo +9",
+		"description": "Increases the user’s Physical Moves ↑ Next effect and Special Moves ↑ Next effect by one rank when its move is successful.",
+		"energy": "0",
+		"orb": "5",
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 60,
+			"bubbly": 0,
+			"sparky": 60
+		},
+		"level": 1,
+		"color": "red",
+		"icon": "passive"
+	},
+	{
+		"id": 12,
+		"x": 4,
+		"y": -6,
+		"name": "Dire Hit: Super Preparation +9",
+		"description": "Applies the Supereffective ↑ Next effect to the user when its move is successful.",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 80,
+			"bubbly": 0,
+			"sparky": 80
+		},
+		"level": 1,
+		"color": "red",
+		"icon": "passive"
+	},
+	{
+		"id": 13,
+		"x": 5,
+		"y": -7,
+		"name": "Dire Hit: Move: Physical Boost ↑+2 & Special Boost ↑+2 +9",
+		"description": "Increases the user’s Physical Moves ↑ Next effect and Special Moves ↑ Next effect by two ranks when its move is successful.",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 100,
+			"bubbly": 0,
+			"sparky": 100
+		},
+		"level": 1,
+		"color": "red",
+		"icon": "passive"
+	},
+	{
+		"id": 14,
+		"x": 3,
+		"y": -2,
+		"name": "Seed Bomb",
+		"description": "No additional effect.",
+		"energy": "0",
+		"orb": "5",
+		"orbs": {
+			"tm": 1,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "learnmove",
+		"icon": "learnmove"
+	},
+	{
+		"id": 15,
+		"x": 4,
+		"y": -3,
+		"name": "Seed Bomb: Move Gauge Refresh +3",
+		"description": "Has a chance (40%) of charging the user’s move gauge by one when its move is successful.",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 40,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "red",
+		"icon": "passive"
+	},
+	{
+		"id": 16,
+		"x": 5,
+		"y": -4,
+		"name": "Move: Seed Bomb",
+		"description": "The more the user’s Speed is raised, the more it powers up the user’s moves.",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 80,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "red",
+		"icon": "passive"
+	},
+	{
+		"id": 17,
+		"x": 6,
+		"y": -5,
+		"name": "Entry: Physical Boost 2",
+		"description": "Increases the user’s Physical Moves ↑ Next effect by two ranks when it enters a battle.",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 60,
+			"bubbly": 0,
+			"sparky": 60
+		},
+		"level": 1,
+		"color": "yellow",
+		"icon": "passive"
+	},
+	{
+		"id": 18,
+		"x": 7,
+		"y": -6,
+		"name": "Seed Bomb: Power +100",
+		"description": "Seed Bomb: Power +100",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 80,
+			"bubbly": 0,
+			"sparky": 80
+		},
+		"level": 1,
+		"color": "green",
+		"icon": "moveboost"
+	},
+	{
+		"id": 19,
+		"x": 8,
+		"y": -7,
+		"name": "Seed Bomb: Defense Destroyer +9",
+		"description": "Lowers the target’s Defense by two stat ranks when the user’s attack move against it is successful.",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 100,
+			"bubbly": 0,
+			"sparky": 100
+		},
+		"level": 1,
+		"color": "red",
+		"icon": "passive"
+	},
+	{
+		"id": 20,
+		"x": 4,
+		"y": -4,
+		"name": "Attack +20",
+		"description": "Attack +20",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": "stat"
+	},
+	{
+		"id": 21,
+		"x": 5,
+		"y": -5,
+		"name": "Attack +20",
+		"description": "Attack +20",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": "stat"
+	},
+	{
+		"id": 22,
+		"x": 6,
+		"y": -6,
+		"name": "Attack +40",
+		"description": "Attack +40",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": "stat"
+	},
+	{
+		"id": 23,
+		"x": 7,
+		"y": -7,
+		"name": "Attack +40",
+		"description": "Attack +40",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": "stat"
+	},
+	{
+		"id": 24,
+		"x": 8,
+		"y": -8,
+		"name": "Attack +60",
+		"description": "Attack +60",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": "stat"
+	},
+	{
+		"id": 25,
+		"x": 3,
+		"y": -1,
+		"name": "Bullet Seed",
+		"description": "Attacks the target two to five times in a row.",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 1,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "learnmove",
+		"icon": "learnmove"
+	},
+	{
+		"id": 26,
+		"x": 4,
+		"y": -1,
+		"name": "Recharging Strike 1",
+		"description": "Has a chance (20%) of charging the user’s move gauge by one when its attack move hits. If the move has the Multistrike effect tag, has a chance (20%) of charging the user’s move gauge by one for each hit.",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 40,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "yellow",
+		"icon": "passive"
+	},
+	{
+		"id": 27,
+		"x": 5,
+		"y": -1,
+		"name": "Bullet Seed: Power +5",
+		"description": "Bullet Seed: Power +5",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 80,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "green",
+		"icon": "moveboost"
+	},
+	{
+		"id": 28,
+		"x": 6,
+		"y": -1,
+		"name": "Bullet Seed: Unfortunate Strike +3",
+		"description": "Has a chance (40%) of lowering one of the target’s following stats by one stat rank at random when the user’s attack move against it hits: Attack, Defense, Sp. Atk, Sp. Def, Speed, accuracy, or evasiveness. If the move has the multistrike effect tag, has a chance (40%) of lowering one of the target’s following stats by one stat rank at random for each hit: Attack, Defense, Sp. Atk, Sp. Def, Speed, accuracy, or evasiveness.",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 60,
+			"bubbly": 0,
+			"sparky": 60
+		},
+		"level": 1,
+		"color": "red",
+		"icon": "passive"
+	},
+	{
+		"id": 29,
+		"x": 7,
+		"y": -1,
+		"name": "Bullet Seed: Strike: Flinch +1",
+		"description": "Has a chance (20%) of making the target flinch when the user’s attack move hits. If the move has the multistrike effect tag, has a chance (20%) of making the target flinch for each hit.",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 80,
+			"bubbly": 0,
+			"sparky": 80
+		},
+		"level": 1,
+		"color": "red",
+		"icon": "passive"
+	},
+	{
+		"id": 30,
+		"x": 8,
+		"y": -1,
+		"name": "Move: Bullet Seed",
+		"description": "Maximizes the number of times the user hits with a move that has the multistrike effect tag when that move is successful.",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 100,
+			"bubbly": 0,
+			"sparky": 100
+		},
+		"level": 1,
+		"color": "red",
+		"icon": "passive"
+	},
+	{
+		"id": 31,
+		"x": 5,
+		"y": -2,
+		"name": "Attack +20",
+		"description": "Attack +20",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": "stat"
+	},
+	{
+		"id": 32,
+		"x": 6,
+		"y": -2,
+		"name": "Attack +20",
+		"description": "Attack +20",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": "stat"
+	},
+	{
+		"id": 33,
+		"x": 7,
+		"y": -2,
+		"name": "Attack +40",
+		"description": "Attack +40",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": "stat"
+	},
+	{
+		"id": 34,
+		"x": 8,
+		"y": -2,
+		"name": "Attack +40",
+		"description": "Attack +40",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": "stat"
+	},
+	{
+		"id": 35,
+		"x": 9,
+		"y": -2,
+		"name": "Attack +60",
+		"description": "Attack +60",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": "stat"
+	},
+	{
+		"id": 36,
+		"x": 2,
+		"y": 0,
+		"name": "Attack Studies",
+		"description": "Raises the user’s Attack by two stat ranks. Raises the user’s critical-hit rate by one stat rank.",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 1,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "learnmove",
+		"icon": "learnmove"
+	},
+	{
+		"id": 37,
+		"x": 2,
+		"y": 1,
+		"name": "Attack Studies: MP Refresh +2",
+		"description": "Has a chance (30%) of restoring one MP of the user’s move when that move is successful.",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 40,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "red",
+		"icon": "passive"
+	},
+	{
+		"id": 38,
+		"x": 3,
+		"y": 1,
+		"name": "Attack Studies: Berserker +1",
+		"description": "Raises the user’s Attack by one stat rank when its move is successful.",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 80,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "red",
+		"icon": "passive"
+	},
+	{
+		"id": 39,
+		"x": 4,
+		"y": 1,
+		"name": "Attack Studies: Critical Eye +1",
+		"description": "Raises the user’s critical-hit rate by one stat rank when its move is successful.",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 60,
+			"bubbly": 0,
+			"sparky": 60
+		},
+		"level": 1,
+		"color": "red",
+		"icon": "passive"
+	},
+	{
+		"id": 40,
+		"x": 5,
+		"y": 1,
+		"name": "Attack Studies: Berserker +3",
+		"description": "Raises the user’s Attack by three stat ranks when its move is successful.",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 80,
+			"bubbly": 0,
+			"sparky": 80
+		},
+		"level": 1,
+		"color": "red",
+		"icon": "passive"
+	},
+	{
+		"id": 41,
+		"x": 6,
+		"y": 1,
+		"name": "Attack Studies: Mighty Physical Boost +9",
+		"description": "Increases the user’s Physical Moves ↑ Next effect by two ranks when its move is successful.",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 100,
+			"bubbly": 0,
+			"sparky": 100
+		},
+		"level": 1,
+		"color": "red",
+		"icon": "passive"
+	},
+	{
+		"id": 42,
+		"x": -2,
+		"y": 1,
+		"name": "Sp. Atk +10",
+		"description": "Sp. Atk +10",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": "stat"
+	},
+	{
+		"id": 43,
+		"x": -2,
+		"y": 0,
+		"name": "X Speed",
+		"description": "Raises the user’s Speed by two stat ranks.",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 1,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "learnmove",
+		"icon": "learnmove"
+	},
+	{
+		"id": 44,
+		"x": -2,
+		"y": -1,
+		"name": "X Speed: MP Refresh +2",
+		"description": "Has a chance (30%) of restoring one MP of the user’s move when that move is successful.",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 40,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "red",
+		"icon": "passive"
+	},
+	{
+		"id": 45,
+		"x": -2,
+		"y": -2,
+		"name": "X Speed: Fleet Feet +2",
+		"description": "Raises the user’s Speed by two stat ranks when its move is successful.",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 80,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "red",
+		"icon": "passive"
+	},
+	{
+		"id": 46,
+		"x": -3,
+		"y": -2,
+		"name": "X Speed: Power Combo +9",
+		"description": "Increases the user’s Physical Moves ↑ Next effect and Special Moves ↑ Next effect by one rank when its move is successful.",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 60,
+			"bubbly": 0,
+			"sparky": 60
+		},
+		"level": 1,
+		"color": "red",
+		"icon": "passive"
+	},
+	{
+		"id": 47,
+		"x": -4,
+		"y": -2,
+		"name": "Inertia",
+		"description": "The more the user’s Speed is raised, the more it powers up the user’s sync move.",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 80,
+			"bubbly": 0,
+			"sparky": 80
+		},
+		"level": 1,
+		"color": "yellow",
+		"icon": "passive"
+	},
+	{
+		"id": 48,
+		"x": -5,
+		"y": -2,
+		"name": "X Speed: Initial Propulsion +1",
+		"description": "Reduces the sync move countdown by one the first time the user’s move is successful each battle.",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 100,
+			"bubbly": 0,
+			"sparky": 100
+		},
+		"level": 1,
+		"color": "red",
+		"icon": "passive"
+	},
+	{
+		"id": 49,
+		"x": -3,
+		"y": 1,
+		"name": "Giga Drain",
+		"description": "The more damage dealt to the target, the more it restores the user’s HP.",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 1,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "learnmove",
+		"icon": "learnmove"
+	},
+	{
+		"id": 50,
+		"x": -4,
+		"y": 1,
+		"name": "Giga Drain: Fleet Feet +1",
+		"description": "Raises the user’s Speed by one stat rank when its move is successful.",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 40,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "red",
+		"icon": "passive"
+	},
+	{
+		"id": 51,
+		"x": -5,
+		"y": 1,
+		"name": "Giga Drain: Power +20",
+		"description": "Giga Drain: Power +20",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 80,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "green",
+		"icon": "moveboost"
+	},
+	{
+		"id": 52,
+		"x": -6,
+		"y": 1,
+		"name": "Giga Drain: Attack Trap +9",
+		"description": "Leaves the target trapped when the user’s attack move against it is successful.",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 60,
+			"bubbly": 0,
+			"sparky": 60
+		},
+		"level": 1,
+		"color": "red",
+		"icon": "passive"
+	},
+	{
+		"id": 53,
+		"x": -7,
+		"y": 1,
+		"name": "Giga Drain: Master Healer +1",
+		"description": "Increases the amount of HP restored by the user’s healing moves.",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 80,
+			"bubbly": 0,
+			"sparky": 80
+		},
+		"level": 1,
+		"color": "red",
+		"icon": "passive"
+	},
+	{
+		"id": 54,
+		"x": -8,
+		"y": 1,
+		"name": "Giga Drain: BOGO +9",
+		"description": "Applies the Free Move Next effect to the user when its move is successful.",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 100,
+			"bubbly": 0,
+			"sparky": 100
+		},
+		"level": 1,
+		"color": "red",
+		"icon": "passive"
+	},
+	{
+		"id": 55,
+		"x": -4,
+		"y": 0,
+		"name": "Sp. Atk +20",
+		"description": "Sp. Atk +20",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": "stat"
+	},
+	{
+		"id": 56,
+		"x": -5,
+		"y": 0,
+		"name": "Sp. Atk +20",
+		"description": "Sp. Atk +20",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": "stat"
+	},
+	{
+		"id": 57,
+		"x": -6,
+		"y": 0,
+		"name": "Sp. Atk +40",
+		"description": "Sp. Atk +40",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": "stat"
+	},
+	{
+		"id": 58,
+		"x": -7,
+		"y": 0,
+		"name": "Sp. Atk +40",
+		"description": "Sp. Atk +40",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": "stat"
+	},
+	{
+		"id": 59,
+		"x": -8,
+		"y": 0,
+		"name": "Sp. Atk +60",
+		"description": "Sp. Atk +60",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": "stat"
+	},
+	{
+		"id": 60,
+		"x": -3,
+		"y": 2,
+		"name": "Sunny Day",
+		"description": "Makes the weather sunny.",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 1,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "learnmove",
+		"icon": "learnmove"
+	},
+	{
+		"id": 61,
+		"x": -4,
+		"y": 3,
+		"name": "Speeding Sun 2",
+		"description": "Quickly charges the move gauge when the weather is sunny.",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 40,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "yellow",
+		"icon": "passive"
+	},
+	{
+		"id": 62,
+		"x": -5,
+		"y": 4,
+		"name": "Healing Sun 1",
+		"description": "Restores the user’s HP whenever its Pokémon takes an action while the weather is sunny.",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 80,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "yellow",
+		"icon": "passive"
+	},
+	{
+		"id": 63,
+		"x": -6,
+		"y": 5,
+		"name": "Solar Flare 5",
+		"description": "Powers up the user’s sync move when the weather is sunny.",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 60,
+			"bubbly": 0,
+			"sparky": 60
+		},
+		"level": 1,
+		"color": "yellow",
+		"icon": "passive"
+	},
+	{
+		"id": 64,
+		"x": -7,
+		"y": 6,
+		"name": "Drought Alert 3",
+		"description": "Extends the duration of sunny weather when the weather turns sunny while the user is on the field.",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 80,
+			"bubbly": 0,
+			"sparky": 80
+		},
+		"level": 1,
+		"color": "yellow",
+		"icon": "passive"
+	},
+	{
+		"id": 65,
+		"x": -8,
+		"y": 7,
+		"name": "Sunny Day: Initial Propulsion +1",
+		"description": "Reduces the sync move countdown by one the first time the user’s move is successful each battle.",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 100,
+			"bubbly": 0,
+			"sparky": 100
+		},
+		"level": 1,
+		"color": "red",
+		"icon": "passive"
+	},
+	{
+		"id": 66,
+		"x": -5,
+		"y": 3,
+		"name": "Sp. Atk +20",
+		"description": "Sp. Atk +20",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": "stat"
+	},
+	{
+		"id": 67,
+		"x": -6,
+		"y": 4,
+		"name": "Sp. Atk +20",
+		"description": "Sp. Atk +20",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": "stat"
+	},
+	{
+		"id": 68,
+		"x": -7,
+		"y": 5,
+		"name": "Sp. Atk +40",
+		"description": "Sp. Atk +40",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": "stat"
+	},
+	{
+		"id": 69,
+		"x": -8,
+		"y": 6,
+		"name": "Sp. Atk +40",
+		"description": "Sp. Atk +40",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": "stat"
+	},
+	{
+		"id": 70,
+		"x": -9,
+		"y": 7,
+		"name": "Sp. Atk +60",
+		"description": "Sp. Atk +60",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": "stat"
+	},
+	{
+		"id": 71,
+		"x": -2,
+		"y": 2,
+		"name": "Sp. Atk Studies",
+		"description": "Raises the user’s Sp. Atk by two stat ranks. Raises the user’s critical-hit rate by one stat rank.",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 1,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "learnmove",
+		"icon": "learnmove"
+	},
+	{
+		"id": 72,
+		"x": -2,
+		"y": 3,
+		"name": "Sp. Atk Studies: MP Refresh +2",
+		"description": "Has a chance (30%) of restoring one MP of the user’s move when that move is successful.",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 40,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "red",
+		"icon": "passive"
+	},
+	{
+		"id": 73,
+		"x": -3,
+		"y": 4,
+		"name": "Sp. Atk Studies: Ramp Up +1",
+		"description": "Raises the user’s Sp. Atk by one stat rank when its move is successful.",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 80,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "red",
+		"icon": "passive"
+	},
+	{
+		"id": 74,
+		"x": -4,
+		"y": 5,
+		"name": "Sp. Atk Studies: Critical Eye +1",
+		"description": "Raises the user’s critical-hit rate by one stat rank when its move is successful.",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 60,
+			"bubbly": 0,
+			"sparky": 60
+		},
+		"level": 1,
+		"color": "red",
+		"icon": "passive"
+	},
+	{
+		"id": 75,
+		"x": -5,
+		"y": 6,
+		"name": "Sp. Atk Studies: Ramp Up +3",
+		"description": "Raises the user’s Sp. Atk by three stat ranks when its move is successful.",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 80,
+			"bubbly": 0,
+			"sparky": 80
+		},
+		"level": 1,
+		"color": "red",
+		"icon": "passive"
+	},
+	{
+		"id": 76,
+		"x": -6,
+		"y": 7,
+		"name": "Sp. Atk Studies: Move: Special Boost ↑+2 +9",
+		"description": "Increases the user’s Special Moves ↑ Next effect by two ranks when its move is successful.",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 100,
+			"bubbly": 0,
+			"sparky": 100
+		},
+		"level": 1,
+		"color": "red",
+		"icon": "passive"
+	},
+	{
+		"id": 77,
+		"x": 0,
+		"y": -2,
+		"name": "Energy Ball: Move Gauge Refresh +3",
+		"description": "Has a chance (40%) of charging the user’s move gauge by one when its move is successful.",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 40,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "red",
+		"icon": "passive"
+	},
+	{
+		"id": 78,
+		"x": 0,
+		"y": -3,
+		"name": "Natural Remedy",
+		"description": "Removes all status conditions from the user the first time it is inflicted by any status condition each battle.",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 80,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "yellow",
+		"icon": "passive"
+	},
+	{
+		"id": 79,
+		"x": 0,
+		"y": -4,
+		"name": "Attack Trap 4",
+		"description": "Has a chance (50%) of leaving the target trapped when the user’s attack move against it is successful.",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 80,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "yellow",
+		"icon": "passive"
+	},
+	{
+		"id": 80,
+		"x": 0,
+		"y": -5,
+		"name": "Energy Ball: On a Roll +9",
+		"description": "Raises the chance of lowering stat values with the additional effects of the user’s moves.",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 80,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "red",
+		"icon": "passive"
+	},
+	{
+		"id": 81,
+		"x": 0,
+		"y": -6,
+		"name": "Turbo Turf 3",
+		"description": "Quickly charges the move gauge when the terrain is Grassy Terrain.",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 80,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "yellow",
+		"icon": "passive"
+	},
+	{
+		"id": 82,
+		"x": 0,
+		"y": -7,
+		"name": "Verdant Recovery 1",
+		"description": "Restores the user’s HP whenever its Pokémon takes an action when the terrain is Grassy Terrain.",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 60,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 60
+		},
+		"level": 1,
+		"color": "yellow",
+		"icon": "passive"
+	},
+	{
+		"id": 83,
+		"x": 0,
+		"y": -8,
+		"name": "Energy Ball: Hit: Defense ↓ & Sp. Def ↓ +9",
+		"description": "Lowers the target’s Defense and Sp. Def by one stat rank when the user’s attack move is successful.",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 60,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 60
+		},
+		"level": 1,
+		"color": "red",
+		"icon": "passive"
+	},
+	{
+		"id": 84,
+		"x": 0,
+		"y": -9,
+		"name": "Grassy Terrain: S-Moves ↑ 9",
+		"description": "Powers up the user’s sync move when the terrain is Grassy Terrain.",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 60,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 60
+		},
+		"level": 1,
+		"color": "yellow",
+		"icon": "passive"
+	},
+	{
+		"id": 85,
+		"x": 0,
+		"y": -10,
+		"name": "The Season of Growth Begins",
+		"description": "Turns the field of play’s terrain into Grassy Terrain the first time the user enters a battle each battle. Extends the duration of Grassy Terrain when the terrain turns into Grassy Terrain while the user is on the field.",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 160,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 160
+		},
+		"level": 1,
+		"color": "yellow",
+		"icon": "passive"
+	},
+	{
+		"id": 86,
+		"x": 1,
+		"y": -5,
+		"name": "Look Alive 3",
+		"description": "Has a chance (40%) of raising the user’s evasiveness by one stat rank when it is hit by an attack move.",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 80,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "yellow",
+		"icon": "passive"
+	},
+	{
+		"id": 87,
+		"x": 2,
+		"y": -6,
+		"name": "S-Move: Physical Boost ↑2 & Special Boost ↑2 9",
+		"description": "Increases the user’s Physical Moves ↑ Next effect and Special Moves ↑ Next effect by two ranks after using its sync move.",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 60,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 60
+		},
+		"level": 1,
+		"color": "yellow",
+		"icon": "passive"
+	},
+	{
+		"id": 88,
+		"x": 3,
+		"y": -7,
+		"name": "Mark the Seasons Grass Beam: Power +25",
+		"description": "Mark the Seasons Grass Beam: Power +25",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 60,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 60
+		},
+		"level": 1,
+		"color": "sync",
+		"icon": "sync"
+	},
+	{
+		"id": 89,
+		"x": 3,
+		"y": -8,
+		"name": "Unova C (Defensive): S-Moves ↑ 5",
+		"description": "Powers up the user’s sync move when Unova Circle (Defensive) applies to the allied field of play.",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 60,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 60
+		},
+		"level": 1,
+		"color": "yellow",
+		"icon": "passive"
+	},
+	{
+		"id": 90,
+		"x": 4,
+		"y": -8,
+		"name": "First Aid 4",
+		"description": "Restores the user’s HP by approximately 40% of its maximum HP the first time it is in a pinch each battle.",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 60,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 60
+		},
+		"level": 1,
+		"color": "yellow",
+		"icon": "passive"
+	},
+	{
+		"id": 91,
+		"x": 3,
+		"y": -9,
+		"name": "Debut: Unova C (Def) on Field",
+		"description": "Applies Unova Circle (Defensive) to the allied field of play the first time the user enters a battle each battle.",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 80,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 80
+		},
+		"level": 1,
+		"color": "yellow",
+		"icon": "passive"
+	},
+	{
+		"id": 92,
+		"x": 5,
+		"y": -9,
+		"name": "Head Start 1",
+		"description": "Reduces the user’s sync move countdown by one the first time it enters a battle each battle.",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 60,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 60
+		},
+		"level": 1,
+		"color": "yellow",
+		"icon": "passive"
+	},
+	{
+		"id": 93,
+		"x": -1,
+		"y": -4,
+		"name": "Healthy Healing",
+		"description": "Applies the Gradual Healing effect to the user when its HP is full when it enters a battle.",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 80,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "yellow",
+		"icon": "passive"
+	},
+	{
+		"id": 94,
+		"x": -2,
+		"y": -4,
+		"name": "Rejuvenate 6",
+		"description": "Charges the user’s move gauge by six after using its sync move.",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 60,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 60
+		},
+		"level": 1,
+		"color": "yellow",
+		"icon": "passive"
+	},
+	{
+		"id": 95,
+		"x": -3,
+		"y": -4,
+		"name": "Mark the Seasons Grass Beam: Power +25",
+		"description": "Mark the Seasons Grass Beam: Power +25",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 60,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 60
+		},
+		"level": 1,
+		"color": "sync",
+		"icon": "sync"
+	},
+	{
+		"id": 96,
+		"x": -3,
+		"y": -5,
+		"name": "Adrenaline 1",
+		"description": "Reduces the sync move countdown by one the first time the user’s sync move is used each battle.",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 60,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 60
+		},
+		"level": 1,
+		"color": "yellow",
+		"icon": "passive"
+	},
+	{
+		"id": 97,
+		"x": -4,
+		"y": -4,
+		"name": "Circle: Attack Move DR 2",
+		"description": "Reduces damage when the user is hit by an attack move while a circle applies to the allied field of play.",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 60,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 60
+		},
+		"level": 1,
+		"color": "yellow",
+		"icon": "passive"
+	},
+	{
+		"id": 98,
+		"x": -3,
+		"y": -6,
+		"name": "Unova C (Defensive) Extension 3",
+		"description": "Extends the duration of Unova Circle (Defensive) when Unova Circle (Defensive) is applied to the allied field of play.",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 80,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 80
+		},
+		"level": 1,
+		"color": "yellow",
+		"icon": "passive"
+	},
+	{
+		"id": 99,
+		"x": -5,
+		"y": -4,
+		"name": "1st S-Move: Unova C (Def) on Field",
+		"description": "Applies Unova Circle (Defensive) to the allied field of play the first time the user’s sync move is used each battle.",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 60,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 60
+		},
+		"level": 1,
+		"color": "yellow",
+		"icon": "passive"
+	},
+	{
+		"id": 100,
+		"x": 0,
+		"y": 2,
+		"name": "HP +20",
+		"description": "HP +20",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": "stat"
+	},
+	{
+		"id": 101,
+		"x": 0,
+		"y": 3,
+		"name": "HP +20",
+		"description": "HP +20",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": "stat"
+	},
+	{
+		"id": 102,
+		"x": 0,
+		"y": 4,
+		"name": "HP +20",
+		"description": "HP +20",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": "stat"
+	},
+	{
+		"id": 103,
+		"x": 0,
+		"y": 5,
+		"name": "HP +20",
+		"description": "HP +20",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": "stat"
+	},
+	{
+		"id": 104,
+		"x": 0,
+		"y": 6,
+		"name": "HP +40",
+		"description": "HP +40",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": "stat"
+	},
+	{
+		"id": 105,
+		"x": -1,
+		"y": 7,
+		"name": "HP +40",
+		"description": "HP +40",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": "stat"
+	},
+	{
+		"id": 106,
+		"x": 1,
+		"y": 6,
+		"name": "HP +40",
+		"description": "HP +40",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": "stat"
+	},
+	{
+		"id": 107,
+		"x": 0,
+		"y": 7,
+		"name": "HP +60",
+		"description": "HP +60",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": "stat"
+	},
+	{
+		"id": 108,
+		"x": -1,
+		"y": 8,
+		"name": "HP +60",
+		"description": "HP +60",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": "stat"
+	},
+	{
+		"id": 109,
+		"x": 1,
+		"y": 7,
+		"name": "HP +60",
+		"description": "HP +60",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": "stat"
+	},
+	{
+		"id": 110,
+		"x": 0,
+		"y": 8,
+		"name": "HP +80",
+		"description": "HP +80",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": "stat"
+	},
+	{
+		"id": 111,
+		"x": 1,
+		"y": 3,
+		"name": "Defense +5",
+		"description": "Defense +5",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": "stat"
+	},
+	{
+		"id": 112,
+		"x": 2,
+		"y": 3,
+		"name": "Defense +10",
+		"description": "Defense +10",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": "stat"
+	},
+	{
+		"id": 113,
+		"x": 3,
+		"y": 3,
+		"name": "Defense +10",
+		"description": "Defense +10",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": "stat"
+	},
+	{
+		"id": 114,
+		"x": 3,
+		"y": 4,
+		"name": "Defense +15",
+		"description": "Defense +15",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": "stat"
+	},
+	{
+		"id": 115,
+		"x": 4,
+		"y": 3,
+		"name": "Defense +15",
+		"description": "Defense +15",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": "stat"
+	},
+	{
+		"id": 116,
+		"x": 3,
+		"y": 5,
+		"name": "Defense +20",
+		"description": "Defense +20",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": "stat"
+	},
+	{
+		"id": 117,
+		"x": 4,
+		"y": 4,
+		"name": "Defense +25",
+		"description": "Defense +25",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": "stat"
+	},
+	{
+		"id": 118,
+		"x": 5,
+		"y": 3,
+		"name": "Defense +20",
+		"description": "Defense +20",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": "stat"
+	},
+	{
+		"id": 119,
+		"x": -1,
+		"y": 4,
+		"name": "Sp. Def +5",
+		"description": "Sp. Def +5",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": "stat"
+	},
+	{
+		"id": 120,
+		"x": -2,
+		"y": 5,
+		"name": "Sp. Def +10",
+		"description": "Sp. Def +10",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": "stat"
+	},
+	{
+		"id": 121,
+		"x": -3,
+		"y": 6,
+		"name": "Sp. Def +10",
+		"description": "Sp. Def +10",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": "stat"
+	},
+	{
+		"id": 122,
+		"x": -3,
+		"y": 7,
+		"name": "Sp. Def +15",
+		"description": "Sp. Def +15",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": "stat"
+	},
+	{
+		"id": 123,
+		"x": -4,
+		"y": 7,
+		"name": "Sp. Def +15",
+		"description": "Sp. Def +15",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": "stat"
+	},
+	{
+		"id": 124,
+		"x": -3,
+		"y": 8,
+		"name": "Sp. Def +20",
+		"description": "Sp. Def +20",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": "stat"
+	},
+	{
+		"id": 125,
+		"x": -4,
+		"y": 8,
+		"name": "Sp. Def +25",
+		"description": "Sp. Def +25",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": "stat"
+	},
+	{
+		"id": 126,
+		"x": -5,
+		"y": 8,
+		"name": "Sp. Def +20",
+		"description": "Sp. Def +20",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": "stat"
+	}
+]
 
 export const REI_BRAVIARY = [
 	{
@@ -4704,4 +7099,2399 @@ export const MARNIE_CYCLIZAR = [
 	}
 ]
 
-export const FLORIAN_LECHONK = []
+export const FLORIAN_LECHONK = [
+	{
+		"id": 1,
+		"x": -1,
+		"y": 0,
+		"name": "Flameproof",
+		"description": "Prevents the user from getting burned.",
+		"energy": "0",
+		"orb": "5",
+		"orbs": {
+			"tm": 0,
+			"fiery": 40,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "yellow",
+		"icon": "passive"
+	},
+	{
+		"id": 2,
+		"x": 0,
+		"y": -1,
+		"name": "Unbending",
+		"description": "Defense cannot be lowered.",
+		"energy": "0",
+		"orb": "5",
+		"orbs": {
+			"tm": 0,
+			"fiery": 40,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "yellow",
+		"icon": "passive"
+	},
+	{
+		"id": 3,
+		"x": 1,
+		"y": -1,
+		"name": "Escape Artist",
+		"description": "Prevents the user from becoming trapped.",
+		"energy": "0",
+		"orb": "5",
+		"orbs": {
+			"tm": 0,
+			"fiery": 40,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "yellow",
+		"icon": "passive"
+	},
+	{
+		"id": 4,
+		"x": 1,
+		"y": 0,
+		"name": "Attack +10",
+		"description": "Attack +10",
+		"energy": "0",
+		"orb": "5",
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": "stat"
+	},
+	{
+		"id": 5,
+		"x": 0,
+		"y": 1,
+		"name": "HP +20",
+		"description": "HP +20",
+		"energy": "0",
+		"orb": "5",
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": "stat"
+	},
+	{
+		"id": 6,
+		"x": -1,
+		"y": 1,
+		"name": "Sp. Atk +10",
+		"description": "Sp. Atk +10",
+		"energy": "0",
+		"orb": "5",
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": "stat"
+	},
+	{
+		"id": 7,
+		"x": 2,
+		"y": -1,
+		"name": "Attack +10",
+		"description": "Attack +10",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": "stat"
+	},
+	{
+		"id": 8,
+		"x": 2,
+		"y": -2,
+		"name": "X Attack All",
+		"description": "Raises the Attack of all allied sync pairs by two stat ranks.",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 1,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "learnmove",
+		"icon": "learnmove"
+	},
+	{
+		"id": 9,
+		"x": 2,
+		"y": -3,
+		"name": "X Attack All: MP Refresh +2",
+		"description": "Has a chance (30%) of restoring one MP of the user’s move when that move is successful.",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 40,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "red",
+		"icon": "passive"
+	},
+	{
+		"id": 10,
+		"x": 2,
+		"y": -4,
+		"name": "X Attack All: Shielded +1",
+		"description": "Raises the Defense of all allied sync pairs by one stat rank when the user’s move is successful.",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 80,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "red",
+		"icon": "passive"
+	},
+	{
+		"id": 11,
+		"x": 3,
+		"y": -5,
+		"name": "X Attack All: Berserk Bunch +1",
+		"description": "Raises the Attack of all allied sync pairs by one stat rank when the user’s move is successful.",
+		"energy": "0",
+		"orb": "5",
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 60,
+			"bubbly": 0,
+			"sparky": 60
+		},
+		"level": 1,
+		"color": "red",
+		"icon": "passive"
+	},
+	{
+		"id": 12,
+		"x": 4,
+		"y": -6,
+		"name": "X Attack All: Team Brawn Gain +9",
+		"description": "Increases the Physical Moves ↑ Next effect of all allied sync pairs by one rank when the user’s move is successful.",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 80,
+			"bubbly": 0,
+			"sparky": 80
+		},
+		"level": 1,
+		"color": "red",
+		"icon": "passive"
+	},
+	{
+		"id": 13,
+		"x": 5,
+		"y": -7,
+		"name": "X Attack All: Critical Squad +2",
+		"description": "Raises the critical-hit rate of all allied sync pairs by two stat ranks when the user’s move is successful.",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 100,
+			"bubbly": 0,
+			"sparky": 100
+		},
+		"level": 1,
+		"color": "red",
+		"icon": "passive"
+	},
+	{
+		"id": 14,
+		"x": 3,
+		"y": -2,
+		"name": "Play Rough",
+		"description": "Has a chance (10%) of lowering the target’s Attack by one stat rank.",
+		"energy": "0",
+		"orb": "5",
+		"orbs": {
+			"tm": 1,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "learnmove",
+		"icon": "learnmove"
+	},
+	{
+		"id": 15,
+		"x": 4,
+		"y": -3,
+		"name": "Play Rough: Move Gauge Refresh +2",
+		"description": "Has a chance (30%) of charging the user’s move gauge by one when its move is successful.",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 40,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "red",
+		"icon": "passive"
+	},
+	{
+		"id": 16,
+		"x": 5,
+		"y": -4,
+		"name": "Play Rough: Gobsmack +2",
+		"description": "Has a chance (30%) of leaving the target confused when the user’s attack move against it is successful.",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 80,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "red",
+		"icon": "passive"
+	},
+	{
+		"id": 17,
+		"x": 6,
+		"y": -5,
+		"name": "Play Rough: Power +50",
+		"description": "Play Rough: Power +50",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 60,
+			"bubbly": 0,
+			"sparky": 60
+		},
+		"level": 1,
+		"color": "green",
+		"icon": "moveboost"
+	},
+	{
+		"id": 18,
+		"x": 7,
+		"y": -6,
+		"name": "Play Rough: On a Roll +9",
+		"description": "Raises the chance of lowering stat values with the additional effects of the user’s moves.",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 80,
+			"bubbly": 0,
+			"sparky": 80
+		},
+		"level": 1,
+		"color": "red",
+		"icon": "passive"
+	},
+	{
+		"id": 19,
+		"x": 8,
+		"y": -7,
+		"name": "Play Rough: Twofer +9",
+		"description": "Applies the Free Move Next effect to the user when its Pokémon uses a move.",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 100,
+			"bubbly": 0,
+			"sparky": 100
+		},
+		"level": 1,
+		"color": "red",
+		"icon": "passive"
+	},
+	{
+		"id": 20,
+		"x": 4,
+		"y": -4,
+		"name": "Attack +20",
+		"description": "Attack +20",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": "stat"
+	},
+	{
+		"id": 21,
+		"x": 5,
+		"y": -5,
+		"name": "Attack +20",
+		"description": "Attack +20",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": "stat"
+	},
+	{
+		"id": 22,
+		"x": 6,
+		"y": -6,
+		"name": "Attack +40",
+		"description": "Attack +40",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": "stat"
+	},
+	{
+		"id": 23,
+		"x": 7,
+		"y": -7,
+		"name": "Attack +40",
+		"description": "Attack +40",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": "stat"
+	},
+	{
+		"id": 24,
+		"x": 8,
+		"y": -8,
+		"name": "Attack +60",
+		"description": "Attack +60",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": "stat"
+	},
+	{
+		"id": 25,
+		"x": 3,
+		"y": -1,
+		"name": "Zen Headbutt",
+		"description": "Has a chance (20%) of making the target flinch.",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 1,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "learnmove",
+		"icon": "learnmove"
+	},
+	{
+		"id": 26,
+		"x": 4,
+		"y": -1,
+		"name": "Zen Headbutt: Move Gauge Refresh +2",
+		"description": "Has a chance (30%) of charging the user’s move gauge by one when its move is successful.",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 40,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "red",
+		"icon": "passive"
+	},
+	{
+		"id": 27,
+		"x": 5,
+		"y": -1,
+		"name": "Zen Headbutt: Defense Crush +2",
+		"description": "Has a chance (30%) of lowering the target’s Defense by one stat rank when the user’s attack move against it is successful.",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 80,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "red",
+		"icon": "passive"
+	},
+	{
+		"id": 28,
+		"x": 6,
+		"y": -1,
+		"name": "Zen Headbutt: Trip Up +9",
+		"description": "Lowers the target’s Speed by one stat rank when the user’s attack move against it is successful.",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 60,
+			"bubbly": 0,
+			"sparky": 60
+		},
+		"level": 1,
+		"color": "red",
+		"icon": "passive"
+	},
+	{
+		"id": 29,
+		"x": 7,
+		"y": -1,
+		"name": "Zen Headbutt: Aggravation +1",
+		"description": "Raises the chance of inflicting the flinching, confused, or trapped condition with the additional effects of moves.",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 80,
+			"bubbly": 0,
+			"sparky": 80
+		},
+		"level": 1,
+		"color": "red",
+		"icon": "passive"
+	},
+	{
+		"id": 30,
+		"x": 8,
+		"y": -1,
+		"name": "Zen Headbutt: Aggravation +1",
+		"description": "Raises the chance of inflicting the flinching, confused, or trapped condition with the additional effects of moves.",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 100,
+			"bubbly": 0,
+			"sparky": 100
+		},
+		"level": 1,
+		"color": "red",
+		"icon": "passive"
+	},
+	{
+		"id": 31,
+		"x": 5,
+		"y": -2,
+		"name": "Attack +20",
+		"description": "Attack +20",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": "stat"
+	},
+	{
+		"id": 32,
+		"x": 6,
+		"y": -2,
+		"name": "Attack +20",
+		"description": "Attack +20",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": "stat"
+	},
+	{
+		"id": 33,
+		"x": 7,
+		"y": -2,
+		"name": "Attack +40",
+		"description": "Attack +40",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": "stat"
+	},
+	{
+		"id": 34,
+		"x": 8,
+		"y": -2,
+		"name": "Attack +40",
+		"description": "Attack +40",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": "stat"
+	},
+	{
+		"id": 35,
+		"x": 9,
+		"y": -2,
+		"name": "Attack +60",
+		"description": "Attack +60",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": "stat"
+	},
+	{
+		"id": 36,
+		"x": 2,
+		"y": 0,
+		"name": "Defensive Studies",
+		"description": "Raises the user’s Defense and Sp. Def by two stat ranks.",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 1,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "learnmove",
+		"icon": "learnmove"
+	},
+	{
+		"id": 37,
+		"x": 2,
+		"y": 1,
+		"name": "Defensive Studies: MP Refresh +2",
+		"description": "Has a chance (30%) of restoring one MP of the user’s move when that move is successful.",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 40,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "red",
+		"icon": "passive"
+	},
+	{
+		"id": 38,
+		"x": 3,
+		"y": 1,
+		"name": "Defensive Studies: Shielded +1",
+		"description": "Raises the Defense of all allied sync pairs by one stat rank when the user’s move is successful.",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 80,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "red",
+		"icon": "passive"
+	},
+	{
+		"id": 39,
+		"x": 4,
+		"y": 1,
+		"name": "Defensive Studies: Barricade Buddies +1",
+		"description": "Raises the Sp. Def of all allied sync pairs by one stat rank when the user’s move is successful.",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 60,
+			"bubbly": 0,
+			"sparky": 60
+		},
+		"level": 1,
+		"color": "red",
+		"icon": "passive"
+	},
+	{
+		"id": 40,
+		"x": 5,
+		"y": 1,
+		"name": "Defensive Studies: Hit and Heal +9",
+		"description": "Applies the Gradual Healing effect to the user when its move is successful.",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 80,
+			"bubbly": 0,
+			"sparky": 80
+		},
+		"level": 1,
+		"color": "red",
+		"icon": "passive"
+	},
+	{
+		"id": 41,
+		"x": 6,
+		"y": 1,
+		"name": "Defensive Studies: +1st T-Move: Sync CD ↓ +1",
+		"description": "Reduces the user’s sync move countdown by one the first time its Trainer uses a move each battle.",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 100,
+			"bubbly": 0,
+			"sparky": 100
+		},
+		"level": 1,
+		"color": "red",
+		"icon": "passive"
+	},
+	{
+		"id": 42,
+		"x": -2,
+		"y": 1,
+		"name": "Sp. Atk +10",
+		"description": "Sp. Atk +10",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": "stat"
+	},
+	{
+		"id": 43,
+		"x": -2,
+		"y": 0,
+		"name": "Potion",
+		"description": "Restores an ally’s HP by approximately 40% of its maximum HP.",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 1,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "learnmove",
+		"icon": "learnmove"
+	},
+	{
+		"id": 44,
+		"x": -2,
+		"y": -1,
+		"name": "Potion: Friend Mend +9",
+		"description": "When a move targeting an allied sync pair (excluding field effects) is successful, removes all status conditions from the allied sync pair affected by the move.",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 40,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "red",
+		"icon": "passive"
+	},
+	{
+		"id": 45,
+		"x": -2,
+		"y": -2,
+		"name": "Potion: Move on Ally: Sp. Def ↑ +2",
+		"description": "When the user’s move targeting an allied sync pair (excluding field effects) is successful, raises the Sp. Def of the allied sync pair affected by the move by two stat ranks.",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 80,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "red",
+		"icon": "passive"
+	},
+	{
+		"id": 46,
+		"x": -3,
+		"y": -2,
+		"name": "Potion: Master Healer +1",
+		"description": "Increases the amount of HP restored by the user’s healing moves.",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 60,
+			"bubbly": 0,
+			"sparky": 60
+		},
+		"level": 1,
+		"color": "red",
+		"icon": "passive"
+	},
+	{
+		"id": 47,
+		"x": -4,
+		"y": -2,
+		"name": "Potion: Master Healer +1",
+		"description": "Increases the amount of HP restored by the user’s healing moves.",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 80,
+			"bubbly": 0,
+			"sparky": 80
+		},
+		"level": 1,
+		"color": "red",
+		"icon": "passive"
+	},
+	{
+		"id": 48,
+		"x": -5,
+		"y": -2,
+		"name": "Potion: MP Refresh +3",
+		"description": "Has a chance (40%) of restoring one MP of the user’s move when that move is successful.",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 100,
+			"bubbly": 0,
+			"sparky": 100
+		},
+		"level": 1,
+		"color": "red",
+		"icon": "passive"
+	},
+	{
+		"id": 49,
+		"x": -3,
+		"y": 1,
+		"name": "Hyper Voice",
+		"description": "No additional effect.",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 1,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "learnmove",
+		"icon": "learnmove"
+	},
+	{
+		"id": 50,
+		"x": -4,
+		"y": 1,
+		"name": "Hyper Voice: Stoic +9",
+		"description": "Raises the user’s Defense by one stat rank when its Pokémon uses a move.",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 40,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "red",
+		"icon": "passive"
+	},
+	{
+		"id": 51,
+		"x": -5,
+		"y": 1,
+		"name": "Hyper Voice: Satisfied Snicker +9",
+		"description": "Lowers the target’s Sp. Atk by one stat rank when the user’s attack move against it is successful.",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 80,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "red",
+		"icon": "passive"
+	},
+	{
+		"id": 52,
+		"x": -6,
+		"y": 1,
+		"name": "Hyper Voice: Power +50",
+		"description": "Hyper Voice: Power +50",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 60,
+			"bubbly": 0,
+			"sparky": 60
+		},
+		"level": 1,
+		"color": "green",
+		"icon": "moveboost"
+	},
+	{
+		"id": 53,
+		"x": -7,
+		"y": 1,
+		"name": "Hyper Voice: Hit: Attack ↓+2 +9",
+		"description": "Lowers the target’s Attack by two stat ranks when the user’s attack move against it is successful.",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 80,
+			"bubbly": 0,
+			"sparky": 80
+		},
+		"level": 1,
+		"color": "red",
+		"icon": "passive"
+	},
+	{
+		"id": 54,
+		"x": -8,
+		"y": 1,
+		"name": "Hyper Voice: Recharging Strike +9",
+		"description": "Charges the user’s move gauge by one when its attack move hits. If the move has the Multistrike effect tag, charges the user’s move gauge by one for each hit.",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 100,
+			"bubbly": 0,
+			"sparky": 100
+		},
+		"level": 1,
+		"color": "red",
+		"icon": "passive"
+	},
+	{
+		"id": 55,
+		"x": -4,
+		"y": 0,
+		"name": "Sp. Atk +20",
+		"description": "Sp. Atk +20",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": "stat"
+	},
+	{
+		"id": 56,
+		"x": -5,
+		"y": 0,
+		"name": "Sp. Atk +20",
+		"description": "Sp. Atk +20",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": "stat"
+	},
+	{
+		"id": 57,
+		"x": -6,
+		"y": 0,
+		"name": "Sp. Atk +40",
+		"description": "Sp. Atk +40",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": "stat"
+	},
+	{
+		"id": 58,
+		"x": -7,
+		"y": 0,
+		"name": "Sp. Atk +40",
+		"description": "Sp. Atk +40",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": "stat"
+	},
+	{
+		"id": 59,
+		"x": -8,
+		"y": 0,
+		"name": "Sp. Atk +60",
+		"description": "Sp. Atk +60",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": "stat"
+	},
+	{
+		"id": 60,
+		"x": -3,
+		"y": 2,
+		"name": "Mud Shot",
+		"description": "Lowers the target’s Speed by one stat rank.",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 1,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "learnmove",
+		"icon": "learnmove"
+	},
+	{
+		"id": 61,
+		"x": -4,
+		"y": 3,
+		"name": "Mud Shot: Move Gauge Refresh +2",
+		"description": "Has a chance (30%) of charging the user’s move gauge by one when its move is successful.",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 40,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "red",
+		"icon": "passive"
+	},
+	{
+		"id": 62,
+		"x": -5,
+		"y": 4,
+		"name": "Mud Shot: Trip Up +9",
+		"description": "Lowers the target’s Speed by one stat rank when the user’s attack move against it is successful.",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 80,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "red",
+		"icon": "passive"
+	},
+	{
+		"id": 63,
+		"x": -6,
+		"y": 5,
+		"name": "Mud Shot: Power +50",
+		"description": "Mud Shot: Power +50",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 60,
+			"bubbly": 0,
+			"sparky": 60
+		},
+		"level": 1,
+		"color": "green",
+		"icon": "moveboost"
+	},
+	{
+		"id": 64,
+		"x": -7,
+		"y": 6,
+		"name": "Mud Shot: Discombobulate +9",
+		"description": "Lowers the target’s accuracy by one stat rank when the user’s attack move against it is successful.",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 80,
+			"bubbly": 0,
+			"sparky": 80
+		},
+		"level": 1,
+		"color": "red",
+		"icon": "passive"
+	},
+	{
+		"id": 65,
+		"x": -8,
+		"y": 7,
+		"name": "Mud Shot: Hit: Sp. Def ↓+2 +9",
+		"description": "Lowers the target’s Sp. Def by two stat ranks when the user’s attack move against it is successful.",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 100,
+			"bubbly": 0,
+			"sparky": 100
+		},
+		"level": 1,
+		"color": "red",
+		"icon": "passive"
+	},
+	{
+		"id": 66,
+		"x": -5,
+		"y": 3,
+		"name": "Sp. Atk +20",
+		"description": "Sp. Atk +20",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": "stat"
+	},
+	{
+		"id": 67,
+		"x": -6,
+		"y": 4,
+		"name": "Sp. Atk +20",
+		"description": "Sp. Atk +20",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": "stat"
+	},
+	{
+		"id": 68,
+		"x": -7,
+		"y": 5,
+		"name": "Sp. Atk +40",
+		"description": "Sp. Atk +40",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": "stat"
+	},
+	{
+		"id": 69,
+		"x": -8,
+		"y": 6,
+		"name": "Sp. Atk +40",
+		"description": "Sp. Atk +40",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": "stat"
+	},
+	{
+		"id": 70,
+		"x": -9,
+		"y": 7,
+		"name": "Sp. Atk +60",
+		"description": "Sp. Atk +60",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": "stat"
+	},
+	{
+		"id": 71,
+		"x": -2,
+		"y": 2,
+		"name": "Support Studies",
+		"description": "Raises the Defense of all allied sync pairs by two stat ranks. Raises the Speed of all allied sync pairs by one stat rank.",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 1,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "learnmove",
+		"icon": "learnmove"
+	},
+	{
+		"id": 72,
+		"x": -2,
+		"y": 3,
+		"name": "Support Studies: All Ramped Up +1",
+		"description": "Raises the Sp. Atk of all allied sync pairs by one stat rank when the user’s move is successful.",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 40,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "red",
+		"icon": "passive"
+	},
+	{
+		"id": 73,
+		"x": -3,
+		"y": 4,
+		"name": "Support Studies: Pep Rally +1",
+		"description": "Raises the Speed of all allied sync pairs by one stat rank when the user’s move is successful.",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 80,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "red",
+		"icon": "passive"
+	},
+	{
+		"id": 74,
+		"x": -4,
+		"y": 5,
+		"name": "Support Studies: Berserk Bunch +1",
+		"description": "Raises the Attack of all allied sync pairs by one stat rank when the user’s move is successful.",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 60,
+			"bubbly": 0,
+			"sparky": 60
+		},
+		"level": 1,
+		"color": "red",
+		"icon": "passive"
+	},
+	{
+		"id": 75,
+		"x": -5,
+		"y": 6,
+		"name": "Support Studies: Barricade Buddies +2",
+		"description": "Raises the Sp. Def of all allied sync pairs by two stat ranks when the user’s move is successful.",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 80,
+			"bubbly": 0,
+			"sparky": 80
+		},
+		"level": 1,
+		"color": "red",
+		"icon": "passive"
+	},
+	{
+		"id": 76,
+		"x": -6,
+		"y": 7,
+		"name": "Support Studies: T-Move: Team Phys & Spec Boost ↑+1 +9",
+		"description": "Increases the Physical Moves ↑ Next effect and Special Moves ↑ Next effect of all allied sync pairs by one rank when the user’s Trainer uses a move.",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 100,
+			"bubbly": 0,
+			"sparky": 100
+		},
+		"level": 1,
+		"color": "red",
+		"icon": "passive"
+	},
+	{
+		"id": 77,
+		"x": 0,
+		"y": -2,
+		"name": "Tackle: Move Gauge Refresh +4",
+		"description": "Has a chance (50%) of charging the user’s move gauge by one when its move is successful.",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 40,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "red",
+		"icon": "passive"
+	},
+	{
+		"id": 78,
+		"x": 0,
+		"y": -3,
+		"name": "Team Debut Dash 1",
+		"description": "Raises the Speed of all allied sync pairs by one stat rank the first time the user enters a battle each battle.",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 80,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "yellow",
+		"icon": "passive"
+	},
+	{
+		"id": 79,
+		"x": 0,
+		"y": -4,
+		"name": "Tackle: Flabbergast +4",
+		"description": "Has a chance (50%) of leaving the target confused when a move targeting that opponent is successful.",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 80,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "red",
+		"icon": "passive"
+	},
+	{
+		"id": 80,
+		"x": 0,
+		"y": -5,
+		"name": "Terrify 2",
+		"description": "Lowers the Attack of all opposing sync pairs by two stat ranks when the user enters a battle.",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 80,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "yellow",
+		"icon": "passive"
+	},
+	{
+		"id": 81,
+		"x": 0,
+		"y": -6,
+		"name": "Circle: HP Recovery 1",
+		"description": "Restores the user’s HP whenever its Pokémon takes an action when a circle applies to the allied field of play.",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 80,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "yellow",
+		"icon": "passive"
+	},
+	{
+		"id": 82,
+		"x": 0,
+		"y": -7,
+		"name": "First Aid 4",
+		"description": "Restores the user’s HP by approximately 40% of its maximum HP the first time it is in a pinch each battle.",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 60,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 60
+		},
+		"level": 1,
+		"color": "yellow",
+		"icon": "passive"
+	},
+	{
+		"id": 83,
+		"x": 0,
+		"y": -8,
+		"name": "Tackle: Staggering +3",
+		"description": "Has a chance (40%) of making the target flinch when the user’s attack move against it is successful.",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 60,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 60
+		},
+		"level": 1,
+		"color": "red",
+		"icon": "passive"
+	},
+	{
+		"id": 84,
+		"x": 0,
+		"y": -9,
+		"name": "Paldea C (Defensive): Team S-Moves ↑ 4",
+		"description": "Powers up the sync moves of all allied sync pairs when Paldea Circle (Defensive) applies to the allied field of play.",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 60,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 60
+		},
+		"level": 1,
+		"color": "yellow",
+		"icon": "passive"
+	},
+	{
+		"id": 85,
+		"x": 0,
+		"y": -10,
+		"name": "Paranormal Studies Club President",
+		"description": "Applies Paldea Circle (Defensive) to the allied field of play the first time the user enters a battle each battle. Extends the duration of Paldea Circle (Defensive) when Paldea Circle (Defensive) is applied to the allied field of play.",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 160,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 160
+		},
+		"level": 1,
+		"color": "yellow",
+		"icon": "passive"
+	},
+	{
+		"id": 86,
+		"x": 1,
+		"y": -5,
+		"name": "Natural Remedy",
+		"description": "Removes all status conditions from the user the first time it is inflicted by any status condition each battle.",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 80,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "yellow",
+		"icon": "passive"
+	},
+	{
+		"id": 87,
+		"x": 2,
+		"y": -6,
+		"name": "Sterner Stuff 2",
+		"description": "Reduces damage when the user is hit by a physical attack move.",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 60,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 60
+		},
+		"level": 1,
+		"color": "yellow",
+		"icon": "passive"
+	},
+	{
+		"id": 88,
+		"x": 3,
+		"y": -7,
+		"name": "Searching Pasio’s Mysteries Normal Impact: Power +25",
+		"description": "Searching Pasio’s Mysteries Normal Impact: Power +25",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 60,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 60
+		},
+		"level": 1,
+		"color": "sync",
+		"icon": "sync"
+	},
+	{
+		"id": 89,
+		"x": 3,
+		"y": -8,
+		"name": "Debut Damage Reduction (Physical)",
+		"description": "Applies the Physical Damage Reduction effect to the allied field of play the first time the user enters a battle each battle.",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 60,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 60
+		},
+		"level": 1,
+		"color": "yellow",
+		"icon": "passive"
+	},
+	{
+		"id": 90,
+		"x": 4,
+		"y": -8,
+		"name": "Impervious",
+		"description": "The user’s stats cannot be lowered.",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 60,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 60
+		},
+		"level": 1,
+		"color": "yellow",
+		"icon": "passive"
+	},
+	{
+		"id": 91,
+		"x": 3,
+		"y": -9,
+		"name": "1st T-Move: Paldea C (Def) on Field",
+		"description": "Applies Paldea Circle (Defensive) to the allied field of play the first time the user’s Trainer uses a move each battle.",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 80,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 80
+		},
+		"level": 1,
+		"color": "yellow",
+		"icon": "passive"
+	},
+	{
+		"id": 92,
+		"x": 5,
+		"y": -9,
+		"name": "Tackle: Team Fist Bump +9",
+		"description": "Restores the HP of all allied sync pairs when the user’s attack move is successful.",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 60,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 60
+		},
+		"level": 1,
+		"color": "red",
+		"icon": "passive"
+	},
+	{
+		"id": 93,
+		"x": -1,
+		"y": -4,
+		"name": "Quick Cure",
+		"description": "Removes the confused, flinching, and trapped conditions from the user the first time they are inflicted each battle.",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 80,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "yellow",
+		"icon": "passive"
+	},
+	{
+		"id": 94,
+		"x": -2,
+		"y": -4,
+		"name": "Brain Brawn 2",
+		"description": "Reduces damage when the user is hit by a special attack move.",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 60,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 60
+		},
+		"level": 1,
+		"color": "yellow",
+		"icon": "passive"
+	},
+	{
+		"id": 95,
+		"x": -3,
+		"y": -4,
+		"name": "Searching Pasio’s Mysteries Normal Impact: Power +25",
+		"description": "Searching Pasio’s Mysteries Normal Impact: Power +25",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 60,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 60
+		},
+		"level": 1,
+		"color": "sync",
+		"icon": "sync"
+	},
+	{
+		"id": 96,
+		"x": -3,
+		"y": -5,
+		"name": "Debut: Field Special DR",
+		"description": "Applies the Special Damage Reduction effect to the allied field of play the first time the user enters a battle each battle.",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 60,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 60
+		},
+		"level": 1,
+		"color": "yellow",
+		"icon": "passive"
+	},
+	{
+		"id": 97,
+		"x": -4,
+		"y": -4,
+		"name": "Vigilance",
+		"description": "Protects the user against critical hits.",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 60,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 60
+		},
+		"level": 1,
+		"color": "yellow",
+		"icon": "passive"
+	},
+	{
+		"id": 98,
+		"x": -3,
+		"y": -6,
+		"name": "Team Safe Start",
+		"description": "Applies the Enduring effect to all allied sync pairs the first time the user enters a battle each battle.",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 80,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 80
+		},
+		"level": 1,
+		"color": "yellow",
+		"icon": "passive"
+	},
+	{
+		"id": 99,
+		"x": -5,
+		"y": -4,
+		"name": "Move: Tackle",
+		"description": "Lowers the target’s Normal Type Rebuff by one rank the first time the user’s attack move is successful each battle.",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 60,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 60
+		},
+		"level": 1,
+		"color": "red",
+		"icon": "passive"
+	},
+	{
+		"id": 100,
+		"x": 0,
+		"y": 2,
+		"name": "HP +20",
+		"description": "HP +20",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": "stat"
+	},
+	{
+		"id": 101,
+		"x": 0,
+		"y": 3,
+		"name": "HP +20",
+		"description": "HP +20",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": "stat"
+	},
+	{
+		"id": 102,
+		"x": 0,
+		"y": 4,
+		"name": "HP +20",
+		"description": "HP +20",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": "stat"
+	},
+	{
+		"id": 103,
+		"x": 0,
+		"y": 5,
+		"name": "HP +20",
+		"description": "HP +20",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": "stat"
+	},
+	{
+		"id": 104,
+		"x": 0,
+		"y": 6,
+		"name": "HP +40",
+		"description": "HP +40",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": "stat"
+	},
+	{
+		"id": 105,
+		"x": -1,
+		"y": 7,
+		"name": "HP +40",
+		"description": "HP +40",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": "stat"
+	},
+	{
+		"id": 106,
+		"x": 1,
+		"y": 6,
+		"name": "HP +40",
+		"description": "HP +40",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": "stat"
+	},
+	{
+		"id": 107,
+		"x": 0,
+		"y": 7,
+		"name": "HP +60",
+		"description": "HP +60",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": "stat"
+	},
+	{
+		"id": 108,
+		"x": -1,
+		"y": 8,
+		"name": "HP +60",
+		"description": "HP +60",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": "stat"
+	},
+	{
+		"id": 109,
+		"x": 1,
+		"y": 7,
+		"name": "HP +60",
+		"description": "HP +60",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": "stat"
+	},
+	{
+		"id": 110,
+		"x": 0,
+		"y": 8,
+		"name": "HP +80",
+		"description": "HP +80",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": "stat"
+	},
+	{
+		"id": 111,
+		"x": 1,
+		"y": 3,
+		"name": "Defense +5",
+		"description": "Defense +5",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": "stat"
+	},
+	{
+		"id": 112,
+		"x": 2,
+		"y": 3,
+		"name": "Defense +10",
+		"description": "Defense +10",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": "stat"
+	},
+	{
+		"id": 113,
+		"x": 3,
+		"y": 3,
+		"name": "Defense +10",
+		"description": "Defense +10",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": "stat"
+	},
+	{
+		"id": 114,
+		"x": 3,
+		"y": 4,
+		"name": "Defense +15",
+		"description": "Defense +15",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": "stat"
+	},
+	{
+		"id": 115,
+		"x": 4,
+		"y": 3,
+		"name": "Defense +15",
+		"description": "Defense +15",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": "stat"
+	},
+	{
+		"id": 116,
+		"x": 3,
+		"y": 5,
+		"name": "Defense +20",
+		"description": "Defense +20",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": "stat"
+	},
+	{
+		"id": 117,
+		"x": 4,
+		"y": 4,
+		"name": "Defense +25",
+		"description": "Defense +25",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": "stat"
+	},
+	{
+		"id": 118,
+		"x": 5,
+		"y": 3,
+		"name": "Defense +20",
+		"description": "Defense +20",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": "stat"
+	},
+	{
+		"id": 119,
+		"x": -1,
+		"y": 4,
+		"name": "Sp. Def +5",
+		"description": "Sp. Def +5",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": "stat"
+	},
+	{
+		"id": 120,
+		"x": -2,
+		"y": 5,
+		"name": "Sp. Def +10",
+		"description": "Sp. Def +10",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": "stat"
+	},
+	{
+		"id": 121,
+		"x": -3,
+		"y": 6,
+		"name": "Sp. Def +10",
+		"description": "Sp. Def +10",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": "stat"
+	},
+	{
+		"id": 122,
+		"x": -3,
+		"y": 7,
+		"name": "Sp. Def +15",
+		"description": "Sp. Def +15",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": "stat"
+	},
+	{
+		"id": 123,
+		"x": -4,
+		"y": 7,
+		"name": "Sp. Def +15",
+		"description": "Sp. Def +15",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": "stat"
+	},
+	{
+		"id": 124,
+		"x": -3,
+		"y": 8,
+		"name": "Sp. Def +20",
+		"description": "Sp. Def +20",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": "stat"
+	},
+	{
+		"id": 125,
+		"x": -4,
+		"y": 8,
+		"name": "Sp. Def +25",
+		"description": "Sp. Def +25",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": "stat"
+	},
+	{
+		"id": 126,
+		"x": -5,
+		"y": 8,
+		"name": "Sp. Def +20",
+		"description": "Sp. Def +20",
+		"energy": "0",
+		"orb": "0",
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": "stat"
+	}
+]

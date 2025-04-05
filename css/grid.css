@@ -6,14 +6,15 @@
 	--cellSync: #8A73C3;
 	--cellDynamax: #E17DB9;
 	--cellDivine: linear-gradient(135deg, rgba(255,240,0,1) 0%, rgba(255,144,0,1) 100%);
+	--cellLearnMove: linear-gradient(135deg, rgba(104,210,245,1) 0%, rgba(132,226,218,1) 100%);
 	--textOutlineNode: -1px -1px 0 var(--text), 1px -1px 0 var(--text),
-	    			-1px 1px 0 var(--text), 1px 1px 0 var(--text),
-	    			-1px -1px 0 var(--text), 1px -1px 0 var(--text),
-	    			-1px 1px 0 var(--text), 1px 1px 0 var(--text),
-	    			-1px -1px 0 var(--text), 1px -1px 0 var(--text),
-	    			-1px 1px 0 var(--text), 1px 1px 0 var(--text),
-	    			-1px -1px 0 var(--text), 1px -1px 0 var(--text),
-	    			-1px 1px 0 var(--text), 1px 1px 0 var(--text);
+					-1px 1px 0 var(--text), 1px 1px 0 var(--text),
+					-1px -1px 0 var(--text), 1px -1px 0 var(--text),
+					-1px 1px 0 var(--text), 1px 1px 0 var(--text),
+					-1px -1px 0 var(--text), 1px -1px 0 var(--text),
+					-1px 1px 0 var(--text), 1px 1px 0 var(--text),
+					-1px -1px 0 var(--text), 1px -1px 0 var(--text),
+					-1px 1px 0 var(--text), 1px 1px 0 var(--text);
 }
 
 
@@ -37,6 +38,12 @@
 
 #cells {
 	position: relative;
+}
+
+.academyCells {
+	transform: scale(50%) !important;
+	transform-origin: 46% !important;
+	margin-top: 32% !important;
 }
 
 .cell {
@@ -158,7 +165,12 @@
 .cell .cellDescription,
 .cell .cellEnergy,
 .cell .cellOrb,
-.cell .cellLevel {
+.cell .cellLevel,
+.cell .cellOrbTM,
+.cell .cellOrbFiery,
+.cell .cellOrbLeafy,
+.cell .cellOrbBubbly,
+.cell .cellOrbSparky {
 	display: none;
 }
 
@@ -206,6 +218,7 @@
 .cell_sync { background-color: var(--cellSync); }
 .cell_dynamax { background-color: var(--cellDynamax); }
 .cell_divine { background: var(--cellDivine); }
+.cell_learnmove { background: var(--cellLearnMove); }
 .cell_base { background-color: #646464; }
 
 
@@ -219,11 +232,11 @@
 	font-family: 'Roboto', 'Tahoma', 'Verdana';
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: space-between;
+	justify-content: start;
 	z-index: 10;
 	border: 2px solid rgb(0 0 0 / 32%);
 	border-radius: 5px;
-	align-items: baseline;
+	align-items: center;
 	box-shadow: 2px 2px 1px rgb(88 88 88 / 50%);
 }
 
@@ -245,26 +258,37 @@
 	color: #FCF067;
 }
 
+.academyOrbs {
+	display: flex;
+}
+
 .cellEnergyNegative {
 	color: #ff4444 !important;
 }
 
 #detailedCell .cellEnergy,
 #detailedCell .cellOrb,
-#detailedCell .cellLevel {
+#detailedCell .cellLevel,
+#detailedCell .academyOrbs {
 	background-color: rgb(0 0 0 / 40%);
 	display: flex;
 	flex-direction: row;
 	padding-right: 4px;
 	margin: 2% 3%;
 	border-radius: 7px;
-	align-items: baseline;
+	align-items: center;
 	font-size: 13px;
+}
+
+#detailedCell .academyOrbs p {
+	display: flex;
+	align-items: center;
 }
 
 #detailedCell .cellEnergy:before,
 #detailedCell .cellOrb:before,
-#detailedCell .cellLevel:before {
+#detailedCell .cellLevel:before,
+#detailedCell .academyOrbs:before {
 	background-color: rgb(0 0 0 / 20%);
 	padding: 4px;
 	margin-right: 4px;
@@ -280,6 +304,40 @@
 }
 #detailedCell .cellLevel:before {
 	content: "Sync Level";
+}
+#detailedCell .academyOrbs:before {
+	content: "Orbs";
+}
+
+#detailedCell .cellOrbTM:before,
+#detailedCell .cellOrbFiery:before,
+#detailedCell .cellOrbLeafy:before,
+#detailedCell .cellOrbBubbly:before,
+#detailedCell .cellOrbSparky:before {
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+	content: " ";
+	margin: 4px 8px;
+	padding: 7px;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-color: transparent;
+}
+
+#detailedCell .cellOrbTM:before {
+	background-image: url("../images/grid/tm.png");
+}
+#detailedCell .cellOrbFiery:before {
+	background-image: url("../images/grid/fiery.png");
+}
+#detailedCell .cellOrbLeafy:before {
+	background-image: url("../images/grid/leafy.png");
+}
+#detailedCell .cellOrbBubbly:before {
+	background-image: url("../images/grid/bubbly.png");
+}
+#detailedCell .cellOrbSparky:before {
+	background-image: url("../images/grid/sparky.png");
 }
 
 #ressourcesGrid {
@@ -400,14 +458,19 @@
 	background-color: rgb(0 0 0 / 20%);
 	border-radius: 5px;
 	margin: 4px 8px;
-    margin-right: 0;
+	margin-right: 0;
 	padding-right: 12px;
 	text-align: center;
 	order: 3;
 }
 
+#selectedCells .academyOrbs p {
+	margin: 0 4px;
+}
 
-#selectedCells .cellOrb {
+
+#selectedCells .cellOrb,
+#selectedCells .academyOrbs {
 	display: none;
 }
 
@@ -429,6 +492,15 @@
 	content: "Energy";
 }
 
+#selectedCells .academyOrbs:before {
+	background-color: rgb(0 0 0 / 20%);
+	padding: 0 8px;
+	margin-right: 8px;
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+	content: "Orbs";
+}
+
 
 .grid_color_, .grid_color_2, .grid_color_ * { opacity: 0; }
 
@@ -446,6 +518,8 @@
 .grid_color_divine2 { background-image: url("../images/grid/grid_color_divine2.png"); }
 .grid_color_sync { background-image: url("../images/grid/grid_color_sync.png"); }
 .grid_color_sync2 { background-image: url("../images/grid/grid_color_sync2.png"); }
+.grid_color_learnmove { background-image: url("../images/grid/grid_color_learnmove.png"); }
+.grid_color_learnmove2 { background-image: url("../images/grid/grid_color_learnmove2.png"); }
 
 .grid_color_origin { background-image: url("../images/grid/grid_color_origin.png"); }
 
@@ -475,6 +549,7 @@
 .grid_icon_dynamax { background-image: url("../images/grid/grid_icon_dynamax.png"); }
 .grid_icon_stat { background-image: url("../images/grid/grid_icon_stat.png"); }
 .grid_icon_passive { background-image: url("../images/grid/grid_icon_passive.png"); }
+.grid_icon_learnmove { background-image: url("../images/grid/grid_icon_learnmove.png"); }
 .grid_icon_lock { background-image: url("../images/grid/grid_icon_lock.png") !important; }
 
 .grid_icon_origin { filter: brightness(100%) !important; width: 100% !important; }
