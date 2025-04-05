@@ -12766,6 +12766,3032 @@ const ALL_EMPTY = [
 ]
 
 
+const MULTI_EMPTY = [
+	{
+		"id": 1,
+		"x": 1,
+		"y": -1,
+		"name": "",
+		"description": "",
+		"energy": 0,
+		"orb": 0,
+		"level": 1,
+		"color": "blue",
+		"icon": ""
+	},
+	{
+		"id": 2,
+		"x": 1,
+		"y": 0,
+		"name": "",
+		"description": "",
+		"energy": 0,
+		"orb": 0,
+		"level": 1,
+		"color": "blue",
+		"icon": ""
+	},
+	{
+		"id": 3,
+		"x": 0,
+		"y": 1,
+		"name": "",
+		"description": "",
+		"energy": 0,
+		"orb": 0,
+		"level": 1,
+		"color": "blue",
+		"icon": ""
+	},
+	{
+		"id": 4,
+		"x": -1,
+		"y": 1,
+		"name": "",
+		"description": "",
+		"energy": 0,
+		"orb": 0,
+		"level": 1,
+		"color": "blue",
+		"icon": ""
+	},
+	{
+		"id": 5,
+		"x": -1,
+		"y": 0,
+		"name": "",
+		"description": "",
+		"energy": 0,
+		"orb": 0,
+		"level": 1,
+		"color": "blue",
+		"icon": ""
+	},
+	{
+		"id": 6,
+		"x": 0,
+		"y": -1,
+		"name": "",
+		"description": "",
+		"energy": 0,
+		"orb": 0,
+		"level": 1,
+		"color": "blue",
+		"icon": ""
+	},
+	{
+		"id": 7,
+		"x": 0,
+		"y": -2,
+		"name": "",
+		"description": "",
+		"energy": 0,
+		"orb": 0,
+		"level": "2",
+		"color": "divine",
+		"icon": ""
+	},
+	{
+		"id": 8,
+		"x": 0,
+		"y": -3,
+		"name": "",
+		"description": "",
+		"energy": 0,
+		"orb": 0,
+		"level": "3",
+		"color": "divine",
+		"icon": ""
+	},
+	{
+		"id": 9,
+		"x": 0,
+		"y": -4,
+		"name": "",
+		"description": "",
+		"energy": 0,
+		"orb": 0,
+		"level": "4",
+		"color": "divine",
+		"icon": ""
+	},
+	{
+		"id": 10,
+		"x": 0,
+		"y": -5,
+		"name": "",
+		"description": "",
+		"energy": 0,
+		"orb": 0,
+		"level": "5",
+		"color": "divine",
+		"icon": ""
+	},
+	{
+		"id": 11,
+		"x": 1,
+		"y": -2,
+		"name": "",
+		"description": "",
+		"energy": 0,
+		"orb": 0,
+		"level": 1,
+		"color": "blue",
+		"icon": ""
+	},
+	{
+		"id": 12,
+		"x": 2,
+		"y": -2,
+		"name": "",
+		"description": "",
+		"energy": 0,
+		"orb": 0,
+		"level": 1,
+		"color": "blue",
+		"icon": ""
+	},
+	{
+		"id": 13,
+		"x": 3,
+		"y": -2,
+		"name": "",
+		"description": "",
+		"energy": 0,
+		"orb": 0,
+		"level": 1,
+		"color": "blue",
+		"icon": ""
+	},
+	{
+		"id": 14,
+		"x": 2,
+		"y": -3,
+		"name": "",
+		"description": "",
+		"energy": 0,
+		"orb": 0,
+		"level": 1,
+		"color": "blue",
+		"icon": ""
+	},
+	{
+		"id": 15,
+		"x": 3,
+		"y": -3,
+		"name": "",
+		"description": "",
+		"energy": 0,
+		"orb": 0,
+		"level": 1,
+		"color": "blue",
+		"icon": ""
+	},
+	{
+		"id": 16,
+		"x": 2,
+		"y": -4,
+		"name": "",
+		"description": "",
+		"energy": 0,
+		"orb": 0,
+		"level": "2",
+		"color": "blue",
+		"icon": ""
+	},
+	{
+		"id": 17,
+		"x": 3,
+		"y": -4,
+		"name": "",
+		"description": "",
+		"energy": 0,
+		"orb": 0,
+		"level": "2",
+		"color": "blue",
+		"icon": ""
+	},
+	{
+		"id": 18,
+		"x": 3,
+		"y": -5,
+		"name": "",
+		"description": "",
+		"energy": 0,
+		"orb": 0,
+		"level": "2",
+		"color": "blue",
+		"icon": ""
+	},
+	{
+		"id": 19,
+		"x": 1,
+		"y": -4,
+		"name": "",
+		"description": "",
+		"energy": 0,
+		"orb": 0,
+		"level": "3",
+		"color": "blue",
+		"icon": ""
+	},
+	{
+		"id": 20,
+		"x": 2,
+		"y": -5,
+		"name": "",
+		"description": "",
+		"energy": 0,
+		"orb": 0,
+		"level": "3",
+		"color": "blue",
+		"icon": ""
+	},
+	{
+		"id": 21,
+		"x": -2,
+		"y": 2,
+		"name": "",
+		"description": "",
+		"energy": 0,
+		"orb": 0,
+		"level": 1,
+		"color": "blue",
+		"icon": ""
+	},
+	{
+		"id": 22,
+		"x": -1,
+		"y": 2,
+		"name": "",
+		"description": "",
+		"energy": 0,
+		"orb": 0,
+		"level": 1,
+		"color": "blue",
+		"icon": ""
+	},
+	{
+		"id": 23,
+		"x": -2,
+		"y": 3,
+		"name": "",
+		"description": "",
+		"energy": 0,
+		"orb": 0,
+		"level": 1,
+		"color": "blue",
+		"icon": ""
+	},
+	{
+		"id": 24,
+		"x": -1,
+		"y": 3,
+		"name": "",
+		"description": "",
+		"energy": 0,
+		"orb": 0,
+		"level": 1,
+		"color": "blue",
+		"icon": ""
+	},
+	{
+		"id": 25,
+		"x": -1,
+		"y": 4,
+		"name": "",
+		"description": "",
+		"energy": 0,
+		"orb": 0,
+		"level": 1,
+		"color": "blue",
+		"icon": ""
+	},
+	{
+		"id": 26,
+		"x": -3,
+		"y": 3,
+		"name": "",
+		"description": "",
+		"energy": 0,
+		"orb": 0,
+		"level": "2",
+		"color": "blue",
+		"icon": ""
+	},
+	{
+		"id": 27,
+		"x": -3,
+		"y": 4,
+		"name": "",
+		"description": "",
+		"energy": 0,
+		"orb": 0,
+		"level": "2",
+		"color": "blue",
+		"icon": ""
+	},
+	{
+		"id": 28,
+		"x": -2,
+		"y": 4,
+		"name": "",
+		"description": "",
+		"energy": 0,
+		"orb": 0,
+		"level": "2",
+		"color": "blue",
+		"icon": ""
+	},
+	{
+		"id": 29,
+		"x": -3,
+		"y": 5,
+		"name": "",
+		"description": "",
+		"energy": 0,
+		"orb": 0,
+		"level": "3",
+		"color": "blue",
+		"icon": ""
+	},
+	{
+		"id": 30,
+		"x": -2,
+		"y": 5,
+		"name": "",
+		"description": "",
+		"energy": 0,
+		"orb": 0,
+		"level": "3",
+		"color": "blue",
+		"icon": ""
+	},
+	{
+		"id": 31,
+		"x": 2,
+		"y": 0,
+		"name": "",
+		"description": "",
+		"energy": 0,
+		"orb": 0,
+		"level": 1,
+		"color": "blue",
+		"icon": ""
+	},
+	{
+		"id": 32,
+		"x": 1,
+		"y": 1,
+		"name": "",
+		"description": "",
+		"energy": 0,
+		"orb": 0,
+		"level": 1,
+		"color": "blue",
+		"icon": ""
+	},
+	{
+		"id": 33,
+		"x": 2,
+		"y": 1,
+		"name": "",
+		"description": "",
+		"energy": 0,
+		"orb": 0,
+		"level": 1,
+		"color": "blue",
+		"icon": ""
+	},
+	{
+		"id": 34,
+		"x": 1,
+		"y": 2,
+		"name": "",
+		"description": "",
+		"energy": 0,
+		"orb": 0,
+		"level": 1,
+		"color": "blue",
+		"icon": ""
+	},
+	{
+		"id": 35,
+		"x": 1,
+		"y": 3,
+		"name": "",
+		"description": "",
+		"energy": 0,
+		"orb": 0,
+		"level": 1,
+		"color": "blue",
+		"icon": ""
+	},
+	{
+		"id": 36,
+		"x": 3,
+		"y": 0,
+		"name": "",
+		"description": "",
+		"energy": 0,
+		"orb": 0,
+		"level": "2",
+		"color": "blue",
+		"icon": ""
+	},
+	{
+		"id": 37,
+		"x": 3,
+		"y": 1,
+		"name": "",
+		"description": "",
+		"energy": 0,
+		"orb": 0,
+		"level": "2",
+		"color": "blue",
+		"icon": ""
+	},
+	{
+		"id": 38,
+		"x": 2,
+		"y": 2,
+		"name": "",
+		"description": "",
+		"energy": 0,
+		"orb": 0,
+		"level": "2",
+		"color": "blue",
+		"icon": ""
+	},
+	{
+		"id": 39,
+		"x": 3,
+		"y": 2,
+		"name": "",
+		"description": "",
+		"energy": 0,
+		"orb": 0,
+		"level": "3",
+		"color": "blue",
+		"icon": ""
+	},
+	{
+		"id": 40,
+		"x": 2,
+		"y": 3,
+		"name": "",
+		"description": "",
+		"energy": 0,
+		"orb": 0,
+		"level": "3",
+		"color": "blue",
+		"icon": ""
+	},
+	{
+		"id": 41,
+		"x": -2,
+		"y": 0,
+		"name": "",
+		"description": "",
+		"energy": 0,
+		"orb": 0,
+		"level": 1,
+		"color": "blue",
+		"icon": ""
+	},
+	{
+		"id": 42,
+		"x": -1,
+		"y": -1,
+		"name": "",
+		"description": "",
+		"energy": 0,
+		"orb": 0,
+		"level": 1,
+		"color": "blue",
+		"icon": ""
+	},
+	{
+		"id": 43,
+		"x": -3,
+		"y": 1,
+		"name": "",
+		"description": "",
+		"energy": 0,
+		"orb": 0,
+		"level": 1,
+		"color": "blue",
+		"icon": ""
+	},
+	{
+		"id": 44,
+		"x": -3,
+		"y": 0,
+		"name": "",
+		"description": "",
+		"energy": 0,
+		"orb": 0,
+		"level": 1,
+		"color": "blue",
+		"icon": ""
+	},
+	{
+		"id": 45,
+		"x": -2,
+		"y": -1,
+		"name": "",
+		"description": "",
+		"energy": 0,
+		"orb": 0,
+		"level": 1,
+		"color": "blue",
+		"icon": ""
+	},
+	{
+		"id": 46,
+		"x": -3,
+		"y": -1,
+		"name": "",
+		"description": "",
+		"energy": 0,
+		"orb": 0,
+		"level": "2",
+		"color": "blue",
+		"icon": ""
+	},
+	{
+		"id": 47,
+		"x": -2,
+		"y": -2,
+		"name": "",
+		"description": "",
+		"energy": 0,
+		"orb": 0,
+		"level": "2",
+		"color": "blue",
+		"icon": ""
+	},
+	{
+		"id": 48,
+		"x": -3,
+		"y": -2,
+		"name": "",
+		"description": "",
+		"energy": 0,
+		"orb": 0,
+		"level": "2",
+		"color": "blue",
+		"icon": ""
+	},
+	{
+		"id": 49,
+		"x": -1,
+		"y": -3,
+		"name": "",
+		"description": "",
+		"energy": 0,
+		"orb": 0,
+		"level": "3",
+		"color": "blue",
+		"icon": ""
+	},
+	{
+		"id": 50,
+		"x": -2,
+		"y": -3,
+		"name": "",
+		"description": "",
+		"energy": 0,
+		"orb": 0,
+		"level": "3",
+		"color": "blue",
+		"icon": ""
+	},
+	{
+		"id": 51,
+		"x": 3,
+		"y": -1,
+		"name": "",
+		"description": "",
+		"energy": 0,
+		"orb": 0,
+		"level": "3",
+		"color": "blue",
+		"icon": ""
+	},
+	{
+		"id": 52,
+		"x": -3,
+		"y": 2,
+		"name": "",
+		"description": "",
+		"energy": 0,
+		"orb": 0,
+		"level": "3",
+		"color": "blue",
+		"icon": ""
+	}
+]
+
+
+const ACADEMY_EMPTY = [
+	{
+		"id": 1,
+		"x": -1,
+		"y": 0,
+		"name": "",
+		"description": "",
+		"energy": 0,
+		"orb": 0,
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": ""
+	},
+	{
+		"id": 2,
+		"x": 0,
+		"y": -1,
+		"name": "",
+		"description": "",
+		"energy": 0,
+		"orb": 0,
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": ""
+	},
+	{
+		"id": 3,
+		"x": 1,
+		"y": -1,
+		"name": "",
+		"description": "",
+		"energy": 0,
+		"orb": 0,
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": ""
+	},
+	{
+		"id": 4,
+		"x": 1,
+		"y": 0,
+		"name": "",
+		"description": "",
+		"energy": 0,
+		"orb": 0,
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": ""
+	},
+	{
+		"id": 5,
+		"x": 0,
+		"y": 1,
+		"name": "",
+		"description": "",
+		"energy": 0,
+		"orb": 0,
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": ""
+	},
+	{
+		"id": 6,
+		"x": -1,
+		"y": 1,
+		"name": "",
+		"description": "",
+		"energy": 0,
+		"orb": 0,
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": ""
+	},
+	{
+		"id": 7,
+		"x": 2,
+		"y": -1,
+		"name": "",
+		"description": "",
+		"energy": 0,
+		"orb": 0,
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": ""
+	},
+	{
+		"id": 8,
+		"x": 2,
+		"y": -2,
+		"name": "",
+		"description": "",
+		"energy": 0,
+		"orb": 0,
+		"orbs": {
+			"tm": 1,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "learnmove",
+		"icon": "learnmove"
+	},
+	{
+		"id": 9,
+		"x": 2,
+		"y": -3,
+		"name": "",
+		"description": "",
+		"energy": 0,
+		"orb": 0,
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": ""
+	},
+	{
+		"id": 10,
+		"x": 2,
+		"y": -4,
+		"name": "",
+		"description": "",
+		"energy": 0,
+		"orb": 0,
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": ""
+	},
+	{
+		"id": 11,
+		"x": 3,
+		"y": -5,
+		"name": "",
+		"description": "",
+		"energy": 0,
+		"orb": 0,
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": ""
+	},
+	{
+		"id": 12,
+		"x": 4,
+		"y": -6,
+		"name": "",
+		"description": "",
+		"energy": 0,
+		"orb": 0,
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": ""
+	},
+	{
+		"id": 13,
+		"x": 5,
+		"y": -7,
+		"name": "",
+		"description": "",
+		"energy": 0,
+		"orb": 0,
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": ""
+	},
+	{
+		"id": 14,
+		"x": 3,
+		"y": -2,
+		"name": "",
+		"description": "",
+		"energy": 0,
+		"orb": 0,
+		"orbs": {
+			"tm": 1,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "learnmove",
+		"icon": "learnmove"
+	},
+	{
+		"id": 15,
+		"x": 4,
+		"y": -3,
+		"name": "",
+		"description": "",
+		"energy": 0,
+		"orb": 0,
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": ""
+	},
+	{
+		"id": 16,
+		"x": 5,
+		"y": -4,
+		"name": "",
+		"description": "",
+		"energy": 0,
+		"orb": 0,
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": ""
+	},
+	{
+		"id": 17,
+		"x": 6,
+		"y": -5,
+		"name": "",
+		"description": "",
+		"energy": 0,
+		"orb": 0,
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": ""
+	},
+	{
+		"id": 18,
+		"x": 7,
+		"y": -6,
+		"name": "",
+		"description": "",
+		"energy": 0,
+		"orb": 0,
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": ""
+	},
+	{
+		"id": 19,
+		"x": 8,
+		"y": -7,
+		"name": "",
+		"description": "",
+		"energy": 0,
+		"orb": 0,
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": ""
+	},
+	{
+		"id": 20,
+		"x": 4,
+		"y": -4,
+		"name": "",
+		"description": "",
+		"energy": 0,
+		"orb": 0,
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": ""
+	},
+	{
+		"id": 21,
+		"x": 5,
+		"y": -5,
+		"name": "",
+		"description": "",
+		"energy": 0,
+		"orb": 0,
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": ""
+	},
+	{
+		"id": 22,
+		"x": 6,
+		"y": -6,
+		"name": "",
+		"description": "",
+		"energy": 0,
+		"orb": 0,
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": ""
+	},
+	{
+		"id": 23,
+		"x": 7,
+		"y": -7,
+		"name": "",
+		"description": "",
+		"energy": 0,
+		"orb": 0,
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": ""
+	},
+	{
+		"id": 24,
+		"x": 8,
+		"y": -8,
+		"name": "",
+		"description": "",
+		"energy": 0,
+		"orb": 0,
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": ""
+	},
+	{
+		"id": 25,
+		"x": 3,
+		"y": -1,
+		"name": "",
+		"description": "",
+		"energy": 0,
+		"orb": 0,
+		"orbs": {
+			"tm": 1,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "learnmove",
+		"icon": "learnmove"
+	},
+	{
+		"id": 26,
+		"x": 4,
+		"y": -1,
+		"name": "",
+		"description": "",
+		"energy": 0,
+		"orb": 0,
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": ""
+	},
+	{
+		"id": 27,
+		"x": 5,
+		"y": -1,
+		"name": "",
+		"description": "",
+		"energy": 0,
+		"orb": 0,
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": ""
+	},
+	{
+		"id": 28,
+		"x": 6,
+		"y": -1,
+		"name": "",
+		"description": "",
+		"energy": 0,
+		"orb": 0,
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": ""
+	},
+	{
+		"id": 29,
+		"x": 7,
+		"y": -1,
+		"name": "",
+		"description": "",
+		"energy": 0,
+		"orb": 0,
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": ""
+	},
+	{
+		"id": 30,
+		"x": 8,
+		"y": -1,
+		"name": "",
+		"description": "",
+		"energy": 0,
+		"orb": 0,
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": ""
+	},
+	{
+		"id": 31,
+		"x": 5,
+		"y": -2,
+		"name": "",
+		"description": "",
+		"energy": 0,
+		"orb": 0,
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": ""
+	},
+	{
+		"id": 32,
+		"x": 6,
+		"y": -2,
+		"name": "",
+		"description": "",
+		"energy": 0,
+		"orb": 0,
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": ""
+	},
+	{
+		"id": 33,
+		"x": 7,
+		"y": -2,
+		"name": "",
+		"description": "",
+		"energy": 0,
+		"orb": 0,
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": ""
+	},
+	{
+		"id": 34,
+		"x": 8,
+		"y": -2,
+		"name": "",
+		"description": "",
+		"energy": 0,
+		"orb": 0,
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": ""
+	},
+	{
+		"id": 35,
+		"x": 9,
+		"y": -2,
+		"name": "",
+		"description": "",
+		"energy": 0,
+		"orb": 0,
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": ""
+	},
+	{
+		"id": 36,
+		"x": 2,
+		"y": 0,
+		"name": "",
+		"description": "",
+		"energy": 0,
+		"orb": 0,
+		"orbs": {
+			"tm": 1,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "learnmove",
+		"icon": "learnmove"
+	},
+	{
+		"id": 37,
+		"x": 2,
+		"y": 1,
+		"name": "",
+		"description": "",
+		"energy": 0,
+		"orb": 0,
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": ""
+	},
+	{
+		"id": 38,
+		"x": 3,
+		"y": 1,
+		"name": "",
+		"description": "",
+		"energy": 0,
+		"orb": 0,
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": ""
+	},
+	{
+		"id": 39,
+		"x": 4,
+		"y": 1,
+		"name": "",
+		"description": "",
+		"energy": 0,
+		"orb": 0,
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": ""
+	},
+	{
+		"id": 40,
+		"x": 5,
+		"y": 1,
+		"name": "",
+		"description": "",
+		"energy": 0,
+		"orb": 0,
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": ""
+	},
+	{
+		"id": 41,
+		"x": 6,
+		"y": 1,
+		"name": "",
+		"description": "",
+		"energy": 0,
+		"orb": 0,
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": ""
+	},
+	{
+		"id": 42,
+		"x": -2,
+		"y": 1,
+		"name": "",
+		"description": "",
+		"energy": 0,
+		"orb": 0,
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": ""
+	},
+	{
+		"id": 43,
+		"x": -2,
+		"y": 0,
+		"name": "",
+		"description": "",
+		"energy": 0,
+		"orb": 0,
+		"orbs": {
+			"tm": 1,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "learnmove",
+		"icon": "learnmove"
+	},
+	{
+		"id": 44,
+		"x": -2,
+		"y": -1,
+		"name": "",
+		"description": "",
+		"energy": 0,
+		"orb": 0,
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": ""
+	},
+	{
+		"id": 45,
+		"x": -2,
+		"y": -2,
+		"name": "",
+		"description": "",
+		"energy": 0,
+		"orb": 0,
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": ""
+	},
+	{
+		"id": 46,
+		"x": -3,
+		"y": -2,
+		"name": "",
+		"description": "",
+		"energy": 0,
+		"orb": 0,
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": ""
+	},
+	{
+		"id": 47,
+		"x": -4,
+		"y": -2,
+		"name": "",
+		"description": "",
+		"energy": 0,
+		"orb": 0,
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": ""
+	},
+	{
+		"id": 48,
+		"x": -5,
+		"y": -2,
+		"name": "",
+		"description": "",
+		"energy": 0,
+		"orb": 0,
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": ""
+	},
+	{
+		"id": 49,
+		"x": -3,
+		"y": 1,
+		"name": "",
+		"description": "",
+		"energy": 0,
+		"orb": 0,
+		"orbs": {
+			"tm": 1,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "learnmove",
+		"icon": "learnmove"
+	},
+	{
+		"id": 50,
+		"x": -4,
+		"y": 1,
+		"name": "",
+		"description": "",
+		"energy": 0,
+		"orb": 0,
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": ""
+	},
+	{
+		"id": 51,
+		"x": -5,
+		"y": 1,
+		"name": "",
+		"description": "",
+		"energy": 0,
+		"orb": 0,
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": ""
+	},
+	{
+		"id": 52,
+		"x": -6,
+		"y": 1,
+		"name": "",
+		"description": "",
+		"energy": 0,
+		"orb": 0,
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": ""
+	},
+	{
+		"id": 53,
+		"x": -7,
+		"y": 1,
+		"name": "",
+		"description": "",
+		"energy": 0,
+		"orb": 0,
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": ""
+	},
+	{
+		"id": 54,
+		"x": -8,
+		"y": 1,
+		"name": "",
+		"description": "",
+		"energy": 0,
+		"orb": 0,
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": ""
+	},
+	{
+		"id": 55,
+		"x": -4,
+		"y": 0,
+		"name": "",
+		"description": "",
+		"energy": 0,
+		"orb": 0,
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": ""
+	},
+	{
+		"id": 56,
+		"x": -5,
+		"y": 0,
+		"name": "",
+		"description": "",
+		"energy": 0,
+		"orb": 0,
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": ""
+	},
+	{
+		"id": 57,
+		"x": -6,
+		"y": 0,
+		"name": "",
+		"description": "",
+		"energy": 0,
+		"orb": 0,
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": ""
+	},
+	{
+		"id": 58,
+		"x": -7,
+		"y": 0,
+		"name": "",
+		"description": "",
+		"energy": 0,
+		"orb": 0,
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": ""
+	},
+	{
+		"id": 59,
+		"x": -8,
+		"y": 0,
+		"name": "",
+		"description": "",
+		"energy": 0,
+		"orb": 0,
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": ""
+	},
+	{
+		"id": 60,
+		"x": -3,
+		"y": 2,
+		"name": "",
+		"description": "",
+		"energy": 0,
+		"orb": 0,
+		"orbs": {
+			"tm": 1,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "learnmove",
+		"icon": "learnmove"
+	},
+	{
+		"id": 61,
+		"x": -4,
+		"y": 3,
+		"name": "",
+		"description": "",
+		"energy": 0,
+		"orb": 0,
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": ""
+	},
+	{
+		"id": 62,
+		"x": -5,
+		"y": 4,
+		"name": "",
+		"description": "",
+		"energy": 0,
+		"orb": 0,
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": ""
+	},
+	{
+		"id": 63,
+		"x": -6,
+		"y": 5,
+		"name": "",
+		"description": "",
+		"energy": 0,
+		"orb": 0,
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": ""
+	},
+	{
+		"id": 64,
+		"x": -7,
+		"y": 6,
+		"name": "",
+		"description": "",
+		"energy": 0,
+		"orb": 0,
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": ""
+	},
+	{
+		"id": 65,
+		"x": -8,
+		"y": 7,
+		"name": "",
+		"description": "",
+		"energy": 0,
+		"orb": 0,
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": ""
+	},
+	{
+		"id": 66,
+		"x": -5,
+		"y": 3,
+		"name": "",
+		"description": "",
+		"energy": 0,
+		"orb": 0,
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": ""
+	},
+	{
+		"id": 67,
+		"x": -6,
+		"y": 4,
+		"name": "",
+		"description": "",
+		"energy": 0,
+		"orb": 0,
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": ""
+	},
+	{
+		"id": 68,
+		"x": -7,
+		"y": 5,
+		"name": "",
+		"description": "",
+		"energy": 0,
+		"orb": 0,
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": ""
+	},
+	{
+		"id": 69,
+		"x": -8,
+		"y": 6,
+		"name": "",
+		"description": "",
+		"energy": 0,
+		"orb": 0,
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": ""
+	},
+	{
+		"id": 70,
+		"x": -9,
+		"y": 7,
+		"name": "",
+		"description": "",
+		"energy": 0,
+		"orb": 0,
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": ""
+	},
+	{
+		"id": 71,
+		"x": -2,
+		"y": 2,
+		"name": "",
+		"description": "",
+		"energy": 0,
+		"orb": 0,
+		"orbs": {
+			"tm": 1,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "learnmove",
+		"icon": "learnmove"
+	},
+	{
+		"id": 72,
+		"x": -2,
+		"y": 3,
+		"name": "",
+		"description": "",
+		"energy": 0,
+		"orb": 0,
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": ""
+	},
+	{
+		"id": 73,
+		"x": -3,
+		"y": 4,
+		"name": "",
+		"description": "",
+		"energy": 0,
+		"orb": 0,
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": ""
+	},
+	{
+		"id": 74,
+		"x": -4,
+		"y": 5,
+		"name": "",
+		"description": "",
+		"energy": 0,
+		"orb": 0,
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": ""
+	},
+	{
+		"id": 75,
+		"x": -5,
+		"y": 6,
+		"name": "",
+		"description": "",
+		"energy": 0,
+		"orb": 0,
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": ""
+	},
+	{
+		"id": 76,
+		"x": -6,
+		"y": 7,
+		"name": "",
+		"description": "",
+		"energy": 0,
+		"orb": 0,
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": ""
+	},
+	{
+		"id": 77,
+		"x": 0,
+		"y": -2,
+		"name": "",
+		"description": "",
+		"energy": 0,
+		"orb": 0,
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": ""
+	},
+	{
+		"id": 78,
+		"x": 0,
+		"y": -3,
+		"name": "",
+		"description": "",
+		"energy": 0,
+		"orb": 0,
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": ""
+	},
+	{
+		"id": 79,
+		"x": 0,
+		"y": -4,
+		"name": "",
+		"description": "",
+		"energy": 0,
+		"orb": 0,
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": ""
+	},
+	{
+		"id": 80,
+		"x": 0,
+		"y": -5,
+		"name": "",
+		"description": "",
+		"energy": 0,
+		"orb": 0,
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": ""
+	},
+	{
+		"id": 81,
+		"x": 0,
+		"y": -6,
+		"name": "",
+		"description": "",
+		"energy": 0,
+		"orb": 0,
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": ""
+	},
+	{
+		"id": 82,
+		"x": 0,
+		"y": -7,
+		"name": "",
+		"description": "",
+		"energy": 0,
+		"orb": 0,
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": ""
+	},
+	{
+		"id": 83,
+		"x": 0,
+		"y": -8,
+		"name": "",
+		"description": "",
+		"energy": 0,
+		"orb": 0,
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": ""
+	},
+	{
+		"id": 84,
+		"x": 0,
+		"y": -9,
+		"name": "",
+		"description": "",
+		"energy": 0,
+		"orb": 0,
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": ""
+	},
+	{
+		"id": 85,
+		"x": 0,
+		"y": -10,
+		"name": "",
+		"description": "",
+		"energy": 0,
+		"orb": 0,
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": ""
+	},
+	{
+		"id": 86,
+		"x": 1,
+		"y": -5,
+		"name": "",
+		"description": "",
+		"energy": 0,
+		"orb": 0,
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": ""
+	},
+	{
+		"id": 87,
+		"x": 2,
+		"y": -6,
+		"name": "",
+		"description": "",
+		"energy": 0,
+		"orb": 0,
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": ""
+	},
+	{
+		"id": 88,
+		"x": 3,
+		"y": -7,
+		"name": "",
+		"description": "",
+		"energy": 0,
+		"orb": 0,
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": ""
+	},
+	{
+		"id": 89,
+		"x": 3,
+		"y": -8,
+		"name": "",
+		"description": "",
+		"energy": 0,
+		"orb": 0,
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": ""
+	},
+	{
+		"id": 90,
+		"x": 4,
+		"y": -8,
+		"name": "",
+		"description": "",
+		"energy": 0,
+		"orb": 0,
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": ""
+	},
+	{
+		"id": 91,
+		"x": 3,
+		"y": -9,
+		"name": "",
+		"description": "",
+		"energy": 0,
+		"orb": 0,
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": ""
+	},
+	{
+		"id": 92,
+		"x": 5,
+		"y": -9,
+		"name": "",
+		"description": "",
+		"energy": 0,
+		"orb": 0,
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": ""
+	},
+	{
+		"id": 93,
+		"x": -1,
+		"y": -4,
+		"name": "",
+		"description": "",
+		"energy": 0,
+		"orb": 0,
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": ""
+	},
+	{
+		"id": 94,
+		"x": -2,
+		"y": -4,
+		"name": "",
+		"description": "",
+		"energy": 0,
+		"orb": 0,
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": ""
+	},
+	{
+		"id": 95,
+		"x": -3,
+		"y": -4,
+		"name": "",
+		"description": "",
+		"energy": 0,
+		"orb": 0,
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": ""
+	},
+	{
+		"id": 96,
+		"x": -3,
+		"y": -5,
+		"name": "",
+		"description": "",
+		"energy": 0,
+		"orb": 0,
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": ""
+	},
+	{
+		"id": 97,
+		"x": -4,
+		"y": -4,
+		"name": "",
+		"description": "",
+		"energy": 0,
+		"orb": 0,
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": ""
+	},
+	{
+		"id": 98,
+		"x": -3,
+		"y": -6,
+		"name": "",
+		"description": "",
+		"energy": 0,
+		"orb": 0,
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": ""
+	},
+	{
+		"id": 99,
+		"x": -5,
+		"y": -4,
+		"name": "",
+		"description": "",
+		"energy": 0,
+		"orb": 0,
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": ""
+	},
+	{
+		"id": 100,
+		"x": 0,
+		"y": 2,
+		"name": "",
+		"description": "",
+		"energy": 0,
+		"orb": 0,
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": ""
+	},
+	{
+		"id": 101,
+		"x": 0,
+		"y": 3,
+		"name": "",
+		"description": "",
+		"energy": 0,
+		"orb": 0,
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": ""
+	},
+	{
+		"id": 102,
+		"x": 0,
+		"y": 4,
+		"name": "",
+		"description": "",
+		"energy": 0,
+		"orb": 0,
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": ""
+	},
+	{
+		"id": 103,
+		"x": 0,
+		"y": 5,
+		"name": "",
+		"description": "",
+		"energy": 0,
+		"orb": 0,
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": ""
+	},
+	{
+		"id": 104,
+		"x": 0,
+		"y": 6,
+		"name": "",
+		"description": "",
+		"energy": 0,
+		"orb": 0,
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": ""
+	},
+	{
+		"id": 105,
+		"x": -1,
+		"y": 7,
+		"name": "",
+		"description": "",
+		"energy": 0,
+		"orb": 0,
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": ""
+	},
+	{
+		"id": 106,
+		"x": 1,
+		"y": 6,
+		"name": "",
+		"description": "",
+		"energy": 0,
+		"orb": 0,
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": ""
+	},
+	{
+		"id": 107,
+		"x": 0,
+		"y": 7,
+		"name": "",
+		"description": "",
+		"energy": 0,
+		"orb": 0,
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": ""
+	},
+	{
+		"id": 108,
+		"x": -1,
+		"y": 8,
+		"name": "",
+		"description": "",
+		"energy": 0,
+		"orb": 0,
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": ""
+	},
+	{
+		"id": 109,
+		"x": 1,
+		"y": 7,
+		"name": "",
+		"description": "",
+		"energy": 0,
+		"orb": 0,
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": ""
+	},
+	{
+		"id": 110,
+		"x": 0,
+		"y": 8,
+		"name": "",
+		"description": "",
+		"energy": 0,
+		"orb": 0,
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": ""
+	},
+	{
+		"id": 111,
+		"x": 1,
+		"y": 3,
+		"name": "",
+		"description": "",
+		"energy": 0,
+		"orb": 0,
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": ""
+	},
+	{
+		"id": 112,
+		"x": 2,
+		"y": 3,
+		"name": "",
+		"description": "",
+		"energy": 0,
+		"orb": 0,
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": ""
+	},
+	{
+		"id": 113,
+		"x": 3,
+		"y": 3,
+		"name": "",
+		"description": "",
+		"energy": 0,
+		"orb": 0,
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": ""
+	},
+	{
+		"id": 114,
+		"x": 3,
+		"y": 4,
+		"name": "",
+		"description": "",
+		"energy": 0,
+		"orb": 0,
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": ""
+	},
+	{
+		"id": 115,
+		"x": 4,
+		"y": 3,
+		"name": "",
+		"description": "",
+		"energy": 0,
+		"orb": 0,
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": ""
+	},
+	{
+		"id": 116,
+		"x": 3,
+		"y": 5,
+		"name": "",
+		"description": "",
+		"energy": 0,
+		"orb": 0,
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": ""
+	},
+	{
+		"id": 117,
+		"x": 4,
+		"y": 4,
+		"name": "",
+		"description": "",
+		"energy": 0,
+		"orb": 0,
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": ""
+	},
+	{
+		"id": 118,
+		"x": 5,
+		"y": 3,
+		"name": "",
+		"description": "",
+		"energy": 0,
+		"orb": 0,
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": ""
+	},
+	{
+		"id": 119,
+		"x": -1,
+		"y": 4,
+		"name": "",
+		"description": "",
+		"energy": 0,
+		"orb": 0,
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": ""
+	},
+	{
+		"id": 120,
+		"x": -2,
+		"y": 5,
+		"name": "",
+		"description": "",
+		"energy": 0,
+		"orb": 0,
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": ""
+	},
+	{
+		"id": 121,
+		"x": -3,
+		"y": 6,
+		"name": "",
+		"description": "",
+		"energy": 0,
+		"orb": 0,
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": ""
+	},
+	{
+		"id": 122,
+		"x": -3,
+		"y": 7,
+		"name": "",
+		"description": "",
+		"energy": 0,
+		"orb": 0,
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": ""
+	},
+	{
+		"id": 123,
+		"x": -4,
+		"y": 7,
+		"name": "",
+		"description": "",
+		"energy": 0,
+		"orb": 0,
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": ""
+	},
+	{
+		"id": 124,
+		"x": -3,
+		"y": 8,
+		"name": "",
+		"description": "",
+		"energy": 0,
+		"orb": 0,
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": ""
+	},
+	{
+		"id": 125,
+		"x": -4,
+		"y": 8,
+		"name": "",
+		"description": "",
+		"energy": 0,
+		"orb": 0,
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": ""
+	},
+	{
+		"id": 126,
+		"x": -5,
+		"y": 8,
+		"name": "",
+		"description": "",
+		"energy": 0,
+		"orb": 0,
+		"orbs": {
+			"tm": 0,
+			"fiery": 0,
+			"leafy": 0,
+			"bubbly": 0,
+			"sparky": 0
+		},
+		"level": 1,
+		"color": "blue",
+		"icon": ""
+	}
+]
+
+
 
 const RED_CHARIZARD = [
 	{
@@ -19662,6 +22688,8 @@ export const SYNCGRIDS_TEMPLATES = [
 	FIELD_2_4_5_EMPTY,
 	OAK_MEW_EMPTY,
 	OAK_MEW_2_4_5_EMPTY,
+	MULTI_EMPTY,
+	ACADEMY_EMPTY,
 	ALL_EMPTY
 ]
 
