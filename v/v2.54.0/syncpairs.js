@@ -1472,7 +1472,7 @@ export const AS_N_ZOROARK = {
 		"syncMove": [
 			{
 				"user": "Pokemon",
-				"name": "Shape-Shifting Divine Night Daze",
+				"name": "(divine move) Shape-Shifting Divine Night Daze",
 				"type": "Dark",
 				"gauge": "-",
 				"uses": "-",

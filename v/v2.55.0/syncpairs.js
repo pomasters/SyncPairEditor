@@ -202,7 +202,7 @@ export const REI_BRAVIARY = {
 			},
 			{
 				"name": "Sinnoh",
-				"description": ""
+				"description": "(hisui)"
 			},
 			{
 				"name": "Main Character",
