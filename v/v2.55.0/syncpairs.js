@@ -245,7 +245,7 @@ export const REI_BRAVIARY = {
 			},
 			{
 				"user": "Pokemon",
-				"name": "Gusty Mountains Esper Wing",
+				"name": "(b move) Gusty Mountains Esper Wing",
 				"type": "Psychic",
 				"gauge": "3",
 				"uses": "-",
@@ -403,7 +403,7 @@ export const LACEY_GRANBULL = {
 			},
 			{
 				"user": "Pokemon",
-				"name": "Love Dazzling Gleam",
+				"name": "(b move) Love Dazzling Gleam",
 				"type": "Fairy",
 				"gauge": "2",
 				"uses": "1",
@@ -1023,7 +1023,7 @@ export const CYNTHIA_SPIRITOMB = {
 			},
 			{
 				"user": "Pokemon",
-				"name": "Evil Spirit Shadow Ball",
+				"name": "(b move) Evil Spirit Shadow Ball",
 				"type": "Ghost",
 				"gauge": "2",
 				"uses": "108",
@@ -1176,7 +1176,7 @@ export const MORTY_TYPHLOSION = {
 			},
 			{
 				"user": "Pokemon",
-				"name": "Perilous Twilight Infernal Parade",
+				"name": "(b move) Perilous Twilight Infernal Parade",
 				"type": "Ghost",
 				"gauge": "4",
 				"uses": "-",
@@ -1329,7 +1329,7 @@ export const MARNIE_CYCLIZAR = {
 			},
 			{
 				"user": "Pokemon",
-				"name": "Spring Breeze Scale Shot",
+				"name": "(b move) Spring Breeze Scale Shot",
 				"type": "Dragon",
 				"gauge": "4",
 				"uses": "-",
