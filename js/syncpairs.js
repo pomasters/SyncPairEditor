@@ -2701,12 +2701,25 @@ import * as FEBRUARY2025 from '../v/v2.53.0/syncpairs.js';
 import * as MARCH2025 from '../v/v2.54.0/syncpairs.js';
 import * as APRIL2025 from '../v/v2.55.0/syncpairs.js';
 import * as MAY2025 from '../v/v2.56.0/syncpairs.js';
+import * as JUNE2025 from '../v/v2.57.0/syncpairs.js';
 
 
 export const SYNCPAIRS = [
 
 	TEMPLATE1, //Always at the
 	TEMPLATE2, //top of the array
+
+	DISABLE_OPTION("---------------- v2.57.0 (JUNE2025) ----------------"),
+
+	JUNE2025.ELIO_NECROZMA,
+	JUNE2025.IRIS_DRUDDIGON,
+	JUNE2025.SELENE_NECROZMA,
+	JUNE2025.BEDE_MAWILE,
+	JUNE2025.LARRY_FLAMIGO,
+	JUNE2025.CLIVE_AMOONGUSS,
+	JUNE2025.SAMSON_OAK_EXEGGUTOR,
+	JUNE2025.GORDIE_BARBARACLE,
+	JUNE2025.MELONY_FROSMOTH,
 
 	DISABLE_OPTION("---------------- v2.56.0 (MAY2025) ----------------"),
 
