@@ -617,7 +617,7 @@ export const AS_SILVER_HOOH = {
 		"syncMove": [
 			{
 				"user": "Pokemon",
-				"name": "Golden Rule Divine Sacred Fire",
+				"name": "(divine move) Golden Rule Divine Sacred Fire",
 				"type": "Fire",
 				"gauge": "-",
 				"uses": "-",
@@ -783,7 +783,7 @@ export const AS_ETHAN_LUGIA = {
 		"syncMove": [
 			{
 				"user": "Pokemon",
-				"name": "Silver Torrents Divine Aeroblast",
+				"name": "(divine move) Silver Torrents Divine Aeroblast",
 				"type": "Flying",
 				"gauge": "-",
 				"uses": "-",
