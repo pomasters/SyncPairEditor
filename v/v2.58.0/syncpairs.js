@@ -790,7 +790,7 @@ export const AS_ETHAN_LUGIA = {
 				"category": "Special",
 				"power": "300-360",
 				"accuracy": "-",
-				"target": "An opponent",
+				"target": "All opponents",
 				"effect": "-",
 				"description": "No additional effect."
 			}
