@@ -22735,12 +22735,21 @@ import * as MARCH2025 from '../v/v2.54.0/syncgrids.js';
 import * as APRIL2025 from '../v/v2.55.0/syncgrids.js';
 import * as MAY2025 from '../v/v2.56.0/syncgrids.js';
 import * as JUNE2025 from '../v/v2.57.0/syncgrids.js';
+import * as JULY2025 from '../v/v2.58.0/syncgrids.js';
 
 
 export const SYNCGRIDS = [
 
 	BASE_EMPTY,
 	ALL_EMPTY,
+
+	BASE_EMPTY, // "---------------- v2.58.0 (JULY2025) ----------------"
+
+	JULY2025.CYNTHIA_MILOTIC,
+	JULY2025.LEON_SEISMITOAD,
+	JULY2025.SKYLA_JUMPLUFF,
+	JULY2025.AS_SILVER_HOOH,
+	JULY2025.AS_ETHAN_LUGIA,
 
 	BASE_EMPTY, // "---------------- v2.57.0 (JUNE2025) ----------------"
 
