@@ -2703,12 +2703,25 @@ import * as APRIL2025 from '../v/v2.55.0/syncpairs.js';
 import * as MAY2025 from '../v/v2.56.0/syncpairs.js';
 import * as JUNE2025 from '../v/v2.57.0/syncpairs.js';
 import * as JULY2025 from '../v/v2.58.0/syncpairs.js';
+import * as AUGUST2025 from '../v/v2.59.0/syncpairs.js';
 
 
 export const SYNCPAIRS = [
 
 	TEMPLATE1, //Always at the
 	TEMPLATE2, //top of the array
+
+	DISABLE_OPTION("---------------- v2.59.0 (AUGUST2025) ----------------"),
+
+	AUGUST2025.CARMINE_SINISTCHA,
+	AUGUST2025.ROXIE_GARBODOR,
+	AUGUST2025.LUSAMINE_MILOTIC,
+	AUGUST2025.FANTINA_DUSKNOIR,
+	AUGUST2025.LANA_CLOYSTER,
+	AUGUST2025.BRENDAN_MARSHTOMP,
+	AUGUST2025.IRIS_LAPRAS,
+	AUGUST2025.GLADION_PORYGONZ,
+	AUGUST2025.KIERAN_HYDRAPPLE,
 
 	DISABLE_OPTION("---------------- v2.58.0 (JULY2025) ----------------"),
 
@@ -3180,4 +3193,4 @@ export const SYNCPAIRS = [
 	PROFESSOR_OAK_MEW
 ];
 
-export var CURRENT_SYNCPAIR = [JULY2025.AS_SILVER_HOOH, JULY2025.AS_ETHAN_LUGIA];
+export var CURRENT_SYNCPAIR = [JULY2025.AS_SILVER_HOOH, JULY2025.AS_ETHAN_LUGIA, AUGUST2025.CARMINE_SINISTCHA];

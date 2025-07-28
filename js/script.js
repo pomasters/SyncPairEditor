@@ -1167,6 +1167,11 @@ function foldSomeParts() {
 		CODE_MIRROR_EDITOR.foldCode(CodeMirror.Pos(statsLVL150.from().line,0));
 	}
 
+	var statsLVL200 = CODE_MIRROR_EDITOR.getSearchCursor("statsLVL200", CodeMirror.Pos(CODE_MIRROR_EDITOR.firstLine(), 0));
+	while(statsLVL200.findNext()) {
+		CODE_MIRROR_EDITOR.foldCode(CodeMirror.Pos(statsLVL200.from().line,0));
+	}
+
 	if(SYNCPAIR.trainer.name == "TEMPLATE (FULL)") {
 		CODE_MIRROR_EDITOR.foldCode(CodeMirror.Pos(28, 0));//pokemon2
 		CODE_MIRROR_EDITOR.foldCode(CodeMirror.Pos(57, 0));//passives2
