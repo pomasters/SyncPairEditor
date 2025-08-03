@@ -118,6 +118,9 @@ function showSyncPair2() {
 			g("syncPair_weakness2Image").src = typeImage(SYNCPAIR.pokemonWeakness2);
 		}
 
+		if(SYNCPAIR.pokemon[1].name.indexOf("Mega ") > -1) { g("btn_alter").src = "images/btn_mega.png"; }
+		if(SYNCPAIR.pokemon[1].formName.indexOf("Tera ") > -1) { g("btn_alter").src = "images/btn_tera.png"; }
+
 	} else {
 		g("syncPair_pokemon2").setAttribute('style', 'display: none !important');
 		g("syncPair_pokemon2Stats").setAttribute('style', 'display: none !important');
@@ -125,6 +128,11 @@ function showSyncPair2() {
 
 	if(SYNCPAIR.actions.moves2.length > 0) {
 		g("moves2").innerHTML = movesAre(SYNCPAIR.actions.moves2, "move2_classic");
+		g("btn_alter").classList.remove("hide");
+	}
+
+	if("moveTera" in SYNCPAIR.actions && SYNCPAIR.actions.moveTera.length > 0) {
+		g("moveTera").innerHTML = movesAre(SYNCPAIR.actions.moveTera, "move_tera");
 		g("btn_alter").classList.remove("hide");
 	}
 
@@ -191,6 +199,8 @@ function resetShowSyncPair() {
 	g("syncPair_typeImage").src = emptyImg;
 	g("syncPair_weaknessImage").src = emptyImg;
 
+	g("btn_alter").src = "images/btn_form.png";
+
 	g("syncPair_type2Image").src = emptyImg;
 	g("syncPair_weakness2Image").src = emptyImg;
 
@@ -199,6 +209,7 @@ function resetShowSyncPair() {
 
 	g("moves").innerHTML = "";
 	g("moves2").innerHTML = "";
+	g("moveTera").innerHTML = "";
 	g("movesMAX").innerHTML = "";
 	g("movesSync").innerHTML = "";
 	g("moves2Sync").innerHTML = "";
@@ -241,11 +252,13 @@ function resetShowSyncPair() {
 
 	g("moves").classList.remove("hide");
 	g("moves2").classList.add("hide");
+	g("moveTera").classList.add("hide");
 	g("movesSync").classList.remove("hide");
 	g("moves2Sync").classList.add("hide");
 
 	g("moves").classList.remove("hideMax");
 	g("moves2").classList.remove("hideMax");
+	g("moveTera").classList.remove("hideMax");
 	g("movesSync").classList.remove("hideMax");
 	g("moves2Sync").classList.remove("hideMax");
 	g("movesMAX").classList.add("hideMax");
@@ -481,13 +494,21 @@ function moveIs(move, option) {
 	if(move.name == "" || move.type == "") { moveOption = "no_move"; }
 
 	var b_move = "";
+	var tera_move = "";
 	var divine_move = "";
 	var move_name = move.name;
 	var noIconType = "";
 	if(move_name.substring(0, 8).toLowerCase() == "(b move)") {
 		b_move = `<div class="b_move"><img src="images/b_move_chain.png"><img src="images/b_move_bg.png"><img src="images/b_move_border.png"></div>`;
 		move_name = move.name.substring(8);
+		moveOption = "move_buddy";
 		noIconType = "noIconType"
+	}
+
+	if(move_name.substring(0, 6).toLowerCase() == "(tera)") {
+		tera_move = `<div class="tera"><div class="tera_bg"></div><div class="tera_icon tera_${move.type.toLowerCase()}"><img src="images/tera/border.png"></div></div>`;
+		move_name = move.name.substring(6);
+		moveOption = moveOption.replace("classic","tera");
 	}
 
 	if(move_name.substring(0, 13).toLowerCase() == "(divine move)") {
@@ -502,7 +523,7 @@ function moveIs(move, option) {
 
 	return `<div class="move ${moveOption} bg_${move.type.toLowerCase()} ${divine_move} elementF">
 				<div class="move_basics icon_${move.type.toLowerCase()} ${noIconType}">
-					${b_move}
+					${b_move} ${tera_move}
 					<p class="move_name">${move_name}</p>
 
 					<div class="move_gauge_uses">
@@ -606,6 +627,7 @@ function movesAre(moves, option) {
 	var move4 = moves.slice(0, MAX_NUMBER_MOVES); //keep a limited number of moves
 
 	if(option == "move_sync" || option == "move2_sync") { move4 = moves.slice(0, MAX_NUMBER_SYNCMOVES) }
+	if(option == "move_tera") { move4 = moves.slice(0, 1) }
 
 	for(var i=0; i<move4.length; i++) {
 		o += moveIs(move4[i], option)
@@ -1756,6 +1778,7 @@ g("btn_alter").addEventListener("click", function() {
 	if(SYNCPAIR.actions.syncMove2.length > 0) {
 		switchBetween("movesSync","moves2Sync");
 	}
+	g("moveTera").classList.toggle("hide");
 })
 
 /*
@@ -1764,6 +1787,7 @@ dynamax button
 g("btn_dynamax").addEventListener("click", function() {
 	g("moves").classList.toggle("hideMax");
 	g("moves2").classList.toggle("hideMax");
+	g("moveTera").classList.toggle("hideMax");
 	g("movesSync").classList.toggle("hideMax");
 	g("moves2Sync").classList.toggle("hideMax");
 

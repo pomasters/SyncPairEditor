@@ -66,6 +66,7 @@
 	--bgSyncMove2: url("../images/bg_syncMove2.png");
 	--bgDynamax: url("../images/bg_dynamax.png");
 	--bgDivineMove: url("../images/bg_divineMove.png");
+	--bgTera: url("../images/bg_tera.png");
 
 	--bgPassiveArcsuit: url("../images/skill_arcsuit.png");
 	--iconPassiveArcsuit: url("../images/icon_arcsuit.png");
@@ -120,6 +121,25 @@
 .icon_sync { background-image: url("../images/sync.png"); }
 .icon_dynamax { background-size: 90% 100%; }
 .icon_sync { background-size: 80%; }
+
+.tera_bug { background-image: url("../images/tera/icon_bug.png"), url("../images/tera/bg_bug.png") !important; }
+.tera_dark { background-image: url("../images/tera/icon_dark.png"), url("../images/tera/bg_dark.png") !important; }
+.tera_dragon { background-image: url("../images/tera/icon_dragon.png"), url("../images/tera/bg_dragon.png") !important; }
+.tera_electric { background-image: url("../images/tera/icon_electric.png"), url("../images/tera/bg_electric.png") !important; }
+.tera_fairy { background-image: url("../images/tera/icon_fairy.png"), url("../images/tera/bg_fairy.png") !important; }
+.tera_fighting { background-image: url("../images/tera/icon_fighting.png"), url("../images/tera/bg_fighting.png") !important; }
+.tera_fire { background-image: url("../images/tera/icon_fire.png"), url("../images/tera/bg_fire.png") !important; }
+.tera_flying { background-image: url("../images/tera/icon_flying.png"), url("../images/tera/bg_flying.png") !important; }
+.tera_ghost { background-image: url("../images/tera/icon_ghost.png"), url("../images/tera/bg_ghost.png") !important; }
+.tera_grass { background-image: url("../images/tera/icon_grass.png"), url("../images/tera/bg_grass.png") !important; }
+.tera_ground { background-image: url("../images/tera/icon_ground.png"), url("../images/tera/bg_ground.png") !important; }
+.tera_ice { background-image: url("../images/tera/icon_ice.png"), url("../images/tera/bg_ice.png") !important; }
+.tera_normal { background-image: url("../images/tera/icon_normal.png"), url("../images/tera/bg_normal.png") !important; }
+.tera_poison { background-image: url("../images/tera/icon_poison.png"), url("../images/tera/bg_poison.png") !important; }
+.tera_psychic { background-image: url("../images/tera/icon_psychic.png"), url("../images/tera/bg_psychic .png") !important; }
+.tera_rock { background-image: url("../images/tera/icon_rock.png"), url("../images/tera/bg_rock.png") !important; }
+.tera_steel { background-image: url("../images/tera/icon_steel.png"), url("../images/tera/bg_steel.png") !important; }
+.tera_water { background-image: url("../images/tera/icon_water.png"), url("../images/tera/bg_water.png") !important; }
 
 .hide { display: none !important; }
 .hideMax  { display: none !important; }

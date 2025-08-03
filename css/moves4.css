@@ -1,5 +1,6 @@
 #moves,
 #moves2,
+#moveTera,
 #movesMAX {
 	flex-wrap: wrap;
 	overflow: auto;
@@ -8,6 +9,7 @@
 
 #moves .move,
 #moves2 .move,
+#moveTera .move,
 #movesMAX .move {
 	flex: 1 1 calc((100% / 4) - 8px);
 	width: 100%;
@@ -37,6 +39,10 @@
 
 .move_details_description > * {
 	margin: auto;
+}
+
+#moveTera .move_details, #moveTera .move_description {
+	margin: 0;
 }
 
 #movesSync .move_details,

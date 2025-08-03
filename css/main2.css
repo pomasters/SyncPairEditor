@@ -470,7 +470,7 @@ ACTIONS
 	text-align: center;
 }
 
-#moves, #moves2, #movesMAX, #movesSync, #moves2Sync {
+#moves, #moves2, #movesMAX, #movesSync, #moves2Sync, #moveTera {
 	position: relative;
 	display: flex;
 	flex-wrap: wrap;
@@ -679,6 +679,43 @@ MOVES
 .icon_sync_center {
 	display: none;
 }
+
+
+
+#moveTera .move {
+	width: 100%;
+}
+
+#moveTera .move_details {
+	width: calc(33% - 11px);
+}
+
+.tera {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	margin: auto;
+	top: 0;
+	left: 0;
+}
+
+.tera_bg {
+	position: absolute;
+	margin: auto;
+	top: -4px;
+	left: -4px;
+	bottom: 0px;
+	right: -4px;
+	overflow: hidden;
+	background-image: var(--bgTera);
+	mix-blend-mode: multiply;
+}
+
+.tera_icon {
+	display: none;
+}
+
 
 
 /*-------
@@ -1025,7 +1062,9 @@ SKILLS
 #syncPair_trainerImageBase[src*="v2.49.0"],
 #syncPair_trainerImageEx[src*="v2.49.0"],
 #syncPair_trainerImageBase[src*="v2.5"],
-#syncPair_trainerImageEx[src*="v2.5"] {
+#syncPair_trainerImageEx[src*="v2.5"],
+#syncPair_trainerImageBase[src*="v2.6"],
+#syncPair_trainerImageEx[src*="v2.6"] {
 	width: 560px;
 	height: auto;
 	top: -100px;

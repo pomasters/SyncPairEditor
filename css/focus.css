@@ -238,7 +238,7 @@ ELEMENT FOCUS WHEN CLICKED
 	font-size: 1.3em;
 }
 
-#elementFocus .move_sync .move_basics {
+#elementFocus .move_divine .move_basics {
 	background-image: var(--bgDivineMove);
 }
 
@@ -279,6 +279,11 @@ ELEMENT FOCUS WHEN CLICKED
 
 #elementFocus .move_dynamax .move_details div:nth-child(even) {
 	background-color: rgba(0,0,0,32%);
+}
+
+
+#elementFocus .tera_icon {
+	display: none;
 }
 
 
@@ -361,6 +366,7 @@ ELEMENT FOCUS WHEN CLICKED
 #elementFocus .skill_theme {
 	background-image: none;
 	background: linear-gradient(var(--theme), var(--theme2));
+	flex: none;
 }
 
 #elementFocus .skill_theme .skill_name {

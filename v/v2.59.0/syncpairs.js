@@ -16,7 +16,7 @@ export const CARMINE_SINISTCHA = {
 	"pokemon": [
 		{
 			"name": "Sinistcha",
-			"formName": "Unremarkable Form - Tera Type: Grass",
+			"formName": "Unremarkable Form (Tera Type: Grass)",
 			"stats": {
 				"hp": "606",
 				"atk": "132",
@@ -45,7 +45,7 @@ export const CARMINE_SINISTCHA = {
 		},
 		{
 			"name": "Sinistcha",
-			"formName": "Unremarkable Form - Tera Type: Grass",
+			"formName": "Unremarkable Form (Tera Type: Grass)",
 			"stats": {
 				"hp": "606",
 				"atk": "132",
@@ -216,7 +216,7 @@ export const CARMINE_SINISTCHA = {
 			},
 			{
 				"user": "Pokemon2",
-				"name": "Grassy Terrain",
+				"name": "(tera) Grassy Terrain",
 				"type": "Grass",
 				"gauge": "2",
 				"uses": "2",
@@ -229,12 +229,12 @@ export const CARMINE_SINISTCHA = {
 			},
 			{
 				"user": "Pokemon2",
-				"name": "Matcha Gotcha",
+				"name": "(tera) Matcha Gotcha",
 				"type": "Grass",
 				"gauge": "3",
 				"uses": "-",
 				"category": "Special",
-				"power": "94-112",
+				"power": "141-168",
 				"accuracy": "90",
 				"target": "All opponents",
 				"effect": "-",
@@ -252,10 +252,12 @@ export const CARMINE_SINISTCHA = {
 				"target": "All allies",
 				"effect": "-",
 				"description": "Raises the Defense and Sp.&nbsp;Def of all allied sync pairs by four stat ranks. Applies the Enduring effect to the user."
-			},
+			}
+		],
+		"moveTera": [
 			{
 				"user": "Pokemon2",
-				"name": "Emerald Tera Blast",
+				"name": "(tera) Emerald Tera Blast",
 				"type": "Grass",
 				"gauge": "-",
 				"uses": "1",
@@ -1671,10 +1673,12 @@ export const KIERAN_HYDRAPPLE = {
 				"target": "An ally",
 				"effect": "-",
 				"description": "Raises an ally’s Attack by six stat ranks. Raises an ally’s critical-hit rate by three stat ranks. Applies the Gradual Healing effect to an ally."
-			},
+			}
+		],
+		"moveTera": [
 			{
 				"user": "Pokemon2",
-				"name": "Topaz Tera Blast",
+				"name": "(tera) Topaz Tera Blast",
 				"type": "Fighting",
 				"gauge": "2",
 				"uses": "-",
