@@ -149,7 +149,11 @@ function showSyncPair2() {
 	if(SYNCPAIR.skills.passivesMaster.length > 0) {
 		g("passiveMaster").innerHTML = skillsAre(SYNCPAIR.skills.passivesMaster, "skill_passiveMaster");
 		g("passiveMaster").classList.remove("hide");
-		g("iconTabPassiveMaster").classList.remove("hide");
+		if(!g("iconTabPassiveMasterEX").classList.contains("hide")) {
+			g("iconTabPassiveMaster").classList.add("hide");
+		} else {
+			g("iconTabPassiveMaster").classList.remove("hide");
+		}
 	}
 
 	if("passivesArcSuit" in SYNCPAIR.skills && SYNCPAIR.skills.passivesArcSuit.length > 0) {
@@ -265,6 +269,7 @@ function resetShowSyncPair() {
 	g("btn_dynamax").classList.add("hideMax");
 
 	g("iconTabPassiveMaster").classList.add("hide");
+	g("iconTabPassiveMasterEX").classList.add("hide");
 	g("iconTabPassiveArcSuit").classList.add("hide");
 	g("iconTabPassiveSuperawakening").classList.add("hide");
 	g("passiveMaster").classList.add("hide");
@@ -498,22 +503,22 @@ function moveIs(move, option) {
 	var divine_move = "";
 	var move_name = move.name;
 	var noIconType = "";
-	if(move_name.substring(0, 8).toLowerCase() == "(b move)") {
+	if(move_name.toLowerCase().indexOf("(b move)") > -1) {
 		b_move = `<div class="b_move"><img src="images/b_move_chain.png"><img src="images/b_move_bg.png"><img src="images/b_move_border.png"></div>`;
-		move_name = move.name.substring(8);
 		moveOption = "move_buddy";
 		noIconType = "noIconType"
+		move_name = move_name.replace("(b move)", "");
 	}
 
-	if(move_name.substring(0, 6).toLowerCase() == "(tera)") {
+	if(move_name.toLowerCase().indexOf("(tera)") > -1) {
 		tera_move = `<div class="tera"><div class="tera_bg"></div><div class="tera_icon tera_${move.type.toLowerCase()}"><img src="images/tera/border.png"></div></div>`;
-		move_name = move.name.substring(6);
 		moveOption = moveOption.replace("classic","tera");
+		move_name = move_name.replace("(tera)", "");
 	}
 
-	if(move_name.substring(0, 13).toLowerCase() == "(divine move)") {
+	if(move_name.toLowerCase().indexOf("(divine move)") > -1) {
 		divine_move = `move_divine`;
-		move_name = move.name.substring(13);
+		move_name = move_name.replace("(divine move)", "");
 	}
 
 	var target_icon = "";
@@ -669,16 +674,25 @@ return :
 	string of the html code of 1 skill
 */
 function skillIs(skill, option) {
+	var skillName = skill.name;
 	var themeType = "";
 	var skillOption = option;
 	var themeSkillIcon = "";
+	var masterPassiveEX = "";
 
-	if(skill.name == "" && skill.description == "") { skillOption = "no_move"; skill.name = "&nbsp;"; }
+	if(skill.name == "" && skill.description == "") { skillOption = "no_move"; skillName = "&nbsp;"; }
 
 	if(option == "skill_theme") {
 		var icon = "other";
 		if((icon = DATA.THEMES_SKILLS[skill.name.toLowerCase()]) == undefined) { icon = "other"; }
 		themeSkillIcon = `<img src="images/theme_${icon}.png" class="skill_theme_icon">`;
+	}
+
+	if(skill.name.toLowerCase().indexOf("(ex)") > -1) {
+		masterPassiveEX = " icon_PassiveMasterEX";
+		skillName = skill.name.replace("(ex)","")
+		g("iconTabPassiveMaster").classList.add("hide");
+		g("iconTabPassiveMasterEX").classList.remove("hide");
 	}
 
 	/*if the skill is a "type" (fire, ice, ..)*/
@@ -689,7 +703,7 @@ function skillIs(skill, option) {
 
 	return `<div class="skill ${skillOption} ${themeType} elementF">
 				${themeSkillIcon}
-				<p class="skill_name">${skill.name}</p>
+				<p class="skill_name${masterPassiveEX}">${skillName}</p>
 				<p class="skill_description" data-descriptionlength="${Math.round(skill.description.length/10)}">${skill.description.replaceAll("(lb)","<br>").replace(/\(name:\s*((?:[^()]|\([^)]*\))*)\)/g, "<span class='skill_name2'>$1</span>")}</p>
 			</div>`;
 }

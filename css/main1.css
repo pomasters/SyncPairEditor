@@ -794,6 +794,9 @@ SKILLS
 	background-size: 24px;
 }
 
+.icon_PassiveMasterEX {
+	background-image: var(--iconPassiveMasterEX) !important;
+}
 
 #passivesArcSuit .skill {
 	background-color: var(--passive_arcsuit);
