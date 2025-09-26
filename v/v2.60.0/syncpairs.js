@@ -397,7 +397,7 @@ export const IRIDA_TYPHLOSION = {
 			},
 			{
 				"name": "Sinnoh",
-				"description": ""
+				"description": "(Hisui)"
 			},
 			{
 				"name": "Seasonal Outfit",
@@ -3179,7 +3179,7 @@ export const VOLO_GIRATINA = {
 			},
 			{
 				"name": "Sinnoh",
-				"description": ""
+				"description": "(Hisui)"
 			},
 			{
 				"name": "Knowledgeable",

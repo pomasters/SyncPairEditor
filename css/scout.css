@@ -37,6 +37,15 @@
 	height: 70%;
 	z-index: 3;
 }
+#scout_trainer[src*="v2.48"],
+#scout_trainer[src*="v2.49"],
+#scout_trainer[src*="v2.5"],
+#scout_trainer[src*="v2.6"] {
+	left: -200px;
+	top: -145px;
+	height: 80%;
+}
+
 #scout_pokemon {
 	right: 0;
 	top: 25%;
