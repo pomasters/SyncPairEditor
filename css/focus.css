@@ -356,6 +356,8 @@ ELEMENT FOCUS WHEN CLICKED
 	background-size: 24px;
 }
 
+#elementFocus .rushPassive { min-width: 90%; }
+
 #elementFocus .skill_lucky {
 	background-image: var(--bgLucky);
 	background-size: cover;

@@ -822,6 +822,8 @@ SKILLS
 	background-size: 24px;
 }
 
+.rushPassive { min-width: calc(100% - 8px); order: -1; }
+
 
 #passiveSkills, #luckySkills {
 	display: flex;

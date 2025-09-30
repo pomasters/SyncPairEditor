@@ -695,13 +695,20 @@ function skillIs(skill, option) {
 		g("iconTabPassiveMasterEX").classList.remove("hide");
 	}
 
+	const regions = new Set(["kanto","johto","hoenn","sinnoh","hisui","unova","kalos","alola","galar","paldea","pasio"]);
+	function isRegionRush(str) {
+		if(str.length < 6 || !str.endsWith(" rush")) return false;
+		return regions.has(str.substring(0, str.length - 5));
+	}
+	var rushPassive = isRegionRush(skillName.toLowerCase()) ? "rushPassive" : "";
+
 	/*if the skill is a "type" (fire, ice, ..)*/
 	if(DATA.TYPES.indexOf(skill.name.toLowerCase()) > -1) {
 		themeType= "bg_"+skill.name.toLowerCase();
 		themeSkillIcon = `<img src="images/theme_type.png" class="skill_theme_icon">`;
 	}
 
-	return `<div class="skill ${skillOption} ${themeType} elementF">
+	return `<div class="skill ${skillOption} ${themeType} ${rushPassive} elementF">
 				${themeSkillIcon}
 				<p class="skill_name${masterPassiveEX}">${skillName}</p>
 				<p class="skill_description" data-descriptionlength="${Math.round(skill.description.length/10)}">${skill.description.replaceAll("(lb)","<br>").replace(/\(name:\s*((?:[^()]|\([^)]*\))*)\)/g, "<span class='skill_name2'>$1</span>")}</p>
