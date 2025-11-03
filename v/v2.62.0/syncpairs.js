@@ -183,7 +183,7 @@ export const AS_BLUE_PIDGEOT = {
 		"syncMove": [
 			{
 				"user": "Pokemon2",
-				"name": "Blue Beyond the Clouds Almighty Hurricane",
+				"name": "(divine move) Blue Beyond the Clouds Almighty Hurricane",
 				"type": "Flying",
 				"gauge": "-",
 				"uses": "-",
