@@ -2707,12 +2707,22 @@ import * as AUGUST2025 from '../v/v2.59.0/syncpairs.js';
 import * as SEPTEMBER2025 from '../v/v2.60.0/syncpairs.js';
 import * as OCTOBER2025 from '../v/v2.61.0/syncpairs.js';
 import * as NOVEMBER2025 from '../v/v2.62.0/syncpairs.js';
+import * as DECEMBER2025 from '../v/v2.63.0/syncpairs.js';
 
 
 export const SYNCPAIRS = [
 
 	TEMPLATE1, //Always at the
 	TEMPLATE2, //top of the array
+
+	DISABLE_OPTION("---------------- v2.63.0 (DECEMBER2025) ----------------"),
+
+	DECEMBER2025.HILBERT_KYUREM,
+	DECEMBER2025.HILDA_IRONLEAVES,
+	DECEMBER2025.HILDA_MIENFOO,
+	DECEMBER2025.LANCE_CHARIZARD,
+	DECEMBER2025.ARVEN_SCOVILLAIN,
+	DECEMBER2025.CARMINE_PECHARUNT,
 
 	DISABLE_OPTION("---------------- v2.62.0 (NOVEMBER2025) ----------------"),
 
@@ -3241,4 +3251,4 @@ export const SYNCPAIRS = [
 	PROFESSOR_OAK_MEW
 ];
 
-export var CURRENT_SYNCPAIR = [NOVEMBER2025.AS_BLUE_PIDGEOT, NOVEMBER2025.MIRIAM_TOXAPEX];
+export var CURRENT_SYNCPAIR = [NOVEMBER2025.AS_BLUE_PIDGEOT, DECEMBER2025.HILBERT_KYUREM, DECEMBER2025.HILDA_IRONLEAVES];
