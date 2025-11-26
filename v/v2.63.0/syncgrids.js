@@ -76,6 +76,7 @@ export const HILBERT_KYUREM = [
 		"x": "0",
 		"y": "-2",
 		"name": "Freezing Energy Leak",
+		"description": "Powers up the user’s sync move when the zone is an Ice Zone. Extends the duration of the Ice Zone when the zone turns into an Ice Zone while the user is on the field.",
 		"energy": "0",
 		"orb": "5",
 		"level": "5",

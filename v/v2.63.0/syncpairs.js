@@ -269,7 +269,7 @@ export const HILDA_IRONLEAVES = {
 				"user": "Pokemon",
 				"name": "Giga Impact",
 				"type": "Psychic",
-				"gauge": "4",
+				"gauge": "3",
 				"uses": "-",
 				"category": "Physical",
 				"power": "223-267",

@@ -384,7 +384,7 @@ export const IRIDA_TYPHLOSION = {
 		],
 		"passivesMaster": [
 			{
-				"name": "Hisui’s Shining Pearl",
+				"name": "(ex) Hisui’s Shining Pearl",
 				"description": "Powers up the moves and sync moves of all allied sync pairs by 20%. Reduces attack move and sync move damage taken by all allied sync pairs by 25%. The more allied sync pairs with the Sinnoh theme you have on your team, the higher these percentages are. (Each additional sync pair powers up moves and sync moves by 15% and reduces damage by 3%. The maximum power-up is 50%, and the maximum damage reduction is 31%.) Restores the HP of all allied sync pairs by approximately 20% of their maximum HP the first time the user’s sync move is used each battle."
 			}
 		],
@@ -664,7 +664,7 @@ export const GLORIA_CINDERACE = {
 		],
 		"passivesMaster": [
 			{
-				"name": "Galar’s Shining Ace",
+				"name": "(ex) Galar’s Shining Ace",
 				"description": "Powers up the moves and sync moves of all allied sync pairs by 20%. Reduces attack move and sync move damage taken by all allied sync pairs by 25%. The more allied sync pairs with the Galar theme you have on your team, the higher these percentages are. (Each additional sync pair powers up moves and sync moves by 15% and reduces damage by 3%. The maximum power-up is 50%, and the maximum damage reduction is 31%.) Applies the Enduring effect to all allied sync pairs the first time the user enters a battle each battle."
 			}
 		],
