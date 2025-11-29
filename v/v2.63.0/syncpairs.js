@@ -15,7 +15,7 @@ export const HILBERT_KYUREM = {
 	"pokemonGender": "",
 	"pokemon": [
 		{
-			"name": "Kyurem",
+			"name": "(shiny)Kyurem",
 			"formName": "White Kyurem",
 			"stats": {
 				"hp": "686",
