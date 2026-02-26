@@ -286,6 +286,17 @@ ELEMENT FOCUS WHEN CLICKED
 	display: none;
 }
 
+#elementFocus .bg_stellar {
+	background: url(../images/bg_move_stellar2.png) !important;
+	background-size: cover !important;
+}
+
+#elementFocus .tera_bg {
+	width: 600%;
+	left: -300%;
+	top: -8px;
+}
+
 
 #elementFocus .skill {
 	color: var(--text);

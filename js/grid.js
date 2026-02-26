@@ -24,6 +24,7 @@ export function genGrid(sgrid) {
 	var gridDiv = document.getElementById("cells");
 
 	if(sgrid.length > 100) { gridDiv.classList.add("academyCells"); } else { gridDiv.classList.remove("academyCells"); }
+	if(sgrid.length == 90) { gridDiv.classList.add("red1996Cells"); } else { gridDiv.classList.remove("red1996Cells"); }
 
 	var cellProperties = cellPropertiesBasedOn(gridDiv);
 

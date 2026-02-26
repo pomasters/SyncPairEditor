@@ -1391,7 +1391,7 @@ g("btn_help").addEventListener("click", function() {
 		<span>x, y</span><br>coordinates of the cell in the grid. You can make a completely new template if you want. For more details, look at the "All cells" template.<br><br>
 		<span>energy, orb, level</span><br>(optional but if you really want to fully interact with your grid, you can add those values)<br><br>
 		<span>color</span><br>"blue", "red", "green", "yellow", "sync", "dynamax", "divine"<br><br>
-		<span>icon</span><br>"bug", "dark", "dragon", "electric", "fairy", "fighting", "fire", "flying", "ghost", "grass", "ground", "ice", "normal", "poison", "psychic", "rock", "steel", "water",<br><br>"trainer", "sync", "dynamax", "stat", "passive"`;
+		<span>icon</span><br>"bug", "dark", "dragon", "electric", "fairy", "fighting", "fire", "flying", "ghost", "grass", "ground", "ice", "normal", "poison", "psychic", "rock", "steel", "water", "stellar",<br><br>"trainer", "sync", "dynamax", "stat", "passive"`;
 
 	g("detailedCell").children[4].innerHTML = "0";
 	g("detailedCell").children[5].innerHTML = "0";

@@ -46,6 +46,12 @@
 	margin-top: 32% !important;
 }
 
+.red1996Cells {
+	transform: scale(64%) !important;
+	transform-origin: 46% !important;
+	margin-top: 32% !important;
+}
+
 .cell {
 	position: absolute;
 	width: var(--cellWidth);
@@ -543,6 +549,7 @@
 .grid_icon_rock { background-image: url("../images/grid/grid_icon_rock.png"); }
 .grid_icon_steel { background-image: url("../images/grid/grid_icon_steel.png"); }
 .grid_icon_water { background-image: url("../images/grid/grid_icon_water.png"); }
+.grid_icon_stellar { background-image: url("../images/grid/grid_icon_stellar.png"); }
 
 .grid_icon_trainer { background-image: url("../images/grid/grid_icon_trainer.png"); }
 .grid_icon_sync { background-image: url("../images/grid/grid_icon_sync.png"); }

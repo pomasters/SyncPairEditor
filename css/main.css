@@ -97,6 +97,12 @@
 .bg_trainer { background: linear-gradient(var(--trainer), var(--trainer2)) !important; }
 .bg_ { background: none; }
 
+.bg_stellar {
+	background: url(../images/bg_move_stellar2.png);
+	background-position: center !important;
+	background-size: 100% 100% !important;
+}
+
 .icon_bug { background-image: url("../images/move_bug.png"); }
 .icon_dark { background-image: url("../images/move_dark.png"); }
 .icon_dragon { background-image: url("../images/move_dragon.png"); }
@@ -117,6 +123,8 @@
 .icon_water { background-image: url("../images/move_water.png"); }
 .icon_trainer { background-image: url("../images/move_trainer.png"); }
 .bg_ { background-image: none; }
+
+.icon_stellar { background-image: url("../images/move_stellar.png"); }
 
 .icon_dynamax { background-image: url("../images/dynamax.png"); }
 .icon_sync { background-image: url("../images/sync.png"); }
@@ -141,6 +149,8 @@
 .tera_rock { background-image: url("../images/tera/icon_rock.png"), url("../images/tera/bg_rock.png") !important; }
 .tera_steel { background-image: url("../images/tera/icon_steel.png"), url("../images/tera/bg_steel.png") !important; }
 .tera_water { background-image: url("../images/tera/icon_water.png"), url("../images/tera/bg_water.png") !important; }
+
+.tera_stellar { background-image: url("../images/tera/icon_stellar.png"), url("../images/tera/bg_stellar.png") !important; }
 
 .hide { display: none !important; }
 .hideMax  { display: none !important; }
