@@ -840,8 +840,8 @@ export const JULIANA_TERAPAGOS2 = {
 				"description": "The user Sync Terastallizes into Stellar type the first time its sync move is used each battle."
 			},
 			{
-				"name": "Debut: Sync CD ↓ & Sp. Atk ↑6",
-				"description": "Reduces the user’s sync move countdown by one the first time it enters a battle each battle. Raises the user’s Sp. Atk by six stat ranks the first time it enters a battle each battle."
+				"name": "Terastal Energy Amplified",
+				"description": "Reduces the user’s sync move countdown by two when the user changes into Terastal Form. Raises the user’s critical-hit rate by three stat ranks when the user changes into Terastal Form."
 			},
 			{
 				"name": "Terastal Shell",
