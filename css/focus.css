@@ -57,6 +57,7 @@ ELEMENT FOCUS WHEN CLICKED
 	position: relative;
 	background-image: none;
 	height: auto;
+	width: 100%;
 }
 
 #elementFocus .move_name {

@@ -753,7 +753,21 @@ export const JULIANA_TERAPAGOS = {
 		],
 		"moves2": [],
 		"moveTera": [],
-		"syncMove2": [],
+		"syncMove2": [
+			{
+				"user": "Pokemon2",
+				"name": "Ancient Indigo Disk Tera Blast",
+				"type": "Stellar",
+				"gauge": "-",
+				"uses": "-",
+				"category": "Special",
+				"power": "600-720",
+				"accuracy": "-",
+				"target": "An opponent",
+				"effect": "-",
+				"description": "No additional effect."
+			}
+		],
 		"movesMAX": []
 	}
 }
@@ -953,11 +967,11 @@ export const JULIANA_TERAPAGOS2 = {
 			{
 				"user": "Pokemon2",
 				"name": "Ancient Indigo Disk Tera Blast",
-				"type": "Normal",
+				"type": "Stellar",
 				"gauge": "-",
 				"uses": "-",
 				"category": "Special",
-				"power": "300-360",
+				"power": "600-720",
 				"accuracy": "-",
 				"target": "An opponent",
 				"effect": "-",
@@ -972,9 +986,9 @@ export const JULIANA_TERAPAGOS2 = {
 				"gauge": "4",
 				"uses": "-",
 				"category": "Special",
-				"power": "150-180",
+				"power": "300-360",
 				"accuracy": "100",
-				"target": "An opponent",
+				"target": "All opponents",
 				"effect": "-",
 				"description": "Replaces the effects of the user’s moves with the following when it is in Stellar&nbsp;Form. This move’s type becomes Stellar type. This attack’s power becomes double that of when the user is in Normal&nbsp;Form or Terastal&nbsp;Form. The target becomes all opposing sync pairs."
 			},
@@ -998,9 +1012,9 @@ export const JULIANA_TERAPAGOS2 = {
 				"gauge": "2",
 				"uses": "2",
 				"category": "Special",
-				"power": "200-240",
+				"power": "400-480",
 				"accuracy": "-",
-				"target": "An opponent",
+				"target": "All opponents",
 				"effect": "-",
 				"description": "Activation Condition: When the user uses any move once.(lb)Deactivation Condition: Cannot be deactivated.(lb)(lb)Never misses. Lowers the target’s Normal Type Rebuff by three&nbsp;ranks. Reduces the user’s sync move countdown by three. Replaces the effects of the user’s moves with the following when it is in Stellar&nbsp;Form. This move’s type becomes Stellar type. This attack’s power becomes double that of when the user is in Normal&nbsp;Form or Terastal&nbsp;Form. The target becomes all opposing sync pairs. Never misses. Lowers the target’s Stellar Type Rebuff by three&nbsp;ranks."
 			},
