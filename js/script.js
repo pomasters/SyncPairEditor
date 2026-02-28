@@ -119,7 +119,9 @@ function showSyncPair2() {
 		}
 
 		if(SYNCPAIR.pokemon[1].name.indexOf("Mega ") > -1) { g("btn_alter").src = "images/btn_mega.png"; }
-		if(SYNCPAIR.pokemon[1].formName.indexOf("Tera ") > -1) { g("btn_alter").src = "images/btn_tera.png"; }
+		if(SYNCPAIR.pokemon[1].formName.indexOf("Tera ") > -1 || 
+			SYNCPAIR.pokemon[1].formName.indexOf("Teal Mask") > -1 || 
+			SYNCPAIR.pokemon[1].formName.indexOf("Stellar Form") > -1) { g("btn_alter").src = "images/btn_tera.png"; }
 
 	} else {
 		g("syncPair_pokemon2").setAttribute('style', 'display: none !important');
