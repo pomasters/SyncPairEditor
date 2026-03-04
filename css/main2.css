@@ -681,9 +681,13 @@ MOVES
 }
 
 
-
 #moveTera .move {
 	width: 100%;
+}
+
+#movesSync .bg_stellar, #moveTera .bg_stellar {
+	background: url(../images/bg_move_stellar3.png) !important;
+	background-size: 100% 102% !important;
 }
 
 #moveTera .move_details {
