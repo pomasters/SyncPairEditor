@@ -2712,12 +2712,24 @@ import * as JANUARY2026 from '../v/v2.64.0/syncpairs.js';
 import * as FEBRUARY2026 from '../v/v2.65.0/syncpairs.js';
 import * as MARCH2026 from '../v/v2.66.0/syncpairs.js';
 import * as APRIL2026 from '../v/v2.67.0/syncpairs.js';
+import * as MAY2026 from '../v/v2.68.0/syncpairs.js';
 
 
 export const SYNCPAIRS = [
 
 	TEMPLATE1, //Always at the
 	TEMPLATE2, //top of the array
+
+	DISABLE_OPTION("---------------- v2.68.0 (MAY2026) ----------------"),
+
+	MAY2026.DRAYTON_ARCHALUDON,
+	MAY2026.HAU_INCINEROAR,
+	MAY2026.EMMET_GURDURR,
+	MAY2026.KIERAN_FURRET,
+	MAY2026.RIKA_GREATTUSK,
+	MAY2026.POPPY_IRONTREADS,
+	MAY2026.LARRY_KOMALA,
+	MAY2026.FLANNERY_MAGCARGO,
 
 	DISABLE_OPTION("---------------- v2.67.0 (APRIL2026) ----------------"),
 
