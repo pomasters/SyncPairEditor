@@ -2714,12 +2714,21 @@ import * as MARCH2026 from '../v/v2.66.0/syncpairs.js';
 import * as APRIL2026 from '../v/v2.67.0/syncpairs.js';
 import * as MAY2026 from '../v/v2.68.0/syncpairs.js';
 import * as JUNE2026 from '../v/v2.69.0/syncpairs.js';
+import * as JULY2026 from '../v/v2.70.0/syncpairs.js';
 
 
 export const SYNCPAIRS = [
 
 	TEMPLATE1, //Always at the
 	TEMPLATE2, //top of the array
+
+	DISABLE_OPTION("---------------- v2.70.0 (JULY2026) ----------------"),
+
+	JULY2026.AKARI_MANAPHY,
+	JULY2026.HAU_TAUROS,
+	JULY2026.AREZU_BASCULEGION,
+	JULY2026.AS_DIANTHA_GARDEVOIR,
+	JULY2026.AS_GEETA_GLIMMORA,
 
 	DISABLE_OPTION("---------------- v2.69.0 (JUNE2026) ----------------"),
 
@@ -3314,4 +3323,4 @@ export const SYNCPAIRS = [
 	PROFESSOR_OAK_MEW
 ];
 
-export var CURRENT_SYNCPAIR = [MAY2026.DRAYTON_ARCHALUDON, MAY2026.KIERAN_FURRET, MAY2026.LARRY_KOMALA, MAY2026.FLANNERY_MAGCARGO, JUNE2026.ETHAN_RAIKOU, JUNE2026.LYRA_ENTEI];
+export var CURRENT_SYNCPAIR = [JUNE2026.ETHAN_RAIKOU, JUNE2026.LYRA_ENTEI, JULY2026.AKARI_MANAPHY, JULY2026.AREZU_BASCULEGION];
