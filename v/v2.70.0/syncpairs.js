@@ -70,7 +70,7 @@ export const AKARI_MANAPHY = {
 			},
 			{
 				"name": "Sinnoh",
-				"description": ""
+				"description": "(Hisui)"
 			},
 			{
 				"name": "Main Character",
@@ -398,7 +398,7 @@ export const AREZU_BASCULEGION = {
 			},
 			{
 				"name": "Sinnoh",
-				"description": ""
+				"description": "(Hisui)"
 			},
 			{
 				"name": "Seasonal Outfit",
