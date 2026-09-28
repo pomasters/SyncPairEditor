@@ -2717,12 +2717,25 @@ import * as JUNE2026 from '../v/v2.69.0/syncpairs.js';
 import * as JULY2026 from '../v/v2.70.0/syncpairs.js';
 import * as AUGUST2026 from '../v/v2.71.0/syncpairs.js';
 import * as SEPTEMBER2026 from '../v/v2.72.0/syncpairs.js';
+import * as OCTOBER2026 from '../v/v2.73.0/syncpairs.js';
 
 
 export const SYNCPAIRS = [
 
 	TEMPLATE1, //Always at the
 	TEMPLATE2, //top of the array
+
+	DISABLE_OPTION("---------------- v2.73.0 (OCTOBER2026) ----------------"),
+
+	OCTOBER2026.LYRA_MARILL,
+	OCTOBER2026.GHETSIS_CHIENPAO,
+	OCTOBER2026.LYSANDRE_CHIYU,
+	OCTOBER2026.KORRINA_MACHOKE,
+	OCTOBER2026.ARCHIE_WOCHIEN,
+	OCTOBER2026.MAXIE_TINGLU,
+	OCTOBER2026.TABITHA_CAMERUPT,
+	OCTOBER2026.MATT_SHARPEDO,
+	OCTOBER2026.SHELLY_SHARPEDO,
 
 	DISABLE_OPTION("---------------- v2.72.0 (SEPTEMBER2026) ----------------"),
 
