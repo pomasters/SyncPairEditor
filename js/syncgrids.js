@@ -22752,12 +22752,22 @@ import * as AUGUST2026 from '../v/v2.71.0/syncgrids.js';
 import * as SEPTEMBER2026 from '../v/v2.72.0/syncgrids.js';
 import * as OCTOBER2026 from '../v/v2.73.0/syncgrids.js';
 import * as NOVEMBER2026 from '../v/v2.74.0/syncgrids.js';
+import * as DECEMBER2026 from '../v/v2.75.0/syncgrids.js';
 
 
 export const SYNCGRIDS = [
 
 	BASE_EMPTY,
 	ALL_EMPTY,
+
+	BASE_EMPTY, // "---------------- v2.75.0 (DECEMBER2026) ----------------"
+
+	DECEMBER2026.PAXTON_EMBOAR,
+	DECEMBER2026.CALEM_DELPHOX,
+	DECEMBER2026.PROFESSORSYCAMORE_CHARMANDER,
+	DECEMBER2026.MIRIAM_PINCURCHIN,
+	DECEMBER2026.PENNY_IRONBUNDLE,
+	DECEMBER2026.LUSAMINE_NIHILEGO,
 
 	BASE_EMPTY, // "---------------- v2.74.0 (NOVEMBER2026) ----------------"
 
